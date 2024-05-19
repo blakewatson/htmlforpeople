@@ -22,10 +22,7 @@ if ($email) {
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>HTML for People</title>
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-/>
+    <link rel="stylesheet" href="/css/pico.red.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   
@@ -59,6 +56,10 @@ if ($email) {
 
       <?php endif; ?>
     </main>
+
+    <footer class="container">
+      <p>A <a href="https://blakewatson.com/">Blake Watson</a> project.</p>
+    </footer>
   </body>
   
 </html>

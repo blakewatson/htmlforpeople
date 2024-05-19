@@ -1,0 +1,16 @@
+.container {
+  max-width: 64ch;
+}
+
+.logo {
+  display: block;
+  margin-block-start: 2rem;
+  margin-inline: auto;
+  width: min(300px, 100%);
+  height: auto;
+}
+
+form button[type="submit"] {
+  display: inline-block;
+  width: unset;
+}

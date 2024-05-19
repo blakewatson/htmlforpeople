@@ -1,0 +1,17 @@
+Thumbs.db
+.project
+.DS_Store
+*.scssc
+.sass-cache
+*.map
+*.sublime-project
+*.sublime-workspace
+bower_components
+node_modules
+build
+dist
+vendor
+._*
+.env
+config.php
+emails.txt

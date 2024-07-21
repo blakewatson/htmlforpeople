@@ -101,4 +101,4 @@ This will make your site available at `http://localhost:8000`.
 
 Now that we have a local web server running, we can more easily interact with other websites. Next we're going to make a page of assorted fun stuff, including embedded videos from YouTube!
 
-[[Adding a fun page]]
+[Adding a fun page](/adding-a-fun-page)

@@ -129,7 +129,9 @@ Having made these adjustments, we get some special styling for our website title
 
 ![](/assets/img/a-website-with-style-3.png)
 
-**Note:** if you are following along and your website has a dark background with light text that's okay! Simple.css recognizes if you (the site's visitor) have your system in dark mode and, if so, uses a dark theme for the website. If you want to override this behavior, check out the bonus [[Customizing Simple.css]] article.
+{% aside 'Note' %}
+If you are following along and notice that your website has a dark background with light text that's okay! Simple.css recognizes if you (the site's visitor) have your system in dark mode and, if so, uses a dark theme for the website. If you want to override this behavior, check out the bonus [Customizing Simple.css](/customizing-simple-css) article.
+{% endaside %}
 
 ## Update the live site
 
@@ -151,4 +153,4 @@ We didn't add a lot in terms of writing code in this part but we set ourselves u
 
 The rest of this tutorial series will be focused on building out our website. In the next part, we'll add an about page.
 
-[Adding an about age](/adding-an-about-page)
+[Adding an about page](/adding-an-about-page)

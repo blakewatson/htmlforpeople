@@ -64,11 +64,23 @@ And you’ll need to update the navigation on the other pages to include a link 
 </nav>
 ```
 
+{% aside 'Note' %}
+For now, while we are opening our website files directly in the browser, we're using _relative URLs_ to form links to other pages and files. In an upcoming chapter, we'll learn how to [run a local web server](/intermission-installing-a-local-web-server) and how doing so will enable us to use _absolute URLs_, which are more straightforward.
+{% endaside %}
+
 ## Create the first post
 
-I’m gonna write a silly post about teaching a cat HTML. I'll create a file `2024-04-12-whiskers.html` in the `blog` folder. You can name your blog post file whatever you want. The nice thing about including the date is that, as you create more posts, they'll appear in order on your computer’s filesystem.
+I’m going to write a silly post about teaching a cat HTML. I'll create a file `2024-04-12-whiskers.html` in the `blog` folder. You can name your blog post file whatever you want. The nice thing about including the date is that, as you create more posts, they'll appear in order on your computer’s filesystem.
 
-We'll copy the contents of `blog/index.html` into our new file as a starting point. I'll change the `<h1>` (and the `<title>`) to be the name of my article, "How I taught my cat to make a website with HTML."
+We'll copy the contents of `blog/index.html` into our new file as a starting point. I'll change the `<h1>` (and the `<title>`) to be the name of my article, "How I taught my cat to make a website with HTML." I will also modify the navigation. We aren't on the Blog listing page, so it's not accurate to say `aria-current="page"` lon the blog nav link. But it *is* within the Blog section of the site. So I will change the attribute to the more general `aria-current="true"`. This is **only for individual blog post pages**.
+
+```html
+<nav>
+	<a href="../index.html">Home</a>
+	<a href="index.html" aria-current="true">Blog</a>
+	<a href="../about.html">About</a>
+</nav>
+```
 
 A the end of the post, I'll add a link back to the blog. We're already in the `blog` folder so linking to `index.html` is all we need to get to the blog home.
 

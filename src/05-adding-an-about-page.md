@@ -44,7 +44,7 @@ Here’s the code I have inside the `<body>` tag.
 <main>
 	<img src="images/blake.jpg" alt="Photograph of space with stars and stardust.">
 
-	<p>My name is Blake. I enjoy making websites and teaching others to do the same. I started writing an HTML tutorial series because I think everyone should have a personal website and I want to show that you don't have to be a computer science graduate to make one.</p>
+	<p>My name is Blake. I enjoy making websites and teaching others to do the same. I started writing an HTML web book because I think everyone should have a personal website and I want to show that you don't have to be a computer science graduate to make one.</p>
 
 	<p>I'm a side project enthusiast and have put various sites, apps, and (bad) games into the world. My hobbies include web-related nerdery, D&D and board games, and writing. I like to participate in National Novel Writing Month, the annual novel-writing challenge</p>
 
@@ -131,7 +131,7 @@ My `<main>` content on the homepage now looks like this.
 	
 	<p class="notice">
 		<strong>Want to learn how to make a website like this?</strong><br>
-		Check out the free tutorial series <a href="https://htmlforpeople.com/">HTML for People</a>. It's made for everyone and teaches you how to make a webpage in a friendly, approachable way.
+		Check out the free web book <a href="https://htmlforpeople.com/">HTML for People</a>. It's made for everyone and teaches you how to make a webpage in a friendly, approachable way.
 	</p>
 </main>
 ```

@@ -701,6 +701,5 @@ The magic of CSS is that you could take my exact HTML code—no changes—and cr
   <figcaption>These two designs share the same HTML code. <a href="https://www.youtube.com/watch?v=Iloby6ZXRjI">They’re the same picture.</a></figcaption>
 </figure>
 
-I hope this bonus chapter gave you a taste of what’s possible with CSS. Much like with HTML, even a little CSS knowledge 
-
+I hope this bonus chapter gave you a taste of what’s possible with CSS. Much like with HTML, even a little CSS knowledge is useful—a simple change of font and color, for example, can make a huge difference. I encourage you to continue exploring CSS if you’re interested in creating custom designs. It’s a rewarding skill to have.
 

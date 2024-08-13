@@ -151,6 +151,6 @@ A little cumbersome, but hopefully not too bad. Whichever way you do it, just ma
 
 We didn't add a lot in terms of writing code in this part but we set ourselves up for success by getting organized, acquiring some styles, and sectioning our webpage.
 
-The rest of this tutorial series will be focused on building out our website. In the next part, we'll add an about page.
+The rest of this web book will be focused on building out our website. In the next part, we'll add an about page.
 
 [Adding an about page](/adding-an-about-page)

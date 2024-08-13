@@ -350,6 +350,11 @@ aside {
   code {
     background-color: #00000011;
   }
+
+  pre, pre[class*="language-"] {
+    margin-block: 1rem 0;
+    margin-inline: 0;
+  }
 }
 
 .aside-label {
@@ -366,11 +371,26 @@ aside {
   }
 }
 
+figure {
+  margin-inline: 0;
+
+  & img {
+    display: block;
+    margin-inline: auto;
+    max-width: 100%;
+  }
+}
+
+figcaption {
+  margin-block-start: 0.5rem;
+  font-size: 0.85em;
+}
+
 /* Dark color scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    aside code {
+    aside code:not(pre code) {
       background-color: #F7708E33;
     }
   }

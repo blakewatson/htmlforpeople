@@ -434,7 +434,7 @@ To see this page in action, [check out the live demo](https://demo.htmlforpeople
 
 ## Publish the site
 
-You did it! With this page completed, you’ve finished the main tutorial series. Following the same steps as before, update your Neocities site with this new page. Remember to update your nav menu on all your other pages.
+You did it! With this page completed, you’ve finished the main web book. Following the same steps as before, update your Neocities site with this new page. Remember to update your nav menu on all your other pages.
 
 ## Up next
 

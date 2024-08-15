@@ -28,9 +28,9 @@ That's a totally valid way to do CSS. But often you will find that folks opt to 
 
 CSS is a powerful language. Every website you see is using it. All of those intricate designs, much of the animation, and the positioning of images and typography—that's CSS.
 
-But there is also a learning curve to CSS. And while I totally encourage you to explore it, this series is _HTML_ for People—I want to keep the focus on HTML. But that's okay! We can still use CSS to make our website look nice without having to write all of it ourselves.
+But there is also a learning curve to CSS. And while I totally encourage you to explore it, this book is _HTML_ for People—I want to keep the focus on HTML. But that's okay! We can still use CSS to make our website look nice without having to write all of it ourselves.
 
-**Note:** If you’re interested in diving more into CSS, that’s great! I have bonus content at the end of this series that introduces more CSS and links out to other resources.
+**Note:** If you’re interested in diving more into CSS, that’s great! I have [a bonus chapter](/css-basics) at the end of this book that introduces more CSS and links out to other resources.
 
 ## CSS frameworks
 
@@ -130,7 +130,7 @@ Having made these adjustments, we get some special styling for our website title
 ![](/assets/img/a-website-with-style-3.png)
 
 {% aside 'Note' %}
-If you are following along and notice that your website has a dark background with light text that's okay! Simple.css recognizes if you (the site's visitor) have your system in dark mode and, if so, uses a dark theme for the website. If you want to override this behavior, check out the bonus [Customizing Simple.css](/customizing-simple-css) article.
+If you are following along and notice that your website has a dark background with light text that's okay! Simple.css recognizes if you (the site's visitor) have your system in dark mode and, if so, uses a dark theme for the website. If you want to override this behavior, check out the bonus chapter [Customizing Simple.css](/customizing-simple-css).
 {% endaside %}
 
 ## Update the live site
@@ -149,8 +149,8 @@ A little cumbersome, but hopefully not too bad. Whichever way you do it, just ma
 
 ## Up next
 
-We didn't add a lot in terms of writing code in this part but we set ourselves up for success by getting organized, acquiring some styles, and sectioning our webpage.
+We didn't add a lot in terms of writing code in this chapter but we set ourselves up for success by getting organized, acquiring some styles, and sectioning our webpage.
 
-The rest of this web book will be focused on building out our website. In the next part, we'll add an about page.
+The rest of this web book will be focused on building out our website. In the next chapter, we'll add an about page.
 
 [Adding an about page](/adding-an-about-page)

@@ -237,7 +237,7 @@ There are multiple ways we could go about fixing this. We’re going to use a th
 
 ### Custom HTML tags
 
-HTML provides a way for us to create our own custom tags. They are called _web components_. They typically use a mixture of HTML, CSS, and JavaScript to define the book and behavior of the component. Making our own web component is out of scope for this tutorial. But that's okay, we don't need to make one. We can use web components that other people have made.
+HTML provides a way for us to create our own custom tags. They are called _web components_. They typically use a mixture of HTML, CSS, and JavaScript to define the look and behavior of the component. Making our own web component is out of scope for this book. But that's okay, we don't need to make one. We can use web components that other people have made.
 
 We're going to be using [Lite YouTube Embed](https://github.com/paulirish/lite-youtube-embed#readme). Feel free to read about what all it can do. For our purposes, we just want to install it and have it display a video that is full width and scales down properly on phones.
 
@@ -438,6 +438,6 @@ You did it! With this page completed, you’ve finished the main web book. Follo
 
 ## Up next
 
-Up next we'll revel in our accomplishments and I'll point you toward more learning resources, including the bonus tutorials on this site.
+Up next we'll revel in our accomplishments and I'll point you toward more learning resources, including the bonus chapters on this site.
 
 [Achievement unlocked: Hypertexter](/achievement-unlocked-hypertexter)

@@ -254,7 +254,7 @@ Here’s the whole `index.html` file for reference:
 
 ## Update your live website
 
-These changes are looking pretty good. Let’s publish it to the world. Head over to [your Neocities dashboard](https://neocities.org/dashboard). You’ll see the starting files plus the `index.html` file you uploaded in Part 1 of this series. To make things a bit cleaner, I’m switching to the list view and deleting the PNG image and CSS file that was there.
+These changes are looking pretty good. Let’s publish it to the world. Head over to [your Neocities dashboard](https://neocities.org/dashboard). You’ll see the starting files plus the `index.html` file you uploaded in chapter 1 of this book. To make things a bit cleaner, I’m switching to the list view and deleting the PNG image and CSS file that was there.
 
 ![](/assets/img/add-content-6.png)
 
@@ -266,6 +266,6 @@ Once you’ve done that, click the link to your site at the top of the dashboard
 
 ## Up next
 
-This is part two of HTML for People. In part three, we’re going to take a brief intermission and get a text editor made for writing HTML.
+In the next chapter, we'll take a brief intermission and get a text editor made for writing HTML.
 
 [Intermission: upgrade your text editor](/intermission-upgrade-your-text-editor)

@@ -10,7 +10,7 @@ Blogs are a huge part of the web. You’ve likely heard of several popular blogg
 
 But you don’t _need_ one of these platforms to have a blog. A blog is just a series of posts in chronological order (typically _reverse_ chronological with newest posts first). We can totally do that with HTML!
 
-I’m going to add three blog posts. I won't put all the code here in this tutorial since that would be a bit wordy. You can check out the demo site to see the completed articles. But I _will_ show you how to structure the files and review some of the different HTML tags we can use.
+I’m going to add three blog posts. I won't put all the code here in this chapter since that would be a bit wordy. You can check out the demo site to see the completed articles. But I _will_ show you how to structure the files and review some of the different HTML tags we can use.
 
 ## Create the blog home
 
@@ -144,11 +144,11 @@ Block quotes are typically styled as indented blocks of text, often with a borde
 
 ## Recap: headings and lists
 
-We covered these briefly in part 2, [[Add content to your website]], but it’s worth recapping. Our blog posts already use the topmost heading, the `<h1>`, but if you’re writing a blog post that needs more headings, that’s totally fine!
+We covered these briefly in chapter 2, [Add content to your website](/add-content-to-your-website), but it’s worth recapping. Our blog posts already use the topmost heading, the `<h1>`, but if you’re writing a blog post that needs more headings, that’s totally fine!
 
 Headings in HTML are hierarchical, meaning pages `<h2>` headings should follow `<h1>` headings, `<h3>` headings should follow `<h2>` headings, and so on. Technically, HTML gives us six heading levels—`<h1>` through `<h6>`. But moderation is key here. Ask yourself if you’re _really_ making your page easier to understand by adding so many levels of headings. My advice is try to stick with three levels or less.
 
-And of course we have lists. We also covered these in part 2 but lets look at them again. You’ve got two options here—a bulleted list (called _unordered_) and a numbered list (called _ordered_).
+And of course we have lists. We also covered these in chapter 2 but lets look at them again. You’ve got two options here—a bulleted list (called _unordered_) and a numbered list (called _ordered_).
 
 Here’s a bulleted or _unordered_ list using the `<ul>` tag for the list and `<li>` for each _list item_.
 
@@ -243,7 +243,7 @@ We can fix our haiku by putting a couple of `<br>` tags in there.
 
 ![](/assets/img/adding-a-blog-6.png)
 
-This is helpful in small doses, but be careful not to overuse it. Most of the time, spacing between elements should be controlled with CSS—by applying `margin` or `padding`, for example. Fortunately, our Simple.css stylesheet has good default spacing. We'll cover using CSS for customized spacing in the bonus content at the end of this series.
+This is helpful in small doses, but be careful not to overuse it. Most of the time, spacing between elements should be controlled with CSS—by applying `margin` or `padding`, for example. Fortunately, our Simple.css stylesheet has good default spacing. We'll cover using CSS for customized spacing in the [bonus chapter](/css-basics) at the end of this book.
 
 Another way to manually break up content is to use a _horizontal rule_, or `<hr>` tag. It’s typically styled as a horizontal line. This can be helpful when you want to separate content—like a new section, or a new scene, in the case of a story. Here’s what it can look like.
 
@@ -253,7 +253,7 @@ Another way to manually break up content is to use a _horizontal rule_, or `<hr>
 
 ## Code and pre-formatted text
 
-I've been using these tags _a lot_ during this series. Consider this paragraph:
+I've been using these tags _a lot_ during this book. Consider this paragraph:
 
 ```html
 <p>By the end of day one, he was familiar with basic tags like <code>html</code>, <code>head</code>, and <code>body</code>. On day two, he was creating paragraphs and lists. By day three, he had moved on to creating stunning layouts with <code>article</code> and <code>section</code>.</p>

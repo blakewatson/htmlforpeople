@@ -39,11 +39,11 @@ if ($email) {
         </hgroup>
       <?php endif; ?>
 
-      <p>I’m working on a web book all about getting started making websites with HTML. It’s a beginner-level series aimed at people who may or may not have career aspirations as web developers. I don’t think websites were ever intended to be made only by “web professionals.” They are documents at heart and anyone should be able to make one if they want. Knowing how to write HTML and put it on the internet is a skill that’s valuable to all kinds of careers and personal pursuits. HTML is for anyone.</p>
+      <p>I’m working on a web book all about getting started making websites with HTML. It’s a beginner-level book aimed at people who may or may not have career aspirations as web developers. I don’t think websites were ever intended to be made only by “web professionals.” They are documents at heart and anyone should be able to make one if they want. Knowing how to write HTML and put it on the internet is a skill that’s valuable to all kinds of careers and personal pursuits. HTML is for anyone.</p>
 
       <?php if (!$email): ?>
 
-        <p>If you want me to email you when the series is ready, leave your email address below. I won't spam you, sell your email address, or use it for anything other than letting you know when the series is released.</p>
+        <p>If you want me to email you when the book is ready, leave your email address below. I won't spam you, sell your email address, or use it for anything other than letting you know when the book is released.</p>
 
         <form action="/" method="post">
           <label>

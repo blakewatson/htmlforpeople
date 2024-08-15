@@ -27,7 +27,7 @@ Neocities, the service we've been using to host our personal website, doesn’t 
 Starting off, I recommend what’s called _shared hosting_. Long story short, this usually means the service will manage its servers and give you, the customer, a folder on the server where you can upload your files (and usually include access to various services).
 
 {% aside 'Note' %}
-It’s possible to run PHP on your computer so that you can test your website before uploading it to a server. However, it falls outside the scope of this article.
+It’s possible to run PHP on your computer so that you can test your website before uploading it to a server. However, it falls outside the scope of this book.
 
 The easiest way is probably by using an app like [XAMPP](https://www.apachefriends.org/) or [MAMP](https://www.mamp.info) (what I use). You can also [install PHP directly on your system](https://kinsta.com/blog/install-php) and use its [built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php). If you’re on a Mac, you probably already have PHP installed.
 {% endaside %}
@@ -43,7 +43,7 @@ And then there’s [NearlyFreeSpeech.NET](https://www.nearlyfreespeech.net/), th
 
 Once you have an account at one of these (or some other) web host, you should be able to upload files either directly through their website or by connecting to your server with [FTP](https://kinsta.com/knowledgebase/what-is-ftp/#what-is-an-ftp-client-and-why-do-you-need-one).
 
-The particulars of this fall outside the scope of this article, but there are tons of resources on getting up and running with a shared web post. A few web searches should put you on the right track.
+The particulars of this fall outside the scope of this book, but there are tons of resources on getting up and running with a shared web post. A few web searches should put you on the right track.
 
 The cool thing about PHP is that it is extremely easy to get started with. Just take one of the pages of your website and change the file extension from `.html` to `.php`. You just created a perfectly valid PHP file—no changes necessary.
 
@@ -162,7 +162,7 @@ You could do this for other repeatable elements of your site. For example, much 
 
 During the course of moving our nav menu over to PHP we did lose something. Previously we were setting the `aria-current` attribute on the appropriate nav link in order to signify which page is the current page in the nav. This is good for accessibility, but it also adds some visual cues for sighted users. But if we're reusing the navigation in one file, how do we set the current page? How do we know which one is the current page?
 
-Consider this the bonus section of this bonus chapter (that's right, a bonus within a bonus). I say that because I will be introducing some programming concepts. I don't have a ton of time to cover them as programming in PHP or any other language is really outside of the scope of this article. That said, with some fairly light code (which I am totally fine with you stealing) you can implement `aria-current` automagically.
+Consider this the bonus section of this bonus chapter (that's right, a bonus within a bonus). I say that because I will be introducing some programming concepts. I don't have a ton of time to cover them as programming in PHP or any other language is really outside of the scope of this book. That said, with some fairly light code (which I am totally fine with you stealing) you can implement `aria-current` automagically.
 
 First, let's recap what this attribute means. If a visitor goes to the About page, we want that link in the nav menu to be styled differently so as to indicate that it represents the current page (or announced by a screen reader, if the visitor happens to be using one). In that case, we would use the attribute `aria-current="page"`.
 

@@ -6,7 +6,7 @@ layout: "base.njk"
 
 For this chapter, we won’t be using our Simple site. We’re going to be writing our own styles and, for that, I want to use a simpler page. You will be able to take what you learn here and apply it to your Simple site if you want. But for this chapter I want to show you how we can start from scratch to make a nice webpage.
 
-We'll look specifically at styling typographic elements to make a pleasant, readable webpage. But CSS can do much, much more. All of the sophisticated designs you are used to seeing on pages across the web are done with CSS. It is an incredibly powerful tool. If this tutorial gives you a taste for it, I encourage you to explore CSS beyond what we cover here.
+We'll look specifically at styling typographic elements to make a pleasant, readable webpage. But CSS can do much, much more. All of the sophisticated designs you are used to seeing on pages across the web are done with CSS. It is an incredibly powerful tool. If this chapter gives you a taste for it, I encourage you to explore CSS beyond what we cover here.
 
 ## Introducing the planets of the solar system
 

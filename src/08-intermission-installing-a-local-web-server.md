@@ -87,7 +87,7 @@ This will make your site available at `localhost` on whatever port it specifies 
 
 ### PHP
 
-Installing PHP is out of scope for this tutorial, but it’s available for nearly all systems. PHP was born as a website technology and, as I'll discuss in the bonus content, [PHP is handy for easily reusing HTML snippets](/reusable-html-with-php) (like the nav menu) across multiple pages.
+Installing PHP is out of scope for this chapter, but it’s available for nearly all systems. PHP was born as a website technology and, as I'll discuss in a bonus chapter, [PHP is handy for easily reusing HTML snippets](/reusable-html-with-php) (like the nav menu) across multiple pages.
 
 If PHP is on your system, you can run the PHP development server similarly to the Python example above.
 

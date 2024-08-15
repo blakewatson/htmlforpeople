@@ -45,7 +45,7 @@ In CSS, text that's in between `/*` and `*/` is ignored by the browser. It’s j
 
 The bit that says `:root` means that the following block of code—the part between the squiggly brackets, `{}`—applies to the whole page. Ignore `::backdrop` for now.
 
-Inside the squiggly brackets we find a list of _properties_. We've seen CSS properties earlier in this series. For example, we used `columns: 2` on the resume page to arrange a bulleted list into two columns. In that case, `columns` is a _property_ and `2` is a _value_.
+Inside the squiggly brackets we find a list of _properties_. We've seen CSS properties in a previous chapter. For example, we used `columns: 2` on the resume page to arrange a bulleted list into two columns. In that case, `columns` is a _property_ and `2` is a _value_.
 
 Any property that starts with `--` is a _custom property_, or _variable_. It’s a way to reuse a value in multiple places. For example, if we had a variable `--accent: blue`, we could make different elements use the `--accent` color. And if we ever decided to make the accent another color, say `red`, we could update it in the one place—by writing `--accent: red`—and every element that’s using the `--accent` variable will be updated automatically.
 
@@ -233,7 +233,7 @@ Here’s a look at one of the blog posts set in Georgia.
 
 ## Make it yours
 
-I chose Simple.css for this series because it makes HTML look good without any extra work. But I also chose it for its ability to be customized with a handful of CSS variables. Even though it’s just colors and fonts, there are endless possibilities for making your site unique.
+I chose Simple.css for this book because it makes HTML look good without any extra work. But I also chose it for its ability to be customized with a handful of CSS variables. Even though it’s just colors and fonts, there are endless possibilities for making your site unique.
 
 I encourage you to explore the world color and experiment with different combinations. In the next bonus chapter, I'll cover even more CSS so that you can go beyond Simple and write your own styles.
 

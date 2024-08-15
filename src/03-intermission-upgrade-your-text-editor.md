@@ -14,11 +14,13 @@ Speaking of simple text editors, it can get pretty annoying to keep everything i
 
 It’s not terrible, but we can do better. Let’s download an editor that’s made for writing code.
 
-**Note:** I’m using Windows for this part just for kicks but everything I’m doing can be done on Mac, Windows, and Linux.
+{% aside 'Note' %}
+I’m using Windows for this part just for kicks but everything I’m doing can be done on Mac, Windows, and Linux.
+{% endaside %}
 
 ## Download Visual Studio Code
 
-Head over to <https://code.visualstudio.com/>. This is a free code editor from Microsoft that works on Mac, Windows, and Linux. It can do a lot of things but we’re going to keep it nice and easy for this tutorial.
+Head over to <https://code.visualstudio.com/>. This is a free code editor from Microsoft that works on Mac, Windows, and Linux. It can do a lot of things but we’re going to keep it nice and easy for this book.
 
 Don’t let the busy screenshot on the homepage scare you. We don’t need all those advanced features for what we’re doing.
 
@@ -48,6 +50,6 @@ For now, let’s get back to making our website!
 
 ## Up next
 
-This is part three of HTML for People. Now that we’ve leveled up our text editor, let’s learn how to add _style_ to our website.
+Now that we’ve leveled up our text editor, let’s learn how to add _style_ to our website.
 
 [A website with style](/a-website-with-style)

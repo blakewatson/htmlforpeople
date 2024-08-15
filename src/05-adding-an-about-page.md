@@ -6,7 +6,7 @@ layout: "base.njk"
 
 # Adding an about page
 
-For the rest of this series, we'll be expanding our personal homepage into a full website with multiple pages and a blog. The example will continue to be **Blake's Homepage** and the content will relate to me. You will need to customize things as necessary to fit what you want to see on your own website.
+For the rest of this book, we'll be expanding our personal homepage into a full website with multiple pages and a blog. The example will continue to be **Blake's Homepage** and the content will relate to me. You will need to customize things as necessary to fit what you want to see on your own website.
 
 If you don't want to build a personal homepage, that's cool too! The concepts we're covering are easily applicable to other types of websites. So you can feel free to take what we cover and adapt it as necessary.
 
@@ -136,7 +136,7 @@ My `<main>` content on the homepage now looks like this.
 </main>
 ```
 
-What is this `class="notice"`? You can learn more about classes in the bonus CSS articles at the end of this series. But, in short, this will activate some styles provided by Simple.css for making a little box with some text in it.
+What is this `class="notice"`? You can learn more about classes in the bonus CSS chapters at the end of this book. But, in short, this will activate some styles provided by Simple.css for making a little box with some text in it.
 
 ![](/assets/img/adding-an-about-page-3.png)
 

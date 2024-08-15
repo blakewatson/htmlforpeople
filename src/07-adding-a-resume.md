@@ -79,7 +79,7 @@ Which renders like this.
 
 It’s a clean bulleted list. That said, I feel there’s a bit of wasted space. It would be nice if we could split it into columns. There isn’t a strictly HTML way to do it but I think it’s worth using a little CSS here to do the trick.
 
-You’ve seen several tags using _attributes_ by now. Every page of our site has links via the `<a>` tag and every one of those has an `href` attribute, for example. Another handy attribute is `style`. It provides a way for us to apply CSS directly to an HTML element. I'll cover CSS a bit more in the bonus content at the end of this series, but for now let’s use the `style` attribute to split the list into columns.
+You’ve seen several tags using _attributes_ by now. Every page of our site has links via the `<a>` tag and every one of those has an `href` attribute, for example. Another handy attribute is `style`. It provides a way for us to apply CSS directly to an HTML element. I'll cover CSS a bit more in the bonus chapters at the end of this book, but for now let’s use the `style` attribute to split the list into columns.
 
 ```html
 <section>
@@ -142,7 +142,7 @@ I'm going to be listing several job roles I've had so I’m using the title of t
 
 Another way you could do it is to put the employer’s name in the heading after the job title. I don’t think one way is more correct than the other and I prefer to reduce the amount of large text on the page.
 
-**Note:** We're working within the limitations of Simple.css right now. If we _really_ wanted to control the look of things, we'd add some custom CSS. We're not going to do that now, but see the bonus articles at the end of the series for more about CSS.
+**Note:** We're working within the limitations of Simple.css right now. If we _really_ wanted to control the look of things, we'd add some custom CSS. We're not going to do that now, but see the bonus chapters at the end of the book for more about CSS.
 
 We wrap the date in a `<time>` tag and provide the [machine-readable date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values) in the `datetime` _attribute_. To put a dash in between the start and end dates, I’m using an HTML _entity_, `&ndash;`. This is to use the _en dash_ character, which is a slightly longer dash than a regular hyphen (`-`) and is used for numeric ranges in typography (there’s also an _em dash_, `&mdash;`, which is an even larger dash—but I digress).
 
@@ -150,7 +150,7 @@ We wrap the date in a `<time>` tag and provide the [machine-readable date](https
 
 Finally, I use an _unordered list_ to provide bullet points about my role and responsibilities.
 
-I'll go ahead and add the rest of my work experience. I'll add the full code for that at the end of the article. You can also [check out the demo resume](https://demo.htmlforpeople.com/resume) and [view the source](https://www.lifewire.com/view-web-source-code-4151702).
+I'll go ahead and add the rest of my work experience. I'll add the full code for that at the end of the chapter. You can also [check out the demo resume](https://demo.htmlforpeople.com/resume) and [view the source](https://www.lifewire.com/view-web-source-code-4151702).
 
 ## Selected projects
 

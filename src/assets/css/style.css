@@ -4,16 +4,20 @@
 ------------------------------------------------------------- */
 
 :root {
-  --dark: #1C1B19;
+  --dark: #1c1b19;
   --moredark: #111110;
-  --lesslight: #FBEDEF;
-  --accent: #B21E4F;
-  --border: #C6C6C6;
+  --lesslight: #fbedef;
+  --accent: #b21e4f;
+  --border: #c6c6c6;
   --main-menu-bg: #eee;
-  --aside-bg: #FBEDEF;
+  --aside-bg: #fbedef;
 
-  --text: "Valkyrie B", "Iowan Old Style", "Georgia", Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --headings: "Hermes Maia 2", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  
+  --text: "Valkyrie B", "Iowan Old Style", "Georgia", Apple Garamond,
+    Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --headings: "Hermes Maia 2", -apple-system, BlinkMacSystemFont, avenir next,
+    avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+    arial, sans-serif;
   --code: "Input Mono", monospace;
 }
 
@@ -21,13 +25,13 @@
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --dark: #D1D5DB;
-    --moredark: #F9C8CE;
+    --dark: #d1d5db;
+    --moredark: #f9c8ce;
     --light: #191415; /* bg */
-    --lesslight: #4B0C1F; /* bg alt */
-    --accent: #F7708E;
+    --lesslight: #4b0c1f; /* bg alt */
+    --accent: #f7708e;
     --border: #303030;
-    --aside-bg: #F42C6F11;
+    --aside-bg: #f42c6f11;
   }
 }
 
@@ -39,43 +43,44 @@
 /* ANCHOR Accessibility
 ------------------------------------------------------------- */
 
-.sr-only, .assistive-text {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+.sr-only,
+.assistive-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 
 /* Hide elements with the `hidden` attribute */
 [hidden] {
-    display: none;
+  display: none;
 }
 
 .skip-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    opacity: 0;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .skip-link:focus {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* ANCHOR Global styles
@@ -84,7 +89,8 @@
 a {
   text-decoration-color: var(--accent);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: var(--accent);
     text-decoration-color: var(--accent);
   }
@@ -115,7 +121,8 @@ main details {
   border-radius: 0.5em;
   overflow: hidden;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border: 1px solid var(--border);
   }
 
@@ -125,7 +132,8 @@ main details {
 
   /* the last thing in the details element should have 0 margin-bottom
      the language thing is to increase specificity for code blocks */
-  > &:last-child, > [class*="language-"]:last-child {
+  > &:last-child,
+  > [class*="language-"]:last-child {
     margin-block-end: 0;
   }
 }
@@ -140,7 +148,8 @@ main summary {
 
   /* the first thing after the summary element should have 0.5em margin-top
      the language thing is to increase specificity for code blocks */
-  & + *, & + [class*="language-"] {
+  & + *,
+  & + [class*="language-"] {
     margin-block-start: 0.5em;
   }
 }
@@ -149,7 +158,6 @@ video {
   margin-block: 1.75em;
   max-width: 100%;
 }
-
 
 /* ANCHOR Header
 ------------------------------------------------------------- */
@@ -185,7 +193,8 @@ video {
   border: 1px solid transparent;
   border-radius: 0.5em;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border: 1px solid var(--border);
   }
 
@@ -215,7 +224,6 @@ video {
   list-style-type: none;
 }
 
-
 /* ANCHOR Typography
 ------------------------------------------------------------- */
 
@@ -224,12 +232,24 @@ video {
   font-family: var(--text);
 }
 
-h1, h2, h3, h4 {
+main > * {
+  margin-block: 0;
+}
+
+main > * + * {
+  margin-block-start: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
   & a {
     text-decoration: none;
     color: var(--text);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
   }
@@ -239,7 +259,8 @@ h1 {
   margin-block-end: 3rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--headings);
   font-weight: normal;
   text-wrap: pretty;
@@ -260,7 +281,7 @@ code {
   font-family: var(--code) !important;
   font-size: 0.85em;
   line-height: 1.5;
-  color: #5F0E28;
+  color: #5f0e28;
 }
 
 pre[class*="language-"] > code {
@@ -268,14 +289,16 @@ pre[class*="language-"] > code {
   font-size: 0.75em;
 }
 
-pre, pre[class*="language-"] {
+pre,
+pre[class*="language-"] {
   margin-block: 1.75em;
   border: 1px solid var(--border);
   border-radius: 0.25em;
   color: #1c1b19;
 }
 
-details pre, details pre[class*="language-"] {
+details pre,
+details pre[class*="language-"] {
   border: none;
   border-radius: 0;
 }
@@ -284,7 +307,8 @@ details pre, details pre[class*="language-"] {
   color: unset;
 }
 
-code[class*="language-"], pre[class*="language-"] {
+code[class*="language-"],
+pre[class*="language-"] {
   white-space: pre-wrap;
   /* word-break: break-word; */
 }
@@ -294,7 +318,8 @@ code[class*="language-"], pre[class*="language-"] {
     font-size: 1.25em;
   }
 
-  pre, pre[class*="language-"] {
+  pre,
+  pre[class*="language-"] {
     margin-inline: -1.5em;
 
     details & {
@@ -306,25 +331,27 @@ code[class*="language-"], pre[class*="language-"] {
 /* Dark color scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
-  pre, pre[class*="language-"] {
-    --border: #C6C6C6;
+  pre,
+  pre[class*="language-"] {
+    --border: #c6c6c6;
     filter: invert(98%) hue-rotate(180deg) !important;
   }
 
   code {
-    color: #F9C8CE;
+    color: #f9c8ce;
   }
 }
 
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
-  & pre, & pre[class*="language-"] {
+  & pre,
+  & pre[class*="language-"] {
     filter: invert(98%) hue-rotate(180deg) !important;
   }
 
   & code {
-    color: #F9C8CE;
+    color: #f9c8ce;
   }
 }
 
@@ -332,7 +359,7 @@ code[class*="language-"], pre[class*="language-"] {
 ------------------------------------------------------------- */
 
 aside {
-  margin-block-end: 1rem;
+  margin-block: 1.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
   font-size: 0.85em;
@@ -351,7 +378,8 @@ aside {
     background-color: #00000011;
   }
 
-  pre, pre[class*="language-"] {
+  pre,
+  pre[class*="language-"] {
     margin-block: 1rem 0;
     margin-inline: 0;
   }
@@ -391,7 +419,7 @@ figcaption {
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     aside code:not(pre code) {
-      background-color: #F7708E33;
+      background-color: #f7708e33;
     }
   }
 }
@@ -406,7 +434,6 @@ figcaption {
     margin-inline: -1em;
   }
 }
-
 
 /* ANCHOR Forms
 ------------------------------------------------------------- */

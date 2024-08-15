@@ -11,7 +11,7 @@ I hope you’re buckled in because you, my friend, are about to go from zero to 
 I’m going to let you in on a little secret—websites are just files with text in them. They don’t require fancy, expensive software to create. You can literally make a website with Notepad. In fact, that’s what we are going to do right now.
 
 {% aside 'Note' %}
-  While it’s totally possible to make a website on a phone or tablet, it’s much more common to do it on a computer. So that’s what we’re going to for this tutorial. That said, what you’ll learn will still apply to other contexts. One beautiful thing about the web is that there are so many ways to create on it.
+  While it’s totally possible to make a website on a phone or tablet, it’s much more common to do it on a computer. So that’s what we’re going to in this book. That said, what you’ll learn will still apply to other contexts. One beautiful thing about the web is that there are so many ways to create on it.
 {% endaside %}
 
 ## Step 1. Create a folder on your computer
@@ -62,6 +62,14 @@ Don’t worry about how it looks. We’re going to fix that later.
 
 There are ton of options for publishing your website. For our purposes we need something free, easy, and geared toward individuals instead of businesses. Fortunately, we get just that with [Neocities](https://neocities.org).
 
+{% aside 'Alternate webhosts' %}
+Throughout this book I will be using Neocities as an example. But there are a handful of alternatives I'd like to mention in case one of them strikes your fancy.
+
+- **[Yay.boo](https://yay.boo/):** Silly name, really easy website publishing. You just drag and drop a folder and pick a name and your website is online.
+- **[Glitch](https://glitch.com/):** This is a good option if you want to code everything directly in the browser. Build it then publish.
+- **[Netlify](https://www.netlify.com/):** More sophisticated, but has a [drag-and-drop-folder-to-publish](https://docs.netlify.com/site-deploys/create-deploys/#drag-and-drop) feature and gives you more developer-centric features.
+{% endaside %}
+
 Head over to Neocities and create an account. It’s free. You’ll also choose a username/sitename. Your website will ultimately be on a _subdomain_ at `yourname.neocites.org`. I suggest using your real name or an online username if you have one. Or if you know what you want your page to be about you could choose something befitting the topic (for example, `dndfanpage`).
 
 Once you’ve created your account, go to your [site’s dashboard](https://neocities.org/dashboard). You’ll see that you have some starting files there. You can ignore them for now. To publish the page you just made on your computer, drag `index.html` from your computer onto your Neocities dashboard. That will replace the `index.html` that’s already there.
@@ -74,6 +82,6 @@ Once you’ve done that, click the link to your site at the top of the dashboard
 
 ## Up next
 
-This is part one of HTML for People. In part two, we’ll add more content to our website and learn about a handful of HTML tags.
+In the next chapter, we’ll add more content to our website and learn about a handful of HTML tags.
 
 [Add content to your website](/add-content-to-your-website)

@@ -30,7 +30,9 @@ CSS is a powerful language. Every website you see is using it. All of those intr
 
 But there is also a learning curve to CSS. And while I totally encourage you to explore it, this book is _HTML_ for People—I want to keep the focus on HTML. But that's okay! We can still use CSS to make our website look nice without having to write all of it ourselves.
 
-**Note:** If you’re interested in diving more into CSS, that’s great! I have [a bonus chapter](/css-basics) at the end of this book that introduces more CSS and links out to other resources.
+{% aside 'Note' %}
+If you’re interested in diving more into CSS, that’s great! I have [a bonus chapter](/css-basics) at the end of this book that introduces more CSS and links out to other resources.
+{% endaside %}
 
 ## CSS frameworks
 
@@ -95,7 +97,11 @@ We can add a _stylesheet_ to our page similar to how we added the image. We'll u
 
 The `<link>` tag is _self-closing_—there isn't a closing tag. We need to give it two _attributes_. `rel` specifies what relationship the file we're linking has with our webpage. CSS files are called _stylesheets_ so we provide that as the relationship (singular). The `href` is where we specify the file, including the folder path.
 
-**Note:** One point I will clarify because it is a little confusing. What people typically call "links" on a webpage—clickable text or images—are made with the `<a>` tag as we saw previously. They typically refer to a destination to navigate to when clicked. The `<link>` tag is specifying a file that we want to link to our page and what that file's relationship is. We are using it to connect a stylesheet. Another common relationship is to define an icon for the site, for example.
+{% aside 'Note' %}
+One point I will clarify because it is a little confusing. What people typically call "links" on a webpage—clickable text or images—are made with the `<a>` tag as we saw previously. They typically refer to a destination to navigate to when clicked.
+
+The `<link>` tag is specifying a file that we want to link to our page and what that file's relationship is. We are using it to connect a stylesheet. Another common relationship is to define an icon for the site, for example.
+{% endaside %}
 
 Just like that, our website is transformed. We are now seeing a centered page, larger text, and a sans-serif font.
 

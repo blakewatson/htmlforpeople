@@ -67,7 +67,9 @@ Once you have created the server, you’ll see it in the server list. Click it t
 
 ![](/assets/img/intermission-installing-a-local-web-server-9.png)
 
-**Note:** Simple Web Server is cross platform and works on macOS and Linux as well. For Mac users, I recommend WorldWideWeb unless you need multiple servers running simultaneously.
+{% aside 'Note' %}
+Simple Web Server is cross platform and works on macOS and Linux as well. That said, for Mac users, I recommend WorldWideWeb unless you need multiple servers running simultaneously.
+{% endaside %}
 
 ## Python and PHP (cross-platform)
 

@@ -10,7 +10,9 @@ We'll look specifically at styling typographic elements to make a pleasant, read
 
 ## Introducing the planets of the solar system
 
-I put together this very simple HTML page that uses a handful of typographic elements and presents a good starting point for applying styles. You are, of course, free to use any content you want if you have something in mind. But you are also welcome to use the same HTML page that I will be using. You can see the source code either in your browser with the [view source command](https://www.lifewire.com/view-web-source-code-4151702) or by checking out the [code on GitHub](https://github.com/blakewatson/css-basics).
+I put together this very simple HTML page that uses a handful of typographic elements and presents a good starting point for applying styles. You are, of course, free to use any content you want if you have something in mind. But you are also welcome to use the same HTML page that I will be using.
+
+You can see the source code either in your browser with the [view source command](https://www.lifewire.com/view-web-source-code-4151702) or by checking out the [code on GitHub](https://github.com/blakewatson/css-basics). And you can [see the end result here](https://planets.htmlforpeople.com/) if you want a sneak peak of what it’ll look like.
 
 This page introduces the planets in the solar system and gives a little information about each one. It is super simple and basic on purpose. You can think of it as dummy text not really intended to be read seriously (but the information is accurate to the best of my knowledge).
 

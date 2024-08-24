@@ -210,7 +210,11 @@ It's because I still have my website open as a file. This is a situation were we
 
 No worries, though! This is why we installed a local web server in the last part. If you haven't already, start your web server following whichever method you chose.
 
-**Note:** things get a little weird here unfortunately. Some of these server options such as Live Preview and Simple Web Server default to opening the browser at the IP address of `127.0.0.1`, which is essentially equivalent to `localhost`, the value other local servers use. For reasons I don't fully understand, the embedded videos will not work when accessing the site using the IP address. You need to be using `localhost`. Fortunately that is as easy as just manually replacing `127.0.0.1` with `localhost` in the address bar. If you are using Microsoft Live Preview, you will need to view the site in your web browser instead of the preview window.
+{% aside 'Note' %}
+Things get a little weird here unfortunately. Some of these server options such as Live Preview and Simple Web Server default to opening the browser at the IP address of `127.0.0.1`, which is essentially equivalent to `localhost`, the value other local servers use.
+
+For reasons I don't fully understand, the embedded videos will not work when accessing the site using the IP address. You need to be using `localhost`. Fortunately that is as easy as just manually replacing `127.0.0.1` with `localhost` in the address bar. If you are using Microsoft Live Preview, you will need to view the site in your web browser instead of the preview window.
+{% endaside %}
 
 I will be using [WorldWideWeb](https://iconfactory.com/worldwideweb/) for this example. Once I point it to my site folder and hit the play button, my server is running and I can visit it at the address provided.
 

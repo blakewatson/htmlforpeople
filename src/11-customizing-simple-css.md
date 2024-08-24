@@ -175,7 +175,7 @@ And here is a side by side preview of how the blog index page looks in light mod
 
 Some color combinations can make text hard to read because of limited contrast. You want to make sure that there is plenty of contrast between your text color and your background color.
 
-You can rely on your own eyes to an extent, but everyone is different. Fortunately there are standards around how much contrast text should have. You can use a handy [contrast checker like this one](https://coolors.co/contrast-checker/). You give it two colors and it will tell you if there is sufficient contrast between them.
+You can rely on your own eyes to an extent, but everyone is different. Fortunately there are standards around how much contrast text should have. You can use a handy [contrast checker like this one](https://coolors.co/contrast-checker). You give it two colors and it will tell you if there is sufficient contrast between them.
 
 ## Changing the font
 

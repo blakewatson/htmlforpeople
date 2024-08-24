@@ -72,7 +72,7 @@ For now, while we are opening our website files directly in the browser, we're u
 
 I’m going to write a silly post about teaching a cat HTML. I'll create a file `2024-04-12-whiskers.html` in the `blog` folder. You can name your blog post file whatever you want. The nice thing about including the date is that, as you create more posts, they'll appear in order on your computer’s filesystem.
 
-We'll copy the contents of `blog/index.html` into our new file as a starting point. I'll change the `<h1>` (and the `<title>`) to be the name of my article, "How I taught my cat to make a website with HTML." I will also modify the navigation. We aren't on the Blog listing page, so it's not accurate to say `aria-current="page"` lon the blog nav link. But it *is* within the Blog section of the site. So I will change the attribute to the more general `aria-current="true"`. This is **only for individual blog post pages**.
+We'll copy the contents of `blog/index.html` into our new file as a starting point. I'll change the `<h1>` (and the `<title>`) to be the name of my article, "How I taught my cat to make a website with HTML." I will also modify the navigation. We aren't on the Blog listing page, so it's not accurate to say `aria-current="page"` on the blog nav link. But it *is* within the Blog section of the site. So I will change the attribute to the more general `aria-current="true"`. This is **only for individual blog post pages**.
 
 ```html
 <nav>
@@ -249,7 +249,9 @@ Another way to manually break up content is to use a _horizontal rule_, or `<hr>
 
 ![](/assets/img/adding-a-blog-7.png)
 
-**Note:** What’s up with the nonsensical text? It’s Latin-ish text called _[lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)_ that is often used in design situations where you want to see what text looks like without being distracted by what the text says.
+{% aside 'Note' %}
+What’s up with the nonsensical text? It’s Latin-ish text called _[lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)_ that is often used in design situations where you want to see what text looks like without being distracted by what the text says.
+{% endaside %}
 
 ## Code and pre-formatted text
 
@@ -311,7 +313,7 @@ Simple.css will put the aside in a box and shift it over to the side. This is a 
 
 ## Mark, strikethrough, deletion, insertion
 
-Here are some more text formatting tags for you. Use `<mark>` to <mark>highlight text</mark>. If you want strikethrough <s>unwanted</s> text, wrap it in the `<s>` tag. If you are explicitly showing edit to a document, prefer the `<del>` tag for indicating a deletion and the `<ins>` tag to show inserted text. For example, this is from my donut post.
+Here are some more text formatting tags for you. Use `<mark>` to <mark>highlight text</mark>. If you want strikethrough <s>unwanted</s> text, wrap it in the `<s>` tag. If you are explicitly showing edits to a document, prefer the `<del>` tag for indicating a deletion and the `<ins>` tag to show inserted text. For example, this is from my donut post.
 
 ![](/assets/img/adding-a-blog-11.png)
 

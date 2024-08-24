@@ -20,6 +20,8 @@ It has the following pages and features:
 - A digital resume
 - A fun page with embedded YouTube videos
 
+I will be including many code samples in the coming chapters, but at any point you can also go to the demo site and [view the source code](https://www.lifewire.com/view-web-source-code-4151702) of any page for reference.
+
 ## Pages are just files that you link to
 
 To create a new page on our site, we will first create a new file. Create `about.html` to go alongside `index.html`. To save some typing, copy the entire contents of `index.html` and paste it into `about.html`.
@@ -113,11 +115,25 @@ Load it up in the browser and marvel at your multi-page website! Click. Click. C
 
 Since we have an about page now, some of our homepage content is redundant. Some of this is on the about page now. I think I'll remove the bio text, the Neal.fun link, and the board games list. I will keep the space image and add a little welcome paragraph. Might as well keep the *how to make a website* list too.
 
+Although, speaking of the space image, let's make it a little more interesting. I would like to give this image a caption and include a link to where I got it. We can further mark up an image by wrapping it in a `<figure>` tag and including a `<figcaption>`.
+
+```html
+<figure>
+	<img src="/images/space.jpg" alt="Photograph of space with stars and stardust.">
+
+	<figcaption>Space is cool. <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source</a></figcaption>
+</figure>
+```
+
 My `<main>` content on the homepage now looks like this.
 
 ```html
 <main>
-	<img src="images/space.jpg" alt="Photograph of space with stars and stardust.">
+	<figure>
+		<img src="/images/space.jpg" alt="Photograph of space with stars and stardust.">
+	
+		<figcaption>Space is cool. <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source</a></figcaption>
+	</figure>
 	
 	<p>Welcome to my website! Here you can find out more about me, read my very interesting and totally not contrived blog posts, and check out some of the fun hobbies I am into. It won't be long until you are wondering what sorcery I have used to create this mind-blowing, web-based experience. The answer is HTML.</p>
 	

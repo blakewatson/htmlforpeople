@@ -38,7 +38,9 @@ VS Code also helps by making it easier to write code. It understands HTML and ma
 
 VS Code opens your files in tabs. This is convenient later when your website has multiple pages.
 
-**Note:** VS Code lets lines of text scroll off the side of the page by default. If you would rather have text wrap to the next line, click the _View_ menu and choose _Word Wrap_.
+{% aside 'Note' %}
+VS Code lets lines of text scroll off the side of the page by default. If you would rather have text wrap to the next line, click the _View_ menu and choose _Word Wrap_.
+{% endaside %}
 
 ## Explore when you’re ready
 

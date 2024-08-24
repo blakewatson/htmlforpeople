@@ -27,20 +27,20 @@ You need a computer with internet access. I wrote this book in a generic way so 
 ## Table of contents
 
 1. [Zero to internet: your first website](/zero-to-internet-your-first-website)
-1. [Add content to your website](/add-content-to-your-website)
-1. [Intermission: upgrade your text editor](/intermission-upgrade-your-text-editor)
-1. [A website with style](/a-website-with-style)
-1. [Adding an about page](/adding-an-about-page)
-1. [Adding a blog](/adding-a-blog)
-1. [Adding a resume](/adding-a-resume)
-1. [Intermission: installing a local web server](/intermission-installing-a-local-web-server)
-1. [Adding a fun page](/adding-a-fun-page)
-1. [Achievement unlocked: Hypertexter](/achievement-unlocked-hypertexter)
+2. [Add content to your website](/add-content-to-your-website)
+3. [Intermission: upgrade your text editor](/intermission-upgrade-your-text-editor)
+4. [A website with style](/a-website-with-style)
+5. [Adding an about page](/adding-an-about-page)
+6. [Adding a blog](/adding-a-blog)
+7. [Adding a resume](/adding-a-resume)
+8. [Intermission: installing a local web server](/intermission-installing-a-local-web-server)
+9. [Adding a fun page](/adding-a-fun-page)
+10. [Achievement unlocked: Hypertexter](/achievement-unlocked-hypertexter)
 
 ### Bonus chapters
 
 This is the stuff I wanted to cover but felt that it was a little bit out of scope. CSS and PHP both have a bit of a steeper learning curve compared to HTML. I don't think they're out of reach for anyone who wants to explore them, though. And a little bit of both of them can go a long way. So this is my way of giving you a little taste of each one.
 
 1. [Customizing Simple.css](/customizing-simple-css)
-1. [CSS basics](/css-basics)
-1. [Reusable HTML with PHP](/reusable-html-with-php)
+2. [CSS basics](/css-basics)
+3. [Reusable HTML with PHP](/reusable-html-with-php)

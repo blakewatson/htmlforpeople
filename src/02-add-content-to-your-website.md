@@ -160,6 +160,45 @@ Let’s save and refresh the browser.
 
 I resized the window so the whole page would fit in the screenshot, but if yours needs to be scrolled, that’s totally fine!
 
+## Add notes to your code
+
+Sometimes you want to put notes in your code—text you don’t want to display on the page, but that you'd like to be visible in the code. Reasons for doing this are to help organize a document, leave notes (like todos) to your future self, or even to hide some work-in-progress code that you don’t want to be displayed just yet.
+
+For example, I could leave myself a note to come back and update my favorite board games.
+
+```html
+<h2>Favorite board games</h2>
+
+<!-- Todo: after playing some new games,
+see if any deserve to make this list. -->
+
+<ul>
+    <li>Dungeons & Dragons</li>
+    <li>Risk</li>
+    <li>Pandemic</li>
+</ul>
+```
+
+Anything between `<!--` and `-->` is ignored by the browser and will not show up on the page. This is called a _comment_. Comments give you a nice way to annotate code since they're only visible in the code—not on the rendered webpage.
+
+Here’s another example where I've wrapped multiple HTML tags inside a comment. This means it won’t be displayed on the page at all.
+
+```html
+<!--
+Work in progress. When I finalize this list, I'll remove the comment markers.
+
+<h2>Favorite board games</h2>
+
+<ul>
+    <li>Dungeons & Dragons</li>
+    <li>Risk</li>
+    <li>Pandemic</li>
+</ul>
+-->
+```
+
+**Your HTML code is public, even the comments.** Anyone can _view source_ on your website to see the source code of your page. So don’t put anything secret or sensitive inside of comments. To view the source code of a page, you can press a keyboard shortcut or find the option in your web browser's menu. It varies by browser. Check out this [reference on Lifewire](https://www.lifewire.com/view-web-source-code-4151702).
+
 ## Give your website a head and a body
 
 I haven’t been totally honest with you so far. I’ve been having you take a shortcut. We’ve been writing _only_ the stuff the browser will display in our `index.html` file. But every website has an invisible section. And now yours needs it.
@@ -210,7 +249,9 @@ The `<title>` tag controls the text that appears in the browser tab for your web
 
 The `<meta>` tag can be used multiple times to provide the browser extra info about your page. In this case we’re telling it which _character set_ to use. All you need to know here is that UTF-8 text means special symbols and emoji will appear like you would expect them to.
 
-**Note:** If you’re getting confused by all the extra tags here, just know that you can copy and paste this starting code structure so that you don’t have to remember it all right now!
+{% aside 'Note' %}
+If you’re getting confused by all the extra tags here, just know that you can copy and paste this starting code structure so that you don’t have to remember it all right now!
+{% endaside %}
 
 Here’s the whole `index.html` file for reference:
 

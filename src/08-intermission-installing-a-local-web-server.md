@@ -1,20 +1,21 @@
 ---
 title: "Intermission: installing a local web server"
+summary: "Learn how to run a webserver on your computer, giving you powerful features for serving your website locally."
 permalink: "intermission-installing-a-local-web-server/"
 layout: "base.njk"
 ---
 
 # Intermission: installing a local web server
 
-HTML is an approachable language and that was one the reasons I wanted to make this web book. It’s forgiving. If you remember back to the very first part—that first website we made that was just a sentence or two—you’ll recall that we didn’t use a single HTML tag. But we were still able to open the file in the browser and see our content. We put that file on the web and it worked! As we discovered, you can start simple and layer on the complexity as needed.
+HTML is an approachable language, which was one reason I wanted to make this web book. It’s forgiving. If you remember the first chapter—that first website we made that was just a sentence or two—you’ll recall that we didn’t use a single HTML tag. But we could still open the file in the browser and see our content. We put that file on the web, and it worked! You can start simply and layer on the complexity as needed.
 
-We're now to one of those points. In the next part, we're going to make a fun page. It’ll have some jokes, some tabletop gaming resources, and embedded YouTube videos.
+We're now at one of those points. In the next chapter, we'll create a fun page with jokes, tabletop gaming resources, and embedded YouTube videos.
 
-Unfortunately, YouTube videos won’t work with the way we've been previewing our site—just opening it with the web browser. For the most part that’s a perfect fine way to preview HTML. But in cases where we are fetching data from other websites—like streaming video—we'll need to mimic a real life web server.
+Unfortunately, YouTube videos won’t work with the way we've been previewing our site—opening HTML files with the web browser. For the most part, that’s a perfectly okay way to preview HTML. But in cases where we are fetching data from other websites—like streaming video—we'll need to mimic a real-life web server.
 
-You can think of a web server as a program that makes a website available at an address. Visit that address with a web browser and you get that website. We're going to install and run one of these so that our website is available at a local address—that is, one that’s only accessible to our computer, not everyone on the internet.
+A web server is a program that makes a website available at an address. When you visit that address with a web browser, you get the website. We'll install and run one of these so that our website is available at a local address—that is, one that’s only accessible to our computer, not everyone on the internet.
 
-I’m going to give several options based on operating system and technical knowledge needed. So you don’t need to read everything. Use the links below to jump to the section that applies to you.
+I’ll give you several options based on the operating system and technical knowledge needed. So you don’t need to read everything. Use the links below to jump to the section that applies to you.
 
 - [Visual Studio Code (cross-platform)](#visual-studio-code-(cross-platform))
 - [macOS](#macos)
@@ -23,63 +24,63 @@ I’m going to give several options based on operating system and technical know
 
 ## Visual Studio Code (cross-platform)
 
-Microsoft publishes a VS Code extension called [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server). It runs your site on a local web server and auto-refreshes as you make changes to it. You can install it from that link or click the extensions icon and search for it
+Microsoft publishes a VS Code extension called [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server). It runs your site on a local web server and auto-refreshes as you change it. You can install it from that link or click the extensions icon and search for it.
 
-![](/assets/img/intermission-installing-a-local-web-server-1.png)
+![A screenshot of the Visual Studio Code Extensions Marketplace displaying the "Live Preview" extension page. The extension is created by Microsoft and has a description, ratings, usage instructions, and installation button visible.](/assets/img/intermission-installing-a-local-web-server-1.png)
 
-Once installed you’ll notice a _Show Preview_ option when you right-click a file.
+Once installed, you’ll notice a _Show Preview_ option when you right-click a file.
 
-![](/assets/img/intermission-installing-a-local-web-server-2.png)
+![A VS Code window is open showing HTML code. The file "index.html" is selected on the left sidebar, while a context menu over index.html is open with the option "Show Preview" highlighted.](/assets/img/intermission-installing-a-local-web-server-2.png)
 
-Clicking it will open a side panel with a web view running on a local address. You can use the preview this way, or you can open it in the browser by navigating to the address, or by clicking _Open in Browser_ in the address bar menu.
+Clicking it will open a side panel with a web view at a local address. You can either use that preview, open it in the browser by navigating to the address, or click _Open in Browser_ in the address bar menu.
 
-![](/assets/img/intermission-installing-a-local-web-server-3.png)
+![Screenshot of a VS Code window. On the left side is HTML code for a personal webpage. On the right side, the webpage preview shows "Blake's Homepage" with navigation buttons and an image of a starry night sky. The URL is highlighted in a navigation bar.](/assets/img/intermission-installing-a-local-web-server-3.png)
 
 ## macOS
 
-I'm a Mac user myself so I can highly recommend the excellent [WorldWideWeb](https://iconfactory.com/worldwideweb/) app. It’s free for our purposes but does have a Pro upgrade that will automatically reload the page when you make changes.
+I'm a Mac user myself, so I can highly recommend the excellent [WorldWideWeb](https://iconfactory.com/worldwideweb/) app. It’s free for our purposes but has a Pro upgrade that will automatically reload the page when you make changes.
 
-The way it works is you point it at your website folder, then click the play button.
+It works by telling it your website folder and then clicking the play button.
 
-![](/assets/img/intermission-installing-a-local-web-server-4.png)
+![Screenshot of app window titled "WorldWideWeb" is displayed, showing two main sections: "Website Folder" and "Web Server." The "Website Folder" section includes a folder icon labeled "my-site," and the "Web Server" section has a play button labeled "Server is stopped." Red arrows point to each icon.](/assets/img/intermission-installing-a-local-web-server-4.png)
 
-Once you click the play button, it will make your site available at some address. You can click _Open Browser_ to visit that URL in your default browser.
+Once you click the play button, your site will be available at some address. Click _Open Browser_ to visit that URL in your default browser.
 
-![](/assets/img/intermission-installing-a-local-web-server-5.png)
+![Screenshot of the same window. The interface shows a website folder named "my-site" and a web server with the URL "http://blakes-mac-studio.local:8080". There are icons for folder actions and buttons labeled "Reveal in Finder" and "Open Browser". The URL and Open Browser button are highlighted.](/assets/img/intermission-installing-a-local-web-server-5.png)
 
 And now notice that we’re seeing our site at our shiny new web address.
 
-![](/assets/img/intermission-installing-a-local-web-server-6.png)
+![A browser window titled "Blake's Homepage" with navigation links for Home, Blog, About, and Resume. The main section features an image of a starry night sky with colorful nebulae. A red arrow points to the URL bar at the top of the screen.](/assets/img/intermission-installing-a-local-web-server-6.png)
 
 ## Windows and cross-platform
 
-For Windows users, I have two options for you. If you’re using Visual Studio Code, I recommend that you jump to that section and check out Microsoft's Live Preview extension.
+For Windows users, I have two options for you. If you’re using Visual Studio Code, I recommend jumping to that section and checking out Microsoft's Live Preview extension.
 
-Otherwise try [Simple Web Server](https://simplewebserver.org/). Once you’ve installed it, you can click the button for creating a new server.
+Otherwise, try [Simple Web Server](https://simplewebserver.org/). Once you’ve installed it, you can click the button to create a new server.
 
-![](/assets/img/intermission-installing-a-local-web-server-7.png)
+![A screenshot of the Simple Web Server application. The screen shows "You haven't created any servers yet" in the center with a server icon above it. At the bottom right corner, there is a yellow button labeled "New Server," highlighted by a red arrow.](/assets/img/intermission-installing-a-local-web-server-7.png)
 
 You can then point it to your website folder by clicking the folder icon button and selecting the appropriate folder.
 
-![](/assets/img/intermission-installing-a-local-web-server-8.png)
+![The image shows the "Add Server" window from the Simple Web Server application. It includes fields for "Folder path" and "Port," with options for Basic Options, Advanced Options, and Error Pages. Buttons labeled "Cancel" and "Create Server" are at the bottom.](/assets/img/intermission-installing-a-local-web-server-8.png)
 
-Once you have created the server, you’ll see it in the server list. Click it to open it. From there, you’ll see the URL where your site is available and you can click the link to open it in your default browser.
+Once you have created the server, you’ll see it in the server list. Click it to open it. From there, you’ll see the URL where your site is available, and you can click the link to open it in your default browser.
 
-![](/assets/img/intermission-installing-a-local-web-server-9.png)
+![A Simple Web Server window titled "Edit Server" shows options for a running web server. The URL highlighted is "http://127.0.0.1:8080" and appears clickable. There are fields for folder path, port (set to 8080), and a checkbox for local network accessibility. At the bottom are cancel and save changes buttons.](/assets/img/intermission-installing-a-local-web-server-9.png)
 
 {% aside 'Note' %}
-Simple Web Server is cross platform and works on macOS and Linux as well. That said, for Mac users, I recommend WorldWideWeb unless you need multiple servers running simultaneously.
+Simple Web Server is cross-platform and works on macOS and Linux as well. That said, I recommend WorldWideWeb for Mac users unless you need multiple servers running simultaneously.
 {% endaside %}
 
 ## Python and PHP (cross-platform)
 
-This is a more technical option. You don’t have to be a elite hacker but you will need to run a command-line program from your terminal app.
+This is a more technical option. You don’t have to be an elite hacker, but you will need to run a command-line program from your terminal app.
 
 ### Python
 
 If you don’t have either on your machine, Python is the easiest to set up. Go to the [Python downloads page](https://www.python.org/downloads/) and download the installer for your system (get version 3).
 
-Open a terminal window and `cd` to your website directory. Then run this command to start the Python development server.
+Open a terminal window and `cd` to your website directory. Then, run this command to start the Python development server.
 
 ```bash
 python3 -m http.server
@@ -89,7 +90,7 @@ This will make your site available at `localhost` on whatever port it specifies 
 
 ### PHP
 
-Installing PHP is out of scope for this chapter, but it’s available for nearly all systems. PHP was born as a website technology and, as I'll discuss in a bonus chapter, [PHP is handy for easily reusing HTML snippets](/reusable-html-with-php) (like the nav menu) across multiple pages.
+Installing PHP is out of scope for this book, but it’s available for nearly all systems. PHP was born as a website technology and, as I'll discuss in a bonus chapter, [PHP is handy for reusing HTML snippets](/reusable-html-with-php) (like the nav menu) across multiple pages.
 
 If PHP is on your system, you can run the PHP development server similarly to the Python example above.
 
@@ -101,9 +102,9 @@ This will make your site available at `http://localhost:8000`.
 
 ## Relative vs. absolute URLs
 
-Thus far, since we've been opening our website files directly in the browser, we've needed to use relative URLs. Relative URLs are written from the perspective of the current file. For example, if I am in a subpage and I want to link to a top-level page, I need to use the `..` syntax in order to "move up" a level and find the destination page.
+Thus far, since we've been opening our website files directly in the browser, we've needed to use relative URLs. Relative URLs are written from the perspective of the current file. For example, if I am on a subpage and want to link to a top-level page, I need to use the `..` syntax to "move up" a level and find the destination page.
 
-When running a web server we can use absolute URLs. An absolute URL is always from the perspective of the topmost level. In this case our website folder is the topmost level. No matter what subpage I'm on, I could link to the homepage of the website as follows.
+When running a web server, we can use absolute URLs. An absolute URL is always written from the perspective of the topmost level. In this case, our website folder is the topmost level. No matter what subpage I'm on, I could link to the website homepage as follows.
 
 ```html
 <a href="/">Go to the homepage</a>
@@ -112,17 +113,25 @@ When running a web server we can use absolute URLs. An absolute URL is always fr
 If I wanted to link to the `about.html` page, I could do that as follows.
 
 ```html
-<a href="/about.html">Go to the homepage</a>
+<a href="/about.html">Go to the About page</a>
 ```
 
-The cool thing is it doesn't matter what page I'm on, it can be a top-level page or a sub-page. This path will always lead to the About page, no matter where the current page is.
+The cool thing is that it doesn't matter what page I'm on—it can be a top-level page or a subpage. This path will always lead to the About page, no matter where the current page is. Say we're on a page that’s nested down in a folder.
+
+```html
+<!-- instead of this -->
+<a href="../top-level-page.html">Top level</a>
+
+<!-- we can do this -->
+<a href="/top-level-page.html">Top level</a>
+```
 
 We didn't use absolute URLs earlier because we weren't using a web server. Had we tried to use absolute URLs when opening our website directly in the browser, the slash would have pointed toward the top-level folder of your *entire computer*, which is certainly not what we wanted.
 
-Now that we're using a web server, I'll leave it up to you if you'd like to go back and change all the paths, but it does make copying and pasting the menu easier. And creating links between pages is more straightforward when using absolute URLs.
+Now that we're using a web server, I'll leave it up to you if you'd like to go back and change all the paths, but it does make copying and pasting the menu easier. Creating links between pages is more straightforward when using absolute URLs.
 
 ## Up next
 
-Now that we have a local web server running, we can more easily interact with other websites. Next we're going to make a page of assorted fun stuff, including embedded videos from YouTube!
+Now that we have a local web server running, our website can interact more easily with other websites. Next, we'll make a page with assorted fun stuff, including embedded videos from YouTube!
 
 [Adding a fun page](/adding-a-fun-page)

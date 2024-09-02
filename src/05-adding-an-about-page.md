@@ -1,16 +1,17 @@
 ---
 title: "Adding an about page"
+summary: "Learn more HTML tags and see how to create a navigation menu to link between webpages."
 permalink: "adding-an-about-page/"
 layout: "base.njk"
 ---
 
 # Adding an about page
 
-For the rest of this book, we'll be expanding our personal homepage into a full website with multiple pages and a blog. The example will continue to be **Blake's Homepage** and the content will relate to me. You will need to customize things as necessary to fit what you want to see on your own website.
+For the rest of this book, we'll expand our personal homepage into a complete website with multiple pages and a blog. The example will continue to be **Blake's Homepage**, and the content will relate to me. You'll want to customize things as necessary to fit what you want to see on your own website.
 
-If you don't want to build a personal homepage, that's cool too! The concepts we're covering are easily applicable to other types of websites. So you can feel free to take what we cover and adapt it as necessary.
+If you don't want to build a personal homepage, that's cool too! The concepts we cover apply to all kinds of websites, so you can follow along and adapt as necessary.
 
-If you want to get a sneak peak, you can head over to the complete [Blake's Homepage demo site](https://demo.htmlforpeople.com/).
+If you want a sneak peek, visit the complete [demo of Blake's Homepage](https://demo.htmlforpeople.com/).
 
 It has the following pages and features:
 
@@ -20,23 +21,23 @@ It has the following pages and features:
 - A digital resume
 - A fun page with embedded YouTube videos
 
-I will be including many code samples in the coming chapters, but at any point you can also go to the demo site and [view the source code](https://www.lifewire.com/view-web-source-code-4151702) of any page for reference.
+I will include many code samples in the coming chapters, but you can also go to the demo site and [view the source code](https://perma.cc/3WP3-R9XL) of any page for reference at any point.
 
 ## Pages are just files that you link to
 
-To create a new page on our site, we will first create a new file. Create `about.html` to go alongside `index.html`. To save some typing, copy the entire contents of `index.html` and paste it into `about.html`.
+We will create a new page on our site by creating a new file. Create `about.html` to go alongside `index.html`. To save some typing, copy all the contents of `index.html` and paste it into `about.html`.
 
-And now let's clean it up a little bit. I'm going to remove the "How to make a website" heading. I'll also remove the paragraph that links to neal.fun. This page should just be about me. Speaking of which, I'll also change the image to a photo of myself (if you don’t feel comfortable using a photo of yourself, use any image you want here).
+And now, let's clean it up a little. I'll remove the "How to make a website" heading and the paragraph with the link to neal.fun. This page should be about me. Speaking of which, I'll also change the image to a photo of myself (if you don’t feel comfortable using a picture of yourself, use any image you want here).
 
-I'll expand the content a bit by adding a couple of paragraphs. This is also a good place to provide any contact information you want. I'll add a link to my Mastodon account (with an elephant emoji).
+I'll expand the content by adding a couple of paragraphs. This is also an excellent place to provide any contact information you want. I'll add a link to my Mastodon account (with an elephant emoji).
 
 ```html
 <p>🐘 <a href="https://social.lol/@bw">Drop me a line on Mastodon</a></p>
 ```
 
-Remember, a link is an `<a>` tag. What ever text you wrap the tag around becomes clickable. Then you provide the `href` _attribute_ which is the destination of the link—typically a URL of some sort.
+Remember, a link is an `<a>` tag. Whatever text you wrap the tag around becomes clickable. Then you provide the `href` _attribute_, which is the link's destination—typically a URL.
 
-Here’s the code I have inside the `<body>` tag.
+Here’s my code inside the `<body>` tag.
 
 ```html
 <header>
@@ -68,15 +69,15 @@ Here’s the code I have inside the `<body>` tag.
 
 And this is what it looks like.
 
-![](/assets/img/adding-an-about-page-1.png)
+![Screenshot of the "About Blake" page. The page header shows "About Blake." Below is a photo of Blake (me!) smiling in front of a brick wall. The text introduces Blake, mentioning his passion for making websites and teaching others, along with his hobbies in web development, D&D, board games, and writing. A link to contact him on Mastodon is included. A section titled "Favorite board games" lists "Dungeons & Dragons," "Risk," and "Pandemic." The page footer reads "Made with ❤️ and ☕ by Blake Watson."](/assets/img/adding-an-about-page-1.png)
 
 Surprise, that’s me! Anyway, this is looking like a proper about page. I admit it’s a bit contrived. You should feel free to write as much as you want here. 
 
 ## Navigating between pages
 
-We have an about page now but no way to navigate between our two pages. We need a navigation, or nav, menu. A nav menu is just a list of links. Simple.css seems to like the nav menu to sit atop the header so I'll do that, although you could also put it below.
+We have an About page now but need a way to navigate between our two pages. We need a navigation, or nav, menu. A nav menu is just a list of links. Simple.css seems to like the nav menu to sit above the header, so I'll do that, although you could put it below instead.
 
-HTML has a `<nav>` tag for exactly this purpose. We'll put two links in our nav menu—one to the home page and one to the about page.
+HTML has a `<nav>` tag for exactly this purpose. We'll put two links in our nav menu—one to the home page and one to the About page.
 
 ```html
 <header>
@@ -89,14 +90,14 @@ HTML has a `<nav>` tag for exactly this purpose. We'll put two links in our nav 
 </header>
 ```
 
-Since this is currently the about page, I've added a special attribute to the about page link. ARIA stands for _Accessible Rich Internet Applications_. We can make our site more accessible by adding the `aria-current="page"` attribute. It’s doing a couple of things for us.
+Since this is currently the About page, I've added a special attribute to the link. ARIA stands for Accessible Rich Internet Applications. We can make our site more accessible by adding the `aria-current="page"` attribute. It does a couple of things for us.
 
 - It'll make our page more accessible to assistive technologies like screen readers.
-- Simple.css will style the link differently so that it's easy to tell which page we are on.
+- Simple.css will style the link differently so it's easy to tell which page we are on.
 
-![](/assets/img/adding-an-about-page-2.png)
+![Screenshot showing the top section of the "About Blake" page with navigation buttons. The navigation includes "Home" and "About," with the "About" button highlighted to indicate the current page. The header "About Blake" is displayed in bold below the navigation bar.](/assets/img/adding-an-about-page-2.png)
 
-Let's add the same nav menu to the home page. Open `index.html` and add the menu the same way we did on the about page. This is the home page, we need to put the `aria-current` attribute on the *Home* link.
+Let's add the same nav menu to the home page. Open `index.html` and add the menu as we did on the About page. Since this is the home page, we should put the `aria-current` attribute on the Home link.
 
 ```html
 <header>
@@ -113,9 +114,9 @@ Load it up in the browser and marvel at your multi-page website! Click. Click. C
 
 ## Homepage cleanup
 
-Since we have an about page now, some of our homepage content is redundant. Some of this is on the about page now. I think I'll remove the bio text, the Neal.fun link, and the board games list. I will keep the space image and add a little welcome paragraph. Might as well keep the *how to make a website* list too.
+Since we now have an About page, some of our homepage content is redundant. Some of this is on the About page. I'll remove the bio text, the Neal.fun link, and the board games list. I will keep the space image and add a little welcome paragraph. I might as well keep the "how to make a website" list.
 
-Although, speaking of the space image, let's make it a little more interesting. I would like to give this image a caption and include a link to where I got it. We can further mark up an image by wrapping it in a `<figure>` tag and including a `<figcaption>`.
+Although, speaking of the space image, let's make it more interesting. I want to give this image a caption and link to where I got it. We can further mark up an image by wrapping it in a `<figure>` tag and including a `<figcaption>`.
 
 ```html
 <figure>
@@ -152,18 +153,18 @@ My `<main>` content on the homepage now looks like this.
 </main>
 ```
 
-What is this `class="notice"`? You can learn more about classes in the bonus CSS chapters at the end of this book. But, in short, this will activate some styles provided by Simple.css for making a little box with some text in it.
+What is this `class="notice"`? You can learn more about classes in the bonus CSS chapters at the end of this book. But, in short, this will activate some styles provided by Simple.css to make a little box with some text in it.
 
-![](/assets/img/adding-an-about-page-3.png)
+![Screenshot of the refactored "Blake's Homepage." The page header includes navigation buttons for "Home" (highlighted) and "About." Below is a large, colorful image of a starry space scene. The introductory text welcomes visitors to the site, mentioning blog posts and hobbies, with a playful tone about the simplicity of using HTML. A section titled "How to make a website" lists three steps: "Create an HTML file," "Write some HTML in it," and "Open it with your web browser." A highlighted box encourages visitors to check out the "HTML for People" tutorial series.](/assets/img/adding-an-about-page-3.png)
 
 ## Update the live site
 
-If you want to. It's also totally fine to just keep working on it on your computer. A lot of websites are built that way—the person works on their website on their own computer until they are finished, then they publish it. But plenty of people also build their website in public, updating the live site as they go.
+If you want to. It's also okay to keep working on it on your computer. Many websites are built that way—the person works on their website on their own computer until they are finished, then publishes it. But plenty of people also build their website in public, updating the live site as they go.
 
-If you want to update it, head back to your Neocities dashboard and upload both `index.html` and `about.html`, since those are the files that changed. If you added any images, you will need to click into the images folder in Neocities and upload them there (or you can drag the `images` folder onto the drop zone, which will replace the whole folder and contents).
+If you want to update it, head back to your Neocities dashboard and upload both `index.html` and `about.html` since those files have changed. If you added any images, you must click into the images folder in Neocities and upload them there (or you can drag the `images` folder onto the drop zone, which will replace the whole folder and contents).
 
 ## Up next
 
-We turned our webpage into a website! Up next we're going to add a blog and explore some various HTML tags.
+We turned our web*page* into a web*site*! Next, we will add a blog and explore various HTML tags.
 
 [Adding a blog](/adding-a-blog)

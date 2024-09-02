@@ -1,5 +1,6 @@
 ---
-title: "Intro"
+title: "Introduction"
+summary: "Learn how to create your own personal website, even if you have no prior coding experience. This guide takes you from the basics of HTML to building a multi-page site with images, a blog, and more."
 permalink: "intro/"
 layout: "base.njk"
 ---

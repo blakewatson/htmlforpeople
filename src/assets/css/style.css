@@ -19,6 +19,8 @@
     avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
     arial, sans-serif;
   --code: "Input Mono", monospace;
+
+  --li-spacing: 0.25em;
 }
 
 /* Dark color scheme (Auto) */
@@ -270,6 +272,14 @@ h2 {
   margin-block-start: 1.75em;
 }
 
+ul, ol {
+  padding-inline-start: 1em;
+}
+
+li {
+  margin-block-start: var(--li-spacing);
+}
+
 li::marker {
   color: var(--accent);
 }
@@ -372,6 +382,10 @@ aside {
 
   > * + * {
     margin-block-start: 1rem;
+  }
+
+  li {
+    margin-block-start: var(--li-spacing);
   }
 
   code {

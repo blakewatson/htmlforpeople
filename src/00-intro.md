@@ -1,8 +1,8 @@
 ---
-title: "Introduction"
-summary: "Learn how to create your own personal website, even if you have no prior coding experience. This guide takes you from the basics of HTML to building a multi-page site with images, a blog, and more."
-permalink: "intro/"
-layout: "base.njk"
+title: 'Introduction'
+summary: 'Learn how to create your own personal website, even if you have no prior coding experience. This guide takes you from the basics of HTML to building a multi-page site with images, a blog, and more.'
+permalink: 'intro/'
+layout: 'base.njk'
 ---
 
 # Introduction
@@ -15,11 +15,11 @@ HTML is robust. You could look at a website made today or one made twenty years 
 
 I created this web book because I wanted something for people who don’t consider themselves professional web developers. Imagine if Word documents were only ever created by “Word professionals.” No. Knowing how to write some HTML and put it on the web is a valuable skill that is useful to all sorts of professional and personal pursuits. It doesn’t belong only to those of us who make websites as a career. HTML is for everyone. HTML is for people.
 
-## Who is it for?
+## Who is this book for?
 
 This web book is aimed at people who have no prior coding experience of any kind. I won’t assume you know the first thing about HTML. We will start small. But by the end of the book we will have built a personal website complete with multiple pages, images, a blog, and more.
 
-I *will* assume you have some experience using a computer and performing basic tasks like creating files and folders. This is a necessary prerequisite because (again, spoiler alert) websites are essentially just files and folders.
+I _will_ assume you have some experience using a computer and performing basic tasks like creating files and folders. This is a necessary prerequisite because (again, spoiler alert) websites are essentially just files and folders.
 
 ## What do I need?
 
@@ -45,3 +45,9 @@ This is the stuff I wanted to cover but felt that it was a little bit out of sco
 1. [Customizing Simple.css](/customizing-simple-css)
 2. [CSS basics](/css-basics)
 3. [Reusable HTML with PHP](/reusable-html-with-php)
+
+## Up next
+
+Now that you know the why behind this book, it’s time to take the first step. In one chapter, you will learn how to make a website from scratch and put it on the web. Yes that’s right, you’re going...
+
+[Zero to internet: your first website](/zero-to-internet-your-first-website)

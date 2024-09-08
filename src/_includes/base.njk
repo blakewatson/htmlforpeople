@@ -50,9 +50,16 @@
         <a href="/">HTML for People</a>
       </p>
 
+      <a href="#main-content" class="skip-link">Skip to content</a>
+
       <details class="main-menu" id="main-menu">
         <summary>Menu</summary>
+
         <nav>
+          <p class="mb-xs">
+            <strong>Chapters</strong>
+          </p>
+
           <ul>
             <li>
               <a href="/intro">Introduction</a>
@@ -124,7 +131,7 @@
         </div>
       </header>
 
-      <main class="container">
+      <main id="main-content" class="container">
         {% block content %}
           {{ content | safe }}
         {% endblock %}

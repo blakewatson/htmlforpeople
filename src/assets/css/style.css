@@ -421,7 +421,7 @@ aside {
 }
 
 .aside-label {
-  font-family: var(--headings);
+  font-family: var(--text);
   font-weight: bold;
   font-size: 0.85em;
   line-height: 1;
@@ -515,6 +515,7 @@ form button[type='submit'] {
 .promo {
   margin-block-start: 3rem;
   padding-block: 3rem;
+  border-block-start: 1px solid #e0cab1;
   background-color: var(--bg-alt);
 
   & + .site-footer {
@@ -532,6 +533,7 @@ form button[type='submit'] {
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
   .promo {
+    border-block-start: 1px solid #3e5d59;
     background-color: #283331;
     color: #fff8f0;
   }

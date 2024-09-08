@@ -160,7 +160,7 @@ video {
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
   & img {
-    opacity: 0.7;
+    opacity: 0.85;
     transition: opacity 150ms linear;
   }
 
@@ -291,6 +291,7 @@ h2 {
 
 h2 {
   margin-block-start: 1.75em;
+  margin-block-end: 1.5rem;
 }
 
 h3 {
@@ -377,6 +378,10 @@ details pre[class*='language-'] {
 
   & code:not([class*='language-']) {
     color: #f9c8ce;
+  }
+
+  mark {
+    background-color: #90d8ff40;
   }
 }
 
@@ -481,6 +486,9 @@ elevator-button a {
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
+  aside {
+    box-shadow: 0 0.15rem 0.25rem #0003;
+  }
   aside code:not(pre code) {
     background-color: #f7708e33;
   }

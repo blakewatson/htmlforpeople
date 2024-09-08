@@ -1,8 +1,8 @@
 ---
-title: "Adding a fun page"
-summary: "Add an interactive page to your website using show/hide capability and YouTube video embeds."
-permalink: "adding-a-fun-page/"
-layout: "base.njk"
+title: 'Adding a fun page'
+summary: 'Add an interactive page to your website using show/hide capability and YouTube video embeds.'
+permalink: 'adding-a-fun-page/'
+layout: 'base.njk'
 ---
 
 # Adding a fun page
@@ -21,9 +21,9 @@ First up, let’s add a section for some jokes.
 
 ```html
 <section>
-	<h2>Jokes</h2>
+  <h2>Jokes</h2>
 
-	...Jokes will go here
+  ...Jokes will go here
 </section>
 ```
 
@@ -31,9 +31,11 @@ The idea is to show the setup of the joke but hide the punchline behind a click.
 
 ```html
 <details>
-	<summary>This content will show up by default</summary>
+  <summary>This content will show up by default</summary>
 
-	<p>Clicking the above content will cause this hidden content to become visible.</p>
+  <p>
+    Clicking the above content will cause this hidden content to become visible.
+  </p>
 </details>
 ```
 
@@ -45,22 +47,22 @@ I’m going to add three admittedly corny jokes.
 
 ```html
 <section>
-	<h2>Jokes</h2>
+  <h2>Jokes</h2>
 
-	<details>
-		<summary>Why wouldn’t the skeleton cross the road?</summary>
-		<p>It didn't have the guts.</p>
-	</details>
+  <details>
+    <summary>Why wouldn’t the skeleton cross the road?</summary>
+    <p>It didn't have the guts.</p>
+  </details>
 
-	<details>
-		<summary>Why was the math book sad?</summary>
-		<p>It had too many problems.</p>
-	</details>
+  <details>
+    <summary>Why was the math book sad?</summary>
+    <p>It had too many problems.</p>
+  </details>
 
-	<details>
-		<summary>Why don't scientists trust atoms?</summary>
-		<p>Because they make up everything!</p>
-	</details>
+  <details>
+    <summary>Why don't scientists trust atoms?</summary>
+    <p>Because they make up everything!</p>
+  </details>
 </section>
 ```
 
@@ -74,21 +76,30 @@ In tabletop RPGs like Dungeons and Dragons, the gamemaster often needs to improv
 
 This is what the final table will look like.
 
-![A table titled "Roll (1d8) Encounter" with two columns. The left column lists numbers 1 to 8, and the right column lists corresponding encounters: 1. Band of Goblins, 2. Wandering Merchant, 3. Group of Bandits, 4. Pack of Wolves, 5. Travelling Minstrels, 6. Lost Child, 7. Hidden Trap, 8. Old Hermit.](/assets/img/adding-a-fun-page-1.png)
+<img src="/assets/img/adding-a-fun-page-1.png" alt="A table titled 'Roll (1d8) Encounter' with two columns. The left column lists numbers 1 to 8, and the right column lists corresponding encounters: 1. Band of Goblins, 2. Wandering Merchant, 3. Group of Bandits, 4. Pack of Wolves, 5. Travelling Minstrels, 6. Lost Child, 7. Hidden Trap, 8. Old Hermit." style="max-height: 450px">
 
 First, I will make a new `<section>` with a heading and some introductory text about D&D. Then, I will briefly introduce the random encounter table.
 
 ```html
 <section>
-	<h2>D&D stuff</h2>
+  <h2>D&D stuff</h2>
 
-	<p>Dungeons & Dragons (D&D) is a fun tabletop game where you create characters and go on epic adventures with friends. Guided by a Dungeon Master (DM), you'll roll dice to see what happens next. It's all about creativity, teamwork, and having a blast as you tackle quests, fight monsters, and find awesome treasures.</p>
+  <p>
+    Dungeons & Dragons (D&D) is a fun tabletop game where you create characters
+    and go on epic adventures with friends. Guided by a Dungeon Master (DM),
+    you'll roll dice to see what happens next. It's all about creativity,
+    teamwork, and having a blast as you tackle quests, fight monsters, and find
+    awesome treasures.
+  </p>
 
-	<h3>Random encounter table</h3>
+  <h3>Random encounter table</h3>
 
-	<p>This is a table you can use to randomly decide what enemy or creature the players are going to encounter. Just roll a d8.</p>
+  <p>
+    This is a table you can use to randomly decide what enemy or creature the
+    players are going to encounter. Just roll a d8.
+  </p>
 
-	...The table will go here
+  ...The table will go here
 </section>
 ```
 
@@ -96,80 +107,80 @@ We use the `<table>` tag to create a table. A table can have a head section and 
 
 ```html
 <table>
-	<thead></thead>
-	<tbody></tbody>
+  <thead></thead>
+  <tbody></tbody>
 </table>
 ```
 
-The table needs two columns—one for the dice roll and one for the corresponding encounter. Let's create a *table row* inside the `<thead>`. I will fill out the head section and then explain it.
+The table needs two columns—one for the dice roll and one for the corresponding encounter. Let's create a _table row_ inside the `<thead>`. I will fill out the head section and then explain it.
 
 ```html
 <table>
-	<thead>
-		<tr>
-			<th>Roll (1d8)</th>
-			<th>Encounter</th>
-		</tr>
-	</thead>
-	<tbody></tbody>
+  <thead>
+    <tr>
+      <th>Roll (1d8)</th>
+      <th>Encounter</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
 </table>
 ```
 
 The `<tr>` tag creates a _table row_. Inside that row, we'll add two table cells. Because these are column headings, we will use the _table header_ or `<th>` tag—one for the dice roll and one for the outcome. This is what it will look like so far.
 
-![An image describing Dungeons &amp; Dragons (D&amp;D) as a fun tabletop game involving character creation and adventures. There is a "Random encounter table" section with the headers of a table stubbed out.](/assets/img/adding-a-fun-page-2.png)
+![An image describing Dungeons & Dragons (D&D) as a fun tabletop game involving character creation and adventures. There is a "Random encounter table" section with the headers of a table stubbed out.](/assets/img/adding-a-fun-page-2.png)
 
 Next, we can fill out our table using the _table data cell_ or `<td>` tag. We will put these rows inside the body section.
 
 ```html
 <table>
-	<thead>
-		<tr>
-			<th>Roll (1d8)</th>
-			<th>Encounter</th>
-		</tr>
-	</thead>
-	
-	<tbody>
-		<tr>
-			<td>1</td>
-			<td>Band of Goblins</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Wandering Merchant</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Group of Bandits</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Pack of Wolves</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Travelling Minstrels</td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>Lost Child</td>
-		</tr>
-		<tr>
-			<td>7</td>
-			<td>Hidden Trap</td>
-		</tr>
-		<tr>
-			<td>8</td>
-			<td>Old Hermit</td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th>Roll (1d8)</th>
+      <th>Encounter</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Band of Goblins</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Wandering Merchant</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Group of Bandits</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Pack of Wolves</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Travelling Minstrels</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Lost Child</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Hidden Trap</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Old Hermit</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 That's a lot of tags! Hopefully, you can follow the logic here. Inside the `<tbody>`, we create eight _table rows_, each with two _table data cells_. And that will give us our final table.
 
-![A table titled "Roll (1d8) Encounter" with two columns. The left column lists numbers 1 to 8, and the right column lists corresponding encounters: 1. Band of Goblins, 2. Wandering Merchant, 3. Group of Bandits, 4. Pack of Wolves, 5. Travelling Minstrels, 6. Lost Child, 7. Hidden Trap, 8. Old Hermit.](/assets/img/adding-a-fun-page-1.png)
+<img src="/assets/img/adding-a-fun-page-1.png" alt="A table titled 'Roll (1d8) Encounter' with two columns. The left column lists numbers 1 to 8, and the right column lists corresponding encounters: 1. Band of Goblins, 2. Wandering Merchant, 3. Group of Bandits, 4. Pack of Wolves, 5. Travelling Minstrels, 6. Lost Child, 7. Hidden Trap, 8. Old Hermit." style="max-height: 450px">
 
 HTML tables can also do some things you would do in a spreadsheet program, such as making a cell span multiple columns. We won't get into that here, but remember that tables have power if you need it.
 
@@ -181,9 +192,9 @@ I will make a new section for my videos.
 
 ```html
 <section>
-	<h2>Synthwave mixes</h2>
+  <h2>Synthwave mixes</h2>
 
-	...videos will go here
+  ...videos will go here
 </section>
 ```
 
@@ -191,13 +202,22 @@ First, I will grab this music mix called Waves (https://www.youtube.com/watch?v=
 
 ![Screenshot of a YouTube share dialog box for a post creation, showing sharing options for Embed, WhatsApp, Facebook, X (formerly Twitter), Email, and KakaoTalk. There's also a unique hyperlink with a "Copy" button next to it, and a checkbox to start at a specific time.](/assets/img/adding-a-fun-page-4.png)
 
-Select "Embed" if it is available. Once you do that, you will see some HTML code and a *Copy* button. Go ahead and copy the code. You can paste the code after the `<h2>` tag.
+Select "Embed" if it is available. Once you do that, you will see some HTML code and a _Copy_ button. Go ahead and copy the code. You can paste the code after the `<h2>` tag.
 
 ```html
 <section>
-	<h2>Synthwave mixes</h2>
+  <h2>Synthwave mixes</h2>
 
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/b6toYA0W4IA?si=-Iu68cVS5E08st5O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/b6toYA0W4IA?si=-Iu68cVS5E08st5O"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
 </section>
 ```
 
@@ -246,7 +266,7 @@ HTML provides a way for us to create our own custom tags. These are called web c
 
 We're going to use [Lite YouTube Embed](https://github.com/paulirish/lite-youtube-embed#readme). Feel free to read about what it can do. For our purposes, we just want to install it and have it display a full-width video that scales down properly on phones.
 
-Before we go into how to install this component, let's look at how we would use it. It provides a new custom tag, `<lite-youtube>`. You give it an *attribute* of `videoid`, which is the ID of the YouTube video. You can find the video's ID from the URL. This is my URL:
+Before we go into how to install this component, let's look at how we would use it. It provides a new custom tag, `<lite-youtube>`. You give it an _attribute_ of `videoid`, which is the ID of the YouTube video. You can find the video's ID from the URL. This is my URL:
 
 ```
 https://www.youtube.com/watch?v=b6toYA0W4IA
@@ -269,12 +289,12 @@ Visit each of those and use _File > Save Page As…_ (Ctrl+S on Windows, Command
 
 ```html
 <head>
-	<title>Fun - Blake's Homepage</title>
-	<meta charset="utf-8">
-	
-	<link rel="stylesheet" href="css/simple.css">
-	<link rel="stylesheet" href="css/lite-yt-embed.min.css">
-	<script src="js/lite-yt-embed.min.js"></script>
+  <title>Fun - Blake's Homepage</title>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="css/simple.css" />
+  <link rel="stylesheet" href="css/lite-yt-embed.min.css" />
+  <script src="js/lite-yt-embed.min.js"></script>
 </head>
 ```
 
@@ -292,7 +312,7 @@ We need to get the ID from this URL. In a YouTube URL, the ID is the portion tha
 
 I will go ahead and do the other two videos this way as well.
 
-```html  
+```html
 <lite-youtube videoid="b6toYA0W4IA"></lite-youtube>
 
 <lite-youtube videoid="rDfS8B2-Mt4"></lite-youtube>
@@ -308,9 +328,9 @@ I will add some _horizontal rules_ to create some separation between these video
 
 ```html
 <lite-youtube videoid="b6toYA0W4IA"></lite-youtube>
-<hr>
+<hr />
 <lite-youtube videoid="rDfS8B2-Mt4"></lite-youtube>
-<hr>
+<hr />
 <lite-youtube videoid="yb0DR_qRetA"></lite-youtube>
 ```
 
@@ -325,123 +345,129 @@ Nice!
 To see this page in action, [check out the live demo](https://demo.htmlforpeople.com/fun). Here is the complete code for the _Fun!_ page.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>Fun - Blake's Homepage</title>
+    <meta charset="utf-8" />
 
-	<head>
-		<title>Fun - Blake's Homepage</title>
-		<meta charset="utf-8">
+    <link rel="stylesheet" href="css/simple.css" />
+    <link rel="stylesheet" href="css/lite-yt-embed.min.css" />
+    <script src="js/lite-yt-embed.min.js"></script>
+  </head>
 
-		<link rel="stylesheet" href="css/simple.css">
-		<link rel="stylesheet" href="css/lite-yt-embed.min.css">
-		<script src="js/lite-yt-embed.min.js"></script>
-	</head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="fun.html" aria-current="page">Fun</a>
+      </nav>
 
-	<body>
-		<header>
-			<nav>
-				<a href="index.html">Home</a>
-				<a href="blog/index.html">Blog</a>
-				<a href="about.html">About</a>
-				<a href="resume.html">Resume</a>
-				<a href="fun.html" aria-current="page">Fun</a>
-			</nav>
+      <h1>Fun</h1>
+    </header>
 
-			<h1>Fun</h1>
-		</header>
+    <main>
+      <section>
+        <h2>Jokes</h2>
 
-		<main>
-			<section>
-				<h2>Jokes</h2>
-	
-				<details>
-					<summary>Why wouldn't the skeleton cross the road?</summary>
-					<p>It didn't have the guts.</p>
-				</details>
-	
-				<details>
-					<summary>Why was the math book sad?</summary>
-					<p>It had too many problems.</p>
-				</details>
-	
-				<details>
-					<summary>Why don't scientists trust atoms?</summary>
-					<p>Because they make up everything!</p>
-				</details>
-			</section>
+        <details>
+          <summary>Why wouldn't the skeleton cross the road?</summary>
+          <p>It didn't have the guts.</p>
+        </details>
 
-			<section>
-				<h2>D&D stuff</h2>
-	
-				<p>Dungeons & Dragons (D&D) is a fun tabletop game where you create characters and go on epic adventures with friends. Guided by a Dungeon Master (DM), you'll roll dice to see what happens next. It's all about creativity, teamwork, and having a blast as you tackle quests, fight monsters, and find awesome treasures.</p>
-	
-				<h3>Random encounter table</h3>
-	
-				<p>This is a table you can use to randomly decide what enemy or creature the players are going to encounter. Just roll a d8.</p>
+        <details>
+          <summary>Why was the math book sad?</summary>
+          <p>It had too many problems.</p>
+        </details>
 
-				<table>
-					<thead>
-						<tr>
-							<th>Roll (1d8)</th>
-							<th>Encounter</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Band of Goblins</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Wandering Merchant</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Group of Bandits</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>Pack of Wolves</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>Travelling Minstrels</td>
-						</tr>
-						<tr>
-							<td>6</td>
-							<td>Lost Child</td>
-						</tr>
-						<tr>
-							<td>7</td>
-							<td>Hidden Trap</td>
-						</tr>
-						<tr>
-							<td>8</td>
-							<td>Old Hermit</td>
-						</tr>
-					</tbody>
-				</table>
-			</section>
+        <details>
+          <summary>Why don't scientists trust atoms?</summary>
+          <p>Because they make up everything!</p>
+        </details>
+      </section>
 
-			<section>
-				<h2>Synthwave mixes</h2>
+      <section>
+        <h2>D&D stuff</h2>
 
-				<lite-youtube videoid="b6toYA0W4IA"></lite-youtube>
-				<hr>
-				<lite-youtube videoid="rDfS8B2-Mt4"></lite-youtube>
-				<hr>
-				<lite-youtube videoid="yb0DR_qRetA"></lite-youtube>
-			</section>
-		</main>
+        <p>
+          Dungeons & Dragons (D&D) is a fun tabletop game where you create
+          characters and go on epic adventures with friends. Guided by a Dungeon
+          Master (DM), you'll roll dice to see what happens next. It's all about
+          creativity, teamwork, and having a blast as you tackle quests, fight
+          monsters, and find awesome treasures.
+        </p>
 
-        <footer>
-            <p>Made with ❤️ and ☕️ by Blake Watson.</p>
-        </footer>
-	</body>
+        <h3>Random encounter table</h3>
 
+        <p>
+          This is a table you can use to randomly decide what enemy or creature
+          the players are going to encounter. Just roll a d8.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Roll (1d8)</th>
+              <th>Encounter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Band of Goblins</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Wandering Merchant</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Group of Bandits</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Pack of Wolves</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Travelling Minstrels</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Lost Child</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Hidden Trap</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Old Hermit</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Synthwave mixes</h2>
+
+        <lite-youtube videoid="b6toYA0W4IA"></lite-youtube>
+        <hr />
+        <lite-youtube videoid="rDfS8B2-Mt4"></lite-youtube>
+        <hr />
+        <lite-youtube videoid="yb0DR_qRetA"></lite-youtube>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ and ☕️ by Blake Watson.</p>
+    </footer>
+  </body>
 </html>
 ```
-
 
 ## Publish the site
 

@@ -1,3 +1,4 @@
+@import url('fonts.css');
 @import url('spacing.css');
 
 /* ANCHOR Config
@@ -15,13 +16,13 @@
   --bg-alt: #fff8f0;
   --aside-bg: #fbedef;
 
-  --text: 'Valkyrie B', 'Iowan Old Style', 'Georgia', Apple Garamond,
-    Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
+  --text: valkyrie_b, 'Iowan Old Style', 'Georgia', Apple Garamond, Baskerville,
+    Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --headings: 'Hermes Maia 2', -apple-system, BlinkMacSystemFont, avenir next,
+  --headings: hermes_maia_2, -apple-system, BlinkMacSystemFont, avenir next,
     avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
     arial, sans-serif;
-  --code: 'Input Mono', monospace;
+  --code: 'Input Sans Reg', monospace;
 
   --li-spacing: 0.25em;
 }

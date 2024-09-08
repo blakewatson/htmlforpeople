@@ -4,6 +4,7 @@
 ------------------------------------------------------------- */
 
 :root {
+  color-scheme: light;
   --dark: #1c1b19;
   --moredark: #111110;
   --light: #fff;
@@ -25,24 +26,18 @@
   --li-spacing: 0.25em;
 }
 
-/* Dark color scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --dark: #fff8f0;
-    --moredark: #f9c8ce;
-    --light: #221f20; /* bg */
-    --lesslight: #55152a; /* code bg */
-    --accent: #f7708e;
-    --border: #585555;
-    --bg-alt: #283331;
-    --aside-bg: #55152a;
-  }
-}
-
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
+  color-scheme: dark;
+  --dark: #fff8f0;
+  --moredark: #f9c8ce;
+  --light: #221f20; /* bg */
+  --lesslight: #55152a; /* code bg */
+  --accent: #f7708e;
+  --border: #585555;
+  --bg-alt: #283331;
+  --aside-bg: #55152a;
 }
 
 /* ANCHOR Accessibility
@@ -161,24 +156,17 @@ video {
   }
 }
 
-/* Dark color scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    & img {
-      opacity: 0.7;
-      transition: opacity 150ms linear;
-    }
-
-    & img:hover {
-      opacity: 1;
-    }
-  }
-}
-
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
+  & img {
+    opacity: 0.7;
+    transition: opacity 150ms linear;
+  }
+
+  & img:hover {
+    opacity: 1;
+  }
 }
 
 /* ANCHOR Header
@@ -222,6 +210,7 @@ video {
 
   &[open] {
     border: 1px solid var(--border);
+    padding-bottom: 1rem;
   }
 }
 
@@ -244,6 +233,18 @@ video {
   padding-inline-start: 0;
   padding-block-end: 0.5em;
   list-style-type: none;
+}
+
+/* Settings */
+
+.settings {
+  margin-inline: 0.75em;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
 }
 
 /* ANCHOR Typography
@@ -344,8 +345,8 @@ details pre[class*='language-'] {
   color: unset;
 }
 
-code[class*='language-'],
-pre[class*='language-'] {
+.wrap-code code[class*='language-'],
+.wrap-code [class*='language-'] {
   white-space: pre-wrap;
   /* word-break: break-word; */
 }
@@ -365,29 +366,16 @@ pre[class*='language-'] {
   }
 }
 
-/* Dark color scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-  pre,
-  pre[class*='language-'] {
-    --border: #c6c6c6;
-    filter: invert(98%) hue-rotate(180deg) !important;
-  }
-
-  code {
-    color: #f9c8ce;
-  }
-}
-
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
   & pre,
   & pre[class*='language-'] {
+    --border: #c6c6c6;
     filter: invert(98%) hue-rotate(180deg) !important;
   }
 
-  & code {
+  & code:not([class*='language-']) {
     color: #f9c8ce;
   }
 }
@@ -490,19 +478,12 @@ elevator-button a {
   color: var(--light);
 }
 
-/* Dark color scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    aside code:not(pre code) {
-      background-color: #f7708e33;
-    }
-  }
-}
-
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
+  aside code:not(pre code) {
+    background-color: #f7708e33;
+  }
 }
 
 @media (min-width: 700px) {
@@ -538,20 +519,13 @@ form button[type='submit'] {
   font-weight: bold;
 }
 
-/* Dark color scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    .promo {
-      background-color: #283331;
-      color: #fff8f0;
-    }
-  }
-}
-
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
+  .promo {
+    background-color: #283331;
+    color: #fff8f0;
+  }
 }
 
 /* ANCHOR Footer

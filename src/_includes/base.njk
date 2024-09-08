@@ -6,6 +6,35 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <title>{{ title }}</title>
+
+    <script>
+      /**
+      * A global function that the theme toggle can use to apply the current theme.
+      * @param {string | undefined} override - The setting that needs to be applied or undefined
+      * @returns {string} - The applied theme setting
+      */
+      window.applyThemeSetting = function (override) {
+        const getSystemPreference = () => {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark';
+          }
+          return 'light';
+        };
+        const currentSetting = override || localStorage.getItem('user-color-scheme') || getSystemPreference();
+        const currentThemeValue = document
+          .documentElement
+          .getAttribute('data-theme');
+        if (currentSetting && currentSetting !== currentThemeValue) {
+          document
+            .documentElement
+            .setAttribute('data-theme', currentSetting);
+          localStorage.setItem('user-color-scheme', currentSetting);
+        }
+        return currentSetting;
+      };
+      window.applyThemeSetting();
+    </script>
+
     <link rel="stylesheet" href="/assets/css/neat.css"/>
     <link rel="stylesheet" href="/assets/css/prism.css"/>
     <link rel="stylesheet" href="/assets/css/style.css"/>
@@ -22,27 +51,75 @@
         <summary>Menu</summary>
         <nav>
           <ul>
-            <li><a href="/intro">Introduction</a></li>
-            <li><a href="/zero-to-internet-your-first-website">Zero to internet: your first website</a></li>
-            <li><a href="/add-content-to-your-website">Add content to your website</a></li>
-            <li><a href="/intermission-upgrade-your-text-editor">Intermission: upgrade your text editor</a></li>
-            <li><a href="/a-website-with-style">A website with style</a></li>
-            <li><a href="/adding-an-about-page">Adding an about page</a></li>
-            <li><a href="/adding-a-blog">Adding a blog</a></li>
-            <li><a href="/adding-a-resume">Adding a resume</a></li>
-            <li><a href="/intermission-installing-a-local-web-server">Intermission: installing a local web server</a></li>
-            <li><a href="/adding-a-fun-page">Adding a fun page</a></li>
-            <li><a href="/achievement-unlocked-hypertexter">Achievement unlocked: Hypertexter</a></li>
+            <li>
+              <a href="/intro">Introduction</a>
+            </li>
+            <li>
+              <a href="/zero-to-internet-your-first-website">Zero to internet: your first website</a>
+            </li>
+            <li>
+              <a href="/add-content-to-your-website">Add content to your website</a>
+            </li>
+            <li>
+              <a href="/intermission-upgrade-your-text-editor">Intermission: upgrade your text editor</a>
+            </li>
+            <li>
+              <a href="/a-website-with-style">A website with style</a>
+            </li>
+            <li>
+              <a href="/adding-an-about-page">Adding an about page</a>
+            </li>
+            <li>
+              <a href="/adding-a-blog">Adding a blog</a>
+            </li>
+            <li>
+              <a href="/adding-a-resume">Adding a resume</a>
+            </li>
+            <li>
+              <a href="/intermission-installing-a-local-web-server">Intermission: installing a local web server</a>
+            </li>
+            <li>
+              <a href="/adding-a-fun-page">Adding a fun page</a>
+            </li>
+            <li>
+              <a href="/achievement-unlocked-hypertexter">Achievement unlocked: Hypertexter</a>
+            </li>
           </ul>
 
-          <p class="mb-xs"><strong>Bonus chapters</strong></p>
+          <p class="mb-xs">
+            <strong>Bonus chapters</strong>
+          </p>
           <ul>
-            <li><a href="/customizing-simple-css">Customizing Simple.css</a></li>
-            <li><a href="/css-basics">CSS basics</a></li>
-            <li><a href="/reusable-html-with-php">Reusable HTML with PHP</a></li>
+            <li>
+              <a href="/customizing-simple-css">Customizing Simple.css</a>
+            </li>
+            <li>
+              <a href="/css-basics">CSS basics</a>
+            </li>
+            <li>
+              <a href="/reusable-html-with-php">Reusable HTML with PHP</a>
+            </li>
           </ul>
         </nav>
-    </header>
+
+        <div class="settings" hidden>
+          <p class="mb-xs">
+            <strong>Settings</strong>
+          </p>
+
+          <theme-toggle>
+            <label class="checkbox theme-toggle">
+              <input type="checkbox"> Dark theme
+            </label>
+          </theme-toggle>
+
+          <code-wrap>
+            <label class="checkbox code-wrap">
+              <input type="checkbox"> Wrap code samples
+            </label>
+          </code-wrap>
+        </div>
+      </header>
 
       <main class="container">
         {% block content %}
@@ -59,15 +136,24 @@
       <div class="promo">
         <div class="container">
           <p class="promo-title">Enjoying the book?</p>
-          <p><em>HTML for People</em> was a labor of love. If you have the means, consider sending me a <a href="https://ko-fi.com/blakewatson">donation on Ko-fi</a> and sharing the book on social media.</p>
+          <p>
+            <em>HTML for People</em> was a labor of love. If you have the means, consider sending me a <a href="https://ko-fi.com/blakewatson">donation on Ko-fi</a> and sharing the book on social media.</p>
 
           <p>Check out some of my other work:</p>
 
           <ul>
-            <li><a href="https://afinestart.me">A minimal new-tab page extension</a></li>
-            <li><a href="https://synthwave.live/">A synthwave mix site</a></li>
-            <li><a href="https://minimalcharactersheet.com/">A minimalist character sheet for D&D</a></li>
-            <li><a href="https://blakewatson.com">My personal website</a></li>
+            <li>
+              <a href="https://afinestart.me">A minimal new-tab page extension</a>
+            </li>
+            <li>
+              <a href="https://synthwave.live/">A synthwave mix site</a>
+            </li>
+            <li>
+              <a href="https://minimalcharactersheet.com/">A minimalist character sheet for D&D</a>
+            </li>
+            <li>
+              <a href="https://blakewatson.com">My personal website</a>
+            </li>
           </ul>
         </div>
       </div>

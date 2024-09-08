@@ -1,3 +1,55 @@
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.settings').removeAttribute('hidden');
+});
+
+/* Theme toggle */
+customElements.define(
+  'theme-toggle',
+  class extends HTMLElement {
+    #theme = 'light';
+
+    constructor() {
+      super();
+      this.#theme = localStorage.getItem('user-color-scheme') || 'light';
+    }
+
+    connectedCallback() {
+      this.querySelector('input').checked = this.#theme === 'dark';
+
+      this.querySelector('input').addEventListener('change', () => {
+        this.#theme = this.#theme === 'light' ? 'dark' : 'light';
+        window.applyThemeSetting(this.#theme);
+      });
+    }
+  }
+);
+
+/* Code wrap */
+customElements.define(
+  'code-wrap',
+  class extends HTMLElement {
+    #wrapCode = true;
+
+    constructor() {
+      super();
+      const value = localStorage.getItem('wrap-code') === 'true';
+      this.#wrapCode = value !== 'false';
+    }
+
+    connectedCallback() {
+      this.querySelector('input').checked = this.#wrapCode;
+      document.body.classList.toggle('wrap-code', this.#wrapCode);
+
+      this.querySelector('input').addEventListener('change', () => {
+        this.#wrapCode = !this.#wrapCode;
+        localStorage.setItem('wrap-code', this.#wrapCode);
+        document.body.classList.toggle('wrap-code', this.#wrapCode);
+      });
+    }
+  }
+);
+
+/* Elevator button */
 customElements.define(
   'elevator-button',
   class extends HTMLElement {

@@ -7,7 +7,7 @@ layout: "base.njk"
 
 # CSS basics
 
-For this chapter, we won’t be using our Simple site. We’ll be writing our own styles, and for that, I want to use a simpler page. You can apply what you learn here to your Simple site. But for this chapter, I want to show you how to start from scratch to make a nice webpage.
+For this chapter, we won’t be using our Simple.css site. We’ll be writing our own styles, and for that, I want to use a simpler page. You can apply what you learn here to your Simple site. But for this chapter, I want to show you how to start from scratch to make a nice webpage.
 
 We'll look specifically at styling typographic elements to make a pleasant, readable webpage. But CSS can do much, much more. All of the sophisticated designs you are used to seeing on pages across the web are done with CSS. It is a potent tool. If this chapter gives you a taste for it, I encourage you to explore CSS beyond what we cover here.
 

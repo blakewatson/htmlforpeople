@@ -1,4 +1,4 @@
-@import url("spacing.css");
+@import url('spacing.css');
 
 /* ANCHOR Config
 ------------------------------------------------------------- */
@@ -6,19 +6,21 @@
 :root {
   --dark: #1c1b19;
   --moredark: #111110;
+  --light: #fff;
   --lesslight: #fbedef;
   --accent: #b21e4f;
   --border: #c6c6c6;
   --main-menu-bg: #eee;
+  --bg-alt: #fff8f0;
   --aside-bg: #fbedef;
 
-  --text: "Valkyrie B", "Iowan Old Style", "Georgia", Apple Garamond,
+  --text: 'Valkyrie B', 'Iowan Old Style', 'Georgia', Apple Garamond,
     Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --headings: "Hermes Maia 2", -apple-system, BlinkMacSystemFont, avenir next,
+  --headings: 'Hermes Maia 2', -apple-system, BlinkMacSystemFont, avenir next,
     avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
     arial, sans-serif;
-  --code: "Input Mono", monospace;
+  --code: 'Input Mono', monospace;
 
   --li-spacing: 0.25em;
 }
@@ -27,19 +29,20 @@
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --dark: #d1d5db;
+    --dark: #fff8f0;
     --moredark: #f9c8ce;
-    --light: #191415; /* bg */
-    --lesslight: #4b0c1f; /* bg alt */
+    --light: #221f20; /* bg */
+    --lesslight: #55152a; /* code bg */
     --accent: #f7708e;
-    --border: #303030;
-    --aside-bg: #f42c6f11;
+    --border: #585555;
+    --bg-alt: #283331;
+    --aside-bg: #55152a;
   }
 }
 
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
+[data-theme='dark'] {
 }
 
 /* ANCHOR Accessibility
@@ -88,6 +91,17 @@
 /* ANCHOR Global styles
 ------------------------------------------------------------- */
 
+body {
+  max-width: unset;
+  padding: unset;
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: 1em;
+}
+
 a {
   text-decoration-color: var(--accent);
 
@@ -95,6 +109,55 @@ a {
   &:focus {
     color: var(--accent);
     text-decoration-color: var(--accent);
+  }
+}
+
+main details {
+  border: 1px solid transparent;
+  border-radius: 0.5em;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--border);
+  }
+
+  &[open] {
+    border: 1px solid var(--border);
+  }
+
+  /* the last thing in the details element should have 0 margin-bottom
+     the language thing is to increase specificity for code blocks */
+  > &:last-child,
+  > [class*='language-']:last-child {
+    margin-block-end: 0;
+  }
+}
+
+main summary {
+  padding: 0.5em;
+  cursor: pointer;
+
+  &::marker {
+    color: var(--accent);
+  }
+
+  /* the first thing after the summary element should have 0.5em margin-top
+     the language thing is to increase specificity for code blocks */
+  & + *,
+  & + [class*='language-'] {
+    margin-block-start: 0.5em;
+  }
+}
+
+video {
+  margin-block: 1.75em;
+  max-width: 100%;
+}
+
+@media (min-width: 700px) {
+  .container {
+    padding-inline: 1.5em;
   }
 }
 
@@ -115,50 +178,7 @@ a {
 
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
-}
-
-main details {
-  border: 1px solid transparent;
-  border-radius: 0.5em;
-  overflow: hidden;
-
-  &:hover,
-  &:focus {
-    border: 1px solid var(--border);
-  }
-
-  &[open] {
-    border: 1px solid var(--border);
-  }
-
-  /* the last thing in the details element should have 0 margin-bottom
-     the language thing is to increase specificity for code blocks */
-  > &:last-child,
-  > [class*="language-"]:last-child {
-    margin-block-end: 0;
-  }
-}
-
-main summary {
-  padding: 0.5em;
-  cursor: pointer;
-
-  &::marker {
-    color: var(--accent);
-  }
-
-  /* the first thing after the summary element should have 0.5em margin-top
-     the language thing is to increase specificity for code blocks */
-  & + *,
-  & + [class*="language-"] {
-    margin-block-start: 0.5em;
-  }
-}
-
-video {
-  margin-block: 1.75em;
-  max-width: 100%;
+[data-theme='dark'] {
 }
 
 /* ANCHOR Header
@@ -177,14 +197,14 @@ video {
   }
 
   & a:before {
-    content: "<";
+    content: '<';
     margin-inline-end: 0.25em;
     font-family: var(--text);
     color: var(--accent);
   }
 
   & a:after {
-    content: ">";
+    content: '>';
     margin-inline-start: 0.25em;
     font-family: var(--text);
     color: var(--accent);
@@ -272,8 +292,13 @@ h2 {
   margin-block-start: 1.75em;
 }
 
-ul, ol {
-  padding-inline-start: 1em;
+h3 {
+  margin-block-start: 1.5em;
+}
+
+ul,
+ol {
+  padding-inline-start: 1.75em;
 }
 
 li {
@@ -294,21 +319,23 @@ code {
   color: #5f0e28;
 }
 
-pre[class*="language-"] > code {
+pre[class*='language-'] > code {
   display: block;
+  padding: 0;
   font-size: 0.75em;
 }
 
 pre,
-pre[class*="language-"] {
+pre[class*='language-'] {
   margin-block: 1.75em;
+  padding: 1rem;
   border: 1px solid var(--border);
   border-radius: 0.25em;
   color: #1c1b19;
 }
 
 details pre,
-details pre[class*="language-"] {
+details pre[class*='language-'] {
   border: none;
   border-radius: 0;
 }
@@ -317,8 +344,8 @@ details pre[class*="language-"] {
   color: unset;
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
   white-space: pre-wrap;
   /* word-break: break-word; */
 }
@@ -329,8 +356,8 @@ pre[class*="language-"] {
   }
 
   pre,
-  pre[class*="language-"] {
-    margin-inline: -1.5em;
+  pre[class*='language-'] {
+    margin-inline: -1em;
 
     details & {
       margin-inline: auto;
@@ -342,7 +369,7 @@ pre[class*="language-"] {
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
   pre,
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     --border: #c6c6c6;
     filter: invert(98%) hue-rotate(180deg) !important;
   }
@@ -354,9 +381,9 @@ pre[class*="language-"] {
 
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
+[data-theme='dark'] {
   & pre,
-  & pre[class*="language-"] {
+  & pre[class*='language-'] {
     filter: invert(98%) hue-rotate(180deg) !important;
   }
 
@@ -393,7 +420,7 @@ aside {
   }
 
   pre,
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     margin-block: 1rem 0;
     margin-inline: 0;
   }
@@ -405,7 +432,7 @@ aside {
   font-size: 0.85em;
   line-height: 1;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.085em;
   color: var(--dark);
 
   & + * {
@@ -428,6 +455,41 @@ figcaption {
   font-size: 0.85em;
 }
 
+elevator-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0.5rem 0.25rem #00000011;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--dark);
+  color: var(--light);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &:before {
+    content: '↑';
+    color: var(--light);
+  }
+}
+
+.elevator-arrow {
+  color: var(--light);
+}
+
 /* Dark color scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
@@ -440,7 +502,7 @@ figcaption {
 
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
+[data-theme='dark'] {
 }
 
 @media (min-width: 700px) {
@@ -452,7 +514,53 @@ figcaption {
 /* ANCHOR Forms
 ------------------------------------------------------------- */
 
-form button[type="submit"] {
+form button[type='submit'] {
   display: inline-block;
   width: unset;
+}
+
+/* ANCHOR Promo
+------------------------------------------------------------- */
+
+.promo {
+  margin-block-start: 3rem;
+  padding-block: 3rem;
+  background-color: var(--bg-alt);
+
+  & + .site-footer {
+    margin-block-start: 0;
+    padding-block-start: 1rem;
+  }
+}
+
+.promo-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+/* Dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    .promo {
+      background-color: #283331;
+      color: #fff8f0;
+    }
+  }
+}
+
+/* Dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme='dark'] {
+}
+
+/* ANCHOR Footer
+------------------------------------------------------------- */
+
+.site-footer {
+  margin-block-start: 3rem;
+  padding-block: 2rem;
+  /* border-block-start: 1px solid var(--border); */
+  font-size: 0.85em;
+  background-color: var(--bg-alt);
 }

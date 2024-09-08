@@ -1,3 +1,11 @@
 {
-  "commentAnchors.tagHighlights.enabled": false
-}
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "commentAnchors.tagHighlights.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+} 

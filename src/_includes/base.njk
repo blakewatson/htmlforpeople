@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="/assets/css/neat.css"/>
     <link rel="stylesheet" href="/assets/css/prism.css"/>
     <link rel="stylesheet" href="/assets/css/style.css"/>
-    {# <script defer src="js/app.js"></script> #}
+    <script defer src="/assets/js/app.js"></script>
   </head>
 
   <body>
-    <header class="site-header container-fluid">
+    <header class="site-header container">
       <p class="site-title">
         <a href="/">HTML for People</a>
       </p>
 
-      <details class="main-menu">
+      <details class="main-menu" id="main-menu">
         <summary>Menu</summary>
         <nav>
           <ul>
@@ -42,13 +42,41 @@
             <li><a href="/reusable-html-with-php">Reusable HTML with PHP</a></li>
           </ul>
         </nav>
-      </header>
+    </header>
 
-      <main class="container-fluid">
+      <main class="container">
         {% block content %}
           {{ content | safe }}
         {% endblock %}
       </main>
+
+      <elevator-button title="Jump to menu">
+        <a href="#main-menu">
+          <span class="sr-only">Jump to menu</span>
+        </a>
+      </elevator-button>
+
+      <div class="promo">
+        <div class="container">
+          <p class="promo-title">Enjoying the book?</p>
+          <p><em>HTML for People</em> was a labor of love. If you have the means, consider sending me a <a href="https://ko-fi.com/blakewatson">donation on Ko-fi</a> and sharing the book on social media.</p>
+
+          <p>Check out some of my other work:</p>
+
+          <ul>
+            <li><a href="https://afinestart.me">A minimal new-tab page extension</a></li>
+            <li><a href="https://synthwave.live/">A synthwave mix site</a></li>
+            <li><a href="https://minimalcharactersheet.com/">A minimalist character sheet for D&D</a></li>
+            <li><a href="https://blakewatson.com">My personal website</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <div class="container">
+          <p>A <a href="https://blakewatson.com">Blake Watson</a> project. Copyright 2024. All rights reserved.</p>
+        </div>
+      </footer>
     </body>
 
   </html>

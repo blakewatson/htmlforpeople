@@ -1,0 +1,24 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  {{ content | safe }}
+{% endblock %}
+
+{% block after_main %}
+  {% set previousPost = collections.chapter | sort(false, false, 'fileSlug') | getPreviousCollectionItem %}
+  {% set nextPost = collections.chapter | sort(false, false, 'fileSlug') | getNextCollectionItem %}
+
+  {% if previousPost or nextPost %}
+    <nav class="chapter-nav">
+      {% if nextPost %}
+        <a href="{{ nextPost.url }}">{{ nextPost.data.title }} &rarr;</a>
+      {% endif %}
+
+      {% if previousPost %}
+        <a href="{{ previousPost.url }}"
+          >&larr; {{ previousPost.data.title }}</a
+        >
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endblock %}

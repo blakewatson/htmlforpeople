@@ -1,8 +1,9 @@
 ---
-title: "Achievement unlocked: Hypertexter"
-summary: "Recap of what the book covered with links to external resources and documentation related to web development and design."
-permalink: "achievement-unlocked-hypertexter"
-layout: "base.njk"
+title: 'Achievement unlocked: Hypertexter'
+summary: 'Recap of what the book covered with links to external resources and documentation related to web development and design.'
+permalink: 'achievement-unlocked-hypertexter'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Achievement unlocked: Hypertexter
@@ -33,7 +34,7 @@ We’ve completed the main content I wanted to cover in _HTML for People_. That 
 
 - **[Customizing Simple.css](/customizing-simple-css)**. Even without learning much CSS, you can change the appearance of your Simple site by overriding a few variables.
 - **[CSS basics](/css-basics)**. This side quest teaches you how to make a nicely designed webpage from scratch using CSS.
-- **[Reusable HTML with PHP](/reusable-html-with-php)**.  We'll look at how to reuse chunks of HTML—like a nav menu—using PHP includes. This is a programming-lite introduction to dynamic websites.
+- **[Reusable HTML with PHP](/reusable-html-with-php)**. We'll look at how to reuse chunks of HTML—like a nav menu—using PHP includes. This is a programming-lite introduction to dynamic websites.
 
 ## Resources from this book
 
@@ -52,7 +53,7 @@ I peppered in quite a few links along the way, pointing you to various demos and
 - **[Neocities Tutorials](https://neocities.org/tutorials):** A list of tutorials and resources published by Neocities. Check out their fantastic [HTML course](https://neocities.org/tutorial/html/1).
 - **[Simple.css](https://simplecss.org/)**. This is the CSS framework we used throughout the book. The site has documentation on how to use Simple.css and a demo of various HTML elements.
 - **[Butterick's Practical Typography](https://practicaltypography.com/)**. An excellent book about typography and design. If you’re short on time, check out [Typography in ten minutes](https://practicaltypography.com/typography-in-ten-minutes.html).
-- **[EntityCode](https://entitycode.com/)**. Here's a reference of *HTML entities* you can use to reproduce special characters and symbols.
+- **[EntityCode](https://entitycode.com/)**. Here's a reference of _HTML entities_ you can use to reproduce special characters and symbols.
 - **[Coolers color contrast checker](https://coolors.co/contrast-checker)**. A nice tool for making sure your text and background colors have enough contrast to be legible.
 
 ## Web hosts for static websites
@@ -70,7 +71,7 @@ I used [Visual Studio Code](https://code.visualstudio.com/) as my code editor th
 I use a Mac, so I’m not as familiar with editors for other systems, but I know a few that you should check out and evaluate yourself. Some are free, some are paid, and some are both.
 
 - **[Sublime Text](https://www.sublimetext.com/):** Cross-platform with an unlimited free trial (will occasionally nag you to pay). Sublime Text was the standard in web development until VS Code took the throne. It’s still quite good, though. Super fast and lightweight. The plugin-in/extensions system is more difficult to use, but you may not need any if you do basic HTML/CSS, as it has good support for those right out of the box.
-- **[WebStorm](https://www.jetbrains.com/webstorm/):** One of the many paid *IDEs* (integrated development environments) from JetBrains. It’s cross-platform and has a ton of features. It’s pricey but has a 30-day free trial. People love it. I haven’t used it much, so I can’t say much except that it has a solid reputation.
+- **[WebStorm](https://www.jetbrains.com/webstorm/):** One of the many paid _IDEs_ (integrated development environments) from JetBrains. It’s cross-platform and has a ton of features. It’s pricey but has a 30-day free trial. People love it. I haven’t used it much, so I can’t say much except that it has a solid reputation.
 - **[Zed](https://zed.dev/):** Cross-platform (Mac and Linux, with Windows "coming soon") and free. This one feels like a mix of VS Code and Sublime Text and has a lot of hype around it at the time of this writing.
 - **[Nova](https://nova.app/):** Mac-only and paid (but with a free trial). This is the sequel to Coda, a beloved web dev editor for Mac by the same developer (Panic). Panic apps are always fantastic, so give Nova a look if you’re on a Mac.
 - **[NotePad++](https://notepad-plus-plus.org/):** Free and open source editor for Windows. I can’t say much about it other than it has been around for a long time.

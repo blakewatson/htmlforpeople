@@ -1,8 +1,9 @@
 ---
-title: "CSS Basics"
-summary: "Learn how to design a nice, clean webpage from scratch by writing your own CSS."
-permalink: "css-basics"
-layout: "base.njk"
+title: 'CSS Basics'
+summary: 'Learn how to design a nice, clean webpage from scratch by writing your own CSS.'
+permalink: 'css-basics'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # CSS basics
@@ -146,13 +147,15 @@ I made an `index.html` and put the following code in there. It assumes that you 
         Neptune: 'Known for its deep blue color and strong winds.'
     };
     return planets[planet] || 'Planet not found';
+
 }</code></pre>
-    </main>
+</main>
 
     <footer>
       <p>
         A demo website for learning CSS. Part of <a href="https://htmlforpeople.com/">HTML for People</a> by <a href="https://blakewatson.com/">Blake Watson</a>. Check out the <a href="https://github.com/blakewatson/css-basics">source code on GitHub</a>.
       </p>
+
   </body>
 </html>
 ```
@@ -171,36 +174,34 @@ So we’re going to fancy ourselves web doctors of a sort. First, we will do no 
 We can write CSS directly in our `index.html` file using a special HTML tag, `<style>`. We can put the `<style>` tag inside of the `<head>` section of our file. Like this:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    
-    <head>
-        <title>My website</title>
-        <meta charset="utf-8">
+  <head>
+    <title>My website</title>
+    <meta charset="utf-8" />
 
-        <style>
-              CSS code goes here
-        </style>
-    </head>
+    <style>
+      CSS code goes here
+    </style>
+  </head>
 
-    <body>
-        ...
-    </body>
-
+  <body>
+    ...
+  </body>
 </html>
 ```
 
 This is perfectly valid, but if you have more than one page on your website, you would have to copy and paste your `<style>` tag onto each page to have the same styles on every page. Instead, it’s common to put all your CSS in a separate file and then _link_ that file to every page with a `<link>` tag in your website’s `<head>` section.
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 ## First steps to improving the page
 
 If you haven’t already, create a `style.css` file. This is where we'll write all our custom CSS. If you’re not using my starting HTML code, you’ll need to add the `<link>` tag to your page's `<head>` section to hook up your styles to the page, as described above.
 
-We can immediately achieve some big wins with only a few lines of CSS. For example, one problem is that the page is too wide on a desktop browser window. Long lines of text are hard to read. Let’s fix it by giving the page a maximum width. According to [Butterick's Practical Typography](https://practicaltypography.com/line-length.html), we should be able to fit between two and three alphabets on one line. I’m going to make it 65 *characters* wide.
+We can immediately achieve some big wins with only a few lines of CSS. For example, one problem is that the page is too wide on a desktop browser window. Long lines of text are hard to read. Let’s fix it by giving the page a maximum width. According to [Butterick's Practical Typography](https://practicaltypography.com/line-length.html), we should be able to fit between two and three alphabets on one line. I’m going to make it 65 _characters_ wide.
 
 ```css
 main {
@@ -288,7 +289,7 @@ main * {
 }
 ```
 
-A selector can be a chain of things. For example, `main p` selects every `<p>` element *inside* the `<main>` element. I want to target _everything_ in the `<main>` element.
+A selector can be a chain of things. For example, `main p` selects every `<p>` element _inside_ the `<main>` element. I want to target _everything_ in the `<main>` element.
 
 I’m setting the margin above and below every element. Similar to `margin-inline`, which controls horizontal space around elements, `margin-block` controls the vertical space around elements (in left-to-right languages). I’m setting the margin above elements to `0` and the margin below them to `1rem`. The `rem` is a unit equal to the font size of the **r**oot el**em**ent (the `<html>` element). Since I set the root font size at `20px`, that’s what the value of `1rem` becomes.
 
@@ -306,7 +307,7 @@ You can only use a font if your visitors have it available on their devices. Whi
 
 Web fonts need to be in a specific format, and _installed_ a certain way, for lack of a better term. Typically, people will use a service like [Google Fonts](http://fonts.google.com/) (free) or [Adobe Fonts](https://fonts.adobe.com) (paid). There are a [lot](https://typography.com/webfonts) of [options](https://typenetwork.com/), including hosting the fonts on your own server next to your other website files. Just ensure that your font license covers it.
 
-For simplicity, we'll use a couple of fonts from Google Fonts. Head over to fonts.google.com. Search for "Oswald" and select it from the results. Then click *Get Font*.
+For simplicity, we'll use a couple of fonts from Google Fonts. Head over to fonts.google.com. Search for "Oswald" and select it from the results. Then click _Get Font_.
 
 ![Screenshot of the Google Fonts website showing the font "Oswald." The "Get font" button is highlighted with a red arrow. Sample text below reads, "Whereas disregard and contempt for human rights have resulted." The site menu is visible on the left.](/assets/img/css-basics-04.png)
 
@@ -320,25 +321,25 @@ Copy and paste the embed code into your website's `<head>` section.
 
 ```html
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Planets of the Solar System</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet"
+  />
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 ```
 
 Add a `font-family` declaration to the `html` block to check that it's working.
 
 ```html
-html {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 20px;
-  line-height: 1.45;
-}
+html { font-family: 'Source Sans 3', sans-serif; font-size: 20px; line-height:
+1.45; }
 ```
 
 This will set the font for the whole document. The browser will first try Source Sans 3. If, for some reason, that font isn’t available (if, say, Google Fonts is down), then `sans-serif` will instruct the browser to use whatever sans-serif font is available. You can put other fallback fonts in the _font stack_. Just separate them with commas, as you see above.
@@ -357,8 +358,8 @@ If you read the [Customizing Simple.css](/customizing-simple) chapter, you’ll 
   --link-color: #028090;
   --background-color: #fffdf7;
 
-  --heading-font: "Oswald", sans-serif;
-  --body-font: "Source Sans 3", sans-serif;
+  --heading-font: 'Oswald', sans-serif;
+  --body-font: 'Source Sans 3', sans-serif;
 }
 ```
 
@@ -409,7 +410,7 @@ I like how Oswald—the font I’m using for headings—looks without bolding. S
 We’re using [variable fonts](https://perma.cc/A75H-V4HJ), so we have more weight options than `normal` or `bold`. Try using 300, 500, 900 [and so on](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight).
 {% endaside %}
 
-For the `<h1>`, I’m keeping the default `font-size`. For the `<h2>`, I’m setting the `font-size` to `1.2em`, which is to say 1.2 times the *current font size*.
+For the `<h1>`, I’m keeping the default `font-size`. For the `<h2>`, I’m setting the `font-size` to `1.2em`, which is to say 1.2 times the _current font size_.
 
 A handful of typographic changes transformed our page, and it has an entirely different feel.
 
@@ -428,7 +429,7 @@ Let’s style these a bit. I've chosen a blue-green color and set it as a variab
   /* ... other code ... */
 
   --link-color: #028090;
-  
+
   /* ... other code ... */
 }
 ```
@@ -465,7 +466,9 @@ This gives us a subtle visual interaction with the link.
 On the subject of hover effects, there is one that you may not have noticed. If you look at the HTML in the first paragraph, you’ll find the following sentence.
 
 ```html
-In this article, we will explore the distinctive attributes of each planet, providing an overview of what makes them unique (and learn a little <abbr title="Cascading style sheets">CSS</abbr> while doing it).
+In this article, we will explore the distinctive attributes of each planet,
+providing an overview of what makes them unique (and learn a little
+<abbr title="Cascading style sheets">CSS</abbr> while doing it).
 ```
 
 The `<abbr>` tag helps visitors know what certain abbreviations or acronyms stand for. When you hover the term CSS in the document, you’ll get a helpful tooltip showing what it stands for. You put the abbreviation inside the tags, then use the `title` attribute for the full text.
@@ -526,7 +529,8 @@ Let’s make quick work of the bulleted list of Pluto and the gang. We’ll give
 You already know that the selector targets the elements we want to style. But you can also have multiple selectors! We can target the `<ul>` element and the `<ol>` element and give both the same indentation by doing the following.
 
 ```css
-ul, ol {
+ul,
+ol {
   padding-inline-start: 1.5rem;
 }
 ```
@@ -560,7 +564,7 @@ li::marker {
 }
 ```
 
-The `::marker` bit is called a *pseudo-element* because it represents a piece of an HTML element. The `::marker` is a part of the *list item* or `<li>` element. It contains the bullet (or number) of the list item. We can target it with our selector and change the color to our red heading color.
+The `::marker` bit is called a _pseudo-element_ because it represents a piece of an HTML element. The `::marker` is a part of the _list item_ or `<li>` element. It contains the bullet (or number) of the list item. We can target it with our selector and change the color to our red heading color.
 
 ![Screenshot of the bulleted list titled "Other Major Bodies" includes entries for Pluto, Ceres, Haumea, Makemake, Eris, Ganymede, Titan, and Europa. It has more spacing between list items, making it easier to read. The bullet points are red, while the text is the same dark text color.](/assets/img/css-basics-9.png)
 
@@ -646,7 +650,7 @@ footer {
 
 Some of this should start to look familiar. We're creating some margin above the element with `margin-block-start`. We're adding a `2px` wide border above the footer using our go-to red heading color. Using `padding-block`, we're adding some space between the text and the border and a good chunk of padding below to provide breathing room at the bottom of the page. Finally, we'll use the same muted text color we used on the blockquote.
 
-Since we already added the margin we want to the `<footer>` element itself, let’s remove all the margin on stuff *inside* the footer. We'll use our friend, the universal selector (`*`).
+Since we already added the margin we want to the `<footer>` element itself, let’s remove all the margin on stuff _inside_ the footer. We'll use our friend, the universal selector (`*`).
 
 ```css
 footer * {
@@ -659,7 +663,7 @@ This selector will target everything _inside_ the `<footer>` tag. We’ll set `m
 
 ## Extra typographic fun
 
-We could totally stop here, *but*... let’s have some fun.
+We could totally stop here, _but_... let’s have some fun.
 
 Looking at the first paragraph in the markup, I gave it a class of `intro`. Let's give it a bit of emphasis by making the text a little larger.
 

@@ -1,33 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>{{ title }}</title>
 
     <script>
       /**
-      * A global function that the theme toggle can use to apply the current theme.
-      * @param {string | undefined} override - The setting that needs to be applied or undefined
-      * @returns {string} - The applied theme setting
-      */
+       * A global function that the theme toggle can use to apply the current theme.
+       * @param {string | undefined} override - The setting that needs to be applied or undefined
+       * @returns {string} - The applied theme setting
+       */
       window.applyThemeSetting = function (override) {
         const getSystemPreference = () => {
-          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          if (
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+          ) {
             return 'dark';
           }
           return 'light';
         };
-        const currentSetting = override || localStorage.getItem('user-color-scheme') || getSystemPreference();
-        const currentThemeValue = document
-          .documentElement
-          .getAttribute('data-theme');
+        const currentSetting =
+          override ||
+          localStorage.getItem('user-color-scheme') ||
+          getSystemPreference();
+        const currentThemeValue =
+          document.documentElement.getAttribute('data-theme');
         if (currentSetting && currentSetting !== currentThemeValue) {
-          document
-            .documentElement
-            .setAttribute('data-theme', currentSetting);
+          document.documentElement.setAttribute('data-theme', currentSetting);
           localStorage.setItem('user-color-scheme', currentSetting);
         }
         return currentSetting;
@@ -35,11 +37,15 @@
       window.applyThemeSetting();
     </script>
 
-    <link rel="stylesheet" href="/assets/css/neat.css"/>
-    <link rel="stylesheet" href="/assets/css/prism.css"/>
-    <link rel="stylesheet" href="/assets/css/style.css"/>
+    <link rel="stylesheet" href="/assets/css/neat.css" />
+    <link rel="stylesheet" href="/assets/css/prism.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
-    <link href="//fastly-cloud.typenetwork.com/projects/8233/fontface.css?66ddfea4" rel="stylesheet" type="text/css">
+    <link
+      href="//fastly-cloud.typenetwork.com/projects/8233/fontface.css?66ddfea4"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <script defer src="/assets/js/app.js"></script>
   </head>
@@ -65,13 +71,19 @@
               <a href="/intro">Introduction</a>
             </li>
             <li>
-              <a href="/zero-to-internet-your-first-website">Zero to internet: your first website</a>
+              <a href="/zero-to-internet-your-first-website"
+                >Zero to internet: your first website</a
+              >
             </li>
             <li>
-              <a href="/add-content-to-your-website">Add content to your website</a>
+              <a href="/add-content-to-your-website"
+                >Add content to your website</a
+              >
             </li>
             <li>
-              <a href="/intermission-upgrade-your-text-editor">Intermission: upgrade your text editor</a>
+              <a href="/intermission-upgrade-your-text-editor"
+                >Intermission: upgrade your text editor</a
+              >
             </li>
             <li>
               <a href="/a-website-with-style">A website with style</a>
@@ -86,13 +98,17 @@
               <a href="/adding-a-resume">Adding a resume</a>
             </li>
             <li>
-              <a href="/intermission-installing-a-local-web-server">Intermission: installing a local web server</a>
+              <a href="/intermission-installing-a-local-web-server"
+                >Intermission: installing a local web server</a
+              >
             </li>
             <li>
               <a href="/adding-a-fun-page">Adding a fun page</a>
             </li>
             <li>
-              <a href="/achievement-unlocked-hypertexter">Achievement unlocked: Hypertexter</a>
+              <a href="/achievement-unlocked-hypertexter"
+                >Achievement unlocked: Hypertexter</a
+              >
             </li>
           </ul>
 
@@ -119,60 +135,71 @@
 
           <theme-toggle>
             <label class="checkbox theme-toggle">
-              <input type="checkbox"> Dark theme
+              <input type="checkbox" /> Dark theme
             </label>
           </theme-toggle>
 
           <code-wrap>
             <label class="checkbox code-wrap">
-              <input type="checkbox"> Wrap code samples
+              <input type="checkbox" /> Wrap code samples
             </label>
           </code-wrap>
         </div>
-      </header>
+      </details>
+    </header>
 
-      <main id="main-content" class="container">
-        {% block content %}
-          {{ content | safe }}
-        {% endblock %}
-      </main>
+    <main id="main-content" class="container">
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
+    </main>
 
-      <elevator-button title="Jump to menu">
-        <a href="#main-menu">
-          <span class="sr-only">Jump to menu</span>
-        </a>
-      </elevator-button>
+    {% block after_main %}{% endblock %}
 
-      <div class="promo">
-        <div class="container">
-          <p class="promo-title">Enjoying the book?</p>
-          <p>
-            <em>HTML for People</em> is a labor of love. If you have the means, consider sending me a <a href="https://ko-fi.com/blakewatson">donation on Ko-fi</a> and sharing the book on social media.</p>
+    <elevator-button title="Jump to menu">
+      <a href="#main-menu">
+        <span class="sr-only">Jump to menu</span>
+      </a>
+    </elevator-button>
 
-          <p>Check out some of my other stuff:</p>
+    <div class="promo">
+      <div class="container">
+        <p class="promo-title">Enjoying the book?</p>
+        <p>
+          <em>HTML for People</em> is a labor of love. If you have the means,
+          consider sending me a
+          <a href="https://ko-fi.com/blakewatson">donation on Ko-fi</a> and
+          sharing the book on social media.
+        </p>
 
-          <ul>
-            <li>
-              <a href="https://afinestart.me">A minimal new-tab page extension</a>
-            </li>
-            <li>
-              <a href="https://synthwave.live/">A synthwave mix site</a>
-            </li>
-            <li>
-              <a href="https://minimalcharactersheet.com/">A minimalist character sheet for D&D</a>
-            </li>
-            <li>
-              <a href="https://blakewatson.com">My personal website</a>
-            </li>
-          </ul>
-        </div>
+        <p>Check out some of my other stuff:</p>
+
+        <ul>
+          <li>
+            <a href="https://afinestart.me">A minimal new-tab page extension</a>
+          </li>
+          <li>
+            <a href="https://synthwave.live/">A synthwave mix site</a>
+          </li>
+          <li>
+            <a href="https://minimalcharactersheet.com/"
+              >A minimalist character sheet for D&D</a
+            >
+          </li>
+          <li>
+            <a href="https://blakewatson.com">My personal website</a>
+          </li>
+        </ul>
       </div>
+    </div>
 
-      <footer class="site-footer">
-        <div class="container">
-          <p>A <a href="https://blakewatson.com">Blake Watson</a> project. Copyright 2024. All rights reserved.</p>
-        </div>
-      </footer>
-    </body>
-
-  </html>
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          A <a href="https://blakewatson.com">Blake Watson</a> project.
+          Copyright 2024. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

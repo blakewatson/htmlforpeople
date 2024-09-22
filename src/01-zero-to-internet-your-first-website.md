@@ -1,8 +1,9 @@
 ---
-title: "Zero to internet: your first website"
-summary: "Build an extremely simple webpage from scratch using Notepad and put it on the web with Neocities."
-permalink: "zero-to-internet-your-first-website/"
-layout: "base.njk"
+title: 'Zero to internet: your first website'
+summary: 'Build an extremely simple webpage from scratch using Notepad and put it on the web with Neocities.'
+permalink: 'zero-to-internet-your-first-website/'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Zero to internet: your first website
@@ -53,7 +54,7 @@ When making websites it’s essential to see file extensions—the part of the f
 
 You can open your website by double-clicking `index.html`. It should open in your default browser. Alternatively, you can launch your browser first, click _File_ > _Open File…_, then navigate to your `index.html` file.
 
-You should see your (admittedly plain) website in your browser! Feel free to adjust your text and fix any typos because we’re about to publish this page to the *world*.
+You should see your (admittedly plain) website in your browser! Feel free to adjust your text and fix any typos because we’re about to publish this page to the _world_.
 
 Don’t worry about how it looks. We’ll fix that later.
 
@@ -69,7 +70,7 @@ Throughout this book, I will use Neocities as an example. But I'd like to mentio
 - **[Yay.boo](https://yay.boo/):** Silly name, effortless website publishing. You just drag and drop a folder, pick a name, and your website is online.
 - **[Glitch](https://glitch.com/):** This is a good option if you want to code everything directly in the browser. Build it, then publish.
 - **[Netlify](https://www.netlify.com/):** More sophisticated, but has a [drag-and-drop-folder-to-publish](https://perma.cc/W3PH-5KRS) feature and gives you more developer-centric features.
-{% endaside %}
+  {% endaside %}
 
 Head over to Neocities and create an account. It’s free. You’ll also need to choose a username/sitename. Your website will ultimately be on a _subdomain_ at `YOURNAME.neocities.org`. I suggest using your real name or an online username if you have one. Or, if you know what you want your page to be about, you could choose something befitting the topic (for example, `dndfanpage`).
 
@@ -84,5 +85,3 @@ Once you’ve done that, click the link to your site at the top of the dashboard
 ## Up next
 
 In the next chapter, we’ll add more content to our website and learn about a handful of HTML tags.
-
-[Add content to your website](/add-content-to-your-website)

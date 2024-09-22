@@ -15,6 +15,7 @@
   --main-menu-bg: #eee;
   --bg-alt: #fff8f0;
   --aside-bg: #fbedef;
+  --red-text: #5f0e28;
 
   --text: valkyrie_b, 'Iowan Old Style', 'Georgia', Apple Garamond, Baskerville,
     Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
@@ -39,6 +40,7 @@
   --border: #585555;
   --bg-alt: #283331;
   --aside-bg: #55152a;
+  --red-text: #f9c8ce;
 }
 
 /* ANCHOR Accessibility
@@ -319,7 +321,7 @@ code {
   font-family: var(--code) !important;
   font-size: 0.85em;
   line-height: 1.5;
-  color: #5f0e28;
+  color: var(--red-text);
 }
 
 pre[class*='language-'] > code {
@@ -378,7 +380,7 @@ details pre[class*='language-'] {
   }
 
   & code:not([class*='language-']) {
-    color: #f9c8ce;
+    color: var(--red-text);
   }
 
   mark {
@@ -484,6 +486,30 @@ elevator-button a {
   color: var(--light);
 }
 
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-block: 1.5rem 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+
+  & a {
+    padding: 1em 1em;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      background-color: var(--lesslight);
+      color: var(--red-text);
+    }
+
+    &:has(+ a) {
+      border-block-start: 1px solid var(--border);
+    }
+  }
+}
+
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
@@ -499,6 +525,19 @@ elevator-button a {
   aside {
     margin-inline: -1em;
   }
+
+  .chapter-nav {
+    flex-direction: row;
+
+    & a:first-child {
+      order: 1;
+    }
+
+    & a:has(+ a) {
+      border-block-start: none;
+      border-inline-start: 1px solid var(--border);
+    }
+  }
 }
 
 /* ANCHOR Forms
@@ -513,7 +552,6 @@ form button[type='submit'] {
 ------------------------------------------------------------- */
 
 .promo {
-  margin-block-start: 3rem;
   padding-block: 3rem;
   border-block-start: 1px solid #e0cab1;
   background-color: var(--bg-alt);

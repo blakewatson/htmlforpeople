@@ -1,8 +1,9 @@
 ---
-title: "Add content to your website"
-summary: "Learn how to add content like headings, links, images, and lists to a webpage using HTML tags."
-permalink: "add-content-to-your-website/"
-layout: "base.njk"
+title: 'Add content to your website'
+summary: 'Learn how to add content like headings, links, images, and lists to a webpage using HTML tags.'
+permalink: 'add-content-to-your-website/'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Add content to your website
@@ -13,7 +14,7 @@ First, pat yourself on the back because you now have a live, homemade website! N
 
 ## Add a heading
 
-Let’s give it a name! It depends on what kind of site you’re making, but mine will be a personal homepage. Everyone and their mom have a social media profile, but those are boring and same-y. We deserve *more*. And our old friend, the personal homepage, is a perfect place to start.
+Let’s give it a name! It depends on what kind of site you’re making, but mine will be a personal homepage. Everyone and their mom have a social media profile, but those are boring and same-y. We deserve _more_. And our old friend, the personal homepage, is a perfect place to start.
 
 ```plaintext
 Blake's Homepage
@@ -34,7 +35,9 @@ What is this weird pill-shaped code I just wrote? It’s called an HTML tag. We 
 ```html
 <h1>Blake's Homepage</h1>
 
-<p>My name is Blake. I enjoy making websites and teaching others to do the same.</p>
+<p>
+  My name is Blake. I enjoy making websites and teaching others to do the same.
+</p>
 ```
 
 Here, we’ve separated the two elements of our page and wrapped each one inside tags. We’re saying our site name should be a level 1 heading, and our first paragraph should be, well, a _paragraph_—that’s what the `p` stands for.
@@ -68,9 +71,13 @@ Let’s add a link to our website—pick one of your favorite websites or someth
 ```html
 <h1>Blake's Homepage</h1>
 
-<p>My name is Blake. I enjoy making websites and teaching others to do the same.</p>
+<p>
+  My name is Blake. I enjoy making websites and teaching others to do the same.
+</p>
 
-<p>Check out these cool web games at <a href="https://neal.fun/">Neal.fun</a>!
+<p>
+  Check out these cool web games at <a href="https://neal.fun/">Neal.fun</a>!
+</p>
 ```
 
 Save and reload!
@@ -85,9 +92,9 @@ List lovers, this set of tags is for you. We’ll use the _unordered list_ eleme
 
 ```html
 <ul>
-    <li>The first thing</li>
-    <li>Another thing</li>
-    <li>And lastly, this thing</li>
+  <li>The first thing</li>
+  <li>Another thing</li>
+  <li>And lastly, this thing</li>
 </ul>
 ```
 
@@ -108,34 +115,38 @@ Let’s add a list to our website. Here’s the full site so far:
 ```html
 <h1>Blake's Homepage</h1>
 
-<p>My name is Blake. I enjoy making websites and teaching others to do the same.</p>
+<p>
+  My name is Blake. I enjoy making websites and teaching others to do the same.
+</p>
 
-<p>Check out these cool web games at <a href="https://neal.fun/">Neal.fun</a>!</p>
+<p>
+  Check out these cool web games at <a href="https://neal.fun/">Neal.fun</a>!
+</p>
 
 <h2>Favorite board games</h2>
 
 <ul>
-    <li>Dungeons & Dragons</li>
-    <li>Risk</li>
-    <li>Pandemic</li>
+  <li>Dungeons & Dragons</li>
+  <li>Risk</li>
+  <li>Pandemic</li>
 </ul>
 
 <h2>How to make a website</h2>
 
 <ol>
-    <li>Create an HTML file</li>
-    <li>Write some HTML in it</li>
-    <li>Open it with your web browser</li>
+  <li>Create an HTML file</li>
+  <li>Write some HTML in it</li>
+  <li>Open it with your web browser</li>
 </ol>
 ```
 
 Hey, this thing is slowly starting to look like a website now!
 
-![A web page titled "Blake's Homepage" is displayed. It includes sections on favorite board games (Dungeons &amp; Dragons, Risk, Pandemic) and instructions on how to make a website: 1. Create an HTML file, 2. Write some HTML in it, 3. Open it with a web browser.](/assets/img/add-content-4.png)
+![A web page titled "Blake's Homepage" is displayed. It includes sections on favorite board games (Dungeons & Dragons, Risk, Pandemic) and instructions on how to make a website: 1. Create an HTML file, 2. Write some HTML in it, 3. Open it with a web browser.](/assets/img/add-content-4.png)
 
 You’ll notice I snuck a new tag in there without mentioning it. It’s a _level 2 heading_, or `<h2>` tag. Headings add structure to a page, making it easier for visitors to find what they want.
 
-There's another subtle difference between the tags we've been using. Some of them, like the `<a>` tag, are *inline elements*, meaning they do not start new lines and only take up the necessary width. Other tags—like `<h1>`, `<ul>`, and `<p>`—are known as *block elements*. A block element starts on a new line and occupies the full width of its container.
+There's another subtle difference between the tags we've been using. Some of them, like the `<a>` tag, are _inline elements_, meaning they do not start new lines and only take up the necessary width. Other tags—like `<h1>`, `<ul>`, and `<p>`—are known as _block elements_. A block element starts on a new line and occupies the full width of its container.
 
 So far, we’ve got a lot of words, but do you know what’s worth a thousand of them?
 
@@ -148,7 +159,7 @@ I found a cool image of space. I downloaded the small-size version and renamed i
 You can add it to your page using the _image tag_ or `<img>`. Unlike the tags we’ve seen so far, the `<img>` tag is _self-closing_. That means there isn’t a closing tag. It looks like this:
 
 ```html
-<img src="space.jpg" alt="Photograph of space with stars and stardust.">
+<img src="space.jpg" alt="Photograph of space with stars and stardust." />
 ```
 
 Just like with the `<a>` tag, the `<img>` tag uses attributes to provide more information about how you want to use the tag.
@@ -176,9 +187,9 @@ For example, I could leave a note to return and update my favorite board games.
 see if any deserve to make this list. -->
 
 <ul>
-    <li>Dungeons & Dragons</li>
-    <li>Risk</li>
-    <li>Pandemic</li>
+  <li>Dungeons & Dragons</li>
+  <li>Risk</li>
+  <li>Pandemic</li>
 </ul>
 ```
 
@@ -210,15 +221,13 @@ Remember how we wrap most elements in tags? We actually need to wrap the whole p
 
 ```html
 <html>
+  <head>
+    info about your site goes here
+  </head>
 
-    <head>
-        info about your site goes here
-    </head>
-
-    <body>
-        stuff you want to show up on your page goes here
-    </body>
-
+  <body>
+    stuff you want to show up on your page goes here
+  </body>
 </html>
 ```
 
@@ -227,15 +236,13 @@ To make our HTML document official, let's add a `doctype` line at the very begin
 ```html
 <!doctype html>
 <html>
-    
-    <head>
-        ...
-    </head>
+  <head>
+    ...
+  </head>
 
-    <body>
-        ...
-    </body>
-
+  <body>
+    ...
+  </body>
 </html>
 ```
 
@@ -243,8 +250,8 @@ For now, let’s include two things in the `<head>`: a title tag and a meta tag.
 
 ```html
 <head>
-    <title>Blake's Homepage</title>
-    <meta charset="utf-8">
+  <title>Blake's Homepage</title>
+  <meta charset="utf-8" />
 </head>
 ```
 
@@ -261,38 +268,42 @@ Here’s the whole `index.html` file for reference:
 ```html
 <!doctype html>
 <html>
+  <head>
+    <title>Blake's Homepage</title>
+    <meta charset="utf-8" />
+  </head>
 
-    <head>
-        <title>Blake's Homepage</title>
-        <meta charset="utf-8">
-    </head>
+  <body>
+    <h1>Blake's Homepage</h1>
 
-    <body>
-        <h1>Blake's Homepage</h1>
+    <img src="space.jpg" alt="Photograph of space with stars and stardust." />
 
-        <img src="space.jpg" alt="Photograph of space with stars and stardust.">
+    <p>
+      My name is Blake. I enjoy making websites and teaching others to do the
+      same.
+    </p>
 
-        <p>My name is Blake. I enjoy making websites and teaching others to do the same.</p>
+    <p>
+      Check out these cool web games at
+      <a href="https://neal.fun/">Neal.fun</a>!
+    </p>
 
-        <p>Check out these cool web games at <a href="https://neal.fun/">Neal.fun</a>!</p>
+    <h2>Favorite board games</h2>
 
-        <h2>Favorite board games</h2>
+    <ul>
+      <li>Dungeons & Dragons</li>
+      <li>Risk</li>
+      <li>Pandemic</li>
+    </ul>
 
-        <ul>
-            <li>Dungeons & Dragons</li>
-            <li>Risk</li>
-            <li>Pandemic</li>
-        </ul>
+    <h2>How to make a website</h2>
 
-        <h2>How to make a website</h2>
-
-        <ol>
-            <li>Create an HTML file</li>
-            <li>Write some HTML in it</li>
-            <li>Open it with your web browser</li>
-        </ol>
-    </body>
-
+    <ol>
+      <li>Create an HTML file</li>
+      <li>Write some HTML in it</li>
+      <li>Open it with your web browser</li>
+    </ol>
+  </body>
 </html>
 ```
 
@@ -306,7 +317,7 @@ Now click the _Upload_ button or just drag your updated files (the index page an
 
 Once you’ve done that, click the link to your site at the top of the dashboard. That’s your newly updated LIVE website, which you made from scratch. How cool!
 
-![Screenshot of a web browser visiting "Blake's Homepage" (same website from earlier). The URL is blakewatson.neocities.org. The page has sections about favorite board games, including Dungeons &amp; Dragons, Risk, and Pandemic, and instructions on how to make a website.](/assets/img/add-content-7.png)
+![Screenshot of a web browser visiting "Blake's Homepage" (same website from earlier). The URL is blakewatson.neocities.org. The page has sections about favorite board games, including Dungeons & Dragons, Risk, and Pandemic, and instructions on how to make a website.](/assets/img/add-content-7.png)
 
 ## Up next
 

@@ -1,8 +1,9 @@
 ---
-title: "A website with style"
-summary: "Learn about CSS and see how to link an external stylesheet like Simple.css to your website."
-permalink: "a-website-with-style/"
-layout: "base.njk"
+title: 'A website with style'
+summary: 'Learn about CSS and see how to link an external stylesheet like Simple.css to your website.'
+permalink: 'a-website-with-style/'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # A website with style
@@ -11,15 +12,15 @@ I think our website is nice. Its quiet simplicity is welcoming in a world full o
 
 We’re seeing the browser’s default styles—how it displays text and images without further instructions on how they should look. But most websites you visit don’t look this way. They have been designed to look differently. Their designers have given instructions for what fonts to use, what colors, and what page layout.
 
-In the land of HTML, we are only concerned with _what things are_—this thing is a heading, this other thing is a paragraph, here is an image, and so on. To define *how things look* the browser uses HTML’s sibling language, Cascading Style Sheets, or CSS.
+In the land of HTML, we are only concerned with _what things are_—this thing is a heading, this other thing is a paragraph, here is an image, and so on. To define _how things look_ the browser uses HTML’s sibling language, Cascading Style Sheets, or CSS.
 
 One way to include CSS is by using the `<style>` tag and putting CSS code directly into it. For example, consider the following:
 
 ```html
 <style>
-	body {
-		font-family: "Gill Sans", sans-serif
-	}
+  body {
+    font-family: 'Gill Sans', sans-serif;
+  }
 </style>
 ```
 
@@ -37,7 +38,7 @@ If you’re interested in learning more about CSS, that’s great! I have [a bon
 
 ## CSS frameworks
 
-Even professional web developers who know CSS will use pre-written CSS as a starting point. We will do something similar. Some CSS frameworks are made for web developers—they include a lot of bells and whistles and require that you write your HTML code in a particular way. However, other frameworks are designed for simpler websites. They make your HTML look nice without you doing much extra work. They're called *classless CSS frameworks*.
+Even professional web developers who know CSS will use pre-written CSS as a starting point. We will do something similar. Some CSS frameworks are made for web developers—they include a lot of bells and whistles and require that you write your HTML code in a particular way. However, other frameworks are designed for simpler websites. They make your HTML look nice without you doing much extra work. They're called _classless CSS frameworks_.
 
 For our purposes, that’s perfect. We'll use one called [Simple.css](https://simplecss.org/). But here are some other ones you might want to look at. They’re similar in spirit but with different styles.
 
@@ -64,9 +65,9 @@ Alright, you’ve saved it, and we'll add it to the page soon. But first, let's 
 So far, we only have three files—our webpage, an image file, and the `simple.css` file we just downloaded. But we'll add more files soon. Let’s create a couple of folders and move things around. We want our new file structure to look like this:
 
 - `css` folder
-	- `simple.css`
+  - `simple.css`
 - `images` folder
-	- `space.jpg`
+  - `space.jpg`
 - `index.html`
 
 Nice and clean. Using Visual Studio Code, you can create files and folders directly in the sidebar. Hover your mouse over your files, and you’ll see these buttons.
@@ -80,7 +81,10 @@ Once you make the changes, if you reload the page in the browser, you will notic
 We can fix this by updating the image's `src` value. Add the folder name and a slash before the filename.
 
 ```html
-<img src="images/space.jpg" alt="Photograph of space with stars and stardust.">
+<img
+  src="images/space.jpg"
+  alt="Photograph of space with stars and stardust."
+/>
 ```
 
 ## Adding Simple.css to the page
@@ -89,10 +93,10 @@ We can add a _stylesheet_ to our page similarly to how we added the image. We'll
 
 ```html
 <head>
-	<title>Blake's Homepage</title>
-	<meta charset="utf-8">
+  <title>Blake's Homepage</title>
+  <meta charset="utf-8" />
 
-	<link rel="stylesheet" href="css/simple.css">
+  <link rel="stylesheet" href="css/simple.css" />
 </head>
 ```
 
@@ -118,17 +122,15 @@ So we'll put our website's name in a `<header>` tag and our main content in the 
 
 ```html
 <body>
-	<header>
-		<h1>Blake's Homepage</h1>
-	</header>
+  <header>
+    <h1>Blake's Homepage</h1>
+  </header>
 
-	<main>
-		PAGE CONTENT GOES HERE
-	</main>
+  <main>PAGE CONTENT GOES HERE</main>
 
-	<footer>
-		<p>Made with ❤️ and ☕️ by Blake Watson.</p>
-	</footer>
+  <footer>
+    <p>Made with ❤️ and ☕️ by Blake Watson.</p>
+  </footer>
 </body>
 ```
 

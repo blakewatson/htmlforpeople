@@ -8,7 +8,8 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "prettier.documentSelectors": ["**/*.njk"],
   "[nunjucks]": {
-    "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

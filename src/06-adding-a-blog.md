@@ -1,8 +1,9 @@
 ---
-title: "Adding a blog"
+title: 'Adding a blog'
 summary: "Add a blog to your static website and learn get a whirlwind tour of HTML tags you can use to enhance your site's content."
-permalink: "adding-a-blog/"
-layout: "base.njk"
+permalink: 'adding-a-blog/'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Adding a blog
@@ -30,7 +31,7 @@ Let’s open it in the browser and see how it looks.
 Whoa, we broke it; what happened!? It has to do with the file structure. Look at our `<link>` tag, where we bring our Simple.css styles.
 
 ```html
-<link rel="stylesheet" href="css/simple.css">
+<link rel="stylesheet" href="css/simple.css" />
 ```
 
 It’s looking for `css/simple.css` but can’t find it. Why? The path we gave it is _relative_ to the current file. The current file is in the `blog` folder, so it looks for `blog/css/simple.css`, which doesn’t exist.
@@ -38,7 +39,7 @@ It’s looking for `css/simple.css` but can’t find it. Why? The path we gave i
 So, how do we refer to files that aren’t in the current folder? We can use the `..` syntax like this.
 
 ```html
-<link rel="stylesheet" href="../css/simple.css">
+<link rel="stylesheet" href="../css/simple.css" />
 ```
 
 That means "move up one level, then look for css/simple.css."
@@ -49,9 +50,9 @@ That’s better! Now, let’s update the navigation. Since the home page and the
 
 ```html
 <nav>
-	<a href="../index.html">Home</a>
-	<a href="index.html" aria-current="page">Blog</a>
-	<a href="../about.html">About</a>
+  <a href="../index.html">Home</a>
+  <a href="index.html" aria-current="page">Blog</a>
+  <a href="../about.html">About</a>
 </nav>
 ```
 
@@ -59,9 +60,9 @@ You’ll also need to update the navigation on the other pages to include a link
 
 ```html
 <nav>
-	<a href="index.html" aria-current="page">Home</a>
-	<a href="blog/index.html">Blog</a>
-	<a href="about.html">About</a>
+  <a href="index.html" aria-current="page">Home</a>
+  <a href="blog/index.html">Blog</a>
+  <a href="about.html">About</a>
 </nav>
 ```
 
@@ -73,13 +74,13 @@ Since we're opening our website files directly in the browser, we're using _rela
 
 I’m going to write a silly post about teaching a cat HTML. I'll create a `2024-04-12-whiskers.html` file in the `blog` folder. You can name your blog post file whatever you want. The nice thing about including the date is that, as you create more posts, they'll appear in order on your computer’s filesystem.
 
-As a starting point, we'll copy the contents of `blog/index.html` into our new file. I'll change the `<h1>` (and the `<title>`) to be the name of my article, "How I taught my cat to make a website with HTML." I will also modify the navigation. We aren't on the Blog listing page, so it's inaccurate to say `aria-current="page"` on the blog nav link. But it *is* within the Blog section of the site. So I will change the attribute to the more general `aria-current="true"`. This is **only for individual blog post pages**.
+As a starting point, we'll copy the contents of `blog/index.html` into our new file. I'll change the `<h1>` (and the `<title>`) to be the name of my article, "How I taught my cat to make a website with HTML." I will also modify the navigation. We aren't on the Blog listing page, so it's inaccurate to say `aria-current="page"` on the blog nav link. But it _is_ within the Blog section of the site. So I will change the attribute to the more general `aria-current="true"`. This is **only for individual blog post pages**.
 
 ```html
 <nav>
-	<a href="../index.html">Home</a>
-	<a href="index.html" aria-current="true">Blog</a>
-	<a href="../about.html">About</a>
+  <a href="../index.html">Home</a>
+  <a href="index.html" aria-current="true">Blog</a>
+  <a href="../about.html">About</a>
 </nav>
 ```
 
@@ -89,7 +90,7 @@ I'll add a link back to the blog at the end of the post. Since we're already in 
 <a href="index.html" class="button">&larr; Back to the blog</a>
 ```
 
-The `class="button"` bit is a style that Simple.css provides that makes a text link look like a button. The `&larr;` is a special code called an *HTML entity*. They are used for encoding special characters. This particular one is a _left arrow_. You can see a [list of other entities here](https://perma.cc/BEA6-LF46).
+The `class="button"` bit is a style that Simple.css provides that makes a text link look like a button. The `&larr;` is a special code called an _HTML entity_. They are used for encoding special characters. This particular one is a _left arrow_. You can see a [list of other entities here](https://perma.cc/BEA6-LF46).
 
 I'll add three blog posts dated a few days apart, just for example purposes. When I’m done, I'll have these posts.
 
@@ -100,15 +101,15 @@ I'll add three blog posts dated a few days apart, just for example purposes. Whe
 My file structure will look like this:
 
 - `blog`
-	- `2024-04-12-whiskers.html`
-	- `2024-04-15-aliens.html`
-	- `2024-04-20-donuts.html`
-	- `index.html`
+  - `2024-04-12-whiskers.html`
+  - `2024-04-15-aliens.html`
+  - `2024-04-20-donuts.html`
+  - `index.html`
 - `css`
-	- `simple.css`
+  - `simple.css`
 - `images`
-	- `blake.jpg`
-	- `space.jpg`
+  - `blake.jpg`
+  - `space.jpg`
 - `about.html`
 - `index.html`
 
@@ -119,7 +120,10 @@ Let’s see some tags you can use in your blog posts and other pages.
 For bold and italics, we can use the tags `<strong>` and `<em>`, respectively.
 
 ```html
-<p>After just three days, <strong>Whiskers can now create web pages</strong> better than <em>I</em> can!</p>
+<p>
+  After just three days,
+  <strong>Whiskers can now create web pages</strong> better than <em>I</em> can!
+</p>
 ```
 
 Which would render like this.
@@ -132,8 +136,8 @@ We can use the `<blockquote>` tag to quote a person, a book, another website, or
 
 ```html
 <blockquote>
-	"HTML is <strong>elementary</strong> my dear Watson."<br>
-	<cite>&mdash; Whiskers, probably</cite>
+  "HTML is <strong>elementary</strong> my dear Watson."<br />
+  <cite>&mdash; Whiskers, probably</cite>
 </blockquote>
 ```
 
@@ -155,9 +159,9 @@ Here’s a bulleted or _unordered_ list using the `<ul>` tag for the list and `<
 
 ```html
 <ul>
-	<li>Bread</li>
-	<li>Sugar</li>
-	<li>Hole</li>
+  <li>Bread</li>
+  <li>Sugar</li>
+  <li>Hole</li>
 </ul>
 ```
 
@@ -171,9 +175,22 @@ And here’s a numbered or _ordered_ list (with some bolded points for emphasis)
 
 ```html
 <ol>
-	<li><strong>Portable Happiness:</strong> Donuts are the perfect grab-and-go food. You can take them anywhere: to work, to the park, or on a road trip. They're like little circles of happiness that fit in your hand.</li>
-	<li><strong>Instant Mood Boost:</strong> Feeling down? Have a donut. It's scientifically proven* that donuts can turn a frown upside down. (*Not actually proven, but we all know it's true.)</li>
-	<li><strong>Endless Creativity:</strong> Donut shops are constantly coming up with new and exciting flavors. From maple bacon to matcha green tea, the possibilities are endless. It's like a delicious adventure every time you visit.</li>
+  <li>
+    <strong>Portable Happiness:</strong> Donuts are the perfect grab-and-go
+    food. You can take them anywhere: to work, to the park, or on a road trip.
+    They're like little circles of happiness that fit in your hand.
+  </li>
+  <li>
+    <strong>Instant Mood Boost:</strong> Feeling down? Have a donut. It's
+    scientifically proven* that donuts can turn a frown upside down. (*Not
+    actually proven, but we all know it's true.)
+  </li>
+  <li>
+    <strong>Endless Creativity:</strong> Donut shops are constantly coming up
+    with new and exciting flavors. From maple bacon to matcha green tea, the
+    possibilities are endless. It's like a delicious adventure every time you
+    visit.
+  </li>
 </ol>
 ```
 
@@ -187,43 +204,39 @@ You can even _nest_ lists like this.
 
 ```html
 <ul>
-	<li>
-		First main point
-		<ul>
-			<li>Sub point</li>
-			<li>Another sub point</li>
-		</ul>
-	</li>
+  <li>
+    First main point
+    <ul>
+      <li>Sub point</li>
+      <li>Another sub point</li>
+    </ul>
+  </li>
 
-	<li>
-		Second main point
-		<ul>
-			<li>Sub-point</li>
-			<li>Another sub-point</li>
-		</ul>
-	</li>
+  <li>
+    Second main point
+    <ul>
+      <li>Sub-point</li>
+      <li>Another sub-point</li>
+    </ul>
+  </li>
 </ul>
 ```
 
 That would render something like this.
 
 - First main point
-	- Sub point
-	- Another sub-point
+  - Sub point
+  - Another sub-point
 - Second main point
-	- Sub point
-	- Another sub-point
+  - Sub point
+  - Another sub-point
 
 ## Breaking up content
 
 The example I just showed is an example of one of the ways we can manually add space between elements—the `<br>` tag or _break_ tag. The break tag adds a line break. For example, consider this haiku (by [Robert Cole](http://www.npr.org/blogs/thetwo-way/2013/05/02/180532424/send-your-haiku-to-mars-nasa-seeks-poets#comment-882372940)).
 
 ```html
-<p>
-	A timeless red orb
-	floats lazy in the ether
-	unimpressed by war.
-</p>
+<p>A timeless red orb floats lazy in the ether unimpressed by war.</p>
 ```
 
 By default, the browser will render everything on one line and ignore most whitespace in your HTML.
@@ -236,9 +249,9 @@ We can fix our haiku by putting a couple of `<br>` tags in there.
 
 ```html
 <p>
-	A timeless red orb<br>
-	floats lazy in the ether<br>
-	unimpressed by war.
+  A timeless red orb<br />
+  floats lazy in the ether<br />
+  unimpressed by war.
 </p>
 ```
 
@@ -259,17 +272,28 @@ What’s up with the nonsensical text? It’s Latin-ish text called _[lorem ipsu
 I've been using these tags _a lot_ during this book. Consider this paragraph:
 
 ```html
-<p>By the end of day one, he was familiar with basic tags like <code>html</code>, <code>head</code>, and <code>body</code>. On day two, he was creating paragraphs and lists. By day three, he had moved on to creating stunning layouts with <code>article</code> and <code>section</code>.</p>
+<p>
+  By the end of day one, he was familiar with basic tags like <code>html</code>,
+  <code>head</code>, and <code>body</code>. On day two, he was creating
+  paragraphs and lists. By day three, he had moved on to creating stunning
+  layouts with <code>article</code> and <code>section</code>.
+</p>
 ```
 
 That will display the code bits in a monospaced and a different color, like this.
 
 ![A paragraph of text rendered in a web browser with specific HTML tags highlighted in red. The text reads: "By the end of day one, he was familiar with basic tags like html, head, and body." The highlighted words "html," "head," and "body" are in red with a monospaced font, while the rest of the text remains in black, drawing attention to these specific terms.](/assets/img/adding-a-blog-8.png)
 
-You've seen me include the less-than (`<`) and greater-than (`>`) symbols in my code elements. That takes a little bit of extra work. Like if I want to mention an `<a>` tag, I can’t simply write `<code><a></code>` because the browser will think I'm trying to make a literal link inside the `<code>` tag. To include the less-than and greater-than symbols (sometimes called "angle brackets"), we'll need the *HTML entities `&lt;` and `&gt;`, respectively. That will tell the browser we want to render the actual symbols.
+You've seen me include the less-than (`<`) and greater-than (`>`) symbols in my code elements. That takes a little bit of extra work. Like if I want to mention an `<a>` tag, I can’t simply write `<code><a></code>` because the browser will think I'm trying to make a literal link inside the `<code>` tag. To include the less-than and greater-than symbols (sometimes called "angle brackets"), we'll need the \*HTML entities `&lt;` and `&gt;`, respectively. That will tell the browser we want to render the actual symbols.
 
 ```html
-<p>By the end of day one, he was familiar with basic tags like <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code>. On day two, he was creating paragraphs and lists. By day three, he had moved on to creating stunning layouts with <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code>.</p>
+<p>
+  By the end of day one, he was familiar with basic tags like
+  <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and
+  <code>&lt;body&gt;</code>. On day two, he was creating paragraphs and lists.
+  By day three, he had moved on to creating stunning layouts with
+  <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code>.
+</p>
 ```
 
 That gives us the following.
@@ -279,13 +303,13 @@ That gives us the following.
 As we saw earlier, when rendering your content, the browser ignores most of the whitespace in your code. But sometimes, you want to preserve the exact spacing and line. A fun example is ASCII art, which is when you make art with plain text characters.
 
 ```
-    ___       ___       ___       ___   
-   /\__\     /\  \     /\__\     /\__\  
-  /:/__/_    \:\  \   /::L_L_   /:/  /  
- /::\/\__\   /::\__\ /:/L:\__\ /:/__/   
- \/\::/  /  /:/\/__/ \/_/:/  / \:\  \   
-   /:/  /   \/__/      /:/  /   \:\__\  
-   \/__/               \/__/     \/__/  
+    ___       ___       ___       ___
+   /\__\     /\  \     /\__\     /\__\
+  /:/__/_    \:\  \   /::L_L_   /:/  /
+ /::\/\__\   /::\__\ /:/L:\__\ /:/__/
+ \/\::/  /  /:/\/__/ \/_/:/  / \:\  \
+   /:/  /   \/__/      /:/  /   \:\__\
+   \/__/               \/__/     \/__/
 ```
 
 The above should appear as the letters "HTML" using a 3d effect. It works because it uses a monospaced font and preserves all the whitespace. How did I do it? I used the `<pre>` tag, which is for _pre-formatted_ text. Use it like this.
@@ -328,15 +352,20 @@ Let’s use the `<article>` tag for each one because each represents an independ
 
 ```html
 <main>
-	<article>
-		<h2><a href="2024-04-20-donuts.html">Why donuts are the best thing ever</a></h2>
-		<p><time datetime="2024-04-20">April 20, 2024</time></p>
-		<p>Donuts are the ultimate comfort food because of their versatility, variety, portability, mood-boosting power, and endless creative flavors.</p>
-	</article>
+  <article>
+    <h2>
+      <a href="2024-04-20-donuts.html">Why donuts are the best thing ever</a>
+    </h2>
+    <p><time datetime="2024-04-20">April 20, 2024</time></p>
+    <p>
+      Donuts are the ultimate comfort food because of their versatility,
+      variety, portability, mood-boosting power, and endless creative flavors.
+    </p>
+  </article>
 </main>
 ```
 
-The link in the header will take an `href` *attribute*, the link's destination. Since we're already in the `blog` folder, we can use the blog post filename as the destination.
+The link in the header will take an `href` _attribute_, the link's destination. Since we're already in the `blog` folder, we can use the blog post filename as the destination.
 
 We're using the `<time>` tag to provide a machine-friendly version of the date. That could be useful for search engines searching your site or supporting potential browser features that rely on dates. The `<time>` tag takes an attribute called `datetime` where you can provide the [machine-readable version](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values).
 

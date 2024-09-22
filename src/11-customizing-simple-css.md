@@ -1,8 +1,9 @@
 ---
-title: "Customizing Simple.css"
-summary: "Learn how to use CSS variables to give your Simple.css website a new look."
-permalink: "customizing-simple-css"
-layout: "base.njk"
+title: 'Customizing Simple.css'
+summary: 'Learn how to use CSS variables to give your Simple.css website a new look.'
+permalink: 'customizing-simple-css'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Customizing Simple.css
@@ -18,10 +19,10 @@ Let's open the `simple.css` file we previously added to our site to see what var
 :root,
 ::backdrop {
   /* Set sans-serif & mono fonts */
-  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
-    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
-    "Helvetica Neue", sans-serif;
-  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --sans-font: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir,
+    'Nimbus Sans L', Roboto, 'Noto Sans', 'Segoe UI', Arial, Helvetica,
+    'Helvetica Neue', sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   --standard-border-radius: 5px;
 
   /* Default (light) theme */
@@ -29,7 +30,7 @@ Let's open the `simple.css` file we previously added to our site to see what var
   --accent-bg: #f5f7ff;
   --text: #212121;
   --text-light: #585858;
-  --border: #898EA4;
+  --border: #898ea4;
   --accent: #0d47a1;
   --accent-hover: #1266e2;
   --accent-text: var(--bg);
@@ -56,7 +57,7 @@ We'll look at fonts later. Let’s first look at the colors.
 
 In this case, most of the color variables are represented as hex codes. All you need to know about hex codes is that they are one of several ways to specify a color in CSS. Go to almost any search engine and search for "color picker." You’ll be greeted with a widget you can use to pick out a color and retrieve its hex code along with other formats.
 
-Okay, so how do we set our own colors? Do we change them here inside `simple.css`? You *could* do that; it would work. But there’s a better way.
+Okay, so how do we set our own colors? Do we change them here inside `simple.css`? You _could_ do that; it would work. But there’s a better way.
 
 ## Creating a custom stylesheet
 
@@ -68,11 +69,11 @@ Now, let’s hook it up to the site. You’ll need to do this for every page on 
 
 ```html
 <head>
-    <title>Blake's Homepage</title>
-    <meta charset="utf-8">
+  <title>Blake's Homepage</title>
+  <meta charset="utf-8" />
 
-    <link rel="stylesheet" href="css/simple.css">
-    <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/simple.css" />
+  <link rel="stylesheet" href="css/custom.css" />
 </head>
 ```
 
@@ -143,28 +144,28 @@ This is the code I put in my `custom.css` file.
 
 ```css
 :root {
-    --bg: mintcream;
-    --border: darkslategray;
-    --accent-bg: honeydew;
-    --text: darkslategray;
-    --accent: mediumvioletred;
-    --accent-hover: mediumvioletred;
-    --marked: mediumspringgreen;
+  --bg: mintcream;
+  --border: darkslategray;
+  --accent-bg: honeydew;
+  --text: darkslategray;
+  --accent: mediumvioletred;
+  --accent-hover: mediumvioletred;
+  --marked: mediumspringgreen;
 }
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
-    :root,
-    ::backdrop {
-      color-scheme: dark;
-      --bg: rgb(17, 18, 18);
-      --border: rgb(80, 90, 90);
-      --accent-bg: rgb(35, 35, 36);
-      --text: ghostwhite;
-      --accent: lightskyblue;
-      --accent-hover: lightblue;
-      --marked: gold;
-    }
+  :root,
+  ::backdrop {
+    color-scheme: dark;
+    --bg: rgb(17, 18, 18);
+    --border: rgb(80, 90, 90);
+    --accent-bg: rgb(35, 35, 36);
+    --text: ghostwhite;
+    --accent: lightskyblue;
+    --accent-hover: lightblue;
+    --marked: gold;
+  }
 }
 ```
 
@@ -195,7 +196,7 @@ That's why multiple fonts are typically specified in CSS. If the first font spec
 ```css
 body {
   /* the first font needs quotes because the name includes spaces */
-  font-family: "Some Rando Font", Georgia, serif;
+  font-family: 'Some Rando Font', Georgia, serif;
 }
 ```
 
@@ -213,14 +214,14 @@ We can override Simple's `--sans-font` variable inside the `:root` block so that
 
 ```css
 :root {
-    --sans-font: Georgia, "Times New Roman", serif;
-    --bg: mintcream;
-    --border: darkslategray;
-    --accent-bg: honeydew;
-    --text: darkslategray;
-    --accent: mediumvioletred;
-    --accent-hover: mediumvioletred;
-    --marked: mediumspringgreen;
+  --sans-font: Georgia, 'Times New Roman', serif;
+  --bg: mintcream;
+  --border: darkslategray;
+  --accent-bg: honeydew;
+  --text: darkslategray;
+  --accent: mediumvioletred;
+  --accent-hover: mediumvioletred;
+  --marked: mediumspringgreen;
 }
 ```
 

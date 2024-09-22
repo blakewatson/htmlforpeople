@@ -1,8 +1,9 @@
 ---
-title: "Reusable HTML with PHP"
-summary: "Learn how to reuse elements like navigation menus by leveraging the dynamic ability of PHP."
-permalink: "reusable-html-with-php"
-layout: "base.njk"
+title: 'Reusable HTML with PHP'
+summary: 'Learn how to reuse elements like navigation menus by leveraging the dynamic ability of PHP.'
+permalink: 'reusable-html-with-php'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Reusable HTML with PHP
@@ -64,7 +65,7 @@ For example, here is a webpage that will display the current year.
     </head>
     <body>
         <h1>My website</h1>
-        
+
         <p>The current year is: <?php echo date('Y') ?></p>
     </body>
 </html>
@@ -88,15 +89,15 @@ Consider the website I've been building throughout this book. It has this naviga
 
 ```html
 <nav>
-	<a href="/index.html" aria-current="page">Home</a>
-	<a href="/blog/">Blog</a>
-	<a href="/about.html">About</a>
-	<a href="/resume.html">Resume</a>
-	<a href="/fun.html">Fun!</a>
+  <a href="/index.html" aria-current="page">Home</a>
+  <a href="/blog/">Blog</a>
+  <a href="/about.html">About</a>
+  <a href="/resume.html">Resume</a>
+  <a href="/fun.html">Fun!</a>
 </nav>
 ```
 
-We must maintain this navigation ("nav") menu on every page. It isn't too bad for a small website with a handful of pages. But imagine if you had dozens of pages. If you decided to add something to your nav menu, you’d need to go back to *every single page* and make the identical change in each spot. With PHP, we can reuse our nav menu code.
+We must maintain this navigation ("nav") menu on every page. It isn't too bad for a small website with a handful of pages. But imagine if you had dozens of pages. If you decided to add something to your nav menu, you’d need to go back to _every single page_ and make the identical change in each spot. With PHP, we can reuse our nav menu code.
 
 First, create a file called `nav.php`. You can place it anywhere in your project, but I will put it in an `includes` folder just to be organized.
 
@@ -106,15 +107,15 @@ You should have a `nav.php` file that looks something like this:
 
 ```html
 <nav>
-    <a href="/">Home</a>
-    <a href="/blog">Blog</a>
-    <a href="/about.php">About</a>
-    <a href="/resume.php">Resume</a>
-    <a href="/fun.php">Fun</a>
+  <a href="/">Home</a>
+  <a href="/blog">Blog</a>
+  <a href="/about.php">About</a>
+  <a href="/resume.php">Resume</a>
+  <a href="/fun.php">Fun</a>
 </nav>
 ```
 
-The above is not just an excerpt. That is the *entire contents* of `nav.php`. Unlike other HTML files, which need a `<head>`, `<body>`, etc., PHP files can contain a fragment of HTML.
+The above is not just an excerpt. That is the _entire contents_ of `nav.php`. Unlike other HTML files, which need a `<head>`, `<body>`, etc., PHP files can contain a fragment of HTML.
 
 {% aside 'Note' %}
 In the process of converting the site from HTML-only to PHP, it’s a good time to convert all internal links between pages to use absolute URLs. Start with a slash `/` and type out the full path. Check out this [section on relative versus absolute URLs](/intermission-installing-a-local-web-server/#relative-vs.-absolute-urls) from the web server chapter if you haven’t already.
@@ -153,6 +154,7 @@ If you are comfortable with more code, use a built-in PHP variable that refers t
 ```php
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/includes/nav.php" ?>
 ```
+
 {% endaside %}
 
 Once you’ve done that for each page, you’ll reuse the navigation menu. If you need to update the menu in the future, you can edit `nav.php`.
@@ -173,7 +175,7 @@ Okay, so how can we add this automatically with PHP?
 
 There are many ways you could do this—and none of them are necessarily more right than any other—but here is what I think is the least complicated way of doing it.
 
-This technique will require us to *call a function* on each nav item. It looks like this.
+This technique will require us to _call a function_ on each nav item. It looks like this.
 
 ```php
 <nav>
@@ -185,7 +187,7 @@ This technique will require us to *call a function* on each nav item. It looks l
 </nav>
 ```
 
-We will need a custom *function* called `aria_current` (I will give you the code for that function shortly). The function should receive one *argument*, which should be the text of the `href`. It will then be the function's job to compare that bit of text to the visited URL and determine whether it should output, using `echo`, the `aria-current` attribute.
+We will need a custom _function_ called `aria_current` (I will give you the code for that function shortly). The function should receive one _argument_, which should be the text of the `href`. It will then be the function's job to compare that bit of text to the visited URL and determine whether it should output, using `echo`, the `aria-current` attribute.
 
 You can put the function in the same file above the HTML markup.
 
@@ -219,9 +221,9 @@ function aria_current($url) {
 
 Okay, let's break it down. First, we need to open a pair of PHP tags. Inside, we'll define a function called `aria_current` with one argument: a variable called `$url`.
 
-You can see where I added some notes called *comments*. Every line that starts with two slashes (`//`) is considered a comment and is ignored—it's there just for people.
+You can see where I added some notes called _comments_. Every line that starts with two slashes (`//`) is considered a comment and is ignored—it's there just for people.
 
-The first bit of code is an *if statement*. PHP has a global variable called `$_SERVER` with all kinds of information, including which page is currently being visited (what it calls the `REQUEST_URI`). So we grab that and see if it matches the URL of the given nav item (remember, we are running this function for each nav item). If it does, we will output `aria-current="page"` using the `echo` statement. In that case, the output will appear at the point where we called the function (which is inside the `<a>` tag, where attributes go). After the `echo` statement, we use `return` to stop the function from running further—we're done.
+The first bit of code is an _if statement_. PHP has a global variable called `$_SERVER` with all kinds of information, including which page is currently being visited (what it calls the `REQUEST_URI`). So we grab that and see if it matches the URL of the given nav item (remember, we are running this function for each nav item). If it does, we will output `aria-current="page"` using the `echo` statement. In that case, the output will appear at the point where we called the function (which is inside the `<a>` tag, where attributes go). After the `echo` statement, we use `return` to stop the function from running further—we're done.
 
 If the first test isn't true, there is another test we want to try. Is the current page being visited a sub-page of the given nav item?
 
@@ -230,7 +232,7 @@ This test has two parts:
 1. First, we want to ignore the homepage (`/`) because that's obviously not a sub-page of anything.
 2. Second, we'll test the URL passed to the function against the visited URL to see if we have a match.
 
-The second part of the test uses a function called `strpos`. It receives two arguments. The first is a bit of text you want to search through (let's call it the *haystack*). The second is a bit of text you are looking for (let's call it the *needle*). The function will return the needle's position in the haystack if found. It will return `false` if it doesn't find it at all.
+The second part of the test uses a function called `strpos`. It receives two arguments. The first is a bit of text you want to search through (let's call it the _haystack_). The second is a bit of text you are looking for (let's call it the _needle_). The function will return the needle's position in the haystack if found. It will return `false` if it doesn't find it at all.
 
 So again, we will look at the built-in global variable `$_SERVER['REQUEST_URI']`. You can imagine that being something like `/blog/my-first-post`. We know the visitor is on the blog sub-page if we find `/blog` inside that path.
 

@@ -2,7 +2,8 @@
 title: 'Introduction'
 summary: 'Learn how to create your own personal website, even if you have no prior coding experience. This guide takes you from the basics of HTML to building a multi-page site with images, a blog, and more.'
 permalink: 'intro/'
-layout: 'base.njk'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Introduction
@@ -48,6 +49,4 @@ This is the stuff I wanted to cover but felt that it was a little bit out of sco
 
 ## Up next
 
-Now that you know the why behind this book, it’s time to take the first step. In one chapter, you will learn how to make a website from scratch and put it on the web. Yes that’s right, you’re going...
-
-[Zero to internet: your first website](/zero-to-internet-your-first-website)
+Now that you know the why behind this book, it’s time to take the first step. In one chapter, you will learn how to make a website from scratch and put it on the web.

@@ -1,8 +1,9 @@
 ---
-title: "Adding a resume"
-summary: "Discover how to add structure to a webpage by building a digital resume in HTML."
-permalink: "adding-a-resume/"
-layout: "base.njk"
+title: 'Adding a resume'
+summary: 'Discover how to add structure to a webpage by building a digital resume in HTML.'
+permalink: 'adding-a-resume/'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Adding a resume
@@ -29,15 +30,15 @@ However you go about creating the file, be sure to update the `<title>`, `<h1>`,
 
 ```html
 <header>
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="blog/index.html">Blog</a>
-		<a href="about.html">About</a>
-		<a href="resume.html" aria-current="page">Resume</a>
-	</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="resume.html" aria-current="page">Resume</a>
+  </nav>
 
-	<h1>Blake Watson</h1>
-	<p><em>Experienced Frontend Engineer</em></p>
+  <h1>Blake Watson</h1>
+  <p><em>Experienced Frontend Engineer</em></p>
 </header>
 ```
 
@@ -60,19 +61,19 @@ For this, I will list my relevant skills in short bullet points. I'll use a leve
 
 ```html
 <section>
-	<h2>Skills</h2>
+  <h2>Skills</h2>
 
-	<ul>
-		<li>HTML / CSS</li>
-		<li>JavaScript</li>
-		<li>Web standards / accessibility</li>
-		<li>TypeScript</li>
-		<li>Vue</li>
-		<li>PHP</li>
-		<li>Sass</li>
-		<li>Electron</li>
-		<li>Sketch</li>
-	</ul>
+  <ul>
+    <li>HTML / CSS</li>
+    <li>JavaScript</li>
+    <li>Web standards / accessibility</li>
+    <li>TypeScript</li>
+    <li>Vue</li>
+    <li>PHP</li>
+    <li>Sass</li>
+    <li>Electron</li>
+    <li>Sketch</li>
+  </ul>
 </section>
 ```
 
@@ -86,19 +87,19 @@ You’ve seen several tags using _attributes_ by now. Every page of our site has
 
 ```html
 <section>
-	<h2>Skills</h2>
+  <h2>Skills</h2>
 
-	<ul style="columns: 2">
-		<li>HTML / CSS</li>
-		<li>JavaScript</li>
-		<li>Web standards / accessibility</li>
-		<li>TypeScript</li>
-		<li>Vue</li>
-		<li>PHP</li>
-		<li>Sass</li>
-		<li>Electron</li>
-		<li>Sketch</li>
-	</ul>
+  <ul style="columns: 2">
+    <li>HTML / CSS</li>
+    <li>JavaScript</li>
+    <li>Web standards / accessibility</li>
+    <li>TypeScript</li>
+    <li>Vue</li>
+    <li>PHP</li>
+    <li>Sass</li>
+    <li>Electron</li>
+    <li>Sketch</li>
+  </ul>
 </section>
 ```
 
@@ -118,22 +119,24 @@ I'll show you what markup I chose and what it looks like and then explain it.
 
 ```html
 <section>
-	<h2>Experience</h2>
+  <h2>Experience</h2>
 
-	<h3>Frontend Engineer</h3>
+  <h3>Frontend Engineer</h3>
 
-	<p>
-		<strong>MRI Technologies</strong><br>
-		<time datetime="2019-08">August 2019</time>&ndash;Present
-	</p>
+  <p>
+    <strong>MRI Technologies</strong><br />
+    <time datetime="2019-08">August 2019</time>&ndash;Present
+  </p>
 
-	<ul>
-		<li>Build and maintain a spacesuit management app for NASA</li>
-		<li>Build and maintain a document management system for Collins Aerospace</li>
-		<li>Create reactive frontends with Vue, REST APIs, and GraphQL</li>
-	</ul>
+  <ul>
+    <li>Build and maintain a spacesuit management app for NASA</li>
+    <li>
+      Build and maintain a document management system for Collins Aerospace
+    </li>
+    <li>Create reactive frontends with Vue, REST APIs, and GraphQL</li>
+  </ul>
 
-	<!-- ...the rest of the jobs go here -->
+  <!-- ...the rest of the jobs go here -->
 </section>
 ```
 
@@ -167,15 +170,21 @@ For these projects, I'll use the `<h3>` tag for the project title and put a para
 
 ```html
 <section>
-	<h2>Selected projects</h2>
+  <h2>Selected projects</h2>
 
-	<h3>Mississippi Gulf Coast Community College</h3>
+  <h3>Mississippi Gulf Coast Community College</h3>
 
-	<p>I worked on this website in my role as designer and developer at Mad Genius. I built out several of the dynamic, data-intensive sections like the searchable course catalog and the comprrehensive "A to Z" index. These sections made heavy use of reactive UI, third-party API integrations, and custom WordPress plugin development.</p>
+  <p>
+    I worked on this website in my role as designer and developer at Mad Genius.
+    I built out several of the dynamic, data-intensive sections like the
+    searchable course catalog and the comprrehensive "A to Z" index. These
+    sections made heavy use of reactive UI, third-party API integrations, and
+    custom WordPress plugin development.
+  </p>
 
-	<p><a href="https://mgccc.edu/">mgccc.edu</a></p>
+  <p><a href="https://mgccc.edu/">mgccc.edu</a></p>
 
-	<!-- ...the rest of the projects go here -->
+  <!-- ...the rest of the projects go here -->
 </section>
 ```
 
@@ -185,17 +194,18 @@ Finally, I'll add my degrees, university, year of graduation, and study area. I 
 
 ```html
 <section>
-	<h2>Education</h2>
-	
-	<p>
-		<strong>Master of Business Administration</strong>, <time>2009</time><br>
-		<em>Mississippi State University, Starkville, MS</em>
-	</p>
+  <h2>Education</h2>
 
-	<p>
-		<strong>Bachelor of Business Admiinistration</strong>, Information Systems, <time>2007</time><br>
-		<em>Mississippi State University, Starkville, MS</em>
-	</p>
+  <p>
+    <strong>Master of Business Administration</strong>, <time>2009</time><br />
+    <em>Mississippi State University, Starkville, MS</em>
+  </p>
+
+  <p>
+    <strong>Bachelor of Business Admiinistration</strong>, Information Systems,
+    <time>2007</time><br />
+    <em>Mississippi State University, Starkville, MS</em>
+  </p>
 </section>
 ```
 
@@ -205,92 +215,98 @@ Here’s the complete code, including the header and main content areas.
 
 ```html
 <header>
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="blog/index.html">Blog</a>
-		<a href="about.html">About</a>
-		<a href="resume.html" aria-current="page">Resume</a>
-	</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="resume.html" aria-current="page">Resume</a>
+  </nav>
 
-	<h1>Blake Watson</h1>
-	<p><em>Experienced Frontend Engineer</em></p>
+  <h1>Blake Watson</h1>
+  <p><em>Experienced Frontend Engineer</em></p>
 </header>
 
 <main>
-	<section>
-		<h2>Skills</h2>
+  <section>
+    <h2>Skills</h2>
 
-		<ul  style="columns: 2">
-			<li>HTML / CSS</li>
-			<li>JavaScript</li>
-			<li>Web standards / a11y</li>
-			<li>TypeScript</li>
-			<li>Vue</li>
-			<li>PHP</li>
-			<li>Sass</li>
-			<li>Electron</li>
-			<li>Sketch</li>
-		</ul>
-	</section>
+    <ul style="columns: 2">
+      <li>HTML / CSS</li>
+      <li>JavaScript</li>
+      <li>Web standards / a11y</li>
+      <li>TypeScript</li>
+      <li>Vue</li>
+      <li>PHP</li>
+      <li>Sass</li>
+      <li>Electron</li>
+      <li>Sketch</li>
+    </ul>
+  </section>
 
-	<section>
-		<h2>Experience</h2>
+  <section>
+    <h2>Experience</h2>
 
-		<h3>Frontend Engineer</h3>
+    <h3>Frontend Engineer</h3>
 
-		<p>
-			<strong>MRI Technologies</strong><br>
-			<time datetime="2019-08">August 2019</time>&ndash;Present
-		</p>
+    <p>
+      <strong>MRI Technologies</strong><br />
+      <time datetime="2019-08">August 2019</time>&ndash;Present
+    </p>
 
-		<ul>
-			<li>Build and maintain a spacesuit management app for NASA</li>
-			<li>Build and maintain a document management system for Collins Aerospace</li>
-			<li>Create reactive frontends with Vue, REST APIs, and GraphQL</li>
-		</ul>
+    <ul>
+      <li>Build and maintain a spacesuit management app for NASA</li>
+      <li>
+        Build and maintain a document management system for Collins Aerospace
+      </li>
+      <li>Create reactive frontends with Vue, REST APIs, and GraphQL</li>
+    </ul>
 
-		<h3>Web Developer/Interactive Designer</h3>
+    <h3>Web Developer/Interactive Designer</h3>
 
-		<p>
-			<strong>Mad Genius</strong><br>
-			<time datetime="2015-05">May 2015</time>&ndash;<time datetime="2019-08">August 2019</time>
-		</p>
+    <p>
+      <strong>Mad Genius</strong><br />
+      <time datetime="2015-05">May 2015</time>&ndash;<time datetime="2019-08"
+        >August 2019</time
+      >
+    </p>
 
-		<ul>
-			<li>Sketching, prototyping, and UI design</li>
-			<li>WordPress theme and plugin development</li>
-			<li>Reactive UI with Vue and Knockout</li>
-			<li>Third-party API integrations</li>
-		</ul>
+    <ul>
+      <li>Sketching, prototyping, and UI design</li>
+      <li>WordPress theme and plugin development</li>
+      <li>Reactive UI with Vue and Knockout</li>
+      <li>Third-party API integrations</li>
+    </ul>
 
-		<h3>Web Developer</h3>
+    <h3>Web Developer</h3>
 
-		<p>
-			<strong>Self employed</strong><br>
-			<time>2007</time>&ndash;<time>2015</time>
-		</p>
+    <p>
+      <strong>Self employed</strong><br />
+      <time>2007</time>&ndash;<time>2015</time>
+    </p>
 
-		<ul>
-			<li>Communicated with clients</li>
-			<li>Developed usable, standards-based websites</li>
-			<li>Made responsive websites</li>
-			<li>Volunteered on many non-profit projects</li>
-		</ul>
-	</section>
+    <ul>
+      <li>Communicated with clients</li>
+      <li>Developed usable, standards-based websites</li>
+      <li>Made responsive websites</li>
+      <li>Volunteered on many non-profit projects</li>
+    </ul>
+  </section>
 
-	<section>
-		<h2>Education</h2>
-	
-		<p>
-			<strong>Master of Business Administration</strong>, <time>2009</time><br>
-			<em>Mississippi State University, Starkville, MS</em>
-		</p>
+  <section>
+    <h2>Education</h2>
 
-		<p>
-			<strong>Bachelor of Business Admiinistration</strong>, Information Systems, <time>2007</time><br>
-			<em>Mississippi State University, Starkville, MS</em>
-		</p>
-	</section>
+    <p>
+      <strong>Master of Business Administration</strong>, <time>2009</time
+      ><br />
+      <em>Mississippi State University, Starkville, MS</em>
+    </p>
+
+    <p>
+      <strong>Bachelor of Business Admiinistration</strong>, Information
+      Systems, <time>2007</time><br />
+      <em>Mississippi State University, Starkville, MS</em>
+    </p>
+  </section>
 </main>
 ```
 

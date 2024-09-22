@@ -13,6 +13,8 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "markdown-it-anchor": "^9.0.1",
-    "markdown-it-table-of-contents": "^0.6.0"
+    "markdown-it-table-of-contents": "^0.6.0",
+    "prettier": "3.3.3",
+    "prettier-plugin-jinja-template": "^1.5.0"
   }
 }

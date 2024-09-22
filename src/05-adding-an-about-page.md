@@ -1,8 +1,9 @@
 ---
-title: "Adding an about page"
-summary: "Learn more HTML tags and see how to create a navigation menu to link between webpages."
-permalink: "adding-an-about-page/"
-layout: "base.njk"
+title: 'Adding an about page'
+summary: 'Learn more HTML tags and see how to create a navigation menu to link between webpages.'
+permalink: 'adding-an-about-page/'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Adding an about page
@@ -41,29 +42,42 @@ Here’s my code inside the `<body>` tag.
 
 ```html
 <header>
-	<h1>About Blake</h1>
+  <h1>About Blake</h1>
 </header>
 
 <main>
-	<img src="images/blake.jpg" alt="Photograph of space with stars and stardust.">
+  <img
+    src="images/blake.jpg"
+    alt="Photograph of space with stars and stardust."
+  />
 
-	<p>My name is Blake. I enjoy making websites and teaching others to do the same. I started writing an HTML web book because I think everyone should have a personal website and I want to show that you don't have to be a computer science graduate to make one.</p>
+  <p>
+    My name is Blake. I enjoy making websites and teaching others to do the
+    same. I started writing an HTML web book because I think everyone should
+    have a personal website and I want to show that you don't have to be a
+    computer science graduate to make one.
+  </p>
 
-	<p>I'm a side project enthusiast and have put various sites, apps, and (bad) games into the world. My hobbies include web-related nerdery, D&D and board games, and writing. I like to participate in National Novel Writing Month, the annual novel-writing challenge</p>
+  <p>
+    I'm a side project enthusiast and have put various sites, apps, and (bad)
+    games into the world. My hobbies include web-related nerdery, D&D and board
+    games, and writing. I like to participate in National Novel Writing Month,
+    the annual novel-writing challenge
+  </p>
 
-	<p>🐘 <a href="https://social.lol/@bw">Drop me a line on Mastodon</a></p>
+  <p>🐘 <a href="https://social.lol/@bw">Drop me a line on Mastodon</a></p>
 
-	<h2>Favorite board games</h2>
+  <h2>Favorite board games</h2>
 
-	<ul>
-		<li>Dungeons & Dragons</li>
-		<li>Risk</li>
-		<li>Pandemic</li>
-	</ul>
-</main>  
+  <ul>
+    <li>Dungeons & Dragons</li>
+    <li>Risk</li>
+    <li>Pandemic</li>
+  </ul>
+</main>
 
 <footer>
-	<p>Made with ❤️ and ☕️ by Blake Watson.</p>
+  <p>Made with ❤️ and ☕️ by Blake Watson.</p>
 </footer>
 ```
 
@@ -71,7 +85,7 @@ And this is what it looks like.
 
 ![Screenshot of the "About Blake" page. The page header shows "About Blake." Below is a photo of Blake (me!) smiling in front of a brick wall. The text introduces Blake, mentioning his passion for making websites and teaching others, along with his hobbies in web development, D&D, board games, and writing. A link to contact him on Mastodon is included. A section titled "Favorite board games" lists "Dungeons & Dragons," "Risk," and "Pandemic." The page footer reads "Made with ❤️ and ☕ by Blake Watson."](/assets/img/adding-an-about-page-1.png)
 
-Surprise, that’s me! Anyway, this is looking like a proper about page. I admit it’s a bit contrived. You should feel free to write as much as you want here. 
+Surprise, that’s me! Anyway, this is looking like a proper about page. I admit it’s a bit contrived. You should feel free to write as much as you want here.
 
 ## Navigating between pages
 
@@ -81,12 +95,12 @@ HTML has a `<nav>` tag for exactly this purpose. We'll put two links in our nav 
 
 ```html
 <header>
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="about.html" aria-current="page">About</a>
-	</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+  </nav>
 
-	<h1>About Blake</h1>
+  <h1>About Blake</h1>
 </header>
 ```
 
@@ -101,12 +115,12 @@ Let's add the same nav menu to the home page. Open `index.html` and add the menu
 
 ```html
 <header>
-	<nav>
-		<a href="index.html" aria-current="page">Home</a>
-		<a href="about.html">About</a>
-	</nav>
+  <nav>
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+  </nav>
 
-	<h1>Blake's Homepage</h1>
+  <h1>Blake's Homepage</h1>
 </header>
 ```
 
@@ -120,9 +134,18 @@ Although, speaking of the space image, let's make it more interesting. I want to
 
 ```html
 <figure>
-	<img src="/images/space.jpg" alt="Photograph of space with stars and stardust.">
+  <img
+    src="/images/space.jpg"
+    alt="Photograph of space with stars and stardust."
+  />
 
-	<figcaption>Space is cool. <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source</a></figcaption>
+  <figcaption>
+    Space is cool.
+    <a
+      href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg"
+      >Photo source</a
+    >
+  </figcaption>
 </figure>
 ```
 
@@ -130,26 +153,44 @@ My `<main>` content on the homepage now looks like this.
 
 ```html
 <main>
-	<figure>
-		<img src="/images/space.jpg" alt="Photograph of space with stars and stardust.">
-	
-		<figcaption>Space is cool. <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source</a></figcaption>
-	</figure>
-	
-	<p>Welcome to my website! Here you can find out more about me, read my very interesting and totally not contrived blog posts, and check out some of the fun hobbies I am into. It won't be long until you are wondering what sorcery I have used to create this mind-blowing, web-based experience. The answer is HTML.</p>
-	
-	<h2>How to make a website</h2>
+  <figure>
+    <img
+      src="/images/space.jpg"
+      alt="Photograph of space with stars and stardust."
+    />
 
-	<ol>
-		<li>Create an HTML file</li>
-		<li>Write some HTML in it</li>
-		<li>Open it with your web browser</li>
-	</ol>
-	
-	<p class="notice">
-		<strong>Want to learn how to make a website like this?</strong><br>
-		Check out the free web book <a href="https://htmlforpeople.com/">HTML for People</a>. It's made for everyone and teaches you how to make a webpage in a friendly, approachable way.
-	</p>
+    <figcaption>
+      Space is cool.
+      <a
+        href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg"
+        >Photo source</a
+      >
+    </figcaption>
+  </figure>
+
+  <p>
+    Welcome to my website! Here you can find out more about me, read my very
+    interesting and totally not contrived blog posts, and check out some of the
+    fun hobbies I am into. It won't be long until you are wondering what sorcery
+    I have used to create this mind-blowing, web-based experience. The answer is
+    HTML.
+  </p>
+
+  <h2>How to make a website</h2>
+
+  <ol>
+    <li>Create an HTML file</li>
+    <li>Write some HTML in it</li>
+    <li>Open it with your web browser</li>
+  </ol>
+
+  <p class="notice">
+    <strong>Want to learn how to make a website like this?</strong><br />
+    Check out the free web book
+    <a href="https://htmlforpeople.com/">HTML for People</a>. It's made for
+    everyone and teaches you how to make a webpage in a friendly, approachable
+    way.
+  </p>
 </main>
 ```
 

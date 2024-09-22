@@ -1,8 +1,9 @@
 ---
-title: "Intermission: installing a local web server"
-summary: "Learn how to run a webserver on your computer, giving you powerful features for serving your website locally."
-permalink: "intermission-installing-a-local-web-server/"
-layout: "base.njk"
+title: 'Intermission: installing a local web server'
+summary: 'Learn how to run a webserver on your computer, giving you powerful features for serving your website locally.'
+permalink: 'intermission-installing-a-local-web-server/'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Intermission: installing a local web server
@@ -17,10 +18,10 @@ A web server is a program that makes a website available at an address. When you
 
 I’ll give you several options based on the operating system and technical knowledge needed. So you don’t need to read everything. Use the links below to jump to the section that applies to you.
 
-- [Visual Studio Code (cross-platform)](#visual-studio-code-(cross-platform))
+- [Visual Studio Code (cross-platform)](<#visual-studio-code-(cross-platform)>)
 - [macOS](#macos)
 - [Windows and cross-platform](#windows-and-cross-platform)
-- [Python and PHP (cross-platform)](#python-and-php-(cross-platform))
+- [Python and PHP (cross-platform)](<#python-and-php-(cross-platform)>)
 
 ## Visual Studio Code (cross-platform)
 
@@ -126,7 +127,7 @@ The cool thing is that it doesn't matter what page I'm on—it can be a top-leve
 <a href="/top-level-page.html">Top level</a>
 ```
 
-We didn't use absolute URLs earlier because we weren't using a web server. Had we tried to use absolute URLs when opening our website directly in the browser, the slash would have pointed toward the top-level folder of your *entire computer*, which is certainly not what we wanted.
+We didn't use absolute URLs earlier because we weren't using a web server. Had we tried to use absolute URLs when opening our website directly in the browser, the slash would have pointed toward the top-level folder of your _entire computer_, which is certainly not what we wanted.
 
 Now that we're using a web server, I'll leave it up to you if you'd like to go back and change all the paths, but it does make copying and pasting the menu easier. Creating links between pages is more straightforward when using absolute URLs.
 

@@ -1,15 +1,16 @@
 ---
-title: "Intermission: upgrade your text editor"
-summary: "Learn about and download a code editor like Visual Studio Code that provides syntax highlighting and other features specifically for coding."
-permalink: "intermission-upgrade-your-text-editor/"
-layout: "base.njk"
+title: 'Intermission: upgrade your text editor'
+summary: 'Learn about and download a code editor like Visual Studio Code that provides syntax highlighting and other features specifically for coding.'
+permalink: 'intermission-upgrade-your-text-editor/'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Intermission: upgrade your text editor
 
 You’ve come a long way. Let’s take a second to appreciate that you opened up a simple text editor and created a freaking website by writing some HTML code. Way to go!
 
-Speaking of simple text editors, keeping everything indented nicely in HTML can get annoying. It can also be challenging to distinguish HTML code from our written content. 
+Speaking of simple text editors, keeping everything indented nicely in HTML can get annoying. It can also be challenging to distinguish HTML code from our written content.
 
 ![A notepad window showing an HTML code for "Blake's Homepage". The page contains a heading, an image tag with the source "space.jpg" and alt text "Photograph of space with stars and stardust," and sections about hobby and teaching interests that use various HTML elements.](/assets/img/code-editor-1.png)
 
@@ -31,7 +32,7 @@ Once you download and install VS Code, start it up. You may see a few instructio
 
 ## Open your project
 
-On the VS Code welcome screen, click _Open Folder_, then select the folder containing your web project. You’ll see your website files in the sidebar. When you open the `index.html` file, you’ll see your code in a nice view with line numbers and what is called *syntax highlighting*—parts of the code are colorized to be more easily distinguished from other parts.
+On the VS Code welcome screen, click _Open Folder_, then select the folder containing your web project. You’ll see your website files in the sidebar. When you open the `index.html` file, you’ll see your code in a nice view with line numbers and what is called _syntax highlighting_—parts of the code are colorized to be more easily distinguished from other parts.
 
 ![Screenshot of Visual Studio Code with HTML code for "Blake's Homepage." The left sidebar with the project's files. The main editor shows the same source code as before, but the code has been colorized to make it easier to distinguish the different parts of the code.](/assets/img/code-editor-3.png)
 

@@ -2,7 +2,8 @@
 title: 'Adding a fun page'
 summary: 'Add an interactive page to your website using show/hide capability and YouTube video embeds.'
 permalink: 'adding-a-fun-page/'
-layout: 'base.njk'
+tags: chapter
+layout: 'chapter.njk'
 ---
 
 # Adding a fun page
@@ -345,7 +346,7 @@ Nice!
 To see this page in action, [check out the live demo](https://demo.htmlforpeople.com/fun). Here is the complete code for the _Fun!_ page.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Fun - Blake's Homepage</title>

@@ -279,8 +279,7 @@ Here’s the whole `index.html` file for reference:
     <img src="space.jpg" alt="Photograph of space with stars and stardust." />
 
     <p>
-      My name is Blake. I enjoy making websites and teaching others to do the
-      same.
+      My name is Blake. I enjoy making websites and teaching others to do thesame.
     </p>
 
     <p>

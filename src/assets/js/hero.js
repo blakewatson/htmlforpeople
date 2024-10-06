@@ -33,14 +33,16 @@ const anime = window.anime;
 
   const solarSystem = document.getElementById('solar-system');
 
-  const solarSystemAnims = [...solarSystem.children].map((body) => anime({
-    targets: body.children[0],
-    translateY: () => [anime.random(-20, 10), anime.random(10, 30)],
-    duration: () => anime.random(3500, 5000),
-    loop: true,
-    direction: 'alternate',
-    easing: 'easeInOutSine',
-  }))
+  const solarSystemAnims = [...solarSystem.children].map((body) =>
+    anime({
+      targets: body.children[0],
+      translateY: () => [anime.random(-20, 10), anime.random(10, 30)],
+      duration: () => anime.random(3500, 5000),
+      loop: true,
+      direction: 'alternate',
+      easing: 'easeInOutSine',
+    }),
+  );
 
   // ANCHOR - Sparkle Animation
 

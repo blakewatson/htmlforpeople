@@ -86,18 +86,13 @@ First, I will make a new `<section>` with a heading and some introductory text a
   <h2>D&D stuff</h2>
 
   <p>
-    Dungeons & Dragons (D&D) is a fun tabletop game where you create characters
-    and go on epic adventures with friends. Guided by a Dungeon Master (DM),
-    you'll roll dice to see what happens next. It's all about creativity,
-    teamwork, and having a blast as you tackle quests, fight monsters, and find
-    awesome treasures.
+    Dungeons & Dragons (D&D) is a fun tabletop game where you create characters and go on epic adventures with friends. Guided by a Dungeon Master (DM), you'll roll dice to see what happens next. It's all about creativity, teamwork, and having a blast as you tackle quests, fight monsters, and find awesome treasures.
   </p>
 
   <h3>Random encounter table</h3>
 
   <p>
-    This is a table you can use to randomly decide what enemy or creature the
-    players are going to encounter. Just roll a d8.
+    This is a table you can use to randomly decide what enemy or creature the players are going to encounter. Just roll a d8.
   </p>
 
   ...The table will go here
@@ -394,18 +389,13 @@ To see this page in action, [check out the live demo](https://demo.htmlforpeople
         <h2>D&D stuff</h2>
 
         <p>
-          Dungeons & Dragons (D&D) is a fun tabletop game where you create
-          characters and go on epic adventures with friends. Guided by a Dungeon
-          Master (DM), you'll roll dice to see what happens next. It's all about
-          creativity, teamwork, and having a blast as you tackle quests, fight
-          monsters, and find awesome treasures.
+          Dungeons & Dragons (D&D) is a fun tabletop game where you create characters and go on epic adventures with friends. Guided by a Dungeon Master (DM), you'll roll dice to see what happens next. It's all about creativity, teamwork, and having a blast as you tackle quests, fight monsters, and find awesome treasures.
         </p>
 
         <h3>Random encounter table</h3>
 
         <p>
-          This is a table you can use to randomly decide what enemy or creature
-          the players are going to encounter. Just roll a d8.
+          This is a table you can use to randomly decide what enemy or creature the players are going to encounter. Just roll a d8.
         </p>
 
         <table>

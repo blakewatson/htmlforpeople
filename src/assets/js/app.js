@@ -21,7 +21,7 @@ customElements.define(
         window.applyThemeSetting(this.#theme);
       });
     }
-  }
+  },
 );
 
 /* Code wrap */
@@ -32,7 +32,7 @@ customElements.define(
 
     constructor() {
       super();
-      const value = localStorage.getItem('wrap-code') === 'true';
+      const value = localStorage.getItem('wrap-code');
       this.#wrapCode = value !== 'false';
     }
 
@@ -46,7 +46,7 @@ customElements.define(
         document.body.classList.toggle('wrap-code', this.#wrapCode);
       });
     }
-  }
+  },
 );
 
 /* Elevator button */
@@ -80,7 +80,7 @@ customElements.define(
     isTargetInViewport() {
       return isInViewport(this.#target);
     }
-  }
+  },
 );
 
 // Determine if an element is in the visible viewport

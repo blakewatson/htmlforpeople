@@ -46,23 +46,14 @@ Here’s my code inside the `<body>` tag.
 </header>
 
 <main>
-  <img
-    src="images/blake.jpg"
-    alt="Photograph of space with stars and stardust."
-  />
+  <img src="images/blake.jpg" alt="Photograph of space with stars and stardust.">
 
   <p>
-    My name is Blake. I enjoy making websites and teaching others to do the
-    same. I started writing an HTML web book because I think everyone should
-    have a personal website and I want to show that you don't have to be a
-    computer science graduate to make one.
+    My name is Blake. I enjoy making websites and teaching others to do the same. I started writing an HTML web book because I think everyone should have a personal website and I want to show that you don't have to be a computer science graduate to make one.
   </p>
 
   <p>
-    I'm a side project enthusiast and have put various sites, apps, and (bad)
-    games into the world. My hobbies include web-related nerdery, D&D and board
-    games, and writing. I like to participate in National Novel Writing Month,
-    the annual novel-writing challenge
+    I'm a side project enthusiast and have put various sites, apps, and (bad) games into the world. My hobbies include web-related nerdery, D&D and board games, and writing. I like to participate in National Novel Writing Month, the annual novel-writing challenge
   </p>
 
   <p>🐘 <a href="https://social.lol/@bw">Drop me a line on Mastodon</a></p>
@@ -134,17 +125,11 @@ Although, speaking of the space image, let's make it more interesting. I want to
 
 ```html
 <figure>
-  <img
-    src="/images/space.jpg"
-    alt="Photograph of space with stars and stardust."
-  />
+  <img src="/images/space.jpg" alt="Photograph of space with stars and stardust.">
 
   <figcaption>
     Space is cool.
-    <a
-      href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg"
-      >Photo source</a
-    >
+    <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source</a>
   </figcaption>
 </figure>
 ```
@@ -154,26 +139,16 @@ My `<main>` content on the homepage now looks like this.
 ```html
 <main>
   <figure>
-    <img
-      src="/images/space.jpg"
-      alt="Photograph of space with stars and stardust."
-    />
+    <img src="/images/space.jpg" alt="Photograph of space with stars and stardust.">
 
     <figcaption>
       Space is cool.
-      <a
-        href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg"
-        >Photo source</a
-      >
+      <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source<a>
     </figcaption>
   </figure>
 
   <p>
-    Welcome to my website! Here you can find out more about me, read my very
-    interesting and totally not contrived blog posts, and check out some of the
-    fun hobbies I am into. It won't be long until you are wondering what sorcery
-    I have used to create this mind-blowing, web-based experience. The answer is
-    HTML.
+    Welcome to my website! Here you can find out more about me, read my very interesting and totally not contrived blog posts, and check out some of the fun hobbies I am into. It won't be long until you are wondering what sorcery I have used to create this mind-blowing, web-based experience. The answer is HTML.
   </p>
 
   <h2>How to make a website</h2>
@@ -185,11 +160,7 @@ My `<main>` content on the homepage now looks like this.
   </ol>
 
   <p class="notice">
-    <strong>Want to learn how to make a website like this?</strong><br />
-    Check out the free web book
-    <a href="https://htmlforpeople.com/">HTML for People</a>. It's made for
-    everyone and teaches you how to make a webpage in a friendly, approachable
-    way.
+    <strong>Want to learn how to make a website like this?</strong><br /> Check out the free web book <a href="https://htmlforpeople.com/">HTML for People</a>. It's made for everyone and teaches you how to make a webpage in a friendly, approachable way.
   </p>
 </main>
 ```

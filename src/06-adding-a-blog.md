@@ -121,8 +121,7 @@ For bold and italics, we can use the tags `<strong>` and `<em>`, respectively.
 
 ```html
 <p>
-  After just three days,
-  <strong>Whiskers can now create web pages</strong> better than <em>I</em> can!
+  After just three days, <strong>Whiskers can now create web pages</strong> better than <em>I</em> can!
 </p>
 ```
 
@@ -136,7 +135,7 @@ We can use the `<blockquote>` tag to quote a person, a book, another website, or
 
 ```html
 <blockquote>
-  "HTML is <strong>elementary</strong> my dear Watson."<br />
+  "HTML is <strong>elementary</strong> my dear Watson."<br>
   <cite>&mdash; Whiskers, probably</cite>
 </blockquote>
 ```

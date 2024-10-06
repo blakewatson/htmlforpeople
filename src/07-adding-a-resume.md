@@ -175,11 +175,7 @@ For these projects, I'll use the `<h3>` tag for the project title and put a para
   <h3>Mississippi Gulf Coast Community College</h3>
 
   <p>
-    I worked on this website in my role as designer and developer at Mad Genius.
-    I built out several of the dynamic, data-intensive sections like the
-    searchable course catalog and the comprrehensive "A to Z" index. These
-    sections made heavy use of reactive UI, third-party API integrations, and
-    custom WordPress plugin development.
+    I worked on this website in my role as designer and developer at Mad Genius. I built out several of the dynamic, data-intensive sections like the searchable course catalog and the comprrehensive "A to Z" index. These sections made heavy use of reactive UI, third-party API integrations, and custom WordPress plugin development.
   </p>
 
   <p><a href="https://mgccc.edu/">mgccc.edu</a></p>
@@ -249,15 +245,13 @@ Here’s the complete code, including the header and main content areas.
     <h3>Frontend Engineer</h3>
 
     <p>
-      <strong>MRI Technologies</strong><br />
+      <strong>MRI Technologies</strong><br>
       <time datetime="2019-08">August 2019</time>&ndash;Present
     </p>
 
     <ul>
       <li>Build and maintain a spacesuit management app for NASA</li>
-      <li>
-        Build and maintain a document management system for Collins Aerospace
-      </li>
+      <li>Build and maintain a document management system for Collins Aerospace</li>
       <li>Create reactive frontends with Vue, REST APIs, and GraphQL</li>
     </ul>
 
@@ -265,9 +259,7 @@ Here’s the complete code, including the header and main content areas.
 
     <p>
       <strong>Mad Genius</strong><br />
-      <time datetime="2015-05">May 2015</time>&ndash;<time datetime="2019-08"
-        >August 2019</time
-      >
+      <time datetime="2015-05">May 2015</time>&ndash;<time datetime="2019-08">August 2019</time>
     </p>
 
     <ul>
@@ -296,14 +288,12 @@ Here’s the complete code, including the header and main content areas.
     <h2>Education</h2>
 
     <p>
-      <strong>Master of Business Administration</strong>, <time>2009</time
-      ><br />
+      <strong>Master of Business Administration</strong>, <time>2009</time><br />
       <em>Mississippi State University, Starkville, MS</em>
     </p>
 
     <p>
-      <strong>Bachelor of Business Admiinistration</strong>, Information
-      Systems, <time>2007</time><br />
+      <strong>Bachelor of Business Admiinistration</strong>, Information Systems, <time>2007</time><br>
       <em>Mississippi State University, Starkville, MS</em>
     </p>
   </section>

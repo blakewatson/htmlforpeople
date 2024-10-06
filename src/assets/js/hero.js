@@ -33,14 +33,14 @@ const anime = window.anime;
 
   const solarSystem = document.getElementById('solar-system');
 
-  const solarSystemAnim = anime({
-    targets: [...solarSystem.children].map((body) => body.children[0]),
+  const solarSystemAnims = [...solarSystem.children].map((body) => anime({
+    targets: body.children[0],
     translateY: () => [anime.random(-20, 10), anime.random(10, 30)],
-    duration: () => anime.random(2500, 4000),
+    duration: () => anime.random(3500, 5000),
     loop: true,
     direction: 'alternate',
     easing: 'easeInOutSine',
-  });
+  }))
 
   // ANCHOR - Sparkle Animation
 
@@ -87,7 +87,10 @@ const anime = window.anime;
       duration: 100,
     });
 
-    const tl = anime.timeline();
+    const tl = anime.timeline({
+      loop: 1,
+      direction: 'alternate',
+    });
 
     tl.add({
       targets: cloud,
@@ -101,6 +104,11 @@ const anime = window.anime;
       translateY: -1100,
       duration: 4000,
       easing: 'easeInSine',
+    });
+
+    // delay
+    tl.add({
+      duration: 1000,
     });
 
     tl.add(
@@ -169,8 +177,8 @@ const anime = window.anime;
 
   // ANCHOR - Mobile Hero Swap on resize
 
-  swapHeroAtMobile([solarSystemAnim, sparklesAnim]);
+  swapHeroAtMobile([...solarSystemAnims, sparklesAnim]);
   window.addEventListener('resize', () =>
-    swapHeroAtMobile([solarSystemAnim, sparklesAnim]),
+    swapHeroAtMobile([...solarSystemAnims, sparklesAnim]),
   );
 })();

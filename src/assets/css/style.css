@@ -16,6 +16,9 @@
   --bg-alt: #fff8f0;
   --aside-bg: #fbedef;
   --red-text: #5f0e28;
+  --button-bg: var(--accent);
+  --button-bg-hover: #d03266;
+  --button-text: var(--light);
 
   --text: valkyrie_b, 'Iowan Old Style', 'Georgia', Apple Garamond, Baskerville,
     Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
@@ -41,6 +44,9 @@
   --bg-alt: #283331;
   --aside-bg: #55152a;
   --red-text: #f9c8ce;
+  --button-bg: var(--moredark);
+  --button-bg-hover: var(--dark);
+  --button-text: var(--lesslight);
 }
 
 /* ANCHOR Accessibility
@@ -200,6 +206,10 @@ video {
     font-family: var(--text);
     color: var(--accent);
   }
+}
+
+[data-theme='dark'] .hero {
+  opacity: 0.8;
 }
 
 .main-menu {
@@ -542,6 +552,19 @@ elevator-button a {
 
 /* ANCHOR Forms
 ------------------------------------------------------------- */
+
+/* buttons */
+button,
+a.button {
+  padding: 0.5em 1em;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-bg-hover);
+  }
+}
 
 form button[type='submit'] {
   display: inline-block;

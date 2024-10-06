@@ -14,6 +14,34 @@
     <div class="hero">{% include "./assets/img/hero.svg" %}</div>
     <div class="hero-mobile">{% include "./assets/img/hero-mobile.svg" %}</div>
 
-    {% include "partials/menu.njk" %}
+    <div class="container my-lg">{% include "partials/menu.njk" %}</div>
   </header>
+{% endblock %}
+
+{% block content %}
+  <h1>HTML for is people</h1>
+
+  <p>
+    HTML isn't only for people working in the tech field. It's for anybody, the
+    way documents are for anybody. HTML is just another type of document. A very
+    special one—the one the web is built on.
+  </p>
+
+  <p>
+    I'm Blake Watson. I've been building websites since the early 2000s. Though
+    I work professionally in the field, I feel strongly that you should be able
+    to make a website with HTML if you want. This book will teach you just that.
+    It doesn't require any previous experience making websites or coding. I will
+    cover everything you need to know to get started in a approachable and
+    friendly way.
+  </p>
+
+  <p>Ready? Let's do it!</p>
+
+  <p class="mb-xl mt-lg">
+    <a href="/intro" class="button">Read the introduction</a>
+    <a href="/zero-to-internet-your-first-website" class="button"
+      >Start coding already!</a
+    >
+  </p>
 {% endblock %}

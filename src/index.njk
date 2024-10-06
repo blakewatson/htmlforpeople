@@ -1,5 +1,19 @@
 {% extends "base.njk" %}
 
-{% block content %}
-  <h1>HTML for People</h1>
+{% block scripts %}
+  <script src="/assets/js/anime.min.js"></script>
+  <script src="/assets/js/hero.js" type="module"></script>
+{% endblock %}
+
+{% block header %}
+  <header class="site-header">
+    <p class="site-title sr-only">HTML for People</p>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <div class="hero">{% include "./assets/img/hero.svg" %}</div>
+    <div class="hero-mobile">{% include "./assets/img/hero-mobile.svg" %}</div>
+
+    {% include "partials/menu.njk" %}
+  </header>
 {% endblock %}

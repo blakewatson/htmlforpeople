@@ -577,6 +577,29 @@ form button[type='submit'] {
   }
 }
 
+/* ANCHOR Home
+------------------------------------------------------------- */
+
+.hero {
+  & svg {
+    max-width: 100%;
+  }
+}
+
+g#rocket,
+g#donut-before,
+g#donut-after,
+g#coffee-before,
+g#coffee-after {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#cloud {
+  pointer-events: none;
+}
+
 /* ANCHOR Footer
 ------------------------------------------------------------- */
 

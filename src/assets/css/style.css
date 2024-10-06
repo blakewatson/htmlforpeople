@@ -1,3 +1,5 @@
+@import url('open-props.min.css');
+@import url('reset.css');
 @import url('fonts.css');
 @import url('spacing.css');
 
@@ -6,47 +8,42 @@
 
 :root {
   color-scheme: light;
-  --dark: #1c1b19;
-  --moredark: #111110;
-  --light: #fff;
-  --lesslight: #fbedef;
-  --accent: #b21e4f;
-  --border: #c6c6c6;
-  --main-menu-bg: #eee;
-  --bg-alt: #fff8f0;
-  --aside-bg: #fbedef;
-  --red-text: #5f0e28;
-  --button-bg: var(--accent);
-  --button-bg-hover: #d03266;
-  --button-text: var(--light);
+  --_text-color: #1c1b19;
+  --_darker-text-color: #111110;
+  --_bg: #fff;
+  --_accent: var(--red-8);
+  --_border: #c6c6c6;
+  --_main-menu-bg: #eee;
+  --_bg-alt: var(--brown-0);
+  --_red-text: var(--red-11);
+  --_button-bg: var(--_accent);
+  --_button-outline: var(--red-2);
+  --_button-text: var(--_bg);
 
-  --text: valkyrie_b, 'Iowan Old Style', 'Georgia', Apple Garamond, Baskerville,
+  --_text: valkyrie_b, 'Iowan Old Style', 'Georgia', Apple Garamond, Baskerville,
     Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --headings: hermes_maia_2, -apple-system, BlinkMacSystemFont, avenir next,
+  --_headings: hermes_maia_2, -apple-system, BlinkMacSystemFont, avenir next,
     avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
     arial, sans-serif;
-  --code: 'Input Sans Reg', monospace;
+  --_code: 'Input Sans Reg', monospace;
 
-  --li-spacing: 0.25em;
+  --_li-spacing: 0.25em;
 }
 
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
   color-scheme: dark;
-  --dark: #fff8f0;
-  --moredark: #f9c8ce;
-  --light: #221f20; /* bg */
-  --lesslight: #55152a; /* code bg */
-  --accent: #f7708e;
-  --border: #585555;
-  --bg-alt: #283331;
-  --aside-bg: #55152a;
-  --red-text: #f9c8ce;
-  --button-bg: var(--moredark);
-  --button-bg-hover: var(--dark);
-  --button-text: var(--lesslight);
+  --_text-color: #fff8f0;
+  --_darker-text-color: #f9c8ce;
+  --_bg: var(--gray-9); /* bg */
+  --_bg-alt: #283331;
+  --_accent: #f7708e;
+  --_border: var(--gray-7);
+  --_red-text: #f9c8ce;
+  --_button-bg: var(--red-8);
+  --_button-text: #fff;
 }
 
 /* ANCHOR Accessibility
@@ -95,9 +92,18 @@
 /* ANCHOR Global styles
 ------------------------------------------------------------- */
 
+html {
+  background-color: var(--_bg);
+}
+
 body {
   max-width: unset;
   padding: unset;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  [data-theme='dark'] & {
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 .container {
@@ -107,12 +113,26 @@ body {
 }
 
 a {
-  text-decoration-color: var(--accent);
+  color: var(--_text-color);
+  text-decoration-color: var(--_accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.1em;
+  transition: color 0.15s var(--ease-1), text-decoration-color 0.15s var(--ease-1);
 
   &:hover,
   &:focus {
-    color: var(--accent);
-    text-decoration-color: var(--accent);
+    color: var(--_accent);
+    text-decoration-color: var(--_accent);
+  }
+}
+
+[data-theme="dark"] {
+  a {
+    &:hover,
+    &:focus {
+      color: white;
+      text-decoration-color: white;
+    }
   }
 }
 
@@ -123,11 +143,11 @@ main details {
 
   &:hover,
   &:focus {
-    border: 1px solid var(--border);
+    border: 1px solid var(--_border);
   }
 
   &[open] {
-    border: 1px solid var(--border);
+    border: 1px solid var(--_border);
   }
 
   /* the last thing in the details element should have 0 margin-bottom
@@ -143,7 +163,7 @@ main summary {
   cursor: pointer;
 
   &::marker {
-    color: var(--accent);
+    color: var(--_accent);
   }
 
   /* the first thing after the summary element should have 0.5em margin-top
@@ -182,29 +202,31 @@ video {
 ------------------------------------------------------------- */
 
 .site-header {
-  margin-block-end: 3rem;
+  margin-block-end: var(--size-8);
+}
+
+.logo-wrap {
+  margin-block-end: var(--size-5);
+  padding-block: var(--size-4);
 }
 
 .site-title {
-  margin-block-start: 3rem;
-  font-weight: bold;
-
   & a {
     text-decoration: none;
   }
 
-  & a:before {
-    content: '<';
-    margin-inline-end: 0.25em;
-    font-family: var(--text);
-    color: var(--accent);
+  & img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    opacity: 1;
   }
+}
 
-  & a:after {
-    content: '>';
-    margin-inline-start: 0.25em;
-    font-family: var(--text);
-    color: var(--accent);
+@media (min-width: 1100px) {
+  .site-title img {
+    position: relative;
+    transform: translateX(-112px);
   }
 }
 
@@ -213,16 +235,16 @@ video {
 }
 
 .main-menu {
-  border: 1px solid transparent;
+  border: 1px solid var(--_border);
   border-radius: 0.5em;
 
   &:hover,
   &:focus {
-    border: 1px solid var(--border);
+    border: 1px solid var(--gray-7);
   }
 
   &[open] {
-    border: 1px solid var(--border);
+    border: 1px solid var(--gray-7);
     padding-bottom: 1rem;
   }
 }
@@ -236,7 +258,7 @@ video {
   cursor: pointer;
 
   &::marker {
-    color: var(--accent);
+    color: var(--_accent);
   }
 }
 
@@ -246,6 +268,10 @@ video {
   padding-inline-start: 0;
   padding-block-end: 0.5em;
   list-style-type: none;
+}
+
+.menu-heading {
+  margin-top: var(--size-2);
 }
 
 /* Settings */
@@ -260,12 +286,22 @@ video {
   gap: 0.25em;
 }
 
+[data-theme='dark'] {
+  .main-menu {
+    &:hover,
+    &:focus,
+    &[open] {
+      border: 1px solid var(--gray-6);
+    }
+  }
+}
+
 /* ANCHOR Typography
 ------------------------------------------------------------- */
 
 :root {
   border-top: none; /* remove Neat border */
-  font-family: var(--text);
+  font-family: var(--_text);
 }
 
 main > * {
@@ -282,7 +318,7 @@ h3,
 h4 {
   & a {
     text-decoration: none;
-    color: var(--text);
+    color: var(--_text);
 
     &:hover,
     &:focus {
@@ -297,7 +333,7 @@ h1 {
 
 h1,
 h2 {
-  font-family: var(--headings);
+  font-family: var(--_headings);
   font-weight: normal;
   text-wrap: pretty;
 }
@@ -313,25 +349,34 @@ h3 {
 
 ul,
 ol {
+  margin-block-start: var(--size-3);
   padding-inline-start: 1.75em;
 }
 
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-block-start: 0;
+}
+
 li {
-  margin-block-start: var(--li-spacing);
+  margin-block-start: var(--_li-spacing);
 }
 
 li::marker {
-  color: var(--accent);
+  color: var(--_accent);
 }
 
 code {
   display: inline-block;
   padding: 0 0.25em;
   border-radius: 0.25em;
-  font-family: var(--code) !important;
+  font-family: var(--_code) !important;
   font-size: 0.85em;
   line-height: 1.5;
-  color: var(--red-text);
+  color: var(--_red-text);
+  background-color: var(--red-0);
 }
 
 pre[class*='language-'] > code {
@@ -344,9 +389,11 @@ pre,
 pre[class*='language-'] {
   margin-block: 1.75em;
   padding: 1rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--_border);
   border-radius: 0.25em;
+  max-height: 600px;
   color: #1c1b19;
+  scrollbar-color: var(--_border) transparent;
 }
 
 details pre,
@@ -385,16 +432,18 @@ details pre[class*='language-'] {
 [data-theme='dark'] {
   & pre,
   & pre[class*='language-'] {
-    --border: #c6c6c6;
+    --_border: #c6c6c6;
     filter: invert(98%) hue-rotate(180deg) !important;
   }
 
   & code:not([class*='language-']) {
-    color: var(--red-text);
+    color: var(--_red-text);
+    background-color: var(--gray-12);
   }
 
   mark {
     background-color: #90d8ff40;
+    color: var(--_text-color);
   }
 }
 
@@ -402,15 +451,24 @@ details pre[class*='language-'] {
 ------------------------------------------------------------- */
 
 aside {
-  margin-block: 1.5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  position: relative;
+  margin-block: var(--size-6);
+  margin-inline-start: var(--size-6);
+  padding: var(--size-5);
+  padding-inline-start: var(--size-7);
+  border: var(--border-size-2) solid var(--red-4);
+  border-radius: var(--radius-drawn-3);
   font-size: 0.85em;
   line-height: 1.45;
-  background-color: var(--aside-bg);
+  background-color: var(--red-0);
+  box-shadow: var(--shadow-4);
 
   * {
     margin: 0;
+  }
+
+  p {
+    orphans: 2;
   }
 
   > * + * {
@@ -418,7 +476,7 @@ aside {
   }
 
   li {
-    margin-block-start: var(--li-spacing);
+    margin-block-start: var(--_li-spacing);
   }
 
   code {
@@ -430,21 +488,71 @@ aside {
     margin-block: 1rem 0;
     margin-inline: 0;
   }
+
+  /* mascot */
+  --mascot-multiple: 7;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: calc(120px / var(--mascot-multiple));
+    left: calc(-310px / var(--mascot-multiple));
+    height: calc(291px / var(--mascot-multiple));
+    width: calc(464px / var(--mascot-multiple));
+    background-image: url('../img/design/mascot-aside-back.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: calc(-8px / var(--mascot-multiple));
+    left: calc(-30px / var(--mascot-multiple));
+    height: calc(535px / var(--mascot-multiple));
+    width: calc(156px / var(--mascot-multiple));
+    background-image: url('../img/design/mascot-aside-front.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
 }
 
 .aside-label {
-  font-family: var(--text);
+  font-family: var(--_text);
   font-weight: bold;
   font-size: 0.85em;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.085em;
-  color: var(--dark);
+  color: var(--_text-color);
 
   & + * {
     margin-block-start: 0.5rem;
   }
 }
+
+@media (min-width: 900px) {
+  aside {
+    --mascot-multiple: 5;
+    margin-inline: 0;
+  }
+}
+
+[data-theme='dark'] {
+  aside {
+    border-color: var(--gray-6);
+    background-color: var(--gray-8);
+  }
+  aside code:not(pre code) {
+    background-color: #f7708e33;
+  }
+}
+
+/* ---------------------------------------------------------- */
 
 figure {
   margin-inline: 0;
@@ -461,6 +569,8 @@ figcaption {
   font-size: 0.85em;
 }
 
+/* ---------------------------------------------------------- */
+
 elevator-button a {
   display: flex;
   align-items: center;
@@ -474,8 +584,8 @@ elevator-button a {
   box-shadow: 0 0 0.5rem 0.25rem #00000011;
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: var(--dark);
-  color: var(--light);
+  background-color: var(--_text-color);
+  color: var(--_bg);
   text-decoration: none;
   opacity: 0;
   transition: opacity 0.2s linear;
@@ -488,54 +598,55 @@ elevator-button a {
 
   &:before {
     content: '↑';
-    color: var(--light);
+    color: var(--_bg);
   }
 }
 
 .elevator-arrow {
-  color: var(--light);
+  color: var(--_bg);
 }
+
+/* ---------------------------------------------------------- */
 
 .chapter-nav {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   margin-block: 1.5rem 0;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--_border);
   text-align: center;
 
   & a {
     padding: 1em 1em;
     width: 100%;
+    transition: background-color 0.1s var(--ease-1), color 0.1s var(--ease-1),
+      text-decoration-color 0.1s var(--ease-1);
 
     &:hover,
     &:focus {
-      background-color: var(--lesslight);
-      color: var(--red-text);
+      text-decoration-color: var(--_red-text);
+      background-color: var(--red-0);
+      color: var(--_red-text);
     }
 
     &:has(+ a) {
-      border-block-start: 1px solid var(--border);
+      border-block-start: 1px solid var(--_border);
     }
   }
 }
 
-/* Dark color scheme (Forced) */
-/* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
-  aside {
-    box-shadow: 0 0.15rem 0.25rem #0003;
-  }
-  aside code:not(pre code) {
-    background-color: #f7708e33;
+  .chapter-nav a {
+    &:hover,
+    &:focus {
+      text-decoration-color: var(--_accent);
+      background-color: var(--gray-10);
+      color: var(--_accent);
+    }
   }
 }
 
 @media (min-width: 700px) {
-  aside {
-    margin-inline: -1em;
-  }
-
   .chapter-nav {
     flex-direction: row;
 
@@ -545,7 +656,7 @@ elevator-button a {
 
     & a:has(+ a) {
       border-block-start: none;
-      border-inline-start: 1px solid var(--border);
+      border-inline-start: 1px solid var(--_border);
     }
   }
 }
@@ -556,13 +667,42 @@ elevator-button a {
 /* buttons */
 button,
 a.button {
+  display: inline-block;
+  position: relative;
   padding: 0.5em 1em;
-  background-color: var(--button-bg);
-  color: var(--button-text);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-3);
+  text-decoration: none;
+  background-color: var(--_button-bg);
+  color: var(--_button-text);
+  transition: background-color 0.2s var(--ease-1);
 
-  &:hover,
-  &:focus {
-    background-color: var(--button-bg-hover);
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    border-radius: 8px;
+    background-color: var(--red-2);
+    /* opacity: 0; */
+    transition: height 0.15s var(--ease-1), width 0.15s var(--ease-1);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:before {
+      height: calc(100% + 0.75rem);
+      width: calc(100% + 0.75rem);
+    }
+  }
+
+  & + & {
+    margin-inline-start: 0.5em;
   }
 }
 
@@ -571,13 +711,22 @@ form button[type='submit'] {
   width: unset;
 }
 
+[data-theme='dark'] {
+  & button,
+  & a.button {
+    &:before {
+      background-color: var(--gray-7);
+    }
+  }
+}
+
 /* ANCHOR Promo
 ------------------------------------------------------------- */
 
 .promo {
   padding-block: 3rem;
   border-block-start: 1px solid #e0cab1;
-  background-color: var(--bg-alt);
+  background-color: var(--_bg-alt);
 
   & + .site-footer {
     margin-block-start: 0;
@@ -586,6 +735,7 @@ form button[type='submit'] {
 }
 
 .promo-title {
+  margin-block-end: var(--size-7);
   font-size: 1.125rem;
   font-weight: bold;
 }
@@ -604,6 +754,9 @@ form button[type='submit'] {
 ------------------------------------------------------------- */
 
 .hero {
+  margin-inline: auto;
+  
+  max-width: 1400px;
   & svg {
     max-width: 100%;
   }
@@ -631,5 +784,5 @@ g#coffee-after {
   padding-block: 2rem;
   /* border-block-start: 1px solid var(--border); */
   font-size: 0.85em;
-  background-color: var(--bg-alt);
+  background-color: var(--_bg-alt);
 }

@@ -18,7 +18,7 @@ I created this web book because I wanted something for people who don’t consid
 
 ## Who is this book for?
 
-This web book is aimed at people who have no prior coding experience of any kind. I won’t assume you know the first thing about HTML. We will start small. But by the end of the book we will have built a personal website complete with multiple pages, images, a blog, and more.
+This book is aimed at people who have no prior coding experience of any kind. I won’t assume you know the first thing about HTML. We will start small. But by the end of the book we will have built a personal website complete with multiple pages, images, a blog, and more.
 
 I _will_ assume you have some experience using a computer and performing basic tasks like creating files and folders. This is a necessary prerequisite because (again, spoiler alert) websites are essentially just files and folders.
 

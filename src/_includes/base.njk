@@ -37,7 +37,7 @@
       window.applyThemeSetting();
     </script>
 
-    <link rel="stylesheet" href="/assets/css/neat.css" />
+    {# <link rel="stylesheet" href="/assets/css/neat.css" /> #}
     <link rel="stylesheet" href="/assets/css/prism.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
 
@@ -53,14 +53,20 @@
 
   <body>
     {% block header %}
-      <header class="site-header container">
-        <p class="site-title">
-          <a href="/">HTML for People</a>
-        </p>
+      <header class="site-header">
+        <div class="logo-wrap">
+          <p class="site-title container">
+            <a href="/">
+              <img src="/assets/img/design/logo.svg" alt="HTML for people">
+            </a>
+          </p>
+        </div>
 
         <a href="#main-content" class="skip-link">Skip to content</a>
 
-        {% include "partials/menu.njk" %}
+        <div class="container">
+          {% include "partials/menu.njk" %}
+        </div>
       </header>
     {% endblock %}
 

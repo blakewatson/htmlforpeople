@@ -1,6 +1,8 @@
 @import url('open-props.min.css');
 @import url('reset.css');
 @import url('fonts.css');
+@import url('prism.css');
+@import url('prism-dracula.css');
 @import url('spacing.css');
 
 /* ANCHOR Config
@@ -254,6 +256,7 @@ video {
 .main-menu {
   border: 1px solid var(--_border);
   border-radius: 0.5em;
+  box-shadow: var(--shadow-2);
 
   &:hover,
   &:focus {
@@ -321,11 +324,13 @@ video {
   font-family: var(--_text);
 }
 
-main > * {
+main > *,
+.stack > * {
   margin-block: 0;
 }
 
-main > * + * {
+main > * + *,
+.stack > * + * {
   margin-block-start: 1rem;
 }
 
@@ -417,6 +422,7 @@ pre[class*='language-'] {
   border: 1px solid var(--_border);
   border-radius: 0.25em;
   max-height: 600px;
+  box-shadow: var(--shadow-3);
   color: #1c1b19;
   scrollbar-color: var(--_border) transparent;
 }
@@ -455,18 +461,13 @@ details pre[class*='language-'] {
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
-  & pre,
-  & pre[class*='language-'] {
-    --_border: #c6c6c6;
-  }
-
   & pre:not([class*='language-']) {
     background-color: var(--gray-11);
     border-color: var(--gray-8);
   }
 
   & pre[class*='language-'] {
-    filter: invert(98%) hue-rotate(180deg) !important;
+    /* filter: invert(98%) hue-rotate(180deg) !important; */
   }
 
   & code:not([class*='language-']) {
@@ -494,7 +495,24 @@ aside {
   font-size: 0.85em;
   line-height: 1.45;
   background-color: var(--red-0);
-  box-shadow: var(--shadow-4);
+  box-shadow: var(--shadow-3);
+
+  /* border variations */
+  &:nth-of-type(2) {
+    border-radius: var(--radius-drawn-4);
+  }
+  &:nth-of-type(3) {
+    border-radius: var(--radius-drawn-5);
+  }
+  &:nth-of-type(4) {
+    border-radius: var(--radius-drawn-6);
+  }
+  &:nth-of-type(5) {
+    border-radius: var(--radius-drawn-1);
+  }
+  &:nth-of-type(6) {
+    border-radius: var(--radius-drawn-2);
+  }
 
   * {
     margin: 0;
@@ -682,6 +700,7 @@ elevator-button a {
 
 @media (min-width: 700px) {
   .chapter-nav {
+    margin-block-start: 3rem;
     flex-direction: row;
 
     & a:first-child {

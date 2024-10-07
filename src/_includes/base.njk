@@ -5,6 +5,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>{{ title }}</title>
+    <meta name="og:title" content="{{ title }}" />
+    <meta name="og:description" content="{{ summary }}" />
+    <meta name="og:image" content="/assets/img/design/og.png" />
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/img/design/favicon.png"
+    />
 
     <script>
       /**
@@ -37,8 +48,6 @@
       window.applyThemeSetting();
     </script>
 
-    {# <link rel="stylesheet" href="/assets/css/neat.css" /> #}
-    <link rel="stylesheet" href="/assets/css/prism.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
 
     <link
@@ -87,31 +96,33 @@
     <div class="promo">
       <div class="container">
         <p class="promo-title">Enjoying the book?</p>
-        <p>
-          <em>HTML for People</em> is a labor of love. If you have the means,
-          consider sending me a
-          <a href="https://ko-fi.com/blakewatson">donation on Ko-fi</a> and
-          sharing the book on social media.
-        </p>
-
-        <p>Check out some of my other stuff:</p>
-
-        <ul>
-          <li>
-            <a href="https://afinestart.me">A minimal new-tab page extension</a>
-          </li>
-          <li>
-            <a href="https://synthwave.live/">A synthwave mix site</a>
-          </li>
-          <li>
-            <a href="https://minimalcharactersheet.com/"
-              >A minimalist character sheet for D&D</a
-            >
-          </li>
-          <li>
-            <a href="https://blakewatson.com">My personal website</a>
-          </li>
-        </ul>
+        <div class="stack">
+          <p>
+            <em>HTML for People</em> is a labor of love. If you have the means,
+            consider sending me a
+            <a href="https://ko-fi.com/blakewatson">donation on Ko-fi</a> and
+            sharing the book on social media.
+          </p>
+          <p>Check out some of my other stuff:</p>
+          <ul>
+            <li>
+              <a href="https://afinestart.me"
+                >A minimal new-tab page extension</a
+              >
+            </li>
+            <li>
+              <a href="https://synthwave.live/">A synthwave mix site</a>
+            </li>
+            <li>
+              <a href="https://minimalcharactersheet.com/"
+                >A minimalist character sheet for D&D</a
+              >
+            </li>
+            <li>
+              <a href="https://blakewatson.com">My personal website</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 

@@ -49,4 +49,4 @@ This is the stuff I wanted to cover but felt that it was a little bit out of sco
 
 ## Up next
 
-Now that you know the why behind this book, it’s time to take the first step. In one chapter, you will learn how to make a website from scratch and put it on the web.
+Now that you know the why behind this book, it’s time to take the first step. In the next chapter, you will learn how to make a website from scratch and put it on the web.

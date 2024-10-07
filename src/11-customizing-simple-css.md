@@ -95,7 +95,7 @@ There’s nothing magic about the variable name, `--bg`. The creator of Simple.c
 
 If you reload the page, you should see an admittedly hideous red background. Let's pick a better color. You can search for a [color picking tool](https://www.google.com/search?q=color+picker) of your choice on the web, use one of the many [named CSS colors](https://perma.cc/JF5G-REYD), or, if you are using Visual Studio Code, use the built-in color picker by hovering over a color value.
 
-![In a Visual Studio Code editor window, a CSS file named "custom.css" is open. The editor displays an inline color picker tool beside the code that sets the background color with the property `--bg: red;`. The color picker shows various shades of red along with their RGB color values for easy selection and adjustment.](/assets/img/customizing-simple-css-1.png)
+![In a Visual Studio Code editor window, a CSS file named "custom.css" is open. The editor displays an inline color picker tool beside the code that sets the background color with the property `--bg: red;`. The color picker shows various shades of red along with their RGB color values for easy selection and adjustment.](/assets/img/customizing-simple-css-1.webp)
 
 But before picking out colors, let's talk about dark mode.
 
@@ -171,7 +171,7 @@ This is the code I put in my `custom.css` file.
 
 Here is a side-by-side preview of the blog index page's appearance in light and dark modes.
 
-![A split-screen image showcases two iterations of a blog page: on the left, the page features a light custom color theme with vibrant pinks and pale greens. On the right, it uses a dark custom color theme with blue as an accent color for links and buttons. Both versions present identical content of the blog listing page. The use of custom colors here marks a departure from the default light and dark themes previously used.](/assets/img/customizing-simple-css-2.png)
+![A split-screen image showcases two iterations of a blog page: on the left, the page features a light custom color theme with vibrant pinks and pale greens. On the right, it uses a dark custom color theme with blue as an accent color for links and buttons. Both versions present identical content of the blog listing page. The use of custom colors here marks a departure from the default light and dark themes previously used.](/assets/img/customizing-simple-css-2.webp)
 
 ## Choosing accessible colors
 
@@ -231,7 +231,7 @@ We use a CSS keyword, `serif`, for the third option. That tells the browser to u
 
 Here’s a look at one of the blog posts set in Georgia.
 
-![Screenshot of a blog post titled "Why donuts are the best thing ever," dated April 20, 2024. It’s using the customized light theme from before. The text is set in a serif font rather than the default sans serif.](/assets/img/customizing-simple-css-3.png)
+![Screenshot of a blog post titled "Why donuts are the best thing ever," dated April 20, 2024. It’s using the customized light theme from before. The text is set in a serif font rather than the default sans serif.](/assets/img/customizing-simple-css-3.webp)
 
 ## Make it yours
 

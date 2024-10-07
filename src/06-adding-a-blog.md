@@ -26,7 +26,7 @@ Follow these steps to make the blog available at `sitename.neocities.org/blog`.
 
 Let’s open it in the browser and see how it looks.
 
-![Screenshot of the "Blog" page on Blake's website. The page has minimal styling due to broken file references. It features a simple, unstyled layout with plain black text on a white background. The header contains links to "Home" and "About" in blue, underlined text, indicating default browser styling. The main title "Blog" is bold and large, but the overall appearance lacks the structured design seen on previous pages.](/assets/img/adding-a-blog-1.png)
+![Screenshot of the "Blog" page on Blake's website. The page has minimal styling due to broken file references. It features a simple, unstyled layout with plain black text on a white background. The header contains links to "Home" and "About" in blue, underlined text, indicating default browser styling. The main title "Blog" is bold and large, but the overall appearance lacks the structured design seen on previous pages.](/assets/img/adding-a-blog-1.webp)
 
 Whoa, we broke it; what happened!? It has to do with the file structure. Look at our `<link>` tag, where we bring our Simple.css styles.
 
@@ -44,7 +44,7 @@ So, how do we refer to files that aren’t in the current folder? We can use the
 
 That means "move up one level, then look for css/simple.css."
 
-![Screenshot of the "Blog" page on Blake's website with corrected styling. The page now displays a light-colored header with rounded buttons for "Home" and "About," enhancing navigation. The main title "Blog" is prominently centered and bold, with a clear visual hierarchy. The footer is styled with a thin dividing line above it, containing the centered text.](/assets/img/adding-a-blog-2.png)
+![Screenshot of the "Blog" page on Blake's website with corrected styling. The page now displays a light-colored header with rounded buttons for "Home" and "About," enhancing navigation. The main title "Blog" is prominently centered and bold, with a clear visual hierarchy. The footer is styled with a thin dividing line above it, containing the centered text.](/assets/img/adding-a-blog-2.webp)
 
 That’s better! Now, let’s update the navigation. Since the home page and the About page aren’t in the current folder, we’ll need to use the same `..` syntax to link to them.
 
@@ -127,7 +127,7 @@ For bold and italics, we can use the tags `<strong>` and `<em>`, respectively.
 
 Which would render like this.
 
-![Screenshot of the rendered text shows the following in bold: "Whiskers can now create web pages"](/assets/img/adding-a-blog-3.png)
+![Screenshot of the rendered text shows the following in bold: "Whiskers can now create web pages"](/assets/img/adding-a-blog-3.webp)
 
 ## Block quotes
 
@@ -142,7 +142,7 @@ We can use the `<blockquote>` tag to quote a person, a book, another website, or
 
 Here, I’m using the `<strong>` to give extra emphasis. I'm using the `<cite>` tag to display the source of the quote. The _self-closing_ `<br>` tag creates a manual line break, which pushes the `<cite>` element to the following line.
 
-![A stylized blockquote rendered in a web browser. The quote "HTML is elementary my dear Watson." is italicized with the word "elementary" also in bold. A blue vertical bar appears on the left side of the quote, adding a visual emphasis. Below the quote, the citation "— Whiskers, probably" is displayed in a smaller font, aligned to the left, creating a visually distinct attribution.](/assets/img/adding-a-blog-4.png)
+![A stylized blockquote rendered in a web browser. The quote "HTML is elementary my dear Watson." is italicized with the word "elementary" also in bold. A blue vertical bar appears on the left side of the quote, adding a visual emphasis. Below the quote, the citation "— Whiskers, probably" is displayed in a smaller font, aligned to the left, creating a visually distinct attribution.](/assets/img/adding-a-blog-4.webp)
 
 Block quotes are typically styled as indented blocks of text, often with a border or background color for extra emphasis. The above image shows how Simple.css styles them (unless noted otherwise, all of the example images I post are HTML styled with Simple.css).
 
@@ -240,7 +240,7 @@ The example I just showed is an example of one of the ways we can manually add s
 
 By default, the browser will render everything on one line and ignore most whitespace in your HTML.
 
-![A single line of text rendered in a web browser: "A timeless red orb floats lazy in the ether unimpressed by war." The text is displayed in a standard sans-serif font with no additional styling, centered horizontally on the page.](/assets/img/adding-a-blog-5.png)
+![A single line of text rendered in a web browser: "A timeless red orb floats lazy in the ether unimpressed by war." The text is displayed in a standard sans-serif font with no additional styling, centered horizontally on the page.](/assets/img/adding-a-blog-5.webp)
 
 On the one hand, this is a good thing—it means we can format our code how we want without our visitors seeing a ton of line breaks and indentation on the page that we didn’t intend. But sometimes, we _do_ want actual line breaks.
 
@@ -254,13 +254,13 @@ We can fix our haiku by putting a couple of `<br>` tags in there.
 </p>
 ```
 
-![Multi-line text in a web browser with natural word wrapping: "A timeless red orb floats lazy in the ether unimpressed by war." The text is displayed in a standard sans-serif font and is broken into three lines.](/assets/img/adding-a-blog-6.png)
+![Multi-line text in a web browser with natural word wrapping: "A timeless red orb floats lazy in the ether unimpressed by war." The text is displayed in a standard sans-serif font and is broken into three lines.](/assets/img/adding-a-blog-6.webp)
 
 This is helpful in small doses but use it sparingly. Most of the time, spacing between elements should be controlled with CSS—by applying `margin` or `padding`, for example. Fortunately, our Simple.css stylesheet has good default spacing. We'll cover using CSS for customized spacing in the [bonus chapter](/css-basics) at the end of this book.
 
 Another way to manually break up content is to use a _horizontal rule_, or `<hr>` tag. It’s typically styled as a horizontal line. This can be helpful when you want to separate content—like a new section or a new scene, in the case of a story. Here’s what it can look like.
 
-![Two paragraphs of placeholder text rendered in a web browser. The paragraphs are separated by a horizontal line, providing a clear visual division. The text is displayed in a standard sans-serif font, with each paragraph having adequate line spacing, enhancing readability.](/assets/img/adding-a-blog-7.png)
+![Two paragraphs of placeholder text rendered in a web browser. The paragraphs are separated by a horizontal line, providing a clear visual division. The text is displayed in a standard sans-serif font, with each paragraph having adequate line spacing, enhancing readability.](/assets/img/adding-a-blog-7.webp)
 
 {% aside 'Note' %}
 What’s up with the nonsensical text? It’s Latin-ish text called _[lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)_ that is often used in design situations where you want to see what text looks like without being distracted by what the text says.
@@ -281,7 +281,7 @@ I've been using these tags _a lot_ during this book. Consider this paragraph:
 
 That will display the code bits in a monospaced and a different color, like this.
 
-![A paragraph of text rendered in a web browser with specific HTML tags highlighted in red. The text reads: "By the end of day one, he was familiar with basic tags like html, head, and body." The highlighted words "html," "head," and "body" are in red with a monospaced font, while the rest of the text remains in black, drawing attention to these specific terms.](/assets/img/adding-a-blog-8.png)
+![A paragraph of text rendered in a web browser with specific HTML tags highlighted in red. The text reads: "By the end of day one, he was familiar with basic tags like html, head, and body." The highlighted words "html," "head," and "body" are in red with a monospaced font, while the rest of the text remains in black, drawing attention to these specific terms.](/assets/img/adding-a-blog-8.webp)
 
 You've seen me include the less-than (`<`) and greater-than (`>`) symbols in my code elements. That takes a little bit of extra work. Like if I want to mention an `<a>` tag, I can’t simply write `<code><a></code>` because the browser will think I'm trying to make a literal link inside the `<code>` tag. To include the less-than and greater-than symbols (sometimes called "angle brackets"), we'll need the \*HTML entities `&lt;` and `&gt;`, respectively. That will tell the browser we want to render the actual symbols.
 
@@ -297,7 +297,7 @@ You've seen me include the less-than (`<`) and greater-than (`>`) symbols in my 
 
 That gives us the following.
 
-![A paragraph similar to the previous one but with HTML tags surrounded by angle brackets, emphasizing their role as HTML elements. The text reads: "By the end of day one, he was familiar with basic tags like <html>, <head>, and <body>."](/assets/img/adding-a-blog-9.png)
+![A paragraph similar to the previous one but with HTML tags surrounded by angle brackets, emphasizing their role as HTML elements. The text reads: "By the end of day one, he was familiar with basic tags like <html>, <head>, and <body>."](/assets/img/adding-a-blog-9.webp)
 
 As we saw earlier, when rendering your content, the browser ignores most of the whitespace in your code. But sometimes, you want to preserve the exact spacing and line. A fun example is ASCII art, which is when you make art with plain text characters.
 
@@ -331,7 +331,7 @@ If you’d like to play with more ASCII text art, check out this [text art gener
 
 The `<aside>` tag is fun since Simple.css styles it in an interesting way. These are useful for callouts or _asides_ to the main content. For example, I included an aside that lists ingredients in my [blog post about donuts](https://demo.htmlforpeople.com/blog/2024-04-20-donuts).
 
-![Screenshot of a blog post titled "Why donuts are the best thing ever," dated April 20, 2024. The page features a navigation menu with "Home," "Blog" (highlighted), and "About" buttons. The post discusses the joy and versatility of donuts, with a sidebar box listing "Donut ingredients" (Bread, Sugar, Hole). The layout is clean and well-spaced for readability.](/assets/img/adding-a-blog-10.png)
+![Screenshot of a blog post titled "Why donuts are the best thing ever," dated April 20, 2024. The page features a navigation menu with "Home," "Blog" (highlighted), and "About" buttons. The post discusses the joy and versatility of donuts, with a sidebar box listing "Donut ingredients" (Bread, Sugar, Hole). The layout is clean and well-spaced for readability.](/assets/img/adding-a-blog-10.webp)
 
 Simple.css will style the aside as a rounded box and shift it to the side. This is a neat way to add extra notes or secondary content to a page.
 
@@ -339,7 +339,7 @@ Simple.css will style the aside as a rounded box and shift it to the side. This 
 
 Here are some more text formatting tags for you. Use `<mark>` to <mark>highlight text</mark>. If you want strikethrough <s>unwanted</s> text, wrap it in the `<s>` tag. If you want to explicitly show edits to a document, prefer the `<del>` tag for indicating a deletion and the `<ins>` tag to show inserted text. For example, this is from my donut post.
 
-![Screenshot of text with strikethrough and underline formatting. The phrase "it's vegetables" is struck through, and "donuts" is underlined, emphasizing the replacement of "vegetables" with "donuts" to highlight a humorous preference in the sentence.](/assets/img/adding-a-blog-11.png)
+![Screenshot of text with strikethrough and underline formatting. The phrase "it's vegetables" is struck through, and "donuts" is underlined, emphasizing the replacement of "vegetables" with "donuts" to highlight a humorous preference in the sentence.](/assets/img/adding-a-blog-11.webp)
 
 ## Fill out our blog index page
 
@@ -370,7 +370,7 @@ We're using the `<time>` tag to provide a machine-friendly version of the date. 
 
 Add an `<article>` like the above for each blog post you want to link to. You will end up with something like this.
 
-![Screenshot of a blog listing page with a header containing navigation buttons for "Home," "Blog" (highlighted), and "About." The main heading reads "Blog." Below are three blog post previews with titles in blue: "Why donuts are the best thing ever," "The time I built a website for aliens," and "How I taught my cat to make a website with HTML," each with a brief summary and date (April 20, April 15, and April 12, 2024, respectively).](/assets/img/adding-a-blog-12.png)
+![Screenshot of a blog listing page with a header containing navigation buttons for "Home," "Blog" (highlighted), and "About." The main heading reads "Blog." Below are three blog post previews with titles in blue: "Why donuts are the best thing ever," "The time I built a website for aliens," and "How I taught my cat to make a website with HTML," each with a brief summary and date (April 20, April 15, and April 12, 2024, respectively).](/assets/img/adding-a-blog-12.webp)
 
 ## A table of the (HTML) elements
 

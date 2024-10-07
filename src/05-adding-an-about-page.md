@@ -74,7 +74,7 @@ Here’s my code inside the `<body>` tag.
 
 And this is what it looks like.
 
-![Screenshot of the "About Blake" page. The page header shows "About Blake." Below is a photo of Blake (me!) smiling in front of a brick wall. The text introduces Blake, mentioning his passion for making websites and teaching others, along with his hobbies in web development, D&D, board games, and writing. A link to contact him on Mastodon is included. A section titled "Favorite board games" lists "Dungeons & Dragons," "Risk," and "Pandemic." The page footer reads "Made with ❤️ and ☕ by Blake Watson."](/assets/img/adding-an-about-page-1.png)
+![Screenshot of the "About Blake" page. The page header shows "About Blake." Below is a photo of Blake (me!) smiling in front of a brick wall. The text introduces Blake, mentioning his passion for making websites and teaching others, along with his hobbies in web development, D&D, board games, and writing. A link to contact him on Mastodon is included. A section titled "Favorite board games" lists "Dungeons & Dragons," "Risk," and "Pandemic." The page footer reads "Made with ❤️ and ☕ by Blake Watson."](/assets/img/adding-an-about-page-1.webp)
 
 Surprise, that’s me! Anyway, this is looking like a proper about page. I admit it’s a bit contrived. You should feel free to write as much as you want here.
 
@@ -100,7 +100,7 @@ Since this is currently the About page, I've added a special attribute to the li
 - It'll make our page more accessible to assistive technologies like screen readers.
 - Simple.css will style the link differently so it's easy to tell which page we are on.
 
-![Screenshot showing the top section of the "About Blake" page with navigation buttons. The navigation includes "Home" and "About," with the "About" button highlighted to indicate the current page. The header "About Blake" is displayed in bold below the navigation bar.](/assets/img/adding-an-about-page-2.png)
+![Screenshot showing the top section of the "About Blake" page with navigation buttons. The navigation includes "Home" and "About," with the "About" button highlighted to indicate the current page. The header "About Blake" is displayed in bold below the navigation bar.](/assets/img/adding-an-about-page-2.webp)
 
 Let's add the same nav menu to the home page. Open `index.html` and add the menu as we did on the About page. Since this is the home page, we should put the `aria-current` attribute on the Home link.
 
@@ -167,7 +167,7 @@ My `<main>` content on the homepage now looks like this.
 
 What is this `class="notice"`? You can learn more about classes in the bonus CSS chapters at the end of this book. But, in short, this will activate some styles provided by Simple.css to make a little box with some text in it.
 
-![Screenshot of the refactored "Blake's Homepage." The page header includes navigation buttons for "Home" (highlighted) and "About." Below is a large, colorful image of a starry space scene. The introductory text welcomes visitors to the site, mentioning blog posts and hobbies, with a playful tone about the simplicity of using HTML. A section titled "How to make a website" lists three steps: "Create an HTML file," "Write some HTML in it," and "Open it with your web browser." A highlighted box encourages visitors to check out the "HTML for People" tutorial series.](/assets/img/adding-an-about-page-3.png)
+![Screenshot of the refactored "Blake's Homepage." The page header includes navigation buttons for "Home" (highlighted) and "About." Below is a large, colorful image of a starry space scene. The introductory text welcomes visitors to the site, mentioning blog posts and hobbies, with a playful tone about the simplicity of using HTML. A section titled "How to make a website" lists three steps: "Create an HTML file," "Write some HTML in it," and "Open it with your web browser." A highlighted box encourages visitors to check out the "HTML for People" tutorial series.](/assets/img/adding-an-about-page-3.webp)
 
 ## Update the live site
 

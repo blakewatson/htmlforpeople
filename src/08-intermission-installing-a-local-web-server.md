@@ -27,15 +27,15 @@ I’ll give you several options based on the operating system and technical know
 
 Microsoft publishes a VS Code extension called [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server). It runs your site on a local web server and auto-refreshes as you change it. You can install it from that link or click the extensions icon and search for it.
 
-![A screenshot of the Visual Studio Code Extensions Marketplace displaying the "Live Preview" extension page. The extension is created by Microsoft and has a description, ratings, usage instructions, and installation button visible.](/assets/img/intermission-installing-a-local-web-server-1.png)
+![A screenshot of the Visual Studio Code Extensions Marketplace displaying the "Live Preview" extension page. The extension is created by Microsoft and has a description, ratings, usage instructions, and installation button visible.](/assets/img/intermission-installing-a-local-web-server-1.webp)
 
 Once installed, you’ll notice a _Show Preview_ option when you right-click a file.
 
-![A VS Code window is open showing HTML code. The file "index.html" is selected on the left sidebar, while a context menu over index.html is open with the option "Show Preview" highlighted.](/assets/img/intermission-installing-a-local-web-server-2.png)
+![A VS Code window is open showing HTML code. The file "index.html" is selected on the left sidebar, while a context menu over index.html is open with the option "Show Preview" highlighted.](/assets/img/intermission-installing-a-local-web-server-2.webp)
 
 Clicking it will open a side panel with a web view at a local address. You can either use that preview, open it in the browser by navigating to the address, or click _Open in Browser_ in the address bar menu.
 
-![Screenshot of a VS Code window. On the left side is HTML code for a personal webpage. On the right side, the webpage preview shows "Blake's Homepage" with navigation buttons and an image of a starry night sky. The URL is highlighted in a navigation bar.](/assets/img/intermission-installing-a-local-web-server-3.png)
+![Screenshot of a VS Code window. On the left side is HTML code for a personal webpage. On the right side, the webpage preview shows "Blake's Homepage" with navigation buttons and an image of a starry night sky. The URL is highlighted in a navigation bar.](/assets/img/intermission-installing-a-local-web-server-3.webp)
 
 ## macOS
 
@@ -43,15 +43,15 @@ I'm a Mac user myself, so I can highly recommend the excellent [WorldWideWeb](ht
 
 It works by telling it your website folder and then clicking the play button.
 
-![Screenshot of app window titled "WorldWideWeb" is displayed, showing two main sections: "Website Folder" and "Web Server." The "Website Folder" section includes a folder icon labeled "my-site," and the "Web Server" section has a play button labeled "Server is stopped." Red arrows point to each icon.](/assets/img/intermission-installing-a-local-web-server-4.png)
+![Screenshot of app window titled "WorldWideWeb" is displayed, showing two main sections: "Website Folder" and "Web Server." The "Website Folder" section includes a folder icon labeled "my-site," and the "Web Server" section has a play button labeled "Server is stopped." Red arrows point to each icon.](/assets/img/intermission-installing-a-local-web-server-4.webp)
 
 Once you click the play button, your site will be available at some address. Click _Open Browser_ to visit that URL in your default browser.
 
-![Screenshot of the same window. The interface shows a website folder named "my-site" and a web server with the URL "http://blakes-mac-studio.local:8080". There are icons for folder actions and buttons labeled "Reveal in Finder" and "Open Browser". The URL and Open Browser button are highlighted.](/assets/img/intermission-installing-a-local-web-server-5.png)
+![Screenshot of the same window. The interface shows a website folder named "my-site" and a web server with the URL "http://blakes-mac-studio.local:8080". There are icons for folder actions and buttons labeled "Reveal in Finder" and "Open Browser". The URL and Open Browser button are highlighted.](/assets/img/intermission-installing-a-local-web-server-5.webp)
 
 And now notice that we’re seeing our site at our shiny new web address.
 
-![A browser window titled "Blake's Homepage" with navigation links for Home, Blog, About, and Resume. The main section features an image of a starry night sky with colorful nebulae. A red arrow points to the URL bar at the top of the screen.](/assets/img/intermission-installing-a-local-web-server-6.png)
+![A browser window titled "Blake's Homepage" with navigation links for Home, Blog, About, and Resume. The main section features an image of a starry night sky with colorful nebulae. A red arrow points to the URL bar at the top of the screen.](/assets/img/intermission-installing-a-local-web-server-6.webp)
 
 ## Windows and cross-platform
 
@@ -59,15 +59,15 @@ For Windows users, I have two options for you. If you’re using Visual Studio C
 
 Otherwise, try [Simple Web Server](https://simplewebserver.org/). Once you’ve installed it, you can click the button to create a new server.
 
-![A screenshot of the Simple Web Server application. The screen shows "You haven't created any servers yet" in the center with a server icon above it. At the bottom right corner, there is a yellow button labeled "New Server," highlighted by a red arrow.](/assets/img/intermission-installing-a-local-web-server-7.png)
+<img src="/assets/img/intermission-installing-a-local-web-server-7.webp" alt="A screenshot of the Simple Web Server application. The screen shows 'You haven't created any servers yet' in the center with a server icon above it. At the bottom right corner, there is a yellow button labeled 'New Server,'' highlighted by a red arrow." style="max-height: 600px; margin-inline: auto">
 
 You can then point it to your website folder by clicking the folder icon button and selecting the appropriate folder.
 
-![The image shows the "Add Server" window from the Simple Web Server application. It includes fields for "Folder path" and "Port," with options for Basic Options, Advanced Options, and Error Pages. Buttons labeled "Cancel" and "Create Server" are at the bottom.](/assets/img/intermission-installing-a-local-web-server-8.png)
+<img src="/assets/img/intermission-installing-a-local-web-server-8.webp" alt="The image shows the 'Add Server' window from the Simple Web Server application. It includes fields for 'Folder path' and 'Port,' with options for Basic Options, Advanced Options, and Error Pages. Buttons labeled 'Cancel' and 'Create Server' are at the bottom." style="max-height: 600px; margin-inline: auto">
 
 Once you have created the server, you’ll see it in the server list. Click it to open it. From there, you’ll see the URL where your site is available, and you can click the link to open it in your default browser.
 
-![A Simple Web Server window titled "Edit Server" shows options for a running web server. The URL highlighted is "http://127.0.0.1:8080" and appears clickable. There are fields for folder path, port (set to 8080), and a checkbox for local network accessibility. At the bottom are cancel and save changes buttons.](/assets/img/intermission-installing-a-local-web-server-9.png)
+<img src="/assets/img/intermission-installing-a-local-web-server-9.webp" alt="A Simple Web Server window titled 'Edit Server' shows options for a running web server. The URL highlighted is 'http://127.0.0.1:8080' and appears clickable. There are fields for folder path, port (set to 8080), and a checkbox for local network accessibility. At the bottom are cancel and save changes buttons." style="max-height: 600px; margin-inline: auto">
 
 {% aside 'Note' %}
 Simple Web Server is cross-platform and works on macOS and Linux as well. That said, I recommend WorldWideWeb for Mac users unless you need multiple servers running simultaneously.

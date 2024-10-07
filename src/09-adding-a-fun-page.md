@@ -42,7 +42,7 @@ The idea is to show the setup of the joke but hide the punchline behind a click.
 
 Here’s a video demo of this element in action.
 
-https://youtu.be/Z9qfMCm6AYM
+@[youtube](https://youtu.be/Z9qfMCm6AYM)
 
 I’m going to add three admittedly corny jokes.
 
@@ -77,7 +77,7 @@ In tabletop RPGs like Dungeons and Dragons, the gamemaster often needs to improv
 
 This is what the final table will look like.
 
-<img src="/assets/img/adding-a-fun-page-1.png" alt="A table titled 'Roll (1d8) Encounter' with two columns. The left column lists numbers 1 to 8, and the right column lists corresponding encounters: 1. Band of Goblins, 2. Wandering Merchant, 3. Group of Bandits, 4. Pack of Wolves, 5. Travelling Minstrels, 6. Lost Child, 7. Hidden Trap, 8. Old Hermit." style="max-height: 450px">
+<img src="/assets/img/adding-a-fun-page-1.webp" alt="A table titled 'Roll (1d8) Encounter' with two columns. The left column lists numbers 1 to 8, and the right column lists corresponding encounters: 1. Band of Goblins, 2. Wandering Merchant, 3. Group of Bandits, 4. Pack of Wolves, 5. Travelling Minstrels, 6. Lost Child, 7. Hidden Trap, 8. Old Hermit." style="max-height: 450px">
 
 First, I will make a new `<section>` with a heading and some introductory text about D&D. Then, I will briefly introduce the random encounter table.
 
@@ -124,7 +124,7 @@ The table needs two columns—one for the dice roll and one for the correspondin
 
 The `<tr>` tag creates a _table row_. Inside that row, we'll add two table cells. Because these are column headings, we will use the _table header_ or `<th>` tag—one for the dice roll and one for the outcome. This is what it will look like so far.
 
-![An image describing Dungeons & Dragons (D&D) as a fun tabletop game involving character creation and adventures. There is a "Random encounter table" section with the headers of a table stubbed out.](/assets/img/adding-a-fun-page-2.png)
+![An image describing Dungeons & Dragons (D&D) as a fun tabletop game involving character creation and adventures. There is a "Random encounter table" section with the headers of a table stubbed out.](/assets/img/adding-a-fun-page-2.webp)
 
 Next, we can fill out our table using the _table data cell_ or `<td>` tag. We will put these rows inside the body section.
 
@@ -176,7 +176,7 @@ Next, we can fill out our table using the _table data cell_ or `<td>` tag. We wi
 
 That's a lot of tags! Hopefully, you can follow the logic here. Inside the `<tbody>`, we create eight _table rows_, each with two _table data cells_. And that will give us our final table.
 
-<img src="/assets/img/adding-a-fun-page-1.png" alt="A table titled 'Roll (1d8) Encounter' with two columns. The left column lists numbers 1 to 8, and the right column lists corresponding encounters: 1. Band of Goblins, 2. Wandering Merchant, 3. Group of Bandits, 4. Pack of Wolves, 5. Travelling Minstrels, 6. Lost Child, 7. Hidden Trap, 8. Old Hermit." style="max-height: 450px">
+<img src="/assets/img/adding-a-fun-page-1.webp" alt="A table titled 'Roll (1d8) Encounter' with two columns. The left column lists numbers 1 to 8, and the right column lists corresponding encounters: 1. Band of Goblins, 2. Wandering Merchant, 3. Group of Bandits, 4. Pack of Wolves, 5. Travelling Minstrels, 6. Lost Child, 7. Hidden Trap, 8. Old Hermit." style="max-height: 450px">
 
 HTML tables can also do some things you would do in a spreadsheet program, such as making a cell span multiple columns. We won't get into that here, but remember that tables have power if you need it.
 
@@ -196,7 +196,7 @@ I will make a new section for my videos.
 
 First, I will grab this music mix called Waves (https://www.youtube.com/watch?v=b6toYA0W4IA>). If you visit that page, you will see a share button underneath the video. Clicking that button will give you various choices for sharing the video.
 
-![Screenshot of a YouTube share dialog box for a post creation, showing sharing options for Embed, WhatsApp, Facebook, X (formerly Twitter), Email, and KakaoTalk. There's also a unique hyperlink with a "Copy" button next to it, and a checkbox to start at a specific time.](/assets/img/adding-a-fun-page-4.png)
+![Screenshot of a YouTube share dialog box for a post creation, showing sharing options for Embed, WhatsApp, Facebook, X (formerly Twitter), Email, and KakaoTalk. There's also a unique hyperlink with a "Copy" button next to it, and a checkbox to start at a specific time.](/assets/img/adding-a-fun-page-4.webp)
 
 Select "Embed" if it is available. Once you do that, you will see some HTML code and a _Copy_ button. Go ahead and copy the code. You can paste the code after the `<h2>` tag.
 
@@ -219,7 +219,7 @@ Select "Embed" if it is available. Once you do that, you will see some HTML code
 
 This embed is using the `<iframe>` tag. I won't go into great detail about this element, but in short, it is used to display a web page inside another web page. But when I reload the page, I am greeted with this "Video unavailable" error. Why?
 
-![Screenshot of a webpage titled "Synthwave mixes" with an embedded video player in the center displaying a message that reads "Video unavailable. Watch on YouTube." There is an address bar at the top indicating a local file path.](/assets/img/adding-a-fun-page-5.png)
+![Screenshot of a webpage titled "Synthwave mixes" with an embedded video player in the center displaying a message that reads "Video unavailable. Watch on YouTube." There is an address bar at the top indicating a local file path.](/assets/img/adding-a-fun-page-5.webp)
 
 It's because I still have my website open as a file. We need to fetch data from another website (YouTube), but browser security features prevent us from doing so.
 
@@ -235,11 +235,11 @@ For reasons I don't fully understand, the embedded videos will not work when acc
 
 I will use [WorldWideWeb](https://iconfactory.com/worldwideweb/) for this example. Once I point it to my site folder and click the play button, my server will be running, and I can visit it at the address provided.
 
-![Screenshot of the same window. The interface shows a website folder named "my-site" and a web server with the URL "http://blakes-mac-studio.local:8080". There are icons for folder actions and buttons labeled "Reveal in Finder" and "Open Browser". The URL and Open Browser button are highlighted.](/assets/img/intermission-installing-a-local-web-server-5.png)
+![Screenshot of the same window. The interface shows a website folder named "my-site" and a web server with the URL "http://blakes-mac-studio.local:8080". There are icons for folder actions and buttons labeled "Reveal in Finder" and "Open Browser". The URL and Open Browser button are highlighted.](/assets/img/intermission-installing-a-local-web-server-5.webp)
 
 Double-check your browser's address bar to ensure you access the web server version instead of the direct file.
 
-![A web page titled "Synthwave mixes" featuring an embedded YouTube video player. The video is titled "Waves - A Chillwave Mix Vol. 2" and has a cover image with a futuristic design, including a planet and a beam of light. There’s a HTTP web address now instead of a local file path.](/assets/img/adding-a-fun-page-6.png)
+![A web page titled "Synthwave mixes" featuring an embedded YouTube video player. The video is titled "Waves - A Chillwave Mix Vol. 2" and has a cover image with a futuristic design, including a planet and a beam of light. There’s a HTTP web address now instead of a local file path.](/assets/img/adding-a-fun-page-6.webp)
 
 Awesome! I will go grab two more videos to use.
 
@@ -250,7 +250,7 @@ I will do the same thing for these that I did for the first one. Pull up the vid
 
 So, I embedded my videos, but now I'm noticing something else. It would be nice if these videos spanned the width of my page. Also, let's see what our website might look like on a phone.
 
-![With Safari in responsive design mode, and the window narrowed to be mobile width, the YouTube video embed juts off the side of the page causing a horizontal scroll bar to appear..](/assets/img/adding-a-fun-page-7.png)
+![With Safari in responsive design mode, and the window narrowed to be mobile width, the YouTube video embed juts off the side of the page causing a horizontal scroll bar to appear..](/assets/img/adding-a-fun-page-7.webp)
 
 If I view the website using Safari's _responsive design mode_ and narrow the viewport, I see the embedded videos run right off the right side of the page. Not ideal.
 
@@ -318,7 +318,7 @@ I will go ahead and do the other two videos this way as well.
 
 It's looking good!
 
-![A webpage in responsive design mode showcasing three synthwave mix cover images. The videos' widths have been fixed, but they are all slammed together, touching vertically. The top image features a stylized solar eclipse with the title "WAVES II: A Chillwave Mix." The middle image presents a neon cityscape titled "Neon Rooftops." The bottom image includes abstract neon graphics.](/assets/img/adding-a-fun-page-8.png)
+![A webpage in responsive design mode showcasing three synthwave mix cover images. The videos' widths have been fixed, but they are all slammed together, touching vertically. The top image features a stylized solar eclipse with the title "WAVES II: A Chillwave Mix." The middle image presents a neon cityscape titled "Neon Rooftops." The bottom image includes abstract neon graphics.](/assets/img/adding-a-fun-page-8.webp)
 
 I will add some _horizontal rules_ to create some separation between these videos.
 
@@ -332,7 +332,7 @@ I will add some _horizontal rules_ to create some separation between these video
 
 And let's check out what they look like at mobile size.
 
-![The same image as before except now there are thin gray lines with some space separating the three videos vertically.](/assets/img/adding-a-fun-page-9.png)
+![The same image as before except now there are thin gray lines with some space separating the three videos vertically.](/assets/img/adding-a-fun-page-9.webp)
 
 Nice!
 

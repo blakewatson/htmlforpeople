@@ -24,7 +24,7 @@ My name is Blake. I enjoy making websites and teaching others to do the same.
 
 Nice! Let’s view it in the browser.
 
-![A simple webpage. The one line of text on the page reads: "Blake's Homepage My name is Blake. I enjoy making websites and teaching others to do the same.](/assets/img/add-content-1.png)
+![A simple webpage. The one line of text on the page reads: "Blake's Homepage My name is Blake. I enjoy making websites and teaching others to do the same.](/assets/img/add-content-1.webp)
 
 Well, that’s not what we wanted. The browser slammed our text together on one line. What gives?!
 
@@ -46,7 +46,7 @@ Notice that a pair of tags has an _opening_ tag and a _closing_ tag. The closing
 
 Now, save the file and reload the browser. This is often the flow of website creation: You change some code, save it, and then hit reload on your browser. Then, feel the power coursing through your veins as you create a website from nothing!
 
-![A web browser displays a simple webpage with a large, bolded title "Blake's Homepage." The content reads: "My name is Blake. I enjoy making websites and teaching others to do the same.](/assets/img/add-content-2.png)
+![A web browser displays a simple webpage with a large, bolded title "Blake's Homepage." The content reads: "My name is Blake. I enjoy making websites and teaching others to do the same.](/assets/img/add-content-2.webp)
 
 Whoa, that’s much better! Let’s keep going by adding some more content.
 
@@ -82,7 +82,7 @@ Let’s add a link to our website—pick one of your favorite websites or someth
 
 Save and reload!
 
-![A screenshot of a browser displaying "Blake's Homepage." The text reads: "My name is Blake. I enjoy making websites and teaching others to do the same. Check out these cool web games at Neal.fun!" The page has a minimalistic design with black text on a white background and includes a link.](/assets/img/add-content-3.png)
+![A screenshot of a browser displaying "Blake's Homepage." The text reads: "My name is Blake. I enjoy making websites and teaching others to do the same. Check out these cool web games at Neal.fun!" The page has a minimalistic design with black text on a white background and includes a link.](/assets/img/add-content-3.webp)
 
 With the help of the humble `<a>` tag, your website becomes a part of the living, breathing web. There are over a hundred HTML tags, but you don’t need to memorize them to build a website. You can do a lot with a little. Let’s look at a few more tags that can get you started.
 
@@ -142,7 +142,7 @@ Let’s add a list to our website. Here’s the full site so far:
 
 Hey, this thing is slowly starting to look like a website now!
 
-![A web page titled "Blake's Homepage" is displayed. It includes sections on favorite board games (Dungeons & Dragons, Risk, Pandemic) and instructions on how to make a website: 1. Create an HTML file, 2. Write some HTML in it, 3. Open it with a web browser.](/assets/img/add-content-4.png)
+![A web page titled "Blake's Homepage" is displayed. It includes sections on favorite board games (Dungeons & Dragons, Risk, Pandemic) and instructions on how to make a website: 1. Create an HTML file, 2. Write some HTML in it, 3. Open it with a web browser.](/assets/img/add-content-4.webp)
 
 You’ll notice I snuck a new tag in there without mentioning it. It’s a _level 2 heading_, or `<h2>` tag. Headings add structure to a page, making it easier for visitors to find what they want.
 
@@ -170,7 +170,7 @@ We also need to describe the image in case some visitors to our website cannot s
 
 Let’s save and refresh the browser.
 
-![Screenshot of "Blake's Homepage" featuring an image of a starry galaxy. The text states Blake enjoys making websites and teaching others to do the same. Below, there are sections for favorite board games and a guide on making a website.](/assets/img/add-content-5.png)
+![Screenshot of "Blake's Homepage" featuring an image of a starry galaxy. The text states Blake enjoys making websites and teaching others to do the same. Below, there are sections for favorite board games and a guide on making a website.](/assets/img/add-content-5.webp)
 
 I resized the window so the whole page would fit in the screenshot, but if you're seeing a scrollbar, that’s totally fine!
 
@@ -310,13 +310,13 @@ Here’s the whole `index.html` file for reference:
 
 These changes are looking pretty good. Let’s publish this page to the world. Head over to [your Neocities dashboard](https://neocities.org/dashboard). You’ll see the starting files plus the `index.html` file you uploaded in chapter 1 of this book. To make things a bit cleaner, I’m switching to the list view and deleting the PNG image and CSS file that was there.
 
-![Screenshot of a Neocities dashboard. The header reads "My Cool Website" with the URL "blakewatson.neocities.org" underneath. It shows file usage details and lists two files, "index.html" and "not_found.html," with options to edit or delete them.](/assets/img/add-content-6.png)
+![Screenshot of a Neocities dashboard. The header reads "My Cool Website" with the URL "blakewatson.neocities.org" underneath. It shows file usage details and lists two files, "index.html" and "not_found.html," with options to edit or delete them.](/assets/img/add-content-6.webp)
 
 Now click the _Upload_ button or just drag your updated files (the index page and the image) onto the file list.
 
 Once you’ve done that, click the link to your site at the top of the dashboard. That’s your newly updated LIVE website, which you made from scratch. How cool!
 
-![Screenshot of a web browser visiting "Blake's Homepage" (same website from earlier). The URL is blakewatson.neocities.org. The page has sections about favorite board games, including Dungeons & Dragons, Risk, and Pandemic, and instructions on how to make a website.](/assets/img/add-content-7.png)
+![Screenshot of a web browser visiting "Blake's Homepage" (same website from earlier). The URL is blakewatson.neocities.org. The page has sections about favorite board games, including Dungeons & Dragons, Risk, and Pandemic, and instructions on how to make a website.](/assets/img/add-content-7.webp)
 
 ## Up next
 

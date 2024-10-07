@@ -46,6 +46,12 @@
   --_button-text: #fff;
 }
 
+[data-theme='light'] {
+  --shadow-color: 220 3% 15% !important;
+  --shadow-strength: 1% !important;
+  --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff, inset 0 0.5px 0 0 #0001 !important;
+}
+
 /* ANCHOR Accessibility
 ------------------------------------------------------------- */
 
@@ -117,7 +123,9 @@ a {
   text-decoration-color: var(--_accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
-  transition: color 0.15s var(--ease-1), text-decoration-color 0.15s var(--ease-1);
+  transition:
+    color 0.15s var(--ease-1),
+    text-decoration-color 0.15s var(--ease-1);
 
   &:hover,
   &:focus {
@@ -126,12 +134,11 @@ a {
   }
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   a {
     &:hover,
     &:focus {
-      color: white;
-      text-decoration-color: white;
+      color: var(--_red-text);
     }
   }
 }
@@ -215,7 +222,16 @@ video {
     text-decoration: none;
   }
 
-  & img {
+  & a:hover #mascot {
+    opacity: 0;
+  }
+
+  & a:hover #mascot-hover {
+    opacity: 1;
+  }
+
+  & img,
+  & svg {
     max-width: 350px;
     width: 100%;
     height: auto;
@@ -224,7 +240,8 @@ video {
 }
 
 @media (min-width: 1100px) {
-  .site-title img {
+  .site-title img,
+  .site-title svg {
     position: relative;
     transform: translateX(-112px);
   }
@@ -370,13 +387,21 @@ li::marker {
 
 code {
   display: inline-block;
-  padding: 0 0.25em;
-  border-radius: 0.25em;
   font-family: var(--_code) !important;
   font-size: 0.85em;
   line-height: 1.5;
   color: var(--_red-text);
-  background-color: var(--red-0);
+
+  &:not(pre &) {
+    padding: 0 0.25em;
+    border-radius: 0.25em;
+    background-color: var(--red-0);
+  }
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
 }
 
 pre[class*='language-'] > code {
@@ -433,12 +458,20 @@ details pre[class*='language-'] {
   & pre,
   & pre[class*='language-'] {
     --_border: #c6c6c6;
+  }
+
+  & pre:not([class*='language-']) {
+    background-color: var(--gray-11);
+    border-color: var(--gray-8);
+  }
+
+  & pre[class*='language-'] {
     filter: invert(98%) hue-rotate(180deg) !important;
   }
 
   & code:not([class*='language-']) {
     color: var(--_red-text);
-    background-color: var(--gray-12);
+    background-color: var(--gray-11);
   }
 
   mark {
@@ -619,7 +652,9 @@ elevator-button a {
   & a {
     padding: 1em 1em;
     width: 100%;
-    transition: background-color 0.1s var(--ease-1), color 0.1s var(--ease-1),
+    transition:
+      background-color 0.1s var(--ease-1),
+      color 0.1s var(--ease-1),
       text-decoration-color 0.1s var(--ease-1);
 
     &:hover,
@@ -641,7 +676,6 @@ elevator-button a {
     &:focus {
       text-decoration-color: var(--_accent);
       background-color: var(--gray-10);
-      color: var(--_accent);
     }
   }
 }
@@ -689,7 +723,9 @@ a.button {
     border-radius: 8px;
     background-color: var(--red-2);
     /* opacity: 0; */
-    transition: height 0.15s var(--ease-1), width 0.15s var(--ease-1);
+    transition:
+      height 0.15s var(--ease-1),
+      width 0.15s var(--ease-1);
     pointer-events: none;
     z-index: -1;
   }
@@ -755,7 +791,7 @@ form button[type='submit'] {
 
 .hero {
   margin-inline: auto;
-  
+
   max-width: 1400px;
   & svg {
     max-width: 100%;

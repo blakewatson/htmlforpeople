@@ -72,11 +72,11 @@ So far, we only have three files—our webpage, an image file, and the `simple.c
 
 Nice and clean. Using Visual Studio Code, you can create files and folders directly in the sidebar. Hover your mouse over your files, and you’ll see these buttons.
 
-![Screenshot of VS Code window with a folder named "MY-SITE" highlighted. Inside the folder, there are two files: "index.html" and "space.jpg." A large red arrow points to the "New Folder" button in the top-right corner of the editor.](/assets/img/vscode-new-folder.png)
+![Screenshot of VS Code window with a folder named "MY-SITE" highlighted. Inside the folder, there are two files: "index.html" and "space.jpg." A large red arrow points to the "New Folder" button in the top-right corner of the editor.](/assets/img/vscode-new-folder.webp)
 
 Once you make the changes, if you reload the page in the browser, you will notice that our image no longer works. Notice how the browser falls back to showing the `alt` text we provided in place of the image.
 
-![Screenshot of "Blake's Homepage." It includes sections: a brief statement about the author, favorite board games, and a guide on how to make a website. The page has plain black text on a white background. One image is present but it is not functioning correctly—the image alt text displays instead, "Photograph of space with stars and stardust."](/assets/img/a-website-with-style-1.png)
+![Screenshot of "Blake's Homepage." It includes sections: a brief statement about the author, favorite board games, and a guide on how to make a website. The page has plain black text on a white background. One image is present but it is not functioning correctly—the image alt text displays instead, "Photograph of space with stars and stardust."](/assets/img/a-website-with-style-1.webp)
 
 We can fix this by updating the image's `src` value. Add the folder name and a slash before the filename.
 
@@ -110,7 +110,7 @@ The `<link>` tag specifies a file we want to link to our page and what that file
 
 Just like that, our website transforms. We now see a centered page, larger text, and a sans-serif font.
 
-![Screenshot of "Blake's Homepage" with updated styling using Simple.css. The typography has changed: the title "Blake's Homepage" is now bold and larger, creating a more prominent header. The previously broken image now displays correctly, showing a colorful photograph of a starry space scene. The text is more visually structured with better spacing, and the sections are clearly defined with bold headings for "Favorite board games" and "How to make a website." The overall layout appears cleaner and more organized with improved readability.](/assets/img/a-website-with-style-2.png)
+![Screenshot of "Blake's Homepage" with updated styling using Simple.css. The typography has changed: the title "Blake's Homepage" is now bold and larger, creating a more prominent header. The previously broken image now displays correctly, showing a colorful photograph of a starry space scene. The text is more visually structured with better spacing, and the sections are clearly defined with bold headings for "Favorite board games" and "How to make a website." The overall layout appears cleaner and more organized with improved readability.](/assets/img/a-website-with-style-2.webp)
 
 ## Adding a header, footer, and main content
 
@@ -136,7 +136,7 @@ So we'll put our website's name in a `<header>` tag and our main content in the 
 
 After these adjustments, our website title has some special styling, and paragraphs and lists are spaced more appropriately.
 
-![Screenshot of "Blake's Homepage" with additional styling enhancements. The page now includes a clear header at the top with a light background color, making the title "Blake's Homepage" stand out more. The spacing between sections has been improved for better readability, and a new footer has been added at the bottom, containing the text. This footer provides a personalized touch. The overall layout feels more structured and visually balanced](/assets/img/a-website-with-style-3.png)
+![Screenshot of "Blake's Homepage" with additional styling enhancements. The page now includes a clear header at the top with a light background color, making the title "Blake's Homepage" stand out more. The spacing between sections has been improved for better readability, and a new footer has been added at the bottom, containing the text. This footer provides a personalized touch. The overall layout feels more structured and visually balanced](/assets/img/a-website-with-style-3.webp)
 
 {% aside 'Note' %}
 If you are following along and notice that your website has a dark background with light text, that's okay! Simple.css recognizes if you (the site's visitor) have your system in dark mode and, if so, uses a dark theme for the website. To override this behavior, check out the bonus chapter [Customizing Simple.css](/customizing-simple-css).
@@ -146,13 +146,13 @@ If you are following along and notice that your website has a dark background wi
 
 Let’s put our new stuff online! In Neocities, you can't upload folders using the upload button. You either need to create the folder in the dashboard by clicking "New Folder, " or you can drag the folder from your computer to the drop zone.
 
-![Screenshot of a Neocities dashboard for "Blake's Homepage." The page shows file management options, including uploading files, creating new files, and new folders. Blake's webpage URL and editing options are visible, highlighted by a red arrow pointing at the "New Folder" button.](/assets/img/a-website-with-style-4.png)
+![Screenshot of a Neocities dashboard for "Blake's Homepage." The page shows file management options, including uploading files, creating new files, and new folders. Blake's webpage URL and editing options are visible, highlighted by a red arrow pointing at the "New Folder" button.](/assets/img/a-website-with-style-4.webp)
 
 It's probably easier to drag the folders over, but if you create them manually, you must open each folder and upload its contents. Once a folder is created, you can hover your mouse over it to see options. You’ll want to click "Manage" to open the folder. From there, you can click "Upload" to upload the appropriate files to that folder.
 
 Move existing files by renaming them. For example, if I want to move `space.jpg` down into the images folder, I can click "Rename" and include the folder in the path: `images/space.jpg`.
 
-![A pop-up window titled "Rename / Move" shows a file path "images/space.jpg" being edited.](/assets/img/a-website-with-style-5.png)
+![A pop-up window titled "Rename / Move" shows a file path "images/space.jpg" being edited.](/assets/img/a-website-with-style-5.webp)
 
 It's cumbersome but not too bad. Whichever way you do it, ensure the files in Neocities match what you have on your computer.
 

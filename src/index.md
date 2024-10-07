@@ -1,5 +1,5 @@
 ---
-title: Home
+title: HTML for People
 layout: "home.njk"
 ---
 

@@ -12,7 +12,7 @@ You’ve come a long way. Let’s take a second to appreciate that you opened up
 
 Speaking of simple text editors, keeping everything indented nicely in HTML can get annoying. It can also be challenging to distinguish HTML code from our written content.
 
-![A notepad window showing an HTML code for "Blake's Homepage". The page contains a heading, an image tag with the source "space.jpg" and alt text "Photograph of space with stars and stardust," and sections about hobby and teaching interests that use various HTML elements.](/assets/img/code-editor-1.png)
+![A notepad window showing an HTML code for "Blake's Homepage". The page contains a heading, an image tag with the source "space.jpg" and alt text "Photograph of space with stars and stardust," and sections about hobby and teaching interests that use various HTML elements.](/assets/img/code-editor-1.webp)
 
 It’s not terrible, but we can do better. Let’s download an editor that’s made for writing code.
 
@@ -28,13 +28,13 @@ Don’t let the busy screenshot on the homepage scare you. We don’t need all t
 
 Once you download and install VS Code, start it up. You may see a few instructional screens, but then you’ll be presented with a screen like this:
 
-![Screenshot of Visual Studio Code's welcome screen. The sidebar includes options like "Explorer," "Search," "Source Control," "Run," and "Extensions." The main screen displays options to "Open Folder..." with walkthroughs for starting with VS Code and learning fundamentals.](/assets/img/code-editor-2.png)
+![Screenshot of Visual Studio Code's welcome screen. The sidebar includes options like "Explorer," "Search," "Source Control," "Run," and "Extensions." The main screen displays options to "Open Folder..." with walkthroughs for starting with VS Code and learning fundamentals.](/assets/img/code-editor-2.webp)
 
 ## Open your project
 
 On the VS Code welcome screen, click _Open Folder_, then select the folder containing your web project. You’ll see your website files in the sidebar. When you open the `index.html` file, you’ll see your code in a nice view with line numbers and what is called _syntax highlighting_—parts of the code are colorized to be more easily distinguished from other parts.
 
-![Screenshot of Visual Studio Code with HTML code for "Blake's Homepage." The left sidebar with the project's files. The main editor shows the same source code as before, but the code has been colorized to make it easier to distinguish the different parts of the code.](/assets/img/code-editor-3.png)
+![Screenshot of Visual Studio Code with HTML code for "Blake's Homepage." The left sidebar with the project's files. The main editor shows the same source code as before, but the code has been colorized to make it easier to distinguish the different parts of the code.](/assets/img/code-editor-3.webp)
 
 VS Code also helps by making it easier to write code. It understands HTML and many other languages. When you start to type, it will give you code completion suggestions, which you can accept by clicking or pressing enter. It’ll also automatically indent when you press enter, so you don’t have to manually enter tabs or spaces.
 

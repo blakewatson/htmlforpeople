@@ -24,7 +24,7 @@ Pick a location on your computer and create a folder. Call it `my-site` or somet
 You will probably end up creating multiple websites as time passes, so you can go ahead and create a `sites` folder and put `my-site` inside of it if you'd like.
 {% endaside %}
 
-![Screenshot of a file explorer window showing a folder named "Websites" selected in the left pane and a folder named "my-site" displayed inside the "Websites" folder on the right pane.](/assets/img/zero-to-internet-01.png)
+![Screenshot of a file explorer window showing a folder named "Websites" selected in the left pane and a folder named "my-site" displayed inside the "Websites" folder on the right pane.](/assets/img/zero-to-internet-01.webp)
 
 ## Step 2. Create index.html
 
@@ -44,7 +44,7 @@ My name is Blake. I enjoy making websites and teaching others to do the same.
 
 Now save this file. Name it `index.html` and put it in the `my-site` folder you created in step 1.
 
-![A text editor window displaying the content of a file named "index.html." The text reads: "My name is Blake. I enjoy making websites and teaching others to do the same.](/assets/img/zero-to-internet-02.png)
+![A text editor window displaying the content of a file named "index.html." The text reads: "My name is Blake. I enjoy making websites and teaching others to do the same.](/assets/img/zero-to-internet-02.webp)
 
 {% aside 'Note' %}
 When making websites it’s essential to see file extensions—the part of the filename that comes after the period. If you don’t see them, here’s how you can get [Windows](https://perma.cc/3LAG-L6YW) or [Mac](https://perma.cc/KYR3-6H3L) to show them.
@@ -58,7 +58,7 @@ You should see your (admittedly plain) website in your browser! Feel free to adj
 
 Don’t worry about how it looks. We’ll fix that later.
 
-![A browser window displays a simple webpage with black text on a white background. The text reads: "My name is Blake. I enjoy making websites and teaching others to do the same." The webpage URL shown in the address bar is a local file path.](/assets/img/zero-to-internet-03.png)
+![A browser window displays a simple webpage with black text on a white background. The text reads: "My name is Blake. I enjoy making websites and teaching others to do the same." The webpage URL shown in the address bar is a local file path.](/assets/img/zero-to-internet-03.webp)
 
 ## Step 4. Publish your website
 
@@ -76,7 +76,7 @@ Head over to Neocities and create an account. It’s free. You’ll also need to
 
 Once you’ve created your account, go to your [site’s dashboard](https://neocities.org/dashboard). You’ll see that you have some starting files there. You can ignore them for now. To publish the page you just made on your computer, drag `index.html` from your computer onto your Neocities dashboard. That will replace the `index.html` that’s already there.
 
-![Screenshot of the Neocities dashboard showcasing a website named "My Cool Website" belonging to user blakewatson. The interface shows options for creating a new file, new folder, or uploading files, as well as information about storage usage and site activity.](/assets/img/zero-to-internet-04.png)
+![Screenshot of the Neocities dashboard showcasing a website named "My Cool Website" belonging to user blakewatson. The interface shows options for creating a new file, new folder, or uploading files, as well as information about storage usage and site activity.](/assets/img/zero-to-internet-04.webp)
 
 Once you’ve done that, click the link to your site at the top of the dashboard.
 

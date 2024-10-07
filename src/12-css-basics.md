@@ -163,7 +163,7 @@ I made an `index.html` and put the following code in there. It assumes that you 
 
 Since the `styles.css` file is empty, we get only the browser default styles. This is what it looks like:
 
-![Screenshot of the browser rendering the webpage, "Planets of the Solar System." Each planet has a brief description highlighting unique characteristics. The page uses only default browser styles and is completely unstyled.](/assets/img/css-basics-01.png)
+![Screenshot of the browser rendering the webpage, "Planets of the Solar System." Each planet has a brief description highlighting unique characteristics. The page uses only default browser styles and is completely unstyled.](/assets/img/css-basics-01.webp)
 
 Good ol' Times New Roman and lines of text that run the entire width of the browser window. It doesn’t look great, but there’s something nice and quaint about it. And, crucially, it’s not broken. Many sites are overdone with gratuitous designs, megabytes of images and JavaScript, and user-hostile behaviors (you know, like, "I see you’ve only read two sentences of this article, but I just know you must be dying to subscribe to my newsletter so let me just show you this here giant pop-up.").
 
@@ -247,7 +247,7 @@ The `max-width` can be stated as a percentage of its containing element. Setting
 
 And now our page is looking much nicer.
 
-![The same image from before but now the page is centered and tapped at a width that makes reading easier.](/assets/img/css-basics-02.png)
+![The same image from before but now the page is centered and tapped at a width that makes reading easier.](/assets/img/css-basics-02.webp)
 
 ## Anatomy of a CSS rule
 
@@ -297,7 +297,7 @@ The cool thing about the `rem` unit is that, by allowing us to base values off t
 
 Our text looks nice.
 
-![The same image from before but now the text is larger with more generous line height.](/assets/img/css-basics-03.png)
+![The same image from before but now the text is larger with more generous line height.](/assets/img/css-basics-03.webp)
 
 Nothing against Times New Roman, but it’s very… _default_ looking. We can do better.
 
@@ -309,13 +309,13 @@ Web fonts need to be in a specific format, and _installed_ a certain way, for la
 
 For simplicity, we'll use a couple of fonts from Google Fonts. Head over to fonts.google.com. Search for "Oswald" and select it from the results. Then click _Get Font_.
 
-![Screenshot of the Google Fonts website showing the font "Oswald." The "Get font" button is highlighted with a red arrow. Sample text below reads, "Whereas disregard and contempt for human rights have resulted." The site menu is visible on the left.](/assets/img/css-basics-04.png)
+![Screenshot of the Google Fonts website showing the font "Oswald." The "Get font" button is highlighted with a red arrow. Sample text below reads, "Whereas disregard and contempt for human rights have resulted." The site menu is visible on the left.](/assets/img/css-basics-04.webp)
 
 After selecting it, don’t download anything yet. Do a search for "source sans." Source Sans 3 is the available version at the time of this writing. Select it and click _Get Font_.
 
 Once you have both fonts selected, click _Get embed code_. We're looking for the block labeled _Embed code in the `<head>` of your html_.
 
-![Screenshot of the Google Fonts interface displaying the details for the "Source Sans 3" font. There is a "Copy code" button inside a red highlighted box that provides the embed code for HTML. The interface includes font style options and usage instructions.](/assets/img/css-basics-05.png)
+![Screenshot of the Google Fonts interface displaying the details for the "Source Sans 3" font. There is a "Copy code" button inside a red highlighted box that provides the embed code for HTML. The interface includes font style options and usage instructions.](/assets/img/css-basics-05.webp)
 
 Copy and paste the embed code into your website's `<head>` section.
 
@@ -414,7 +414,7 @@ For the `<h1>`, I’m keeping the default `font-size`. For the `<h2>`, I’m set
 
 A handful of typographic changes transformed our page, and it has an entirely different feel.
 
-![The webpage titled "Planets of the Solar System" has received a design update. The font has been changed, and the font colors have been updated. The background has been refreshed to complement these changes. The header now features a top border. The page appears more polished and designed.](/assets/img/css-basics-06.png)
+![The webpage titled "Planets of the Solar System" has received a design update. The font has been changed, and the font colors have been updated. The background has been refreshed to complement these changes. The header now features a top border. The page appears more polished and designed.](/assets/img/css-basics-06.webp)
 
 We could almost stop here. There’s nothing too terrible going on. But let's style some of the elements we've not covered yet.
 
@@ -510,7 +510,7 @@ I'll set it to be a solid line that’s `4px` wide and uses the heading color, w
 
 But we have a problem. If we stopped there, we’d have a border that bumps right up against the text. Ew.
 
-![Image containing text that provides a brief description of Earth, including a mis-styled blockquote by Carl Sagan where the left border is touching the text.](/assets/img/css-basics-08.png)
+![Image containing text that provides a brief description of Earth, including a mis-styled blockquote by Carl Sagan where the left border is touching the text.](/assets/img/css-basics-08.webp)
 
 Fortunately, we can fix that by adding some `padding`. I'll give you a quick intro to the [_box model_](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model). Every element has space outside of it (margin), space around the inside of it (padding), and an optional layer that separates the two (the border).
 
@@ -518,7 +518,7 @@ With that knowledge, we'll add some space _inside_ the element, which will push 
 
 Finally, I'll round off the effect by making the font size slightly smaller and the text color slightly lighter. The final result is a nice-looking blockquote with a bit of flair.
 
-![The same image of the blockquote as before, but the spacing between the border and the text has been widened, the text size has been reduced, and the text color has been made a subtle gray.](/assets/img/css-basics-07.png)
+![The same image of the blockquote as before, but the spacing between the border and the text has been widened, the text size has been reduced, and the text color has been made a subtle gray.](/assets/img/css-basics-07.webp)
 
 I designed this blockquote style to fit most use cases, but you could go in another direction—pithy callouts with large italicized text, for example.
 
@@ -566,7 +566,7 @@ li::marker {
 
 The `::marker` bit is called a _pseudo-element_ because it represents a piece of an HTML element. The `::marker` is a part of the _list item_ or `<li>` element. It contains the bullet (or number) of the list item. We can target it with our selector and change the color to our red heading color.
 
-![Screenshot of the bulleted list titled "Other Major Bodies" includes entries for Pluto, Ceres, Haumea, Makemake, Eris, Ganymede, Titan, and Europa. It has more spacing between list items, making it easier to read. The bullet points are red, while the text is the same dark text color.](/assets/img/css-basics-9.png)
+![Screenshot of the bulleted list titled "Other Major Bodies" includes entries for Pluto, Ceres, Haumea, Makemake, Eris, Ganymede, Titan, and Europa. It has more spacing between list items, making it easier to read. The bullet points are red, while the text is the same dark text color.](/assets/img/css-basics-9.webp)
 
 Looking good!
 
@@ -594,13 +594,13 @@ We could have long lines of code, so we need to specify what should happen if a 
 
 Finally, monospaced code can look large, so we'll tone it down by saying it should be three-fourths of standard text size.
 
-![The example of a JavaScript function named `getPlanetInfo` has been treated with a subtle rounded background container and is displayed in a monospaced font. This function takes the name of a planet as input and returns information about the planet from a defined 'planets' object that store unique facts about each planet.](/assets/img/css-basics-10.png)
+![The example of a JavaScript function named `getPlanetInfo` has been treated with a subtle rounded background container and is displayed in a monospaced font. This function takes the name of a planet as input and returns information about the planet from a defined 'planets' object that store unique facts about each planet.](/assets/img/css-basics-10.webp)
 
 ## Better image styling
 
 Here’s what the image of Saturn looks like right now.
 
-![The image of Saturn, the sixth planet from the Sun, features its extensive ring system. The planet is shown with a shadowed portion and the rings partially illuminated. Text above the image provides information about Saturn's position and size in the solar system. The image is narrower than the text column and by default the image is rectangular with sharp corners.](/assets/img/css-basics-11.png)
+![The image of Saturn, the sixth planet from the Sun, features its extensive ring system. The planet is shown with a shadowed portion and the rings partially illuminated. Text above the image provides information about Saturn's position and size in the solar system. The image is narrower than the text column and by default the image is rectangular with sharp corners.](/assets/img/css-basics-11.webp)
 
 It's not too bad, but it looks like the `<figure>` tag is adding margin on either side. I want the image to be full-width. I also want the photo caption to be smaller.
 
@@ -629,7 +629,7 @@ We'll remove the inline margin from the `<figure>`. Then we'll target images tha
 
 Finally, we'll reduce the margin above the caption and reduce the `font size to 80% of the document's `font size.
 
-![The same image of Saturn from before except that the margin has been removed and the corners of the image have been rounded.](/assets/img/css-basics-12.png)
+![The same image of Saturn from before except that the margin has been removed and the corners of the image have been rounded.](/assets/img/css-basics-12.webp)
 
 Looking classy! Minor adjustments can make a big difference.
 
@@ -695,7 +695,7 @@ To help with balance, I'm increasing the `font-weight` a bit. In addition to val
 
 Finally, you benefit from increasing the space between letters when using all caps. I’m using the `em` unit, which is based on the current `font-size`. This is useful because if you change the `font-size` in the future, the spacing will change proportionately.
 
-![Screenshot of the title *Planets of the Solar System*. The text below describes the solar system. The text size has been increased and the first phrase of the paragraph has been rendered in small caps.](/assets/img/css-basics-13.png)
+![Screenshot of the title *Planets of the Solar System*. The text below describes the solar system. The text size has been increased and the first phrase of the paragraph has been rendered in small caps.](/assets/img/css-basics-13.webp)
 
 And there we go. From its humble beginnings as a stark _unstyled_ page with quaint appeal, it’s now looking like an authoritative article.
 
@@ -706,7 +706,7 @@ These are just the styles I chose based on my preferences. You could go in all s
 The magic of CSS is that you could take my exact HTML code—no changes—and create an entirely different design from that same starting point. That’s the premise of a web experiment called [CSS Zen Garden](https://csszengarden.com/), where people submit designs based on identical markup.
 
 <figure>
-  <img src="/assets/img/css-basics-14.png" alt="Screenshot of two web pages from the CSS Zen Garden project. The left page features a colorful, vibrant design with a pink, purple, and orange palette. The right page has a minimalist, clean design with a light grey background and blue text. Both showcase CSS design capabilities.">
+  <img src="/assets/img/css-basics-14.webp" alt="Screenshot of two web pages from the CSS Zen Garden project. The left page features a colorful, vibrant design with a pink, purple, and orange palette. The right page has a minimalist, clean design with a light grey background and blue text. Both showcase CSS design capabilities.">
   <figcaption>These two designs share the same HTML code. <a href="https://www.youtube.com/watch?v=Iloby6ZXRjI">They’re the same picture.</a></figcaption>
 </figure>
 

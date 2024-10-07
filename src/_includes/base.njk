@@ -57,16 +57,16 @@
         <div class="logo-wrap">
           <p class="site-title container">
             <a href="/">
-              <img src="/assets/img/design/logo.svg" alt="HTML for people">
+              <span class="sr-only">HTML for people</span>
+              {% include "../assets/img/design/logo.svg" %}
+              {# <img src="/assets/img/design/logo.svg" alt="HTML for people"> #}
             </a>
           </p>
         </div>
 
         <a href="#main-content" class="skip-link">Skip to content</a>
 
-        <div class="container">
-          {% include "partials/menu.njk" %}
-        </div>
+        <div class="container">{% include "partials/menu.njk" %}</div>
       </header>
     {% endblock %}
 

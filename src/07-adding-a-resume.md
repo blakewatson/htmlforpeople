@@ -79,7 +79,7 @@ For this, I will list my relevant skills in short bullet points. I'll use a leve
 
 Which renders like this.
 
-![Screenshot of a "Resume" page for Blake Watson. The page header includes navigation buttons for "Home," "Blog," "About," and "Resume" (highlighted). The page title "Blake Watson" is displayed in bold, with a subtitle "Experienced Frontend Engineer" in smaller italic text beneath it. Below the header, a section titled "Skills" lists various technical skills in a bullet-point format.](adding-a-resume-1.png)
+![Screenshot of a "Resume" page for Blake Watson. The page header includes navigation buttons for "Home," "Blog," "About," and "Resume" (highlighted). The page title "Blake Watson" is displayed in bold, with a subtitle "Experienced Frontend Engineer" in smaller italic text beneath it. Below the header, a section titled "Skills" lists various technical skills in a bullet-point format.](/assets/img/adding-a-resume-1.webp)
 
 It’s a clean, bulleted list. That said, I feel there’s a bit of wasted space. It would be nice if we could split it into columns. There isn’t a strictly HTML way to do it, but I think it’s worth using a little CSS here to do the trick.
 
@@ -105,7 +105,7 @@ You’ve seen several tags using _attributes_ by now. Every page of our site has
 
 That gives us a more pleasing and space-efficient list.
 
-![Screenshot of the updated "Resume" page. The "Skills" section is now organized into two columns, each listing different technical skills in a bullet-point format for a more compact and visually balanced presentation.](adding-a-resume-2.png)
+![Screenshot of the updated "Resume" page. The "Skills" section is now organized into two columns, each listing different technical skills in a bullet-point format for a more compact and visually balanced presentation.](/assets/img/adding-a-resume-2.webp)
 
 ## Experience
 
@@ -142,7 +142,7 @@ I'll show you what markup I chose and what it looks like and then explain it.
 
 That gives us a section that looks like this.
 
-![Screenshot of the "Experience" section on a resume page. The section title "Experience" is bold and large. Below, the job title "Frontend Engineer" is displayed prominently, followed by the company name "MRI Technologies" in bold, with the employment period "August 2019–Present" below it. A bullet-point list describes key responsibilities and achievements in this role.](adding-a-resume-3.png)
+![Screenshot of the "Experience" section on a resume page. The section title "Experience" is bold and large. Below, the job title "Frontend Engineer" is displayed prominently, followed by the company name "MRI Technologies" in bold, with the employment period "August 2019–Present" below it. A bullet-point list describes key responsibilities and achievements in this role.](/assets/img/adding-a-resume-3.webp)
 
 I will list several job roles I've had, so I’m using the position title as a heading (level 3, since it comes under the level 2 heading of _Experience_). Next, I want to display the employer and the time period. I chose to use a single paragraph to display these together. I'm using a manual line break to push the time range to the second line.
 
@@ -302,7 +302,7 @@ Here’s the complete code, including the header and main content areas.
 
 You can see how this looks on the [demo site](https://demo.htmlforpeople.com/resume), but here’s a full-page screenshot.
 
-![Screenshot of the complete "Resume" page. The title "Blake Watson" and subtitle "Experienced Frontend Engineer" are displayed prominently. Below, the "Skills" section lists technical skills in two columns. The "Experience" section details work history, including roles as a Frontend Engineer at MRI Technologies, Web Developer/Interactive Designer at Mad Genius, and Web Developer (self-employed). The "Education" section lists degrees in business administration from Mississippi State University.](adding-a-resume-4.png)
+![Screenshot of the complete "Resume" page. The title "Blake Watson" and subtitle "Experienced Frontend Engineer" are displayed prominently. Below, the "Skills" section lists technical skills in two columns. The "Experience" section details work history, including roles as a Frontend Engineer at MRI Technologies, Web Developer/Interactive Designer at Mad Genius, and Web Developer (self-employed). The "Education" section lists degrees in business administration from Mississippi State University.](/assets/img/adding-a-resume-4.webp)
 
 ## Up next
 

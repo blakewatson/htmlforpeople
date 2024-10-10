@@ -125,7 +125,7 @@ Now, let’s use it. Rename `index.html` to `index.php`. Delete the entire `<nav
 
 ```php
 <header>
-    <?php "includes/nav.php" ?>
+    <?php include "includes/nav.php" ?>
 
     <h1>Blake&rsquo;s Homepage</h1>
 </header>

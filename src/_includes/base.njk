@@ -4,10 +4,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="fediverse:creator" content="@bw@social.lol" />
+
     <title>{{ title }}</title>
-    <meta name="og:title" content="{{ title }}" />
-    <meta name="og:description" content="{{ summary }}" />
-    <meta name="og:image" content="/assets/img/design/og.png" />
+
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ summary }}" />
+    <meta property="og:image" content="/assets/img/design/og.png" />
 
     <!-- favicon -->
     <link
@@ -141,6 +144,10 @@
             >
             &middot;
             <a href="https://github.com/blakewatson/htmlforpeople">GitHub</a>
+            &middot;
+            <a href="https://github.com/blakewatson/htmlforpeople/issues"
+              >Report error</a
+            >
             &middot;
             <a href="https://blakewatson.com/about">About the author</a>
             &middot;

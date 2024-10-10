@@ -8,7 +8,7 @@ layout: 'chapter.njk'
 
 # Reusable HTML with PHP
 
-Throughout this book, one annoying thing we've had to deal with is updating the navigation menu on every page every time we change the menu. Imagine if we didn't need to do that and instead could keep our navigation menu in one place, in one file, and magically appear on every page.
+Throughout this book, one annoying thing we've had to deal with is updating the navigation menu on every page every time we change the menu. Imagine if we didn't need to do that and instead could keep our navigation menu in one place, in one file, and have it magically appear on every page.
 
 That's what we'll do in this bonus chapter with the help of PHP. PHP stands for _PHP: Hypertext Preprocessor_. Yes, [the acronym is part of the name](https://en.wikipedia.org/wiki/Recursive_acronym), which is pretty weird. But back in the day when it was first created, it stood for Personal Home Page, as that was its initial use.
 
@@ -16,7 +16,7 @@ PHP is a programming language that powers much of the web, mainly because the CM
 
 When you visit a _static_ website, like the ones we’ve made in this book, the server gives you the HTML file you requested via the URL. When you visit a website powered by PHP, a PHP script is run on the server, which will return some (usually) HTML code to the browser. So, in both cases, you get HTML back. What’s the difference?
 
-The PHP site can dynamically generate HTML based on the URL and other data from the browser's request. For example, I could have a site where the user has a profile at `mysite.com/user/blake`. With plain HTML, I would need to create that file for each user. However, with PHP, I could generate the page on the fly by reading the username in the URL and constructing the appropriate HTML to send back.
+The PHP site can dynamically generate HTML based on the URL and other data from the browser's request. For example, I could have a site where the user has a profile at `example.com/user/blake`. With plain HTML, I would need to create that file for each user. However, with PHP, I could generate the page on the fly by reading the username in the URL and constructing the appropriate HTML to send back.
 
 PHP also allows you to implement more complicated web features, like accepting user data and saving it in a database. These could be as simple as displaying a dynamic hit counter or as sophisticated as a social network.
 
@@ -31,7 +31,7 @@ I recommend what’s called _shared hosting_. Long story short, this usually mea
 {% aside 'Note' %}
 It’s possible to run PHP on your computer to test your website before uploading it to a server. However, setting that up falls outside the scope of this book.
 
-The easiest way is probably by using an app like [XAMPP](https://www.apachefriends.org/) or [MAMP](https://www.mamp.info) (what I use). You can also [install PHP directly on your system](https://perma.cc/MZB9-GKBD) and use its [built-in development server](https://web.archive.org/web/20240711042305/https://www.php.net/manual/en/features.commandline.webserver.php). If you’re on a Mac, you probably already have PHP installed.
+The easiest way is probably by using an app like [XAMPP](https://www.apachefriends.org/) or [MAMP](https://www.mamp.info) (what I use). You can also [install PHP directly on your system](https://perma.cc/MZB9-GKBD) and use its [built-in development server](https://web.archive.org/web/20240711042305/https://www.php.net/manual/en/features.commandline.webserver.php).
 {% endaside %}
 
 Most shared hosts offer the same services, but here are a few of the ones people recommended when I [asked on Mastodon](https://perma.cc/WAD3-JCNX).
@@ -45,7 +45,7 @@ And then there’s [NearlyFreeSpeech.NET](https://www.nearlyfreespeech.net/), th
 
 Once you have an account at one of these (or some other) web host, you should be able to upload files either directly through their website or by connecting to your server with [FTP](https://perma.cc/P7Y7-CR6P).
 
-The particulars of this fall outside the scope of this book, but there are tons of resources on getting up and running with a shared web post. A few web searches should put you on the right track.
+The particulars of this fall outside the scope of this book, but there are tons of resources on getting up and running with a shared web host. A few web searches should put you on the right track.
 
 The cool thing about PHP is that it is straightforward to start. Just take one of the pages of your website and change the file extension from `.html` to `.php`. You just created a perfectly valid PHP file—no changes necessary.
 
@@ -75,7 +75,7 @@ Even if you never edit this file again, it will always be up to date (as long as
 
 Let's break down the dynamic part of this. First, PHP code is written between PHP tags (`<?php` and `?>`).
 
-PHP code inside these tags is executed on the server before the HTML is sent to the browser. The `echo` statement is how you let PHP know you want it to output something to the page. The `date` function returns the current date–in this case, we’re telling it that we only want the year.
+PHP code inside these tags is executed on the server before the HTML is sent to the browser. The `echo` statement is how you let PHP know you want it to output something to the page. The `date` function returns the current date—in this case, we’re telling it that we only want the year.
 
 So, the `date` function runs, returning the current year. That bit of text is then processed by the `echo` statement, which inserts it into the document.
 
@@ -124,7 +124,11 @@ In the process of converting the site from HTML-only to PHP, it’s a good time 
 Now, let’s use it. Rename `index.html` to `index.php`. Delete the entire `<nav>` block and replace it with the following line of PHP.
 
 ```php
-<?php include "includes/nav.php" ?>
+<header>
+    <?php "includes/nav.php" ?>
+
+    <h1>Blake&rsquo;s Homepage</h1>
+</header>
 ```
 
 When you load the page, things should look the same as they did before. You should see your nav menu. But the magic is that you’re using your PHP version. Now, you can start converting the rest of your pages.
@@ -221,7 +225,7 @@ function aria_current($url) {
 
 Okay, let's break it down. First, we need to open a pair of PHP tags. Inside, we'll define a function called `aria_current` with one argument: a variable called `$url`.
 
-You can see where I added some notes called _comments_. Every line that starts with two slashes (`//`) is considered a comment and is ignored—it's there just for people.
+You can see where I added some notes called _comments_. Every line that starts with two slashes (`//`) is considered a comment and is ignored—it's there just for people who are looking at the code.
 
 The first bit of code is an _if statement_. PHP has a global variable called `$_SERVER` with all kinds of information, including which page is currently being visited (what it calls the `REQUEST_URI`). So we grab that and see if it matches the URL of the given nav item (remember, we are running this function for each nav item). If it does, we will output `aria-current="page"` using the `echo` statement. In that case, the output will appear at the point where we called the function (which is inside the `<a>` tag, where attributes go). After the `echo` statement, we use `return` to stop the function from running further—we're done.
 

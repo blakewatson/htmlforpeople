@@ -12,16 +12,18 @@
     <a href="#main-content" class="skip-link">Skip to content</a>
 
     <div class="hero">{% include "../assets/img/design/hero.svg" %}</div>
-    <div class="hero-mobile">{% include "../assets/img/design/hero-mobile.svg" %}</div>
+    <div class="hero-mobile">
+      {% include "../assets/img/design/hero-mobile.svg" %}
+    </div>
 
-    <div class="container my-lg">{% include "partials/menu.njk" %}</div>
+    <div class="container mt-lg">{% include "partials/menu.njk" %}</div>
   </header>
 {% endblock %}
 
 {% block content %}
   {{ content | safe }}
 
-  <p class="mb-xl mt-lg">
+  <p class="mt-lg" style="margin-bottom: var(--size-10);">
     <a href="/intro" class="button">Read the introduction</a>
     <a href="/zero-to-internet-your-first-website" class="button"
       >Start coding already!</a

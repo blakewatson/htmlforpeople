@@ -152,19 +152,19 @@ So far, we’ve got a lot of words, but do you know what’s worth a thousand of
 
 ## Add images to your website
 
-Let’s add a cool image to our website. While it might be tempting to go to Google Images and grab the first thing you find, that’s not the way to go. You must make sure you have the proper rights to the image. There are a lot of places on the web to find images to use (look for images with a Creative Commons license). Let’s use the popular free image site, [Unsplash](https://unsplash.com), for simplicity.
+Let’s add a cool image to our website. While it might be tempting to go to Google Images and grab the first thing you find, that’s not the way to go. You must make sure you have the proper rights to the image. There are a lot of places on the web to find images to use (look for images with a Creative Commons license). For simplicity, let’s use the popular free image site, [Unsplash](https://unsplash.com).
 
 I found a cool image of space. I downloaded the small-size version and renamed it `space.jpg` to make it easier to refer to. Find an image you like and drop it in the folder next to your `index.html`.
 
 You can add it to your page using the _image tag_ or `<img>`. Unlike the tags we’ve seen so far, the `<img>` tag is _self-closing_. That means there isn’t a closing tag. It looks like this:
 
 ```html
-<img src="space.jpg" alt="Photograph of space with stars and stardust." />
+<img src="space.jpg" alt="Photograph of space with stars and stardust.">
 ```
 
 Just like with the `<a>` tag, the `<img>` tag uses attributes to provide more information about how you want to use the tag.
 
-Use the ' src ' attribute to tell your image tag the _source_ of your image, that is, where it’s located. In this example, we’re saying the image is in the same folder as our `index.html` page (as opposed to a subfolder) and specifying that the image's filename is `space.jpg`.
+Use the `src` attribute to tell your image tag the _source_ of your image, that is, where it’s located. In this example, we’re saying the image is in the same folder as our `index.html` page (as opposed to a subfolder) and specifying that the image's filename is `space.jpg`.
 
 We also need to describe the image in case some visitors to our website cannot see it. This could happen for several reasons—maybe our visitor is blind and uses a screen reader to access websites. Or maybe a glitch causes the image not to load for some reason. If that happens, our _alternative_ text, or `alt` text, will be shown instead.
 
@@ -222,16 +222,16 @@ Remember how we wrap most elements in tags? We actually need to wrap the whole p
 ```html
 <html>
   <head>
-    info about your site goes here
+    <!-- info about your site goes here -->
   </head>
 
   <body>
-    stuff you want to show up on your page goes here
+    <!-- stuff you want to show up on your page goes here -->
   </body>
 </html>
 ```
 
-To make our HTML document official, let's add a `doctype` line at the very beginning. The doctype is mainly needed for historical reasons, but it tells the browser, “Hey, I’m an official HTML document, so please proceed to display me accordingly!” It’s okay to copy and paste that line and move on.
+To make our HTML document official, let's add a `doctype` line at the very beginning. The doctype is mainly needed for historical reasons, but it tells the browser, “Hey, I’m an HTML document, so please proceed to display me accordingly!” It’s okay to copy and paste that line and move on—don't feel like you need to memorize every little thing.
 
 ```html
 <!doctype html>
@@ -251,13 +251,13 @@ For now, let’s include two things in the `<head>`: a title tag and a meta tag.
 ```html
 <head>
   <title>Blake's Homepage</title>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
 </head>
 ```
 
 The `<title>` tag controls the text that appears in your website's browser tab and the name of your site when it appears in search results. Nice!
 
-We can use the `<meta>` tag multiple times to give the browser extra info about your page. In this case, we’re telling it which _character set_ to use. All you need to know here is that UTF-8 text means special symbols like emojis will appear as expected.
+We can use the `<meta>` tag multiple times to give the browser extra info about our page. In this case, we’re telling it which _character set_ to use. All you need to know here is that UTF-8 text means special symbols like emojis will appear as expected.
 
 {% aside 'Note' %}
 If you’re getting confused by all the extra tags here, know that you can copy and paste this starting code structure so that you don’t have to remember it all right now!
@@ -270,13 +270,13 @@ Here’s the whole `index.html` file for reference:
 <html>
   <head>
     <title>Blake's Homepage</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
   </head>
 
   <body>
     <h1>Blake's Homepage</h1>
 
-    <img src="space.jpg" alt="Photograph of space with stars and stardust." />
+    <img src="space.jpg" alt="Photograph of space with stars and stardust.">
 
     <p>
       My name is Blake. I enjoy making websites and teaching others to do thesame.
@@ -308,7 +308,7 @@ Here’s the whole `index.html` file for reference:
 
 ## Update your live website
 
-These changes are looking pretty good. Let’s publish this page to the world. Head over to [your Neocities dashboard](https://neocities.org/dashboard). You’ll see the starting files plus the `index.html` file you uploaded in chapter 1 of this book. To make things a bit cleaner, I’m switching to the list view and deleting the PNG image and CSS file that was there.
+These changes are looking pretty good. Let’s publish this page to the world. Head over to [your Neocities dashboard](https://neocities.org/dashboard). You’ll see the starting files plus the `index.html` file you uploaded in chapter 1 of this book. To make things a bit cleaner, I’m switching to the list view and deleting the PNG image and CSS file that were there initially.
 
 ![Screenshot of a Neocities dashboard. The header reads "My Cool Website" with the URL "blakewatson.neocities.org" underneath. It shows file usage details and lists two files, "index.html" and "not_found.html," with options to edit or delete them.](/assets/img/add-content-6.webp)
 

@@ -28,10 +28,10 @@ Let’s open it in the browser and see how it looks.
 
 ![Screenshot of the "Blog" page on Blake's website. The page has minimal styling due to broken file references. It features a simple, unstyled layout with plain black text on a white background. The header contains links to "Home" and "About" in blue, underlined text, indicating default browser styling. The main title "Blog" is bold and large, but the overall appearance lacks the structured design seen on previous pages.](/assets/img/adding-a-blog-1.webp)
 
-Whoa, we broke it; what happened!? It has to do with the file structure. Look at our `<link>` tag, where we bring our Simple.css styles.
+Whoa, we broke it; what happened!? It has to do with the file structure. Look at our `<link>` tag, where we added our Simple.css styles.
 
 ```html
-<link rel="stylesheet" href="css/simple.css" />
+<link rel="stylesheet" href="css/simple.css">
 ```
 
 It’s looking for `css/simple.css` but can’t find it. Why? The path we gave it is _relative_ to the current file. The current file is in the `blog` folder, so it looks for `blog/css/simple.css`, which doesn’t exist.
@@ -39,7 +39,7 @@ It’s looking for `css/simple.css` but can’t find it. Why? The path we gave i
 So, how do we refer to files that aren’t in the current folder? We can use the `..` syntax like this.
 
 ```html
-<link rel="stylesheet" href="../css/simple.css" />
+<link rel="stylesheet" href="../css/simple.css">
 ```
 
 That means "move up one level, then look for css/simple.css."
@@ -140,7 +140,7 @@ We can use the `<blockquote>` tag to quote a person, a book, another website, or
 </blockquote>
 ```
 
-Here, I’m using the `<strong>` to give extra emphasis. I'm using the `<cite>` tag to display the source of the quote. The _self-closing_ `<br>` tag creates a manual line break, which pushes the `<cite>` element to the following line.
+Here, I’m using `<strong>` to give extra emphasis. I'm using the `<cite>` tag to display the source of the quote. The _self-closing_ `<br>` tag creates a manual line break, which pushes the `<cite>` element to the following line. I used another special character, `&mdash;`, to create an [_em dash_](https://practicaltypography.com/hyphens-and-dashes.html).
 
 ![A stylized blockquote rendered in a web browser. The quote "HTML is elementary my dear Watson." is italicized with the word "elementary" also in bold. A blue vertical bar appears on the left side of the quote, adding a visual emphasis. Below the quote, the citation "— Whiskers, probably" is displayed in a smaller font, aligned to the left, creating a visually distinct attribution.](/assets/img/adding-a-blog-4.webp)
 
@@ -150,7 +150,7 @@ Block quotes are typically styled as indented blocks of text, often with a borde
 
 We covered these briefly in Chapter 2, [Add content to your website](/add-content-to-your-website), but it’s worth recapping. Our blog posts already use the topmost heading, the `<h1>`, but if you’re writing a blog post that needs more headings, that’s totally fine!
 
-Headings in HTML are hierarchical, meaning pages `<h2>` headings should follow `<h1>` headings, `<h3>` headings should follow `<h2>` headings, and so on. Technically, HTML gives us six heading levels—`<h1>` through `<h6>`. But moderation is key here. Ask yourself if you’re _really_ making your page easier to understand by adding so many levels of headings. My advice is to stick with three levels or less.
+Headings in HTML are hierarchical, meaning `<h2>` headings should follow `<h1>` headings, `<h3>` headings should follow `<h2>` headings, and so on. Technically, HTML gives us six heading levels—`<h1>` through `<h6>`. But moderation is key here. Ask yourself if you’re _really_ making your page easier to understand by adding so many levels of headings. My advice is to stick with three levels or less.
 
 And, of course, we have lists. We covered these in Chapter 2, but let's look at them again. You’ve got two options here—a bulleted list (called _unordered_) and a numbered list (called _ordered_).
 
@@ -232,10 +232,14 @@ That would render something like this.
 
 ## Breaking up content
 
-The example I just showed is an example of one of the ways we can manually add space between elements—the `<br>` tag or _break_ tag. The break tag adds a line break. For example, consider this haiku (by [Robert Cole](http://www.npr.org/blogs/thetwo-way/2013/05/02/180532424/send-your-haiku-to-mars-nasa-seeks-poets#comment-882372940)).
+One of the ways we can manually add space between elements is the `<br>` tag or _break_ tag. The break tag adds a line break. For example, consider this haiku (by [Robert Cole](http://www.npr.org/blogs/thetwo-way/2013/05/02/180532424/send-your-haiku-to-mars-nasa-seeks-poets#comment-882372940)).
 
 ```html
-<p>A timeless red orb floats lazy in the ether unimpressed by war.</p>
+<p>
+  A timeless red orb
+  floats lazy in the ether
+  unimpressed by war.
+</p>
 ```
 
 By default, the browser will render everything on one line and ignore most whitespace in your HTML.
@@ -248,8 +252,8 @@ We can fix our haiku by putting a couple of `<br>` tags in there.
 
 ```html
 <p>
-  A timeless red orb<br />
-  floats lazy in the ether<br />
+  A timeless red orb<br>
+  floats lazy in the ether<br>
   unimpressed by war.
 </p>
 ```
@@ -268,7 +272,7 @@ What’s up with the nonsensical text? It’s Latin-ish text called _[lorem ipsu
 
 ## Code and pre-formatted text
 
-I've been using these tags _a lot_ during this book. Consider this paragraph:
+I've been using these tags _a lot_ on the pages you've been reading in this book. Consider this paragraph:
 
 ```html
 <p>
@@ -279,11 +283,11 @@ I've been using these tags _a lot_ during this book. Consider this paragraph:
 </p>
 ```
 
-That will display the code bits in a monospaced and a different color, like this.
+That will display the code bits in a monospaced font and a different color, like this.
 
 ![A paragraph of text rendered in a web browser with specific HTML tags highlighted in red. The text reads: "By the end of day one, he was familiar with basic tags like html, head, and body." The highlighted words "html," "head," and "body" are in red with a monospaced font, while the rest of the text remains in black, drawing attention to these specific terms.](/assets/img/adding-a-blog-8.webp)
 
-You've seen me include the less-than (`<`) and greater-than (`>`) symbols in my code elements. That takes a little bit of extra work. Like if I want to mention an `<a>` tag, I can’t simply write `<code><a></code>` because the browser will think I'm trying to make a literal link inside the `<code>` tag. To include the less-than and greater-than symbols (sometimes called "angle brackets"), we'll need the \*HTML entities `&lt;` and `&gt;`, respectively. That will tell the browser we want to render the actual symbols.
+You've seen me include the less-than (`<`) and greater-than (`>`) symbols in my code elements on the pages of this book (like this, `<a>`). That takes a little bit of extra work. Like if I want to mention an `<a>` tag, I can’t simply write `<code><a></code>` because the browser will think I'm trying to make a literal link inside the `<code>` tag. To include the less-than and greater-than symbols (sometimes called "angle brackets"), we'll need the HTML entities `&lt;` and <span style="text-wrap: nowrap">`&gt;`, </span>respectively. That will tell the browser we want to render the actual symbols.
 
 ```html
 <p>
@@ -299,31 +303,27 @@ That gives us the following.
 
 ![A paragraph similar to the previous one but with HTML tags surrounded by angle brackets, emphasizing their role as HTML elements. The text reads: "By the end of day one, he was familiar with basic tags like <html>, <head>, and <body>."](/assets/img/adding-a-blog-9.webp)
 
-As we saw earlier, when rendering your content, the browser ignores most of the whitespace in your code. But sometimes, you want to preserve the exact spacing and line. A fun example is ASCII art, which is when you make art with plain text characters.
+As we saw earlier, when rendering your content, the browser ignores most of the whitespace in your code. But sometimes, you want to preserve the exact spacing and line breaks. A fun example is ASCII art, which is when you make art with plain text characters.
 
-```
-    ___       ___       ___       ___
-   /\__\     /\  \     /\__\     /\__\
-  /:/__/_    \:\  \   /::L_L_   /:/  /
- /::\/\__\   /::\__\ /:/L:\__\ /:/__/
- \/\::/  /  /:/\/__/ \/_/:/  / \:\  \
-   /:/  /   \/__/      /:/  /   \:\__\
-   \/__/               \/__/     \/__/
-```
+<pre class="language-html"><code class="language-html" style="font-family: monospace!important">    ___       ___       ___       ___   
+   /\__\     /\  \     /\__\     /\__\  
+  /:/__/_    \:\  \   /::L_L_   /:/  /  
+ /::\/\__\   /::\__\ /:/L:\__\ /:/__/   
+ \/\::/  /  /:/\/__/ \/_/:/  / \:\  \   
+   /:/  /   \/__/      /:/  /   \:\__\  
+   \/__/               \/__/     \/__/</code></pre>
 
 The above should appear as the letters "HTML" using a 3d effect. It works because it uses a monospaced font and preserves all the whitespace. How did I do it? I used the `<pre>` tag, which is for _pre-formatted_ text. Use it like this.
 
-```html
-<pre>
+<pre class="language-html"><code class="language-html" style="font-family: monospace!important">&lt;pre&gt;
     ___       ___       ___       ___   
    /\__\     /\  \     /\__\     /\__\  
   /:/__/_    \:\  \   /::L_L_   /:/  /  
  /::\/\__\   /::\__\ /:/L:\__\ /:/__/   
  \/\::/  /  /:/\/__/ \/_/:/  / \:\  \   
    /:/  /   \/__/      /:/  /   \:\__\  
-   \/__/               \/__/     \/__/  
-</pre>
-```
+   \/__/               \/__/     \/__/
+&lt;/pre&gt;</code></pre>
 
 If you’d like to play with more ASCII text art, check out this [text art generator](https://perma.cc/E5NZ-SV56).
 
@@ -347,13 +347,15 @@ Okay, we've covered a variety of tags you can use to _mark up_ different types o
 
 If you open `blog/index.html`, it looks a bit empty. We'll fix that now by displaying the title of each blog post, the newest first, the publish date, and a one-sentence summary. Clicking the title of a blog post should take the reader to it.
 
-Let’s use the `<article>` tag for each one because each represents an independent composition. As a bonus, Simple.css will style these as cards. Let’s use `<h2>` for the blog post title, which will wrap a link (the `<a>` tag). We'll use the `time` tag for the date. We'll use a regular paragraph, or `<p>` tag, for the summary. The final markup looks like this.
+Let’s use the `<article>` tag for each one because each represents an independent composition. As a bonus, Simple.css will style these as cards. Let’s use `<h2>` for the blog post title, inside of which we will put a link (the `<a>` tag). We'll use the `time` tag for the date. We'll use a regular paragraph, or `<p>` tag, for the summary. The final markup looks like this.
 
 ```html
 <main>
   <article>
     <h2>
-      <a href="2024-04-20-donuts.html">Why donuts are the best thing ever</a>
+      <a href="2024-04-20-donuts.html">
+        Why donuts are the best thing ever
+      </a>
     </h2>
     <p><time datetime="2024-04-20">April 20, 2024</time></p>
     <p>
@@ -385,5 +387,3 @@ Of course, you can also keep working _locally_ instead of uploading your progres
 ## Up next
 
 Phew, we’ve finished our whirlwind tour of adding a blog with various tags! Next, we'll slow our pace and focus on page structure by adding a resume page you can share with potential employers.
-
-[Adding a resume](/adding-a-resume)

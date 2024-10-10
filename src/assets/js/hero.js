@@ -89,6 +89,16 @@ const anime = window.anime;
       duration: 100,
     });
 
+    anime({
+      targets: [exhaustCenter],
+      translateY: [10, -10],
+      fill: ['#fff', '#ffffe6'],
+      loop: true,
+      direction: 'alternate',
+      easing: 'linear',
+      duration: 100,
+    });
+
     const tl = anime.timeline({
       loop: 1,
       direction: 'alternate',

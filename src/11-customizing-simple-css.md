@@ -70,10 +70,10 @@ Now, let’s hook it up to the site. You’ll need to do this for every page on 
 ```html
 <head>
   <title>Blake's Homepage</title>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
 
-  <link rel="stylesheet" href="css/simple.css" />
-  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/simple.css">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 ```
 
@@ -183,7 +183,7 @@ You can rely on your eyes to an extent, but everyone is different. Fortunately, 
 
 I glossed over this earlier, but you may have noticed a couple of variables related to fonts above the color variables defined in `simple.css`. One of them, `--sans-font`, is responsible for most of the text on the page (the other one, `--mono-font`, is used for things like showing code, as I am doing in this paragraph).
 
-If you aren't familiar, _sans-serif_ fonts are those that don't have _serifs_, the little feet-like protrusions you find on other fonts like Times New Roman. Simple uses this font for most text on the page by default, but we can override that variable with whatever we want.
+If you aren't familiar, _sans-serif_ fonts are those that don't have _serifs_, the little feet-like protrusions you find on other fonts like Times New Roman. Simple uses the `--sans-font` variable for most text on the page by default, but we can override it with whatever we want.
 
 First, let’s talk about fonts on the web.
 
@@ -196,17 +196,17 @@ That's why multiple fonts are typically specified in CSS. If the first font spec
 ```css
 body {
   /* the first font needs quotes because the name includes spaces */
-  font-family: 'Some Rando Font', Georgia, serif;
+  font-family: "Some Rando Font", Georgia, serif;
 }
 ```
 
-The above style rule sets the font for the `<body>`. The browser will first try to use "Some Rando Font." if that isn't available on the visitor's device, it will attempt to use Georgia instead. If _that_ isn't available, we've told the browser to use any `serif` font it has available.
+The above style rule sets the font for the `<body>`. The browser will first try to use "Some Rando Font." If that isn't available on the visitor's device, it will attempt to use Georgia instead. If _that_ isn't available, we've told the browser to use whatever default `serif` font it has available.
 
 Here's a good reference for finding [fonts commonly found on people's devices](https://practicaltypography.com/system-fonts.html) to see your options. You always want to provide a handful of decent fallbacks as well.
 
 Sometimes, you have a font that you _really_ want visitors to see even though you know they aren't going to have it installed on their system already. Fortunately, there is a way to deal with this. They're called _web fonts_. They are too involved to cover here, but I will cover them briefly in the next chapter, [CSS basics](/css-basics). In short, it’s a method of automatically providing the font to your visitors.
 
-## Changing the font
+## Overriding the font variable
 
 Let's use a serif font. Even though Simple calls the variable `--sans-font`, there is nothing magical about the variable name. We can set it to whatever we want. Let's use Georgia, which is always a pleasure to read.
 
@@ -214,7 +214,7 @@ We can override Simple's `--sans-font` variable inside the `:root` block so that
 
 ```css
 :root {
-  --sans-font: Georgia, 'Times New Roman', serif;
+  --sans-font: Georgia, "Times New Roman", serif;
   --bg: mintcream;
   --border: darkslategray;
   --accent-bg: honeydew;
@@ -225,7 +225,7 @@ We can override Simple's `--sans-font` variable inside the `:root` block so that
 }
 ```
 
-We specified the font, Georgia, but we also provided two fallback options. We specified Times New Roman as our second choice. Note that this one needs to be inside double quotes because the name has spaces.
+We specified the font, Georgia, but we also provided two fallback options. We specified Times New Roman as our second choice. Note that this one needs to be inside quotes because the name has spaces.
 
 We use a CSS keyword, `serif`, for the third option. That tells the browser to use its default serif font, whatever that may be. Often, it will be Times New Roman. Other keywords you have available here are `sans-serif`, `monospace`, and `cursive`, [among others](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family#syntax)
 
@@ -238,5 +238,3 @@ Here’s a look at one of the blog posts set in Georgia.
 I chose Simple.css for this book because it makes HTML look good without any extra work. But I also chose it because it can be customized with a handful of CSS variables. Even though it’s just colors and fonts, there are endless possibilities for making your site unique.
 
 I encourage you to explore the world of color and experiment with different combinations. In the next bonus chapter, I'll cover even more CSS so you can go beyond Simple and write your own styles.
-
-[CSS basics](/css-basics)

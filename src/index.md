@@ -1,5 +1,6 @@
 ---
 title: HTML for People
+summary: "HTML isn't only for people working in the tech field. It's for everyone. Learn how to make a website from scratch in this beginner friendly web book."
 layout: "home.njk"
 ---
 

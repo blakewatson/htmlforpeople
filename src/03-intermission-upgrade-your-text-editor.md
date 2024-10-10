@@ -36,7 +36,7 @@ On the VS Code welcome screen, click _Open Folder_, then select the folder conta
 
 ![Screenshot of Visual Studio Code with HTML code for "Blake's Homepage." The left sidebar with the project's files. The main editor shows the same source code as before, but the code has been colorized to make it easier to distinguish the different parts of the code.](/assets/img/code-editor-3.webp)
 
-VS Code also helps by making it easier to write code. It understands HTML and many other languages. When you start to type, it will give you code completion suggestions, which you can accept by clicking or pressing enter. It’ll also automatically indent when you press enter, so you don’t have to manually enter tabs or spaces.
+VS Code also helps by making it easier to write code. It understands HTML and many other languages. When you start to type, it will give you code completion suggestions, which you can accept by clicking or pressing enter. It’ll also automatically indent when you create a new line, so you don’t have to manually enter tabs or spaces.
 
 VS Code opens your files in tabs. This is convenient later when your website has multiple pages.
 
@@ -54,6 +54,6 @@ For now, let’s get back to making our website!
 
 ## Up next
 
-Now that we’ve leveled up our text editor let’s learn how to add _style_ to our website.
+Now that we’ve leveled up our text editor, let’s learn how to add _style_ to our website.
 
 [A website with style](/a-website-with-style)

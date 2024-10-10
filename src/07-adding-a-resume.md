@@ -6,11 +6,11 @@ tags: chapter
 layout: 'chapter.njk'
 ---
 
-# Adding a resume
+# Adding a resume (or CV)
 
-In the previous parts, we've learned how to add all sorts of content to our HTML pages. Now, we'll look at how to add structure to a large page of content. We'll add a resume page.
+In the previous chapters, we've learned how to add all sorts of content to our HTML pages. Now, we'll look at how to add structure to a large page of content. We'll add a resume page.
 
-Now, a resume is going to look different for different people. If you’re in academia, you might create a _curriculum vitae_. People who have worked for many years may have an extensive resume, while students in school may not have much of a work history.
+Now, a resume is going to look different for different people. If you’re in academia (or not in the US), you might create a _curriculum vitae_. People who have worked for many years may have an extensive resume, while students in school may not have much of a work history.
 
 Don’t worry if you don’t have a lot of experience. You can add sections highlighting your education, particularly degrees, coursework, and school activities. Or you can focus on part-time or volunteer work you’ve done.
 
@@ -124,7 +124,7 @@ I'll show you what markup I chose and what it looks like and then explain it.
   <h3>Frontend Engineer</h3>
 
   <p>
-    <strong>MRI Technologies</strong><br />
+    <strong>MRI Technologies</strong><br>
     <time datetime="2019-08">August 2019</time>&ndash;Present
   </p>
 
@@ -152,7 +152,7 @@ Another way to do it is to put the employer’s name in the heading after the jo
 We're working within the limitations of Simple.css right now. If we _really_ wanted to control the look of things, we'd add some custom CSS. We won't do that now, but see the bonus chapters at the end of the book for more about CSS.
 {% endaside %}
 
-We wrap the date in a `<time>` tag and provide the [machine-readable date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values) in the `datetime` _attribute_. I’m using an HTML _entity_, `&ndash;` to put a dash between the start and end dates. This is to use the _en dash_ character, which is a slightly longer dash than a regular hyphen (`-`) and is used for numeric ranges in typography (there’s also an _em dash_, `&mdash;`, which is an even larger dash—but I digress).
+We wrap the date in a `<time>` tag and provide the [machine-readable date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values) in the `datetime` _attribute_. I’m using an HTML _entity_, `&ndash;` to put a dash between the start and end dates. This is to use the _en dash_ character, which is a slightly longer dash than a regular hyphen (`-`) and is [used for numeric ranges in typography](https://practicaltypography.com/hyphens-and-dashes.html).
 
 {% aside 'Note' %}
 Check out this [list of HTML entities](https://perma.cc/BEA6-LF46) for a reference of special characters you can use in HTML.
@@ -193,13 +193,13 @@ Finally, I'll add my degrees, university, year of graduation, and study area. I 
   <h2>Education</h2>
 
   <p>
-    <strong>Master of Business Administration</strong>, <time>2009</time><br />
+    <strong>Master of Business Administration</strong>, <time>2009</time><br>
     <em>Mississippi State University, Starkville, MS</em>
   </p>
 
   <p>
     <strong>Bachelor of Business Admiinistration</strong>, Information Systems,
-    <time>2007</time><br />
+    <time>2007</time><br>
     <em>Mississippi State University, Starkville, MS</em>
   </p>
 </section>
@@ -258,7 +258,7 @@ Here’s the complete code, including the header and main content areas.
     <h3>Web Developer/Interactive Designer</h3>
 
     <p>
-      <strong>Mad Genius</strong><br />
+      <strong>Mad Genius</strong><br>
       <time datetime="2015-05">May 2015</time>&ndash;<time datetime="2019-08">August 2019</time>
     </p>
 
@@ -272,7 +272,7 @@ Here’s the complete code, including the header and main content areas.
     <h3>Web Developer</h3>
 
     <p>
-      <strong>Self employed</strong><br />
+      <strong>Self employed</strong><br>
       <time>2007</time>&ndash;<time>2015</time>
     </p>
 
@@ -288,7 +288,7 @@ Here’s the complete code, including the header and main content areas.
     <h2>Education</h2>
 
     <p>
-      <strong>Master of Business Administration</strong>, <time>2009</time><br />
+      <strong>Master of Business Administration</strong>, <time>2009</time><br>
       <em>Mississippi State University, Starkville, MS</em>
     </p>
 
@@ -307,5 +307,3 @@ You can see how this looks on the [demo site](https://demo.htmlforpeople.com/res
 ## Up next
 
 We've been creating _a lot_ of content. In the next chapter, we'll take an intermission and look at how we can run a web server on our computer that more closely resembles a live website.
-
-[Intermission installing a local web server](/intermission-installing-a-local-web-server)

@@ -27,6 +27,13 @@ module.exports = function (eleventyConfig) {
     3;
   });
 
+  // if NO_RELOAD node environment variable is found, disable live reloading
+  if (process.env.NO_RELOAD) {
+    eleventyConfig.setServerOptions({
+      liveReload: false,
+    });
+  }
+
   return {
     dir: {
       input: 'src',

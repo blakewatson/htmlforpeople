@@ -194,7 +194,7 @@ I will make a new section for my videos.
 </section>
 ```
 
-First, I will grab this music mix called Waves (https://www.youtube.com/watch?v=b6toYA0W4IA>). If you visit that page, you will see a share button underneath the video. Clicking that button will give you various choices for sharing the video.
+First, I will grab this music mix called Waves (https://www.youtube.com/watch?v=b6toYA0W4IA). If you visit that page, you will see a share button underneath the video. Clicking that button will give you various choices for sharing the video.
 
 ![Screenshot of a YouTube share dialog box for a post creation, showing sharing options for Embed, WhatsApp, Facebook, X (formerly Twitter), Email, and KakaoTalk. There's also a unique hyperlink with a "Copy" button next to it, and a checkbox to start at a specific time.](/assets/img/adding-a-fun-page-4.webp)
 
@@ -264,11 +264,9 @@ We're going to use [Lite YouTube Embed](https://github.com/paulirish/lite-youtub
 
 Before we go into how to install this component, let's look at how we would use it. It provides a new custom tag, `<lite-youtube>`. You give it an _attribute_ of `videoid`, which is the ID of the YouTube video. You can find the video's ID from the URL. This is my URL:
 
-```
-https://www.youtube.com/watch?v=b6toYA0W4IA
+<pre>https://www.youtube.com/watch?v=b6toYA0W4IA
                                 |_________|
-                                 video id
-```
+                                 video id</pre>
 
 ```html
 <lite-youtube videoid="b6toYA0W4IA"></lite-youtube>
@@ -286,10 +284,10 @@ Visit each of those and use _File > Save Page As…_ (Ctrl+S on Windows, Command
 ```html
 <head>
   <title>Fun - Blake's Homepage</title>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
 
-  <link rel="stylesheet" href="css/simple.css" />
-  <link rel="stylesheet" href="css/lite-yt-embed.min.css" />
+  <link rel="stylesheet" href="css/simple.css">
+  <link rel="stylesheet" href="css/lite-yt-embed.min.css">
   <script src="js/lite-yt-embed.min.js"></script>
 </head>
 ```
@@ -324,9 +322,9 @@ I will add some _horizontal rules_ to create some separation between these video
 
 ```html
 <lite-youtube videoid="b6toYA0W4IA"></lite-youtube>
-<hr />
+<hr>
 <lite-youtube videoid="rDfS8B2-Mt4"></lite-youtube>
-<hr />
+<hr>
 <lite-youtube videoid="yb0DR_qRetA"></lite-youtube>
 ```
 
@@ -345,10 +343,10 @@ To see this page in action, [check out the live demo](https://demo.htmlforpeople
 <html>
   <head>
     <title>Fun - Blake's Homepage</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
 
-    <link rel="stylesheet" href="css/simple.css" />
-    <link rel="stylesheet" href="css/lite-yt-embed.min.css" />
+    <link rel="stylesheet" href="css/simple.css">
+    <link rel="stylesheet" href="css/lite-yt-embed.min.css">
     <script src="js/lite-yt-embed.min.js"></script>
   </head>
 
@@ -446,9 +444,9 @@ To see this page in action, [check out the live demo](https://demo.htmlforpeople
         <h2>Synthwave mixes</h2>
 
         <lite-youtube videoid="b6toYA0W4IA"></lite-youtube>
-        <hr />
+        <hr>
         <lite-youtube videoid="rDfS8B2-Mt4"></lite-youtube>
-        <hr />
+        <hr>
         <lite-youtube videoid="yb0DR_qRetA"></lite-youtube>
       </section>
     </main>
@@ -467,5 +465,3 @@ You did it! With this page completed, you’ve finished the main web book. Follo
 ## Up next
 
 Next, we'll revel in our accomplishments, and I'll point you toward more learning resources, including the bonus chapters on this site.
-
-[Achievement unlocked: Hypertexter](/achievement-unlocked-hypertexter)

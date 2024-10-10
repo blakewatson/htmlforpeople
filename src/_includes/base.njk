@@ -60,7 +60,7 @@
     {% block scripts %}{% endblock %}
   </head>
 
-  <body>
+  <body class="{{ tags | default('page', true) }}">
     {% block header %}
       <header class="site-header">
         <div class="logo-wrap">
@@ -93,46 +93,68 @@
       </a>
     </elevator-button>
 
-    <div class="promo">
-      <div class="container">
-        <p class="promo-title">Enjoying the book?</p>
-        <div class="stack">
-          <p>
-            <em>HTML for People</em> is a labor of love. If you have the means,
-            consider sending me a
-            <a href="https://ko-fi.com/blakewatson">donation on Ko-fi</a> and
-            sharing the book on social media.
-          </p>
-          <p>Check out some of my other stuff:</p>
-          <ul>
-            <li>
-              <a href="https://afinestart.me"
-                >A minimal new-tab page extension</a
+    <div class="sticky-footer" style="margin-block-start: auto">
+      <div class="promo">
+        <div class="container">
+          <p class="promo-title">Enjoying the book?</p>
+          <div class="stack">
+            <p>
+              <em>HTML for People</em> is a labor of love. If you have the
+              means, consider sending me a donation on Ko-fi and sharing the
+              book on social media.
+            </p>
+
+            <p>
+              <a href="https://ko-fi.com/blakewatson" class="button"
+                >Donate on Ko-fi</a
               >
-            </li>
-            <li>
-              <a href="https://synthwave.live/">A synthwave mix site</a>
-            </li>
-            <li>
-              <a href="https://minimalcharactersheet.com/"
-                >A minimalist character sheet for D&D</a
-              >
-            </li>
-            <li>
-              <a href="https://blakewatson.com">My personal website</a>
-            </li>
-          </ul>
+            </p>
+
+            <p>Check out some of my other stuff:</p>
+            <ul>
+              <li>
+                <a href="https://afinestart.me"
+                  >A minimal new-tab page extension</a
+                >
+              </li>
+              <li>
+                <a href="https://synthwave.live/">A synthwave mix site</a>
+              </li>
+              <li>
+                <a href="https://minimalcharactersheet.com/"
+                  >A minimalist character sheet for D&D</a
+                >
+              </li>
+              <li>
+                <a href="https://blakewatson.com">My personal website</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>
-          A <a href="https://blakewatson.com">Blake Watson</a> project.
-          Copyright 2024. All rights reserved.
-        </p>
-      </div>
-    </footer>
+      <footer class="site-footer">
+        <div class="container">
+          <p class="mb-sm">
+            <a href="/achievement-unlocked-hypertexter#resources-from-this-book"
+              >Resources</a
+            >
+            &middot;
+            <a href="https://github.com/blakewatson/htmlforpeople">GitHub</a>
+            &middot;
+            <a href="https://blakewatson.com/about">About the author</a>
+            &middot;
+            <a href="https://social.lol/@bw">Mastodon</a>
+          </p>
+          <p>
+            A <a href="https://blakewatson.com">Blake Watson</a> project.
+            Licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+              >CC BY-NC-SA 4.0</a
+            >.
+          </p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

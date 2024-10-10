@@ -52,7 +52,7 @@ These will make your HTML look nice and give you a great starting point for a ba
 
 I encourage you to check out the [Simple.css website](https://simplecss.org/), particularly the [demo page](https://simplecss.org/demo), as it shows you how to use different HTML elements and what they look like with Simple. Let’s download Simple.css.
 
-The [Simple.css docs](https://perma.cc/XA5E-E59Q) give us a few ways to get started, but for simplicity’s sake (see what I did there), I’ll give you the URL to the CSS file:
+The [Simple.css docs](https://perma.cc/XA5E-E59Q) give us a few ways to get started, but for simplicity’s sake (see what I did there?), I’ll give you the URL to the CSS file:
 
 <https://cdn.simplecss.org/simple.css>
 
@@ -72,7 +72,7 @@ So far, we only have three files—our webpage, an image file, and the `simple.c
 
 Nice and clean. Using Visual Studio Code, you can create files and folders directly in the sidebar. Hover your mouse over your files, and you’ll see these buttons.
 
-![Screenshot of VS Code window with a folder named "MY-SITE" highlighted. Inside the folder, there are two files: "index.html" and "space.jpg." A large red arrow points to the "New Folder" button in the top-right corner of the editor.](/assets/img/vscode-new-folder.webp)
+<img src="/assets/img/vscode-new-folder.webp" alt="Screenshot of VS Code window with a folder named 'MY-SITE' highlighted. Inside the folder, there are two files: 'index.html' and 'space.jpg.' A large red arrow points to the 'New Folder' button in the top-right corner of the editor." style="max-width: 450px">
 
 Once you make the changes, if you reload the page in the browser, you will notice that our image no longer works. Notice how the browser falls back to showing the `alt` text we provided in place of the image.
 
@@ -81,10 +81,7 @@ Once you make the changes, if you reload the page in the browser, you will notic
 We can fix this by updating the image's `src` value. Add the folder name and a slash before the filename.
 
 ```html
-<img
-  src="images/space.jpg"
-  alt="Photograph of space with stars and stardust."
-/>
+<img src="images/space.jpg" alt="Photograph of space with stars and stardust.">
 ```
 
 ## Adding Simple.css to the page
@@ -94,9 +91,9 @@ We can add a _stylesheet_ to our page similarly to how we added the image. We'll
 ```html
 <head>
   <title>Blake's Homepage</title>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
 
-  <link rel="stylesheet" href="css/simple.css" />
+  <link rel="stylesheet" href="css/simple.css">
 </head>
 ```
 
@@ -161,5 +158,3 @@ It's cumbersome but not too bad. Whichever way you do it, ensure the files in Ne
 We only added a little in terms of writing code in this chapter, but we set ourselves up for success by getting organized, acquiring some styles, and sectioning our webpage.
 
 The rest of this web book will focus on building our website. In the next chapter, we'll add an About page.
-
-[Adding an about page](/adding-an-about-page)

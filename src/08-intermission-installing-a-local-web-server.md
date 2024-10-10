@@ -6,7 +6,7 @@ tags: chapter
 layout: 'chapter.njk'
 ---
 
-# Intermission: installing a local web server
+# Intermission: installing a local web&nbsp;server
 
 HTML is an approachable language, which was one reason I wanted to make this web book. It’s forgiving. If you remember the first chapter—that first website we made that was just a sentence or two—you’ll recall that we didn’t use a single HTML tag. But we could still open the file in the browser and see our content. We put that file on the web, and it worked! You can start simply and layer on the complexity as needed.
 
@@ -103,28 +103,31 @@ This will make your site available at `http://localhost:8000`.
 
 ## Relative vs. absolute URLs
 
-Thus far, since we've been opening our website files directly in the browser, we've needed to use relative URLs. Relative URLs are written from the perspective of the current file. For example, if I am on a subpage and want to link to a top-level page, I need to use the `..` syntax to "move up" a level and find the destination page.
+Thus far, since we've been opening our website files directly in the browser, we've needed to use relative URLs. Relative URLs are written from the perspective of the current file. For example, if I am on a sub-page and want to link to a top-level page, I need to use the `..` syntax to "move up" a level and find the destination page.
 
-When running a web server, we can use absolute URLs. An absolute URL is always written from the perspective of the topmost level. In this case, our website folder is the topmost level. No matter what subpage I'm on, I could link to the website homepage as follows.
+When running a web server, we can use absolute URLs. An absolute URL is always written from the perspective of the topmost level (the _topmost level_ meaning the folder that we told the web server to use). No matter what sub-page I'm on, I could link to the website homepage as follows.
 
 ```html
 <a href="/">Go to the homepage</a>
 ```
 
-If I wanted to link to the `about.html` page, I could do that as follows.
+The slash represents the topmost level (I could also have written `/index.html` but that isn’t needed because web servers will automatically use it if it exists). If I wanted to link to the `about.html` page, I could do that as follows.
 
 ```html
 <a href="/about.html">Go to the About page</a>
 ```
 
-The cool thing is that it doesn't matter what page I'm on—it can be a top-level page or a subpage. This path will always lead to the About page, no matter where the current page is. Say we're on a page that’s nested down in a folder.
+The cool thing is that it doesn't matter what page I'm on—it can be a top-level page or a sub-page. This path will always lead to the About page, no matter where the current page is. Say we're on a page that’s nested down in a folder.
 
 ```html
-<!-- instead of this -->
-<a href="../top-level-page.html">Top level</a>
+<!-- imagine we are currently on a blog page /blog/my-post.html-->
+<h1>My blog post</h1>
+
+<!-- instead of this, which *does* work -->
+<a href="../about.html">About</a>
 
 <!-- we can do this -->
-<a href="/top-level-page.html">Top level</a>
+<a href="/about.html">About</a>
 ```
 
 We didn't use absolute URLs earlier because we weren't using a web server. Had we tried to use absolute URLs when opening our website directly in the browser, the slash would have pointed toward the top-level folder of your _entire computer_, which is certainly not what we wanted.
@@ -133,6 +136,4 @@ Now that we're using a web server, I'll leave it up to you if you'd like to go b
 
 ## Up next
 
-Now that we have a local web server running, our website can interact more easily with other websites. Next, we'll make a page with assorted fun stuff, including embedded videos from YouTube!
-
-[Adding a fun page](/adding-a-fun-page)
+Now that we have a local web server, our website can interact more easily with other websites. Next, we'll make a page with assorted fun stuff, including embedded videos from YouTube!

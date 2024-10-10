@@ -178,7 +178,7 @@ We can write CSS directly in our `index.html` file using a special HTML tag, `<s
 <html>
   <head>
     <title>My website</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
 
     <style>
       CSS code goes here
@@ -194,7 +194,7 @@ We can write CSS directly in our `index.html` file using a special HTML tag, `<s
 This is perfectly valid, but if you have more than one page on your website, you would have to copy and paste your `<style>` tag onto each page to have the same styles on every page. Instead, it’s common to put all your CSS in a separate file and then _link_ that file to every page with a `<link>` tag in your website’s `<head>` section.
 
 ```html
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css">
 ```
 
 ## First steps to improving the page
@@ -286,10 +286,12 @@ Moving on, I'd like to ensure elements have equal spacing between them. I will t
 main * {
   margin-block-start: 0;
   margin-block-end: 1rem;
+  /* or we could use the shortcut syntax like this */
+  margin-block: 0 1rem;
 }
 ```
 
-A selector can be a chain of things. For example, `main p` selects every `<p>` element _inside_ the `<main>` element. I want to target _everything_ in the `<main>` element.
+A selector can be a chain of things. For example, `main p` selects every `<p>` element _inside_ the `<main>` element. But I want to target _everything_ in the `<main>` element, so I use the asterisk.
 
 I’m setting the margin above and below every element. Similar to `margin-inline`, which controls horizontal space around elements, `margin-block` controls the vertical space around elements (in left-to-right languages). I’m setting the margin above elements to `0` and the margin below them to `1rem`. The `rem` is a unit equal to the font size of the **r**oot el**em**ent (the `<html>` element). Since I set the root font size at `20px`, that’s what the value of `1rem` becomes.
 
@@ -321,25 +323,25 @@ Copy and paste the embed code into your website's `<head>` section.
 
 ```html
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Planets of the Solar System</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 ```
 
 Add a `font-family` declaration to the `html` block to check that it's working.
 
-```html
-html { font-family: 'Source Sans 3', sans-serif; font-size: 20px; line-height:
-1.45; }
+```css
+html {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 20px;
+  line-height: 1.45;
+}
 ```
 
 This will set the font for the whole document. The browser will first try Source Sans 3. If, for some reason, that font isn’t available (if, say, Google Fonts is down), then `sans-serif` will instruct the browser to use whatever sans-serif font is available. You can put other fallback fonts in the _font stack_. Just separate them with commas, as you see above.
@@ -471,7 +473,7 @@ providing an overview of what makes them unique (and learn a little
 <abbr title="Cascading style sheets">CSS</abbr> while doing it).
 ```
 
-The `<abbr>` tag helps visitors know what certain abbreviations or acronyms stand for. When you hover the term CSS in the document, you’ll get a helpful tooltip showing what it stands for. You put the abbreviation inside the tags, then use the `title` attribute for the full text.
+The `<abbr>` tag helps visitors know what certain abbreviations or acronyms stand for. When you hover the term, CSS, in the document, you’ll get a helpful tooltip showing what it stands for. You put the abbreviation inside the tags, then use the `title` attribute for the full text.
 
 Let's give it some `text-decoration` to hint that visitors can interact with it.
 
@@ -529,8 +531,7 @@ Let’s make quick work of the bulleted list of Pluto and the gang. We’ll give
 You already know that the selector targets the elements we want to style. But you can also have multiple selectors! We can target the `<ul>` element and the `<ol>` element and give both the same indentation by doing the following.
 
 ```css
-ul,
-ol {
+ul, ol {
   padding-inline-start: 1.5rem;
 }
 ```
@@ -566,7 +567,7 @@ li::marker {
 
 The `::marker` bit is called a _pseudo-element_ because it represents a piece of an HTML element. The `::marker` is a part of the _list item_ or `<li>` element. It contains the bullet (or number) of the list item. We can target it with our selector and change the color to our red heading color.
 
-![Screenshot of the bulleted list titled "Other Major Bodies" includes entries for Pluto, Ceres, Haumea, Makemake, Eris, Ganymede, Titan, and Europa. It has more spacing between list items, making it easier to read. The bullet points are red, while the text is the same dark text color.](/assets/img/css-basics-9.webp)
+![Screenshot of the bulleted list titled "Other Major Bodies" includes entries for Pluto, Ceres, Haumea, Makemake, Eris, Ganymede, Titan, and Europa. It has more spacing between list items, making it easier to read. The bullet points are red, while the text is the same dark text color.](/assets/img/css-basics-09.webp)
 
 Looking good!
 
@@ -626,8 +627,7 @@ We'll remove the inline margin from the `<figure>`. Then we'll target images tha
 - Set `display` to `block`. Images are set to `inline` by default, but the behavior of `block` works more like you would expect an image like this to work.
 - Set the inline margin to `auto` just in case we use an image smaller than the width of the page—it’ll be centered in that case.
 - Setting `border-radius` to `4px` will round the image's corners just a touch.
-
-Finally, we'll reduce the margin above the caption and reduce the `font size to 80% of the document's `font size.
+- Finally, we'll reduce the margin above the caption and reduce the `font-size` to 80% of the document's font size.
 
 ![The same image of Saturn from before except that the margin has been removed and the corners of the image have been rounded.](/assets/img/css-basics-12.webp)
 
@@ -674,7 +674,7 @@ Looking at the first paragraph in the markup, I gave it a class of `intro`. Let'
 }
 ```
 
-This will make the `font-size` larger than the document's default text size. And with the larger font, it needs some extra margin underneath.
+When we put a period before a term in a CSS selector, that means we want to target every element that has that class (a class of `intro` in this case). This will make the `font-size` larger than the document's default text size. And with the larger font, it needs some extra margin underneath.
 
 Okay, cool, but now let’s get _really extra_. Look at the markup again, and you will notice I wrapped the first three words in a `<span>` tag with a class of `caps`.
 
@@ -689,7 +689,7 @@ Okay, cool, but now let’s get _really extra_. Look at the markup again, and yo
 
 This will give us that fancy bookish effect where the first few words are in small caps. Usually, you would want to use a font with [proper small-caps](https://practicaltypography.com/small-caps.html), but we can do a decent forgery since Source Sans 3 is a variable font.
 
-The `text-transform` declaration will make all the letters uppercased. It’s better to do that with CSS than manually typing all caps, as it’s more of a style thing. For the `font-size`, I just played around with it until I got it to feel right. Mostly, I wanted the caps to be the same height as the intro text's lowercase letters (i.e., the x-height).
+The `text-transform` declaration will make all the letters uppercased. It’s better to do that with CSS than manually typing all caps, as it’s more of a style thing. For the `font-size`, I just played around with it until I got it to feel right. Mostly, I wanted the caps to be the same height as the intro text's lowercase letters (i.e., the [x-height](https://en.wikipedia.org/wiki/X-height)).
 
 To help with balance, I'm increasing the `font-weight` a bit. In addition to values like `normal` and `bold`, you can use the numerical values 100 to 900 if the font supports it—and our variable font does.
 

@@ -22,10 +22,10 @@
   --_button-outline: var(--red-2);
   --_button-text: var(--_bg);
 
-  --_text: valkyrie_b, 'Iowan Old Style', 'Georgia', Apple Garamond, Baskerville,
-    Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
+  --_text: 'Valkyrie B', 'Iowan Old Style', 'Georgia', Apple Garamond,
+    Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --_headings: hermes_maia_2, -apple-system, BlinkMacSystemFont, avenir next,
+  --_headings: 'Heliotrope 3', -apple-system, BlinkMacSystemFont, avenir next,
     avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
     arial, sans-serif;
   --_code: 'Input Sans Reg', monospace;
@@ -44,7 +44,7 @@
   --_accent: #f7708e;
   --_border: var(--gray-7);
   --_red-text: #f9c8ce;
-  --_button-bg: var(--red-8);
+  --_button-bg: var(--red-9);
   --_button-text: #fff;
 }
 
@@ -52,6 +52,12 @@
   --shadow-color: 220 3% 15% !important;
   --shadow-strength: 1% !important;
   --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff, inset 0 0.5px 0 0 #0001 !important;
+}
+
+[data-theme='dark'] {
+  --shadow-color: 220 40% 2% !important;
+  --shadow-strength: 25% !important;
+  --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff1, inset 0 0.5px 0 0 #0007 !important;
 }
 
 /* ANCHOR Accessibility
@@ -105,7 +111,10 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   max-width: unset;
+  min-height: 100vh;
   padding: unset;
   -webkit-font-smoothing: subpixel-antialiased;
 
@@ -130,7 +139,7 @@ a {
     text-decoration-color 0.15s var(--ease-1);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: var(--_accent);
     text-decoration-color: var(--_accent);
   }
@@ -139,7 +148,7 @@ a {
 [data-theme='dark'] {
   a {
     &:hover,
-    &:focus {
+    &:focus-visible {
       color: var(--_red-text);
     }
   }
@@ -188,6 +197,12 @@ video {
   max-width: 100%;
 }
 
+main img {
+  margin-block: 1.75em;
+  margin-inline: auto;
+  max-width: 100%;
+}
+
 @media (min-width: 700px) {
   .container {
     padding-inline: 1.5em;
@@ -211,7 +226,7 @@ video {
 ------------------------------------------------------------- */
 
 .site-header {
-  margin-block-end: var(--size-8);
+  margin-block-end: var(--size-9);
 }
 
 .logo-wrap {
@@ -221,6 +236,7 @@ video {
 
 .site-title {
   & a {
+    display: inline-block;
     text-decoration: none;
   }
 
@@ -242,8 +258,7 @@ video {
 }
 
 @media (min-width: 1100px) {
-  .site-title img,
-  .site-title svg {
+  .site-title {
     position: relative;
     transform: translateX(-112px);
   }
@@ -322,6 +337,7 @@ video {
 :root {
   border-top: none; /* remove Neat border */
   font-family: var(--_text);
+  color: var(--_text-color);
 }
 
 main > *,
@@ -350,13 +366,14 @@ h4 {
 }
 
 h1 {
-  margin-block-end: 3rem;
+  margin-block-end: var(--size-7);
 }
 
 h1,
 h2 {
   font-family: var(--_headings);
   font-weight: normal;
+  line-height: 1.2;
   text-wrap: pretty;
 }
 
@@ -466,8 +483,9 @@ details pre[class*='language-'] {
     border-color: var(--gray-8);
   }
 
+  & pre,
   & pre[class*='language-'] {
-    /* filter: invert(98%) hue-rotate(180deg) !important; */
+    color: var(--_red-text);
   }
 
   & code:not([class*='language-']) {
@@ -728,32 +746,13 @@ a.button {
   text-decoration: none;
   background-color: var(--_button-bg);
   color: var(--_button-text);
-  transition: background-color 0.2s var(--ease-1);
+  outline: 0 solid var(--red-2);
+  transition: outline-width 0.2s var(--ease-1);
 
-  &:before {
-    content: ' ';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    box-sizing: content-box;
-    border-radius: 8px;
-    background-color: var(--red-2);
-    /* opacity: 0; */
-    transition:
-      height 0.15s var(--ease-1),
-      width 0.15s var(--ease-1);
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  &:hover {
-    &:before {
-      height: calc(100% + 0.75rem);
-      width: calc(100% + 0.75rem);
-    }
+  &:hover,
+  &:focus-visible {
+    color: #fff;
+    outline: 8px solid var(--red-2);
   }
 
   & + & {
@@ -769,9 +768,7 @@ form button[type='submit'] {
 [data-theme='dark'] {
   & button,
   & a.button {
-    &:before {
-      background-color: var(--gray-7);
-    }
+    outline-color: var(--gray-7);
   }
 }
 

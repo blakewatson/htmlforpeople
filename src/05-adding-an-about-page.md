@@ -125,11 +125,10 @@ Although, speaking of the space image, let's make it more interesting. I want to
 
 ```html
 <figure>
-  <img src="/images/space.jpg" alt="Photograph of space with stars and stardust.">
+  <img src="images/space.jpg" alt="Photograph of space with stars and stardust.">
 
   <figcaption>
-    Space is cool.
-    <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source</a>
+    Space is cool. <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source</a>
   </figcaption>
 </figure>
 ```
@@ -139,11 +138,10 @@ My `<main>` content on the homepage now looks like this.
 ```html
 <main>
   <figure>
-    <img src="/images/space.jpg" alt="Photograph of space with stars and stardust.">
+    <img src="images/space.jpg" alt="Photograph of space with stars and stardust.">
 
     <figcaption>
-      Space is cool.
-      <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source<a>
+      Space is cool. <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source<a>
     </figcaption>
   </figure>
 
@@ -160,7 +158,7 @@ My `<main>` content on the homepage now looks like this.
   </ol>
 
   <p class="notice">
-    <strong>Want to learn how to make a website like this?</strong><br /> Check out the free web book <a href="https://htmlforpeople.com/">HTML for People</a>. It's made for everyone and teaches you how to make a webpage in a friendly, approachable way.
+    <strong>Want to learn how to make a website like this?</strong><br> Check out the free web book <a href="https://htmlforpeople.com/">HTML for People</a>. It's made for everyone and teaches you how to make a webpage in a friendly, approachable way.
   </p>
 </main>
 ```
@@ -178,5 +176,3 @@ If you want to update it, head back to your Neocities dashboard and upload both 
 ## Up next
 
 We turned our web*page* into a web*site*! Next, we will add a blog and explore various HTML tags.
-
-[Adding a blog](/adding-a-blog)

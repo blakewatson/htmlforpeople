@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "eleventy --serve"
+    "serve": "eleventy --serve",
+    "serve:noreload": "NO_RELOAD=true eleventy --serve"
   },
   "keywords": [],
   "author": "",

@@ -1,14 +1,14 @@
 @font-face {
-  font-family: hermes_maia_2;
+  font-family: 'Heliotrope 3';
   font-style: normal;
   font-weight: normal;
   font-stretch: normal;
   font-display: auto;
-  src: url('../fonts/hermes_maia_2_regular.woff2') format('woff2');
+  src: url('../fonts/heliotrope_3_regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: valkyrie_b;
+  font-family: 'Valkyrie B';
   font-style: normal;
   font-weight: normal;
   font-stretch: normal;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: valkyrie_b;
+  font-family: 'Valkyrie B';
   font-style: italic;
   font-weight: normal;
   font-stretch: normal;
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-  font-family: valkyrie_b;
+  font-family: 'Valkyrie B';
   font-style: normal;
   font-weight: bold;
   font-stretch: normal;

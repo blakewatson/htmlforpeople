@@ -494,7 +494,7 @@ details pre[class*='language-'] {
     background-color: var(--gray-11);
   }
 
-  mark {
+  & mark {
     background-color: #90d8ff40;
     color: var(--_text-color);
   }
@@ -537,7 +537,7 @@ aside {
     margin: 0;
   }
 
-  p {
+  & p {
     orphans: 2;
   }
 
@@ -545,16 +545,16 @@ aside {
     margin-block-start: 1rem;
   }
 
-  li {
+  & li {
     margin-block-start: var(--_li-spacing);
   }
 
-  code {
+  & code {
     background-color: #00000011;
   }
 
-  pre,
-  pre[class*='language-'] {
+  & pre,
+  & pre[class*='language-'] {
     margin-block: 1rem 0;
     margin-inline: 0;
   }

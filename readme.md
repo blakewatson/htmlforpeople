@@ -8,11 +8,11 @@ To run this project locally for development purposes, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
-3. Install the dependencies:\
+3. Install the dependencies:
    ```
    npm i
    ```
-4. Start the development server:\
+4. Start the development server:
    ```
    npm run serve
    ```

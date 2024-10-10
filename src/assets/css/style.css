@@ -442,6 +442,7 @@ pre[class*='language-'] {
   box-shadow: var(--shadow-3);
   color: #1c1b19;
   scrollbar-color: var(--_border) transparent;
+  overflow: auto;
 }
 
 details pre,
@@ -612,11 +613,11 @@ aside {
 }
 
 [data-theme='dark'] {
-  aside {
+  & aside {
     border-color: var(--gray-6);
     background-color: var(--gray-8);
   }
-  aside code:not(pre code) {
+  & aside code:not(pre code) {
     background-color: #f7708e33;
   }
 }
@@ -748,15 +749,12 @@ a.button {
   color: var(--_button-text);
   outline: 0 solid var(--red-2);
   transition: outline-width 0.2s var(--ease-1);
+  text-align: center;
 
   &:hover,
   &:focus-visible {
     color: #fff;
     outline: 8px solid var(--red-2);
-  }
-
-  & + & {
-    margin-inline-start: 0.5em;
   }
 }
 
@@ -826,6 +824,28 @@ g#coffee-after {
 
 #cloud {
   pointer-events: none;
+}
+
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  & a {
+    display: block;
+    margin-block-end: 0.5rem;
+    width: 100%;
+  }
+}
+
+@media (min-width: 500px) {
+  .home-buttons {
+    flex-wrap: nowrap;
+
+    & a {
+      margin-inline-end: 1rem;
+      width: auto;
+    }
+  }
 }
 
 /* ANCHOR Footer

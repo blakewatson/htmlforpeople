@@ -1,8 +1,8 @@
 /* PrismJS 1.29.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+markup-templating+php */
 :where([data-theme='light']) {
-  code[class*='language-'],
-  pre[class*='language-'] {
+  & code[class*='language-'],
+  & pre[class*='language-'] {
     color: #000;
     background: 0 0;
     text-shadow: 0 1px #fff;
@@ -22,27 +22,27 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     -ms-hyphens: none;
     hyphens: none;
   }
-  code[class*='language-'] ::-moz-selection,
-  code[class*='language-']::-moz-selection,
-  pre[class*='language-'] ::-moz-selection,
-  pre[class*='language-']::-moz-selection {
+  & code[class*='language-'] ::-moz-selection,
+  & code[class*='language-']::-moz-selection,
+  & pre[class*='language-'] ::-moz-selection,
+  & pre[class*='language-']::-moz-selection {
     text-shadow: none;
     background: #b3d4fc;
   }
-  code[class*='language-'] ::selection,
-  code[class*='language-']::selection,
-  pre[class*='language-'] ::selection,
-  pre[class*='language-']::selection {
+  & code[class*='language-'] ::selection,
+  & code[class*='language-']::selection,
+  & pre[class*='language-'] ::selection,
+  & pre[class*='language-']::selection {
     text-shadow: none;
     background: #b3d4fc;
   }
   @media print {
-    code[class*='language-'],
-    pre[class*='language-'] {
+    & code[class*='language-'],
+    & pre[class*='language-'] {
       text-shadow: none;
     }
   }
-  pre[class*='language-'] {
+  & pre[class*='language-'] {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;

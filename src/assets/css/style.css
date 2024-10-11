@@ -479,26 +479,24 @@ details pre[class*='language-'] {
 
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-[data-theme='dark'] {
-  & pre:not([class*='language-']) {
-    background-color: var(--gray-11);
-    border-color: var(--gray-8);
-  }
+[data-theme='dark'] pre:not([class*='language-']) {
+  background-color: var(--gray-11);
+  border-color: var(--gray-8);
+}
 
-  & pre,
-  & pre[class*='language-'] {
-    color: var(--_red-text);
-  }
+[data-theme='dark'] pre,
+[data-theme='dark'] pre[class*='language-'] {
+  color: var(--_red-text);
+}
 
-  & code:not([class*='language-']) {
-    color: var(--_red-text);
-    background-color: var(--gray-11);
-  }
+[data-theme='dark'] code:not([class*='language-']) {
+  color: var(--_red-text);
+  background-color: var(--gray-11);
+}
 
-  & mark {
-    background-color: #90d8ff40;
-    color: var(--_text-color);
-  }
+[data-theme='dark'] mark {
+  background-color: #90d8ff40;
+  color: var(--_text-color);
 }
 
 /* ANCHOR Components

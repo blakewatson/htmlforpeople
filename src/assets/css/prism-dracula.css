@@ -5,6 +5,11 @@
  * Ported for PrismJS by Albert Vallverdu [@byverdu]
  */
 
+/* Critical fallback for browsers without CSS nesting support */
+[data-theme='dark'] [class*='language-'] {
+  color: #f8f8f2;
+}
+
 :where([data-theme='dark']) {
   & code[class*='language-'],
   & pre[class*='language-'] {

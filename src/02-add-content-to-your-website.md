@@ -10,7 +10,9 @@ layout: 'chapter.njk'
 
 First, pat yourself on the back because you now have a live, homemade website! Now it’s time to make it more interesting.
 
-**Windows users:** If you are trying to open your `index.html` file in Notepad but you don’t see it in your website folder when using _File > Open_, find the _Text Documents_ dropdown in the bottom right corner of the Open window and change it to _All Files_.
+{% aside 'Windows users' %}
+If you are trying to open your `index.html` file in Notepad but you don’t see it in your website folder when using _File > Open_, find the _Text Documents_ dropdown in the bottom right corner of the Open window and change it to _All Files_.
+{% endaside %}
 
 ## Add a heading
 

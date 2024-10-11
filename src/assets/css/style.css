@@ -192,7 +192,8 @@ main summary {
   }
 }
 
-video {
+video,
+iframe {
   margin-block: 1.75em;
   max-width: 100%;
 }

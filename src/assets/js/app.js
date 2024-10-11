@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.settings').removeAttribute('hidden');
+  fitVids();
 });
 
 /* Theme toggle */
@@ -92,4 +93,16 @@ function isInViewport(el, partiallyVisible = false) {
         (bottom > 0 && bottom < innerHeight)) &&
         ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
     : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+}
+
+function fitVids() {
+  const videoSources = ['iframe[src*="youtube"]', 'iframe[src*="vimeo"]'];
+
+  document.querySelectorAll(videoSources.join(',')).forEach((video) => {
+    video.style.width = '100%';
+    video.style.height = 'auto';
+    video.style.aspectRatio = `${video.getAttribute(
+      'width',
+    )} / ${video.getAttribute('height')}`;
+  });
 }

@@ -21,7 +21,7 @@ While making a website on a phone or tablet is possible, it’s much more common
 Pick a location on your computer and create a folder. Call it `my-site` or something similar. It’s best to name your website folders and files with lowercase letters, numbers, dashes, and underscores. Avoid spaces in filenames. This ensures your files will be compatible with many different computers and servers.
 
 {% aside 'Note' %}
-You will probably end up creating multiple websites as time passes, so you can go ahead and create a `sites` folder and put `my-site` inside of it if you'd like.
+You will probably end up creating multiple websites as time passes, so you can go ahead and create a `Websites` folder and put `my-site` inside of it if you'd like.
 {% endaside %}
 
 ![Screenshot of a file explorer window showing a folder named "Websites" selected in the left pane and a folder named "my-site" displayed inside the "Websites" folder on the right pane.](/assets/img/zero-to-internet-01.webp)

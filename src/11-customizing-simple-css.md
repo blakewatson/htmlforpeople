@@ -1,7 +1,7 @@
 ---
 title: 'Customizing Simple.css'
 summary: 'Learn how to use CSS variables to give your Simple.css website a new look.'
-permalink: 'customizing-simple-css'
+permalink: 'customizing-simple-css/'
 tags: chapter
 layout: 'chapter.njk'
 ---

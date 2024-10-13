@@ -1,7 +1,7 @@
 ---
 title: 'Achievement unlocked: Hypertexter'
 summary: 'Recap of what the book covered with links to external resources and documentation related to web development and design.'
-permalink: 'achievement-unlocked-hypertexter'
+permalink: 'achievement-unlocked-hypertexter/'
 tags: chapter
 layout: 'chapter.njk'
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'Reusable HTML with PHP'
 summary: 'Learn how to reuse elements like navigation menus by leveraging the dynamic ability of PHP.'
-permalink: 'reusable-html-with-php'
+permalink: 'reusable-html-with-php/'
 tags: chapter
 layout: 'chapter.njk'
 ---

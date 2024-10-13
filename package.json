@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "eleventy",
     "serve": "eleventy --serve",
     "serve:noreload": "NO_RELOAD=true eleventy --serve"
   },

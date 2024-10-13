@@ -1,7 +1,7 @@
 ---
 title: 'CSS Basics'
 summary: 'Learn how to design a nice, clean webpage from scratch by writing your own CSS.'
-permalink: 'css-basics'
+permalink: 'css-basics/'
 tags: chapter
 layout: 'chapter.njk'
 ---

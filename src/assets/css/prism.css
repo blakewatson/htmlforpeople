@@ -22,13 +22,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     -ms-hyphens: none;
     hyphens: none;
   }
-  & code[class*='language-'] ::-moz-selection,
-  & code[class*='language-']::-moz-selection,
-  & pre[class*='language-'] ::-moz-selection,
-  & pre[class*='language-']::-moz-selection {
-    text-shadow: none;
-    background: #b3d4fc;
-  }
+
   & code[class*='language-'] ::selection,
   & code[class*='language-']::selection,
   & pre[class*='language-'] ::selection,
@@ -36,12 +30,14 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     text-shadow: none;
     background: #b3d4fc;
   }
+
   @media print {
     & code[class*='language-'],
     & pre[class*='language-'] {
       text-shadow: none;
     }
   }
+
   & pre[class*='language-'] {
     padding: 1em;
     margin: 0.5em 0;

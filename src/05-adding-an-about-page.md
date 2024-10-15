@@ -141,7 +141,7 @@ My `<main>` content on the homepage now looks like this.
     <img src="images/space.jpg" alt="Photograph of space with stars and stardust.">
 
     <figcaption>
-      Space is cool. <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source<a>
+      Space is cool. <a href="https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg">Photo source</a>
     </figcaption>
   </figure>
 

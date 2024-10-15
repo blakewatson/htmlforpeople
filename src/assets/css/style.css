@@ -283,6 +283,11 @@ main img {
     border: 1px solid var(--gray-7);
     padding-bottom: 1rem;
   }
+
+  & [aria-current='page'] {
+    text-decoration: none !important;
+    color: var(--_accent);
+  }
 }
 
 .main-menu nav {

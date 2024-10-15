@@ -27,6 +27,12 @@ module.exports = function (eleventyConfig) {
     3;
   });
 
+  eleventyConfig.addShortcode('current', (slug, currentSlug) => {
+    console.log('slug', slug);
+    console.log('currentSlug', currentSlug);
+    return slug === currentSlug ? 'aria-current="page"' : '';
+  });
+
   // if NO_RELOAD node environment variable is found, disable live reloading
   if (process.env.NO_RELOAD) {
     eleventyConfig.setServerOptions({

@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block after_main %}
-  {% set previousPost = collections.chapter | sort(false, false, 'fileSlug') | getPreviousCollectionItem %}
-  {% set nextPost = collections.chapter | sort(false, false, 'fileSlug') | getNextCollectionItem %}
+  {% set previousPost = collections.sortedChapter | getPreviousCollectionItem %}
+  {% set nextPost = collections.sortedChapter | getNextCollectionItem %}
 
   {% if previousPost or nextPost %}
     <nav class="chapter-nav">

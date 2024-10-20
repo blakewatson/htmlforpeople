@@ -1,0 +1,115 @@
+<!doctype html>
+
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="fediverse:creator" content="@bw@social.lol" />
+
+    <title>HTML for People</title>
+
+    <meta property="og:title" content="HTML for People" />
+    <meta
+      property="og:description"
+      content="HTML isn't only for people working in the tech field. It's for everyone. Learn how to make a website from scratch in this beginner friendly web book."
+    />
+    <meta property="og:image" content="/assets/img/design/og.png" />
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/img/design/favicon.png"
+    />
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" />
+
+    <link
+      href="//fastly-cloud.typenetwork.com/projects/8233/fontface.css?66ddfea4"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style>
+      h1 {
+        margin-top: var(--size-10);
+      }
+
+      .site-footer {
+        background: none;
+      }
+    </style>
+
+    <script defer src="/assets/js/app.js"></script>
+    {% block scripts %}{% endblock %}
+
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script
+      src="https://cdn.usefathom.com/script.js"
+      data-site="VUQDXEXI"
+      defer
+    ></script>
+    <!-- / Fathom -->
+  </head>
+
+  <body class="page wrap-code">
+    {% block header %}
+      <header class="site-header mb-none">
+        <div class="logo-wrap">
+          <p class="site-title container">
+            <a href="/">
+              <span class="sr-only">HTML for people</span>
+              {% include "./assets/img/design/logo.svg" %}
+            </a>
+          </p>
+        </div>
+      </header>
+    {% endblock %}
+
+    <main id="main-content" class="container">
+      {% for chapter in collections.sortedChapter %}
+        {{ chapter.content | safe }}
+      {% endfor %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <ul class="mb-sm pl-none" style="list-style: none">
+          <li>
+            <a href="/achievement-unlocked-hypertexter#resources-from-this-book"
+              >Resources</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/blakewatson/htmlforpeople">GitHub</a>
+          </li>
+          <li>
+            <a href="https://github.com/blakewatson/htmlforpeople/issues"
+              >Report error</a
+            >
+          </li>
+          <li><a href="https://blakewatson.com/about">About the author</a></li>
+          <li><a href="https://social.lol/@bw">Mastodon</a></li>
+        </ul>
+        <p>
+          A <a href="https://blakewatson.com">Blake Watson</a> project.<br />
+          Licensed under
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >CC BY-NC-SA 4.0</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const tocLinks = Array.from(
+        document.querySelector('#table-of-contents + ol').querySelectorAll('a'),
+      );
+      tocLinks.forEach((link) => {
+        link.setAttribute('href', link.getAttribute('href').replace('/', '#'));
+      });
+    </script>
+  </body>
+</html>

@@ -333,5 +333,3 @@ Once you’ve done that, click the link to your site at the top of the dashboard
 ## Up next
 
 In the next chapter, we'll take a brief intermission and get a text editor made for writing HTML.
-
-[Intermission: upgrade your text editor](/intermission-upgrade-your-text-editor)

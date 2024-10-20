@@ -55,5 +55,3 @@ For now, let’s get back to making our website!
 ## Up next
 
 Now that we’ve leveled up our text editor, let’s learn how to add _style_ to our website.
-
-[A website with style](/a-website-with-style)

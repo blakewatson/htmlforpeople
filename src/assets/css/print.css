@@ -1,0 +1,47 @@
+html,
+body {
+  font-size: 14px !important;
+}
+
+.container {
+  max-width: 550px;
+}
+
+aside {
+  page-break-inside: avoid;
+  box-shadow: none;
+}
+
+aside::before,
+aside::after {
+  display: none;
+}
+
+pre {
+  box-shadow: none !important;
+}
+
+h1:not(:first-of-type) {
+  page-break-before: always;
+}
+
+h1,
+h2,
+h3 {
+  page-break-after: avoid;
+}
+
+a:not([href^='#']) {
+  &::after {
+    content: ' (' attr(href) ')';
+  }
+}
+
+.site-title a::after {
+  content: 'https://htmlforpeople.com';
+}
+
+pre,
+pre[class*='language-'] {
+  max-height: none;
+}

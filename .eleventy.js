@@ -28,8 +28,6 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode('current', (slug, currentSlug) => {
-    console.log('slug', slug);
-    console.log('currentSlug', currentSlug);
     return slug === currentSlug ? 'aria-current="page"' : '';
   });
 
@@ -39,6 +37,16 @@ module.exports = function (eleventyConfig) {
       liveReload: false,
     });
   }
+
+  // sort chapter collection by fileSlug
+  eleventyConfig.addCollection('sortedChapter', function (collection) {
+    return collection
+      .getFilteredByTag('chapter')
+      .sort(
+        (a, b) =>
+          parseInt(a.fileSlug.substr(0, 2)) - parseInt(b.fileSlug.substr(0, 2)),
+      );
+  });
 
   return {
     dir: {

@@ -373,6 +373,7 @@ h4 {
 
 h1 {
   margin-block-end: var(--size-7);
+  font-size: var(--size-7);
 }
 
 h1,
@@ -386,10 +387,12 @@ h2 {
 h2 {
   margin-block-start: 1.75em;
   margin-block-end: 1.5rem;
+  font-size: var(--size-5);
 }
 
 h3 {
   margin-block-start: 1.5em;
+  font-size: 1.1rem;
 }
 
 ul,
@@ -624,7 +627,7 @@ aside {
   }
 }
 
-[data-theme='light'] aside code {
+[data-theme='light'] aside code:not(pre code) {
   background-color: #00000011;
 }
 

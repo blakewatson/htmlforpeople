@@ -10,7 +10,7 @@ layout: 'chapter.njk'
 
 You, my friend, are about to go from zero to internet by putting your very first homemade page on the web.
 
-I will let you in on a little secret—websites are just files with text. They don’t require fancy, expensive software to create. You can literally make a website with Notepad. In fact, that’s what we'll do right now.
+I will let you in on a little secret—websites are just files with text. They don’t require fancy, expensive software to create. You can make a website with the free text-editing tools that come with your computer. In fact, that’s what we'll do right now.
 
 {% aside 'Note' %}
 While making a website on a phone or tablet is possible, it’s much more common to do it on a computer. So, that’s what we’ll do in this book. That said, what you’ll learn will still apply to other contexts. One beautiful thing about the web is that there are so many ways to create on it.
@@ -21,6 +21,12 @@ While making a website on a phone or tablet is possible, it’s much more common
 Pick a location on your computer and create a folder. Call it `my-site` or something similar. It’s best to name your website folders and files with lowercase letters, numbers, dashes, and underscores. Avoid spaces in filenames. This ensures your files will be compatible with many different computers and servers.
 
 {% aside 'Note' %}
+Need help creating a folder? Here’s how to do it in a few of the common operating systems.
+
+- [Create a folder in Windows](https://perma.cc/H5YD-7W8S)
+- [Create a folder in macOS](https://perma.cc/X9RD-T6RH)
+- [Create a folder in Ubuntu Linux](https://perma.cc/B7LV-XXD5)
+
 You will probably end up creating multiple websites as time passes, so you can go ahead and create a `sites` folder and put `my-site` inside of it if you'd like.
 {% endaside %}
 
@@ -33,7 +39,7 @@ By convention, a website's homepage is `index.html`. You may have other pages (l
 To create `index.html`, open TextEdit on a Mac or Notepad on Windows.
 
 {% aside 'Mac users' %}
-Websites should be _plain text_, so we’ll need to tell TextEdit to use plain text. Open TextEdit Settings and choose _Plain text_ under the Format section. While you’re here, click the Open and Save tab, then check the box next to _Display HTML files as HTML code instead of formatted text_.
+Websites should be _plain text_, so we’ll need to tell TextEdit to use plain text. Click _Format_ in the menu bar then choose _Make Plain Text_. Then open TextEdit Settings, click the Open and Save tab, then check the box next to _Display HTML files as HTML code instead of formatted text_. While you’re here, if you would like TextEdit to always use plain text by default, choose _Plain text_ under the New Document tab, Format section.
 {% endaside %}
 
 Write a sentence or two about yourself. Here’s mine, for example:

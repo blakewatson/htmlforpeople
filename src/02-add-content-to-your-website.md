@@ -176,6 +176,16 @@ Let’s save and refresh the browser.
 
 I resized the window so the whole page would fit in the screenshot, but if you're seeing a scrollbar, that’s totally fine!
 
+Depending on your image, you might want to make it smaller or larger. You can use the `width` and or `height` attributes for this. If you specify _either_ the width or height, the browser will maintain the image's _aspect ratio_—it won’t stretch or squish it. To set a width or height for the image, you provide a number which represents an amount of pixels.
+
+```html
+<img src="space.jpg" alt="Photograph of space with stars and stardust." width="300">
+```
+
+If we set the `width` to `300`, it looks like this:
+
+![Screenshot of "Blake's Homepage" featuring an image of a starry galaxy. The image is much smaller than in the previous screenshot. The text states Blake enjoys making websites and teaching others to do the same. Below, there are sections for favorite board games and a guide on making a website.](/assets/img/add-content-8.webp)
+
 ## Add notes to your code
 
 Sometimes, you want to put notes in your code—text that isn't displayed on the page but remains visible in the code. You might do this to help organize a document, leave notes (like todos) for your future self, or even hide some work-in-progress code you don’t want displayed yet.

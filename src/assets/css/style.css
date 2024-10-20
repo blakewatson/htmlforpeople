@@ -467,6 +467,39 @@ details pre[class*='language-'] {
   /* word-break: break-word; */
 }
 
+/* font style utility classes */
+.sans-serif {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    avenir next,
+    avenir,
+    segoe ui,
+    helvetica neue,
+    helvetica,
+    Cantarell,
+    Ubuntu,
+    roboto,
+    noto,
+    arial,
+    sans-serif !important;
+}
+
+.serif {
+  font-family: var(--_text) !important;
+}
+
+.mono {
+  font-family:
+    Menlo,
+    Consolas,
+    Monaco,
+    Liberation Mono,
+    Lucida Console,
+    monospace !important;
+  font-size: 0.8rem;
+}
+
 @media (min-width: 700px) {
   :root {
     font-size: 1.25em;
@@ -553,10 +586,6 @@ aside {
     margin-block-start: var(--_li-spacing);
   }
 
-  & code {
-    background-color: #00000011;
-  }
-
   & pre,
   & pre[class*='language-'] {
     margin-block: 1rem 0;
@@ -593,6 +622,10 @@ aside {
     background-repeat: no-repeat;
     z-index: 1;
   }
+}
+
+[data-theme='light'] aside code {
+  background-color: #00000011;
 }
 
 .aside-label {

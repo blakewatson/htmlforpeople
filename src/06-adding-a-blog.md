@@ -305,7 +305,7 @@ That gives us the following.
 
 As we saw earlier, when rendering your content, the browser ignores most of the whitespace in your code. But sometimes, you want to preserve the exact spacing and line breaks. A fun example is ASCII art, which is when you make art with plain text characters.
 
-<pre class="language-html"><code class="language-html" style="font-family: monospace!important">    ___       ___       ___       ___   
+<pre class="language-html"><code class="language-html mono">    ___       ___       ___       ___   
    /\__\     /\  \     /\__\     /\__\  
   /:/__/_    \:\  \   /::L_L_   /:/  /  
  /::\/\__\   /::\__\ /:/L:\__\ /:/__/   
@@ -315,7 +315,7 @@ As we saw earlier, when rendering your content, the browser ignores most of the 
 
 The above should appear as the letters "HTML" using a 3d effect. It works because it uses a monospaced font and preserves all the whitespace. How did I do it? I used the `<pre>` tag, which is for _pre-formatted_ text. Use it like this.
 
-<pre class="language-html"><code class="language-html" style="font-family: monospace!important">&lt;pre&gt;
+<pre class="language-html"><code class="language-html mono">&lt;pre&gt;
     ___       ___       ___       ___   
    /\__\     /\  \     /\__\     /\__\  
   /:/__/_    \:\  \   /::L_L_   /:/  /  

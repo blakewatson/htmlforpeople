@@ -26,7 +26,15 @@ One way to include CSS is by using the `<style>` tag and putting CSS code direct
 
 If you included this code somewhere on your webpage, it would change the font of the `<body>` tag—in effect, all of the visible text on the page. This CSS _ruleset_ says, "Set the body font to Gill Sans or, if that font isn't available, set it to whatever your default sans-serif font is."
 
-That's a totally valid way to do CSS. But you will often find people putting their style rules in a separate file. Something like `styles.css`. The main reason for doing that is that it makes it easier to share styles across multiple pages—it prevents you from copying and pasting your `<style>` tag around to each page you create.
+{% aside 'Note about fonts' %}
+Serif fonts look like this. The have small strokes, called _serifs_, that protrude a bit from the larger ones. You will typically find these in books and newspapers.
+
+<p class="sans-serif">Sans-serif fonts are those <em>without</em> serifs and typically have a more simplified shape to their serif counterparts. They look like this. They are popular on the web and for user interfaces.</p>
+
+<p class="mono">Monospaced fonts look kind of like typewriter text. Each letter takes up an equal amount of width, which is handy if you want to line things up. They are a popular choice for displaying computer code.</p>
+{% endaside %}
+
+That's a totally valid way to use CSS. But you will often find people putting their style rules in a separate file. Something like `styles.css`. The main reason for doing that is that it makes it easier to share styles across multiple pages—it prevents you from copying and pasting your `<style>` tag around to each page you create.
 
 CSS is a powerful language. Every website you see is using it. All of those intricate designs, much of the animation, and the positioning of images and typography—that's CSS.
 
@@ -78,11 +86,19 @@ Once you make the changes, if you reload the page in the browser, you will notic
 
 ![Screenshot of "Blake's Homepage." It includes sections: a brief statement about the author, favorite board games, and a guide on how to make a website. The page has plain black text on a white background. One image is present but it is not functioning correctly—the image alt text displays instead, "Photograph of space with stars and stardust."](/assets/img/a-website-with-style-1.webp)
 
-We can fix this by updating the image's `src` value. Add the folder name and a slash before the filename.
+This is because we moved the `space.jpg` image file relative to our homepage. It’s now located in a folder called `images`. We can fix this by updating the image's `src` value. Add the folder name and a slash before the filename.
 
 ```html
 <img src="images/space.jpg" alt="Photograph of space with stars and stardust.">
 ```
+
+{% aside 'More about URLs' %}
+When we need to provide the location of files in our website—whether it’s a link to another page or the location of an image—we can provide what’s called a _relative URL_.
+
+When you’re on the `index.html` page, you can think of that as your current location. If you want to reference an image, you need to tell the browser how to find it. A relative URL is one way to do that. It describes how to get "from here to there," so to speak.
+
+Similar to how a URL in your browser works, you use slashes to separate levels in the URL. The URL, `images/space.jpg`, means "look for a folder called `images` at the current level, then inside there, look for a file called `space.jpg`."
+{% endaside %}
 
 ## Adding Simple.css to the page
 

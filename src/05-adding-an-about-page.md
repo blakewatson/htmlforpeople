@@ -38,6 +38,13 @@ I'll expand the content by adding a couple of paragraphs. This is also an excell
 
 Remember, a link is an `<a>` tag. Whatever text you wrap the tag around becomes clickable. Then you provide the `href` _attribute_, which is the link's destination—typically a URL.
 
+{% aside 'Emoji picker' %}
+To open an emoji picker:
+
+- On Windows, press the Windows key + period (`.`)
+- On macOS, press `fn` + `e`.
+{% endaside %}
+
 Here’s my code inside the `<body>` tag.
 
 ```html

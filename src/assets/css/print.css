@@ -21,6 +21,12 @@ pre {
   box-shadow: none !important;
 }
 
+img,
+p:has(> img) {
+  display: block;
+  page-break-inside: avoid;
+}
+
 h1:not(:first-of-type) {
   page-break-before: always;
 }

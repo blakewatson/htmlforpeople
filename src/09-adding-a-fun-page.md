@@ -342,8 +342,8 @@ To see this page in action, [check out the live demo](https://demo.htmlforpeople
 <!doctype html>
 <html>
   <head>
-    <title>Fun - Blake's Homepage</title>
     <meta charset="utf-8">
+    <title>Fun - Blake's Homepage</title>
 
     <link rel="stylesheet" href="css/simple.css">
     <link rel="stylesheet" href="css/lite-yt-embed.min.css">

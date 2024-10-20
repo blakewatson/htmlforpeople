@@ -262,14 +262,14 @@ For now, let’s include two things in the `<head>`: a title tag and a meta tag.
 
 ```html
 <head>
-  <title>Blake's Homepage</title>
   <meta charset="utf-8">
+  <title>Blake's Homepage</title>
 </head>
 ```
 
 The `<title>` tag controls the text that appears in your website's browser tab and the name of your site when it appears in search results. Nice!
 
-We can use the `<meta>` tag multiple times to give the browser extra info about our page. In this case, we’re telling it which _character set_ to use. All you need to know here is that UTF-8 text means special symbols like emojis will appear as expected.
+We can use the `<meta>` tag multiple times to give the browser extra info about our page. In this case, we’re telling it which _character set_ to use. All you need to know here is that UTF-8 text means special symbols like emojis will appear as expected. We'll include it first, before any other text elements, to make sure all our text is displayed properly.
 
 {% aside 'Note' %}
 If you’re getting confused by all the extra tags here, know that you can copy and paste this starting code structure so that you don’t have to remember it all right now!
@@ -281,8 +281,8 @@ Here’s the whole `index.html` file for reference:
 <!doctype html>
 <html>
   <head>
-    <title>Blake's Homepage</title>
     <meta charset="utf-8">
+    <title>Blake's Homepage</title>
   </head>
 
   <body>

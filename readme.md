@@ -32,3 +32,5 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 ### Fonts
 
 Valkyrie and Heliotrope are licensed by [MB Type](https://mbtype.com/). If you plan to host a copy of this website, you will need to acquire your own licence from MB Type, or use different fonts.
+
+Input Sans, by [David Jonathan Ross](https://djr.com/), is licensed by [Type Network](https://typenetwork.com/). It’s being hosted by Type Network. If you want to use it, you’ll need to acquire your own license from Type Network.

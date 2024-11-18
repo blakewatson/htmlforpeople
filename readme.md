@@ -28,3 +28,7 @@ If you'd like to report a correction or suggest an improvement, please [create a
 ## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). For more information, see the [LICENSE](https://github.com/blakewatson/htmlforpeople/blob/main/LICENSE.txt) file in this repository or visit [Creative Commons](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+### Fonts
+
+Valkyrie and Heliotrope are licensed by [MB Type](https://mbtype.com/). If you plan to host a copy of this website, you will need to acquire your own licence from MB Type, or use different fonts.

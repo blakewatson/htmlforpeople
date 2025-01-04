@@ -27,7 +27,7 @@ One way to include CSS is by using the `<style>` tag and putting CSS code direct
 If you included this code somewhere on your webpage, it would change the font of the `<body>` tag—in effect, all of the visible text on the page. This CSS _ruleset_ says, "Set the body font to Gill Sans or, if that font isn't available, set it to whatever your default sans-serif font is."
 
 {% aside 'Note about fonts' %}
-Serif fonts look like this. The have small strokes, called _serifs_, that protrude a bit from the larger ones. You will typically find these in books and newspapers.
+Serif fonts look like this. They have small strokes, called _serifs_, that protrude a bit from the larger ones. You will typically find these in books and newspapers.
 
 <p class="sans-serif">Sans-serif fonts are those <em>without</em> serifs and typically have a more simplified shape to their serif counterparts. They look like this. They are popular on the web and for user interfaces.</p>
 

@@ -74,7 +74,8 @@ There are many options for publishing your website. For our purposes, we need so
 Throughout this book, I will use Neocities as an example. But I'd like to mention a handful of alternatives in case one strikes your fancy.
 
 - **[Yay.boo](https://yay.boo/):** Silly name, effortless website publishing. You just drag and drop a folder, pick a name, and your website is online.
-- **[Glitch](https://glitch.com/):** This is a good option if you want to code everything directly in the browser. Build it, then publish.
+- ~~**[Glitch](https://glitch.com/):** This is a good option if you want to code everything directly in the browser. Build it, then publish.~~ [Glitch shut down app hosting](https://perma.cc/C5KE-CMZV) in 2025.
+- **[CodePen](https://codepen.io/):** CodePen is the beginner-friendliest alternative to Glitch that I know of. The difference is that a Pen is one page as opposed to multiple files that make up an entire website. If you opt for CodePen Pro, however, you can access Projects which will let you build a multi-page website in the browser.
 - **[Netlify](https://www.netlify.com/):** More sophisticated, but has a [drag-and-drop-folder-to-publish](https://perma.cc/W3PH-5KRS) feature and gives you more developer-centric features.
   {% endaside %}
 

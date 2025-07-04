@@ -12,11 +12,48 @@ HTML is an approachable language, which was one reason I wanted to make this web
 
 We're now at one of those points. In the next chapter, we'll create a fun page with jokes, tabletop gaming resources, and embedded YouTube videos.
 
-Unfortunately, YouTube videos won’t work with the way we've been previewing our site—opening HTML files with the web browser. For the most part, that’s a perfectly okay way to preview HTML. But in cases where we are fetching data from other websites—like streaming video—we'll need to mimic a real-life web server.
+Unfortunately, YouTube videos may not work with the way we've been previewing our site—opening HTML files with the web browser. For the most part, that’s a perfectly okay way to preview HTML. But in cases where we are fetching data from other websites—like streaming video—we'll need to mimic a real-life web server.
 
 A web server is a program that makes a website available at an address. When you visit that address with a web browser, you get the website. We'll install and run one of these so that our website is available at a local address—that is, one that’s only accessible to our computer, not everyone on the internet.
 
-I’ll give you several options based on the operating system and technical knowledge needed. So you don’t need to read everything. Use the links below to jump to the section that applies to you.
+I’ll give you several options based on the operating system and technical knowledge needed. But first, let’s talk about URLs.
+
+## Relative vs. absolute URLs
+
+Thus far, since we've been opening our website files directly in the browser, we've needed to use relative URLs. Relative URLs are written from the perspective of the current file. For example, if I am on a sub-page and want to link to a top-level page, I need to use the `..` syntax to "move up" a level and find the destination page.
+
+When running a web server, we can use absolute URLs. An absolute URL is always written from the perspective of the topmost level (the _topmost level_ meaning the folder that we told the web server to use). No matter what sub-page I'm on, I could link to the website homepage as follows.
+
+```html
+<a href="/">Go to the homepage</a>
+```
+
+The slash represents the topmost level (I could also have written `/index.html` but that isn’t needed because web servers will automatically use it if it exists). If I wanted to link to the `about.html` page, I could do that as follows.
+
+```html
+<a href="/about.html">Go to the About page</a>
+```
+
+The cool thing is that it doesn't matter what page I'm on—it can be a top-level page or a sub-page. This path will always lead to the About page, no matter where the current page is. Say we're on a page that’s nested down in a folder.
+
+```html
+<!-- imagine we are currently on a blog page /blog/my-post.html-->
+<h1>My blog post</h1>
+
+<!-- instead of this, which *does* work -->
+<a href="../about.html">About</a>
+
+<!-- we can do this -->
+<a href="/about.html">About</a>
+```
+
+We didn't use absolute URLs earlier because we weren't using a web server. Had we tried to use absolute URLs when opening our website directly in the browser, the slash would have pointed toward the top-level folder of your _entire computer_, which is certainly not what we wanted.
+
+Now that we're using a web server, I'll leave it up to you if you'd like to go back and change all the paths, but it does make copying and pasting the menu easier. Creating links between pages is more straightforward when using absolute URLs.
+
+## Web server options
+
+Here are various options for running a web server on your computer. You don’t need to read everything. Use the links below to jump to the section that applies to you.
 
 - [Visual Studio Code (cross-platform)](<#visual-studio-code-(cross-platform)>)
 - [macOS](#macos)
@@ -100,39 +137,6 @@ php -S localhost:8000
 ```
 
 This will make your site available at `http://localhost:8000`.
-
-## Relative vs. absolute URLs
-
-Thus far, since we've been opening our website files directly in the browser, we've needed to use relative URLs. Relative URLs are written from the perspective of the current file. For example, if I am on a sub-page and want to link to a top-level page, I need to use the `..` syntax to "move up" a level and find the destination page.
-
-When running a web server, we can use absolute URLs. An absolute URL is always written from the perspective of the topmost level (the _topmost level_ meaning the folder that we told the web server to use). No matter what sub-page I'm on, I could link to the website homepage as follows.
-
-```html
-<a href="/">Go to the homepage</a>
-```
-
-The slash represents the topmost level (I could also have written `/index.html` but that isn’t needed because web servers will automatically use it if it exists). If I wanted to link to the `about.html` page, I could do that as follows.
-
-```html
-<a href="/about.html">Go to the About page</a>
-```
-
-The cool thing is that it doesn't matter what page I'm on—it can be a top-level page or a sub-page. This path will always lead to the About page, no matter where the current page is. Say we're on a page that’s nested down in a folder.
-
-```html
-<!-- imagine we are currently on a blog page /blog/my-post.html-->
-<h1>My blog post</h1>
-
-<!-- instead of this, which *does* work -->
-<a href="../about.html">About</a>
-
-<!-- we can do this -->
-<a href="/about.html">About</a>
-```
-
-We didn't use absolute URLs earlier because we weren't using a web server. Had we tried to use absolute URLs when opening our website directly in the browser, the slash would have pointed toward the top-level folder of your _entire computer_, which is certainly not what we wanted.
-
-Now that we're using a web server, I'll leave it up to you if you'd like to go back and change all the paths, but it does make copying and pasting the menu easier. Creating links between pages is more straightforward when using absolute URLs.
 
 ## Up next
 

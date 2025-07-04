@@ -2,23 +2,32 @@
 
 {% block content %}
   {{ content | safe }}
-{% endblock %}
-
-{% block after_main %}
   {% set previousPost = collections.sortedChapter | getPreviousCollectionItem %}
   {% set nextPost = collections.sortedChapter | getNextCollectionItem %}
 
   {% if previousPost or nextPost %}
-    <nav class="chapter-nav">
+    <nav
+      class="mb-xl"
+      style="display: flex; flex-direction: column; gap: 0.5rem;"
+    >
       {% if nextPost %}
-        <a href="{{ nextPost.url }}">{{ nextPost.data.title }} &rarr;</a>
+        <p>
+          <strong><span role="presentation">&rarr;</span> Next chapter:</strong>
+          <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+        </p>
       {% endif %}
 
       {% if previousPost %}
-        <a href="{{ previousPost.url }}"
-          >&larr; {{ previousPost.data.title }}</a
-        >
+        <p>
+          <strong
+            ><span role="presentation">&larr;</span> Previous chapter:</strong
+          >
+          <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        </p>
       {% endif %}
     </nav>
   {% endif %}
+{% endblock %}
+
+{% block after_main %}
 {% endblock %}

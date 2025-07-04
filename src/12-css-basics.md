@@ -711,3 +711,5 @@ The magic of CSS is that you could take my exact HTML code—no changes—and cr
 </figure>
 
 I hope this bonus chapter gave you a taste of what’s possible with CSS. Much like with HTML, even a little CSS knowledge is valuable—a simple change of font and color, for example, can make a huge difference. I encourage you to continue exploring CSS if you want to create custom designs. It’s a rewarding skill to have.
+
+## Up next

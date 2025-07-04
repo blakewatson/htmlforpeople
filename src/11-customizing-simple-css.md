@@ -238,3 +238,5 @@ Here’s a look at one of the blog posts set in Georgia.
 I chose Simple.css for this book because it makes HTML look good without any extra work. But I also chose it because it can be customized with a handful of CSS variables. Even though it’s just colors and fonts, there are endless possibilities for making your site unique.
 
 I encourage you to explore the world of color and experiment with different combinations. In the next bonus chapter, I'll cover even more CSS so you can go beyond Simple and write your own styles.
+
+## Up next

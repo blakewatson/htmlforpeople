@@ -79,3 +79,5 @@ I use a Mac, so I’m not as familiar with editors for other systems, but I know
 - **[BBEdit](https://www.barebones.com/products/bbedit/):** One of the oldest Mac apps around that is still actively developed. BBedit is paid but has a free trial and a free-forever mode that limits you to a particular feature subset.
 - **[Glitch](https://glitch.com/):** Yes, this is the same one listed above under web hosts. Glitch is a good option if you want to work "in the cloud." It provides a web-based interface for making websites, including creating files and editing code. Everything is in the browser, which is a good option if you don’t want to bother downloading and installing things on your computer.
 - Many, many more. There are far too many to list, but if none of these suit your fancy, query your favorite search engine and brace yourself for the deluge of results.
+
+## Up next

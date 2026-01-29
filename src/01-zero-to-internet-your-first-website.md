@@ -71,13 +71,15 @@ Don’t worry about how it looks. We’ll fix that later.
 There are many options for publishing your website. For our purposes, we need something free, easy, and geared toward individuals instead of businesses. Fortunately, we get just that with [Neocities](https://neocities.org).
 
 {% aside 'Alternate webhosts' %}
-Throughout this book, I will use Neocities as an example. But I'd like to mention a handful of alternatives in case one strikes your fancy.
+Throughout this book, I will use Neocities as an example. But I'd like to mention a handful of alternatives in case one strikes your fancy. Most of these offer an option to drag your website folder onto their webpage to get started with there service.
 
-- **[Yay.boo](https://yay.boo/):** Silly name, effortless website publishing. You just drag and drop a folder, pick a name, and your website is online.
+- **[Netlify Drop](https://app.netlify.com/drop):** More sophisticated than Neocites, but has a drag-and-drop-folder-to-publish feature and gives you more developer-centric features.
+- **[static.app](https://static.app/):** I don't have personal experience with this one, but it looks like a straightforward service similar to Netlify Drop. The free tier gives you a subdomain and 1 free website.
+- **[Tiiny](https://tiiny.host/):** Offers a similar process as the above services, with support for more formats than just a website. I also don't have personal experience with this service.
+- **[CodePen](https://codepen.io/):** CodePen It gives you an HTML, CSS, and JavaScript editor on a single webpage that allows you to code whatever you want. A "pen" is essentially one page and visitors can click through to see your code. It's best for one-pagers and playing around with code. If you opt for CodePen Pro, however, you can access [Projects](https://codepen.io/features/projects) which will let you build a multi-page website in the browser.
+- ~~**[Yay.boo](https://yay.boo/):** Silly name, effortless website publishing. You just drag and drop a folder, pick a name, and your website is online.~~ Yay.boo is currently not accepting signups. They may be coming back soon.
 - ~~**[Glitch](https://glitch.com/):** This is a good option if you want to code everything directly in the browser. Build it, then publish.~~ [Glitch shut down app hosting](https://perma.cc/C5KE-CMZV) in 2025.
-- **[CodePen](https://codepen.io/):** CodePen is the beginner-friendliest alternative to Glitch that I know of. The difference is that a Pen is one page as opposed to multiple files that make up an entire website. If you opt for CodePen Pro, however, you can access Projects which will let you build a multi-page website in the browser.
-- **[Netlify](https://www.netlify.com/):** More sophisticated, but has a [drag-and-drop-folder-to-publish](https://perma.cc/W3PH-5KRS) feature and gives you more developer-centric features.
-  {% endaside %}
+{% endaside %}
 
 Head over to Neocities and create an account. It’s free. You’ll also need to choose a username/sitename. Your website will ultimately be on a _subdomain_ at `YOURNAME.neocities.org`. I suggest using your real name or an online username if you have one. Or, if you know what you want your page to be about, you could choose something befitting the topic (for example, `dndfanpage`).
 
